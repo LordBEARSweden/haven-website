@@ -12,13 +12,17 @@ html, body {
   font-size: 1rem;
 }
 
-body {
-  background-color: var(--bg);
+/* Flytta bakgrunden till html så den inte täcks */
+html {
   background-image: url('kurbits-bg.png');
   background-repeat: repeat;
-  background-size: 120px auto;
-  background-attachment: scroll; /* följer med scrollen */
+  background-size: 250px auto;
+  background-attachment: scroll;
   background-position: center;
+  background-color: #0e0e0e;
+}
+
+body {
   color: var(--gold);
   font-family: 'Segoe UI', sans-serif;
   display: flex;
@@ -29,11 +33,12 @@ body {
   padding: 2rem;
 }
 
+/* Huvudinnehållsyta – delvis genomskinlig */
 .container {
   max-width: 700px;
   width: 100%;
   padding: 2rem;
-  background-color: rgba(14, 14, 14, 0.7);
+  background-color: rgba(14, 14, 14, 0.85); /* svart med 85% opacitet */
   border: 1px solid var(--gold-light);
   border-radius: 12px;
 }
@@ -95,9 +100,13 @@ footer {
   .container {
     padding: 1.5rem;
   }
+
+  html {
+    background-size: 150px auto;
+  }
 }
 
-/* Responsiv skala för större skärmar */
+/* Större skärmar */
 @media (min-width: 1000px) {
   body {
     font-size: 1.1rem;
@@ -118,5 +127,9 @@ footer {
   .container {
     max-width: 900px;
     padding: 3rem;
+  }
+
+  html {
+    background-size: 350px auto;
   }
 }
