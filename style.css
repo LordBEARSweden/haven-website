@@ -33,7 +33,7 @@ body {
   max-width: 700px;
   width: 100%;
   padding: 2rem;
-  background-color: rgba(14, 14, 14, 0.7);
+  background-color: rgba(14, 14, 14, 0.85); /* halvgenomskinlig för att visa bakgrund */
   border: 1px solid var(--gold-light);
   border-radius: 12px;
 }
