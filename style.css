@@ -1,30 +1,122 @@
+:root {
+  --bg: #0e0e0e;
+  --gold: #d4af37;
+  --gold-light: #f0c75e;
+  --gold-muted: #b79e3b;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  background-color: var(--bg);
+  background-image: url('kurbits-bg.png');
+  background-repeat: repeat;
+  background-size: 120px auto;
+  background-attachment: scroll; /* följer med scrollen */
+  background-position: center;
+  color: var(--gold);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
-header {
-    background-color: #cce0dd;
-    text-align: center;
-    padding: 2rem 1rem;
+.container {
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(14, 14, 14, 0.85); /* halvgenomskinlig för att visa bakgrund */
+  border: 1px solid var(--gold-light);
+  border-radius: 12px;
 }
 
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--gold-light);
 }
 
-h1, h2 {
-    color: #1a4d44;
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--gold-muted);
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.divider {
+  height: 1px;
+  width: 40%;
+  background-color: var(--gold-muted);
+  margin: 2rem auto;
+}
+
+a {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 footer {
-    background-color: #e6e6e6;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--gold-muted);
+  font-size: 0.9rem;
+}
+
+/* Mobilanpassning */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
+
+/* Responsiv skala för större skärmar */
+@media (min-width: 1000px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p, li {
+    font-size: 1.15rem;
+  }
+
+  .container {
+    max-width: 900px;
+    padding: 3rem;
+  }
 }
