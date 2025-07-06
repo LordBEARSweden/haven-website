@@ -1,42 +1,135 @@
 <!DOCTYPE html>
 <html lang="sv">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HAVEN NORDIC HEALTH</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1> Haven Nordic Health</h1>
-            <p> En fristad för återhämtning, närvare och inre balans</p>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haven Nordic Health – En plats för återhämtning och inre balans</title>
+  <meta name="description" content="Haven Nordic Health är en fristad för återhämtning, närvaro och självläkning – genom livestreams, naturinnehåll och ett framtida retreatcenter i Dalarna.">
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --gold: #d4af37;
+      --gold-bright: #f9e285;
+      --gold-light: #f0c75e;
+      --gold-muted: #b79e3b;
+    }
 
+    body {
+        margin: 0;
+        background-color: var(--bg);
+        background-image: url('kurbits-bg.png');
+        background-repeat: repeat;
+        background-size: auto;
+        background-attachment: fixed;
+        background-position: center;
+        color: var(--gold);
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 2rem;
+      }
 
-        <main>
-            <section>
-                <h2>Välkommen</h2>
-                <p> Haven är ett tryggt utrymme där vi tillsammans utforskar hälsa, återhämtning och självläkning - både i det digitala och så småningom i verkliga möten.</p>
-            </section>
+    .container {
+      max-width: 700px;
+      width: 100%;
+      padding: 2rem;
+      border: 1px solid var(--gold-bright);
+      border-radius: 12px;
+      background-color: var(--bg);
+    }
 
-            <section>
-                <h2>Vad vi gör</h2>
-                <ul>
-                    <li>Livestreams om hälsa, mental hälsa, återhämtning</li>
-                    <li>Innehåll om naturens kraft, meditation, tystnad</li>
-                    <li>Kommande retreatcenter och Spaanläggning i Dalarna</li>
-                </ul>
-            </section>
+    header, footer {
+      text-align: center;
+    }
 
-            <section>
-                <h2>Följ oss</h2>
-                <p>Instagram, Threads, TikTok, YouTube och Facebook - Sök på <strong>Haven Nordic Health</strong></p>
-                <p><a href="https://gofund.me/866c9bf9"target="_blank">Stöd vårt arbete här</a></p></p>
-            </section>
-        </main>
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--gold-light);
+    }
 
-        <footer>
-            <p>&copy 2025 Haven Nordic Health</p>
-        </footer>
-    </body>
+    h2 {
+      font-size: 1.4rem;
+      color: var(--gold-muted);
+    }
+
+    p, li {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .divider {
+      height: 1px;
+      width: 40%;
+      background-color: var(--gold-muted);
+      margin: 2rem auto;
+    }
+
+    a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--gold-muted);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="Haven Transparent No buffer no text.png" alt="Haven Nordic Health logotyp" style="max-width: 150px; margin-bottom: 1rem;" />
+      <h1>Haven Nordic Health</h1>
+      <p>En fristad för återhämtning, närvaro och inre balans</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Välkommen</h2>
+        <p>Haven är ett tryggt utrymme där vi tillsammans utforskar hälsa, återhämtning och självläkning – både i det digitala och så småningom i verkliga möten.</p>
+      </section>
+
+      <div class="divider"></div>
+
+      <section>
+        <h2>Vad vi gör</h2>
+        <ul>
+          <li>Livestreams om hälsa, mental hälsa, återhämtning</li>
+          <li>Innehåll om naturens kraft, meditation, tystnad</li>
+          <li>Kommande retreatcenter och Spaanläggning i Dalarna</li>
+        </ul>
+      </section>
+
+      <div class="divider"></div>
+
+      <section>
+        <h2>Följ oss</h2>
+        <p>Instagram, Threads, TikTok, YouTube och Facebook – sök på <strong>Haven Nordic Health</strong></p>
+        <p><a href="https://gofund.me/866c9bf9" target="_blank">Stöd vårt arbete här</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Haven Nordic Health</p>
+    </footer>
+  </div>
+</body>
 </html>
