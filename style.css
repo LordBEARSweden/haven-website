@@ -15,10 +15,10 @@ html, body {
 body {
   background-color: var(--bg);
   background-image: url('kurbits-bg.png');
-  background-repeat: repeat;
-  background-size: 120px auto;
-  background-attachment: scroll; /* följer med scrollen */
-  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
   color: var(--gold);
   font-family: 'Segoe UI', sans-serif;
   display: flex;
@@ -33,9 +33,18 @@ body {
   max-width: 700px;
   width: 100%;
   padding: 2rem;
-  background-color: rgba(14, 14, 14, 0.85); /* halvgenomskinlig för att visa bakgrund */
+  background-color: rgba(14, 14, 14, 0.7);
   border: 1px solid var(--gold-light);
   border-radius: 12px;
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  max-width: 150px;
+  margin-bottom: 1rem;
 }
 
 h1 {
