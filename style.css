@@ -154,11 +154,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
-/* ============================= */
-/*           NAVIGATION          */
-/* ============================= */
-
 /* ============================= */
 /*      RESPONSIV NAVIGATION     */
 /* ============================= */
@@ -223,18 +218,16 @@ a:hover {
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(14, 14, 14, 0.95);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    border-top: 1px solid var(--gold-muted);
-    z-index: 999;
-  }
-
+  transition: all 0.3s ease-in-out;
+  display: none;
+  flex-direction: column;
+  background-color: rgba(14, 14, 14, 0.95);
+  width: 100%;
+  padding: 1rem;
+  border-top: 1px solid var(--gold-muted);
+  z-index: 999;
+  position: static; /* ⬅️ viktig ändring */
+}
   .nav-links.show {
     display: flex;
   }
