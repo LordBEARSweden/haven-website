@@ -159,23 +159,92 @@ a:hover {
 /*           NAVIGATION          */
 /* ============================= */
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1rem 0 2rem;
+/* ============================= */
+/*      RESPONSIV NAVIGATION     */
+/* ============================= */
+
+.nav-wrapper {
+  width: 100%;
+  background-color: rgba(14, 14, 14, 0.85);
+  border-bottom: 1px solid var(--gold-muted);
+  margin-bottom: 1.5rem;
 }
 
-nav a {
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-text {
+  font-family: 'GoudyOldStyle', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  font-family: 'GoudyOldStyle', serif;
   color: var(--gold-light);
   text-decoration: none;
   font-weight: 500;
-  font-family: 'GoudyOldStyle', serif;
 }
 
-nav a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
+
+/* ============================= */
+/*         MOBIL-VY              */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(14, 14, 14, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    border-top: 1px solid var(--gold-muted);
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 
 
 /* ============================= */

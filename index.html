@@ -11,15 +11,22 @@
 <body>
   <div class="container">
     <header>
+      <nav class="nav-wrapper">
+  <div class="nav-container">
+    <div class="logo-text">Haven</div>
+    <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Hem</a></li>
+      <li><a href="om.html">Om</a></li>
+      <li><a href="innehall.html">Innehåll</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
       <img src="Haven Transparent No buffer no text.png" alt="Haven Nordic Health logotyp" style="max-width: 220px; margin-bottom: 1.5rem;" />
       <h1>Haven Nordic Health</h1>
       <p>En fristad för återhämtning, närvaro och inre balans</p>
-      <nav>
-        <a href="om.html">Om Haven</a>
-      </nav>
-
     </header>
-
     <main>
       <section>
         <h2>Välkommen</h2>
@@ -51,4 +58,13 @@
     </footer>
   </div>
 </body>
+<script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 </html>

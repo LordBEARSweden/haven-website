@@ -16,6 +16,18 @@
 
     <!-- Header med logga -->
     <header>
+      <nav class="nav-wrapper">
+  <div class="nav-container">
+    <div class="logo-text">Haven</div>
+    <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Hem</a></li>
+      <li><a href="om.html">Om</a></li>
+      <li><a href="innehall.html">Innehåll</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
       <img src="Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
       <h1 class="goudy">Haven Nordic Health</h1>
     </header>
@@ -55,4 +67,13 @@
     </footer>
   </div>
 </body>
+<script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 </html>
