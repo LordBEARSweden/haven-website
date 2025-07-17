@@ -1,3 +1,7 @@
+/* ============================= */
+/*        FONTER & VARIABLER     */
+/* ============================= */
+
 @font-face {
   font-family: 'GoudyOldStyle';
   src: url('fonts/GoudyOldStyle.ttf') format('truetype');
@@ -9,6 +13,11 @@
   --gold-light: #f0c75e;
   --gold-muted: #b79e3b;
 }
+
+
+/* ============================= */
+/*      GRUNDSTIL & BAKGRUND     */
+/* ============================= */
 
 html, body {
   height: 100%;
@@ -34,6 +43,11 @@ body {
   padding: 2rem;
 }
 
+
+/* ============================= */
+/*         LAYOUT / CONTAINER    */
+/* ============================= */
+
 .container {
   max-width: 700px;
   width: 100%;
@@ -42,6 +56,11 @@ body {
   border: 1px solid var(--gold-light);
   border-radius: 12px;
 }
+
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
 
 header {
   text-align: center;
@@ -52,8 +71,12 @@ header img {
   margin-bottom: 1.5rem;
 }
 
+
+/* ============================= */
+/*         TYPOGRAFI & TEXT      */
+/* ============================= */
+
 h1 {
-  
   font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -81,59 +104,3 @@ ul {
 
 li {
   line-height: 1.6;
-  margin-bottom: 0.6rem;
-}
-
-.divider {
-  height: 1px;
-  width: 40%;
-  background-color: var(--gold-muted);
-  margin: 2rem auto;
-}
-
-a {
-  color: var(--gold-light);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  margin-top: 2rem;
-  text-align: center;
-  color: var(--gold-muted);
-  font-size: 0.9rem;
-}
-
-/* Mobilanpassning */
-@media (max-width: 600px) {
-  .container {
-    padding: 1.5rem;
-  }
-}
-
-/* Responsiv skala för större skärmar */
-@media (min-width: 1000px) {
-  body {
-    font-size: 1.1rem;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  p, li {
-    font-size: 1.15rem;
-  }
-
-  .container {
-    max-width: 900px;
-    padding: 3rem;
-  }
-}
