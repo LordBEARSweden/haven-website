@@ -45,12 +45,12 @@ body {
 
 @media (max-width: 600px) {
   body {
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
   }
 
   .container {
-    padding: 1rem;
-    max-width: 94vw; /* nästan full bredd på mobilen */
+    padding: 1.25rem;
+    max-width: 96vw; /* nästan full bredd på mobilen */
     margin: 0 auto; /* centrera containern */
     box-sizing: border-box; /* viktig! räknar in padding i totalbredd */
   }
