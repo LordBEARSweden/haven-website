@@ -51,6 +51,7 @@ body {
   .container {
     padding: 1.5rem;
     max-width: 95vw; /* nästan full bredd på mobilen */
+    margin: 0 auto; /* centrera containern */
   }
 }
 
