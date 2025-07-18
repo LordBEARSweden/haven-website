@@ -180,6 +180,9 @@ a:hover {
   text-decoration: underline;
 }
 
+body {
+  overflow-x: hidden;
+}
 
 /* ============================= */
 /*     MOBILMENY (enda q*
