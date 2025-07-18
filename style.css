@@ -1,5 +1,5 @@
 /* ============================= */
-/*        FONTER & VARIABLER     */
+/*         FONTER & VARIABLER    */
 /* ============================= */
 
 @font-face {
@@ -12,26 +12,28 @@
   --gold: #d4af37;
   --gold-light: #f0c75e;
   --gold-muted: #b79e3b;
+
+  --max-width: 1300px;
+  --padding-inline: 1rem;
+  --font-base: clamp(1rem, 2vw, 1.15rem);
+  --font-h1: clamp(2rem, 5vw, 3rem);
+  --font-h2: clamp(1.5rem, 4vw, 2.2rem);
 }
 
 
 /* ============================= */
-/*      GRUNDSTIL & BAKGRUND     */
+/*        BASSTILAR & RESET      */
 /* ============================= */
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: var(--font-base);
   background-color: var(--bg);
   background-image: url('kurbits-bg.png');
   background-repeat: no-repeat;
@@ -39,24 +41,19 @@ body {
   background-attachment: fixed;
   background-position: center center;
   color: var(--gold);
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding: 2rem;
+  line-height: 1.6;
 }
 
 
 /* ============================= */
-/*         LAYOUT / CONTAINER    */
+/*            LAYOUT             */
 /* ============================= */
 
 .container {
-  max-width: 1300px;
   width: 100%;
-  padding: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem var(--padding-inline);
   background-color: rgba(14, 14, 14, 0.7);
   border: 1px solid var(--gold-light);
   border-radius: 12px;
@@ -78,50 +75,30 @@ header img {
 
 
 /* ============================= */
-/*         TYPOGRAFI & TEXT      */
+/*         TYPOGRAFI             */
 /* ============================= */
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: var(--gold-light);
   font-family: 'GoudyOldStyle', serif;
+  font-size: var(--font-h1);
+  color: var(--gold-light);
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: var(--gold-light);
   font-family: 'GoudyOldStyle', serif;
+  font-size: var(--font-h2);
+  color: var(--gold-light);
+  margin: 2rem 0 1rem 0;
 }
 
-p {
-  line-height: 1.6;
+p, li {
   margin-bottom: 1.5rem;
 }
 
 ul {
-  padding-left: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-li {
-  line-height: 1.6;
-  margin-bottom: 0.6rem;
-}
-
-
-/* ============================= */
-/*         DELARE & LÄNKAR       */
-/* ============================= */
-
-.divider {
-  height: 1px;
-  width: 40%;
-  background-color: var(--gold-muted);
-  margin: 2rem auto;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 a {
@@ -135,35 +112,49 @@ a:hover {
 
 
 /* ============================= */
-/*      RESPONSIV NAVIGATION     */
+/*          DIVIDER              */
+/* ============================= */
+
+.divider {
+  height: 1px;
+  background-color: var(--gold-muted);
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+
+/* ============================= */
+/*        NAVIGATION (fluid)     */
 /* ============================= */
 
 .nav-wrapper {
   width: 100%;
   background-color: rgba(14, 14, 14, 0.85);
   border-bottom: 1px solid var(--gold-muted);
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1000;
 }
 
 .nav-container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.5rem var(--padding-inline);
 }
 
 .logo-text {
   font-family: 'GoudyOldStyle', serif;
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   color: var(--gold);
 }
 
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   background: none;
   border: none;
   color: var(--gold);
@@ -174,15 +165,15 @@ a:hover {
   display: flex;
   gap: 2rem;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   font-family: 'GoudyOldStyle', serif;
+  font-weight: 500;
   color: var(--gold-light);
   text-decoration: none;
-  font-weight: 500;
 }
 
 .nav-links a:hover {
@@ -191,94 +182,4 @@ a:hover {
 
 
 /* ============================= */
-/*         MOBIL-VY (≤768px)     */
-/* ============================= */
-
-@media (max-width: 768px) {
-  .divider {
-    width: 100vw;
-    margin: 2rem 0;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(14, 14, 14, 0.9);
-    z-index: 1000;
-    padding: 0.5rem 1rem;
-    width: 100%;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(14, 14, 14, 0.95);
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 1rem;
-    border-top: 1px solid var(--gold-muted);
-    z-index: 999;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-
-/* ============================= */
-/*              FOOTER           */
-/* ============================= */
-
-footer {
-  margin-top: 2rem;
-  text-align: center;
-  color: var(--gold-muted);
-  font-size: 0.9rem;
-}
-
-
-/* ============================= */
-/*         STÖRRE SKÄRMAR        */
-/* ============================= */
-
-@media (min-width: 1000px) {
-  body {
-    font-size: 1.1rem;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  p, li {
-    font-size: 1.15rem;
-  }
-
-  .container {
-    max-width: 1300px;
-    padding: 3rem;
-  }
-}
+/*     MOBILMENY (enda q*
