@@ -119,7 +119,7 @@ a:hover {
   height: 1px;
   background-color: var(--gold-muted);
   width: 100%;
-  max-width: 600px;
+  width: min(100%, 600px);
   margin: 2rem auto;
 }
 
@@ -180,9 +180,6 @@ a:hover {
   text-decoration: underline;
 }
 
-body {
-  overflow-x: hidden;
-}
 
 /* ============================= */
 /*     MOBILMENY (enda q*
