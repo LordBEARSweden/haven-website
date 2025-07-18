@@ -50,27 +50,6 @@ body {
 
 
 /* ============================= */
-/*     MOBILANPASSNING (≤600px) */
-/* ============================= */
-
-@media (max-width: 600px) {
-  html, body {
-    padding: 0;
-    margin: 0;
-  }
-
-  .container {
-    max-width: 100vw;
-    width: 100vw;
-    margin: 0;
-    padding: 1rem;
-    border-radius: 0; /* kant-i-kant för mobil */
-    box-sizing: border-box;
-  }
-}
-
-
-/* ============================= */
 /*         LAYOUT / CONTAINER    */
 /* ============================= */
 
@@ -154,6 +133,7 @@ a:hover {
   text-decoration: underline;
 }
 
+
 /* ============================= */
 /*      RESPONSIV NAVIGATION     */
 /* ============================= */
@@ -162,7 +142,8 @@ a:hover {
   width: 100%;
   background-color: rgba(14, 14, 14, 0.85);
   border-bottom: 1px solid var(--gold-muted);
-  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -208,26 +189,44 @@ a:hover {
   text-decoration: underline;
 }
 
+
 /* ============================= */
-/*         MOBIL-VY              */
+/*         MOBIL-VY (≤768px)     */
 /* ============================= */
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 80px; /* skapar plats för fast meny högst upp */
+  }
+
   .menu-toggle {
     display: block;
   }
 
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(14, 14, 14, 0.9);
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+
   .nav-links {
-  transition: all 0.3s ease-in-out;
-  display: none;
-  flex-direction: column;
-  background-color: rgba(14, 14, 14, 0.95);
-  width: 100%;
-  padding: 1rem;
-  border-top: 1px solid var(--gold-muted);
-  z-index: 999;
-  position: static; /* ⬅️ viktig ändring */
-}
+    display: none;
+    flex-direction: column;
+    background-color: rgba(14, 14, 14, 0.95);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem;
+    border-top: 1px solid var(--gold-muted);
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+  }
+
   .nav-links.show {
     display: flex;
   }
@@ -235,9 +234,9 @@ a:hover {
   .nav-container {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 }
-
 
 
 /* ============================= */
