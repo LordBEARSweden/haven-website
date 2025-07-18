@@ -118,8 +118,7 @@ a:hover {
 .divider {
   height: 1px;
   background-color: var(--gold-muted);
-  width: 100%;
-  width: min(100%, 600px);
+  width: clamp(200px, 60%, 600px);
   margin: 2rem auto;
 }
 
