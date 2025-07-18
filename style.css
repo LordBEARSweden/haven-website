@@ -195,9 +195,14 @@ a:hover {
 /* ============================= */
 
 @media (max-width: 768px) {
-  body {
-    padding-top: 80px; /* skapar plats för fast meny högst upp */
+  .divider {
+    width: 100vw;
+    margin: 2rem 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
+
 
   .menu-toggle {
     display: block;
