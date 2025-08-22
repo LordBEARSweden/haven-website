@@ -44,14 +44,6 @@ html, body {
   line-height: 1.6;
 }
 
-.page-wrapper {
-  border: 2px solid var(--gold-muted); /* Guldram runt hela sidan */
-  border-radius: 12px;
-  margin: clamp(1rem, 1vw, 1rem); /* Fluidt utrymme runt sidan */
-  overflow: hidden;
-  width: auto; /* Anpassar sig till skärmens bredd */
-}
-
 
 
 /* ============================= */
