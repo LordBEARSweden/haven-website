@@ -3,8 +3,40 @@
 /* ============================= */
 
 @font-face {
-  font-family: 'GoudyOldStyle';
-  src: url('fonts/GoudyOldStyle.ttf') format('truetype');
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
 }
 
 :root {
@@ -32,7 +64,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Averia Serif Libre',serif;
   font-size: var(--font-base);
   background-color: var(--bg);
   background-image: url('kurbits-bg.png');
@@ -81,14 +113,14 @@ header img {
 /* ============================= */
 
 h1 {
-  font-family: 'GoudyOldStyle', serif;
+  font-family: 'Averia Serif Libre', serif;
   font-size: var(--font-h1);
   color: var(--gold-light);
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-family: 'GoudyOldStyle', serif;
+  font-family: 'Averia Serif Libre', serif;
   font-size: var(--font-h2);
   color: var(--gold-light);
   margin: 2rem 0 1rem 0;
@@ -148,7 +180,7 @@ a:hover {
 }
 
 .logo-text {
-  font-family: 'GoudyOldStyle', serif;
+  font-family: 'Averia Serif Libre', serif;
   font-size: clamp(1.4rem, 3vw, 1.8rem);
   color: var(--gold);
 }
@@ -171,7 +203,7 @@ a:hover {
 }
 
 .nav-links a {
-  font-family: 'GoudyOldStyle', serif;
+  font-family: 'Averia Serif Libre', serif;
   font-weight: 500;
   color: var(--gold-light);
   text-decoration: none;
