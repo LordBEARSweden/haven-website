@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Om Haven Nordic Health</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>Gåvor & Köp | Haven Nordic Health</title>
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
   <div class="container">
@@ -14,44 +14,57 @@
     <div class="corner bl"></div>
     <div class="corner br"></div>
 
-    <!-- Header med logga -->
+    <!-- Header -->
     <header>
-      <nav class="nav-wrapper">
-  <div class="nav-container">
-    <div class="logo-text">HAVEN NORDIC HEALTH</div>
-    <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="index.html">Hem</a></li>
-      <li><a href="om.html">Om</a></li>
-      <li><a href="innehall.html">Innehåll</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-  </div>
-</nav>
-      <img src="Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-    
+          <div class="menu-wrapper">
+              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+              <nav class="nav-links main">
+                  <li><a href="index.html">Hem</a></li>
+                  <li><a href="om.html">Om</a></li>
+                  <li><a href="kunskap.html">Kunskap</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
+              </nav>
+           </div>
+          <div class="logo-wrapper">
+            <img src="Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
+            <div class="logo-text">HAVEN NORDIC HEALTH</div>
+          </div>
+          
     </header>
 
-    <!-- Sidinnehåll -->
+    <!-- Main content -->
     <main>
       <h2>Kontakt</h2>
-      <p>
-        havennordichealth@gmail.com
-      </p>
+   <p>
+      Kontakta oss på 
+      <a href="mailto:havennordichealth@gmail.com">havennordichealth@gmail.com</a>
+  </p>
 
+    <a href="mailto:havennordichealth@gmail.com" class="email-button">Skicka e-post</a>
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 Haven Nordic Health</p>
     </footer>
   </div>
-</body>
-<script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
 
+  <!-- JS Toggle -->
+  <script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links.main');
+
+  // Öppna/stäng meny när hamburgaren klickas
   toggleButton.addEventListener('click', () => {
     navLinks.classList.toggle('show');
   });
+
+  // Stäng meny när man klickar utanför
+  document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+      navLinks.classList.remove('show');
+    }
+  });
 </script>
 
+</body>
 </html>

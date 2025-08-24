@@ -1,42 +1,35 @@
 /* ============================= */
 /*         FONTER & VARIABLER    */
 /* ============================= */
-
 @font-face {
   font-family: 'Averia Serif Libre';
   src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 400; font-style: normal;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
   src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+  font-weight: 700; font-style: normal;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
   src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 400; font-style: italic;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
   src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
+  font-weight: 700; font-style: italic;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
   src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 300; font-style: normal;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
   src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
+  font-weight: 300; font-style: italic;
 }
 
 :root {
@@ -44,27 +37,24 @@
   --gold: #d4af37;
   --gold-light: #f0c75e;
   --gold-muted: #b79e3b;
+  --text-light: #ffffff;        /* för titlar och viktig text */
+  --text-muted: #cccccc;        /* mindre viktig text eller brödtext */
+  --text-accent: #a8d5ba;       /* accentfärg för länkar, hover, knappar */
 
-  --max-width: 1300px;
-  --padding-inline: 1rem;
+  --max-width: 1600px;
+  --padding-inline: 2rem;
   --font-base: clamp(1rem, 2vw, 1.15rem);
   --font-h1: clamp(2rem, 5vw, 3rem);
   --font-h2: clamp(1.5rem, 4vw, 2.2rem);
 }
 
-
 /* ============================= */
 /*        BASSTILAR & RESET      */
 /* ============================= */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
+*, *::before, *::after { box-sizing: border-box; }
 html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Averia Serif Libre',serif;
+  margin: 0; padding: 0;
+  font-family: 'Averia Serif Libre', serif, 'Times New Roman', Georgia, serif;
   font-size: var(--font-base);
   background-color: var(--bg);
   background-image: url('kurbits-bg.png');
@@ -76,117 +66,46 @@ html, body {
   line-height: 1.6;
 }
 
-
-
-/* ============================= */
-/*            LAYOUT             */
-/* ============================= */
-
+/* Container */
 .container {
-  width: 100%; /* Fyller wrappern helt */
-  padding: 2rem var(--padding-inline);
-  background-color: rgba(14, 14, 14, 0.7); /* Behåll transparensen */
-  border-radius: 12px; /* Behåll rundade hörn */
-  box-sizing: border-box; /* Säkerställer att padding inte ökar bredden */
-}
-
-
-/* ============================= */
-/*            HEADER             */
-/* ============================= */
-
-header {
-  text-align: center;
-  padding-top: 2rem;
-}
-
-header img {
-  display: block;
-  margin: 2rem auto 0 auto; /* top, right, bottom, left */
-  max-width: 200px; /* eller vad du använder nu */
-  height: auto;
-}
-
-
-/* ============================= */
-/*         TYPOGRAFI             */
-/* ============================= */
-
-h1 {
-  font-family: 'Averia Serif Libre', serif;
-  font-size: var(--font-h1);
-  color: var(--gold-light);
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-family: 'Averia Serif Libre', serif;
-  font-size: var(--font-h2);
-  color: var(--gold-light);
-  margin: 2rem 0 1rem 0;
-}
-
-p, li {
-  margin-bottom: 1.5rem;
-}
-
-ul {
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-a {
-  color: var(--gold-light);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-/* ============================= */
-/*          DIVIDER              */
-/* ============================= */
-
-.divider {
-  height: 1px;
-  background-color: var(--gold-muted);
-  width: clamp(200px, 60%, 600px);
-  margin: 2rem auto;
-}
-
-
-/* ============================= */
-/*        NAVIGATION (fluid)     */
-/* ============================= */
-
-.nav-wrapper {
   width: 100%;
-  background:transparent;
-  border-bottom: 1px solid var(--gold-muted);
-  position: sticky;
+  max-width: var(--max-width);
+  padding: 1rem var(--padding-inline);
+  margin: 0 auto;
+  background-color: rgba(14,14,14,0.7);
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Hörnramar */
+.corner { position: absolute; width: 20px; height: 20px; border: 2px solid var(--gold); }
+.tl { top: 0; left: 0; }
+.tr { top: 0; right: 0; }
+.bl { bottom: 0; left: 0; }
+.br { bottom: 0; right: 0; }
+
+/* ============================= */
+/*       HEADER & NAVIGATION     */
+/* ============================= */
+
+/* ============================= */
+/* HEADER + MENY */
+header {
+  position: relative;
+  width: 100%;
+}
+
+/* Meny högst upp */
+.menu-wrapper {
+  position: fixed;
   top: 0;
+  right: 0;
+  padding: 0.5rem var(--padding-inline);
   z-index: 1000;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0.5rem var(--padding-inline);
-}
-
-.logo-text {
-  font-family: 'Averia Serif Libre', serif;
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
-  color: var(--gold);
-}
-
+/* Toggle-knapp */
 .menu-toggle {
-  display: none;
   font-size: 2rem;
   background: none;
   border: none;
@@ -194,25 +113,126 @@ a:hover {
   cursor: pointer;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
+/* Dropdown-menyn */
+.nav-links.main {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  flex-direction: column;
+  gap: 10px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  background-color: rgba(14,14,14,0.95);
+  border-radius: 8px;
+  align-items: flex-start;
 }
 
-.nav-links a {
-  font-family: 'Averia Serif Libre', serif;
-  font-weight: 500;
+.nav-links.main.show {
+  display: flex;
+}
+
+.nav-links.main a {
   color: var(--gold-light);
   text-decoration: none;
+  font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links.main a:hover {
   text-decoration: underline;
 }
 
+/* Logga centrerad under menyn */
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem; /* kan justeras för avstånd från toppen */
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+.logo-text {
+  margin-top: 0.25rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Main content */
+main { 
+  margin-top: 2rem; 
+  min-height: 100vh; /* fyller hela desktop-fönstret */
+  display: flex;      /* gör det flexibelt om du vill centrera innehåll vertikalt */
+  flex-direction: column;
+}
+
+main h2 { 
+  text-align: center; 
+  font-size: var(--font-h2); 
+  margin-bottom: 1.5rem; 
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  min-width: 150px;
+  max-width: 200px;
+  flex: 1 1 180px;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--gold);
+  background: rgba(212,175,55,0.1);
+  color: var(--gold-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(212,175,55,0.2);
+}
+
+/* Footer */
+footer { margin-top: 50px; text-align: center; }
+
+/* Mobil */
+@media (max-width: 768px) {
+  .cards { flex-direction: column; align-items: center; }
+}
 
 /* ============================= */
-/*     MOBILMENY (enda q*
+/*        TYPOGRAFI & FÄRGER     */
+/* ============================= */
+
+/* Rubriker */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-light);
+}
+
+/* Brödtext */
+p, li {
+  color: var(--gold-muted);
+}
+
+/* Länkar */
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
