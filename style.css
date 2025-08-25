@@ -88,8 +88,6 @@ html, body {
 /*       HEADER & NAVIGATION     */
 /* ============================= */
 
-/* ============================= */
-/* HEADER + MENY */
 header {
   position: relative;
   width: 100%;
@@ -179,30 +177,47 @@ main h2 {
 
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .card {
-  min-width: 150px;
-  max-width: 200px;
-  flex: 1 1 180px;
-  text-align: center;
-  padding: 1.5rem;
+  position: relative;
+  padding: 2rem;
+  border: 2px solid gold;
   border-radius: 12px;
-  border: 2px solid var(--gold);
-  background: rgba(212,175,55,0.1);
-  color: var(--gold-light);
-  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
   font-weight: bold;
-  transition: transform 0.3s, background 0.3s;
+  transition: 0.2s ease-in-out;
 }
-.card:hover {
-  transform: translateY(-5px);
-  background: rgba(212,175,55,0.2);
+
+.card.active {
+  cursor: pointer;
+  color: gold;
+  background: rgba(255, 255, 255, 0.05);
 }
+.card.active:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.card.inactive {
+  color: #888;
+  border-color: #555;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: not-allowed;
+}
+
+.card .tag {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: silver;
+  font-style: italic;
+}
+
 
 /* Footer */
 footer { margin-top: 50px; text-align: center; }
