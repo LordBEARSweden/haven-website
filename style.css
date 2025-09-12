@@ -78,11 +78,19 @@ html, body {
 }
 
 /* Hörnramar */
-.corner { position: absolute; width: 20px; height: 20px; border: 2px solid var(--gold); }
-.tl { top: 0; left: 0; }
-.tr { top: 0; right: 0; }
-.bl { bottom: 0; left: 0; }
-.br { bottom: 0; right: 0; }
+.corner {
+  position: absolute;
+  width: 150px;   /* Justera storleken */
+  height: auto;
+  pointer-events: none; /* så de inte stör klick */
+  opacity: 0.8; /* ev. transparens */
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; transform: rotate(90deg); }
+.bottom-left { bottom: 0; left: 0; transform: rotate(-90deg); }
+.bottom-right { bottom: 0; right: 0; transform: rotate(180deg); }
+
 
 /* ============================= */
 /*       HEADER & NAVIGATION     */
