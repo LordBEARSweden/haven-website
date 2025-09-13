@@ -228,7 +228,9 @@ main h2 {
 
 
 /* Footer */
-footer { margin-top: 50px; text-align: center; }
+footer { margin-top: 50px; text-align: center;
+  padding-bottom: 40px;
+}
 
 /* Mobil */
 @media (max-width: 768px) {
