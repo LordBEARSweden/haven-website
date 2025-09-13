@@ -261,3 +261,72 @@ a:hover {
   color: var(--text-light);
   text-decoration: underline;
 }
+
+/* Stress-sidan CSS */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #111; /* mörk bakgrund */
+  color: #f5f5dc; /* ljus text */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  flex: 1 1 300px; /* flexbaserad layout */
+}
+
+.card.exercise {
+  background-color: #222; /* lite annan färg för övningar */
+  border-left: 4px solid #d4af37; /* accentfärg Haven-guld */
+}
+
+.fact-detail {
+  background-color: #111; /* mörk bakgrund */
+  color: #f5f5dc;         /* ljus text */
+  padding: 20px 30px;
+  margin: 30px 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  line-height: 1.6;
+}
+
+.fact-detail a {
+  color: --text-accent; 
+  text-decoration: underline;
+}
+.sources {
+  background-color: #111;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.sources a {
+  color: #d4af37;
+}
+
+.infobox {
+  background-color: #fff8e1;   /* mjuk gul bakgrund */
+  border-left: 4px solid #d4a017; /* markeringslinje i guld */
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.infobox h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.infobox p {
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+
