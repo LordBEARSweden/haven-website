@@ -115,7 +115,7 @@ header {
   font-size: 2rem;
   background: none;
   border: none;
-  color: var(--gold);
+  color: var(--text-light);
   cursor: pointer;
 }
 
