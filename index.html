@@ -28,6 +28,10 @@
                   <li><a href="spirituellt.html">Spirituellt</a></li>
               </nav>
            </div>
+
+           <!-- Tillbaka-knapp -->
+            <button class="back-button" onclick="history.back()">←</button>
+
           <div class="logo-wrapper">
             <img src="Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
             <div class="logo-text">HAVEN NORDIC HEALTH</div>
@@ -75,21 +79,24 @@
 
   <!-- JS Toggle -->
   <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links.main');
 
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+    // Öppna/stäng meny när hamburgaren klickas
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
 
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-</script>
+    // Stäng meny när man klickar utanför
+    document.addEventListener('click', (event) => {
+      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+        navLinks.classList.remove('show');
+      }
+    });
+
+    
+
+  </script>
 
 </body>
 </html>

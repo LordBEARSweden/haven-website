@@ -118,6 +118,11 @@ header {
   color: var(--text-light);
   cursor: pointer;
 }
+.menu-toggle:hover {
+  transform: scale(1.2);  /* samma effekt som back-knappen */
+  transition: transform 0.2s ease-in-out;
+}
+
 
 /* Dropdown-menyn */
 .nav-links.main {
@@ -148,6 +153,24 @@ header {
 .nav-links.main a:hover {
   text-decoration: underline;
 }
+
+.back-button {
+  position: fixed;        /* följer med vid scroll */
+  top: 0.1rem;            /* justera vertikalt */
+  left: 2rem;           /* justera horisontellt */
+  background: none;       /* ingen bakgrund */
+  border: none;           /* ingen ram */
+  color: white;           /* vit färg */
+  font-size: 3rem;      /* stor pil */
+  cursor: pointer;
+  z-index: 1001;          /* ovanför menyn om behövs */
+  padding: 0;             /* ingen extra padding */
+}
+.back-button:hover {
+  transform: scale(1.2);  /* liten förstoring på hover */
+}
+
+
 
 /* Logga centrerad under menyn */
 .logo-wrapper {
