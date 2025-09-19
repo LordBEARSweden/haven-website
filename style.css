@@ -156,7 +156,7 @@ header {
 
 .back-button {
   position: fixed;        /* följer med vid scroll */
-  top: 0.3rem;            /* justera vertikalt */
+  top: 0.7rem;            /* justera vertikalt */
   left: 2rem;           /* justera horisontellt */
   background: none;       /* ingen bakgrund */
   border: none;           /* ingen ram */
