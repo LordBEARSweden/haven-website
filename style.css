@@ -156,12 +156,12 @@ header {
 
 .back-button {
   position: fixed;        /* följer med vid scroll */
-  top: 0.1rem;            /* justera vertikalt */
+  top: 0.3rem;            /* justera vertikalt */
   left: 2rem;           /* justera horisontellt */
   background: none;       /* ingen bakgrund */
   border: none;           /* ingen ram */
   color: white;           /* vit färg */
-  font-size: 3rem;      /* stor pil */
+  font-size: 2rem;      /* stor pil */
   cursor: pointer;
   z-index: 1001;          /* ovanför menyn om behövs */
   padding: 0;             /* ingen extra padding */
