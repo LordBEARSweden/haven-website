@@ -183,24 +183,41 @@ main h2 {
   margin-bottom: 1.5rem; 
 }
 
-
+/* Kunskapssidan (grid) */
 .cards {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
+
+
+/* Stress/Depression-sidorna (flex) */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Bas-stil för alla kort */
 .card {
   position: relative;
-  padding: 2rem;
-  border: 2px solid gold;
-  border-radius: 12px;
+  flex: 1 1 300px;              /* flexbaserad layout */
+  padding: 2rem;                /* enhetlig padding */
+  border: 2px solid gold;       /* Haven-guld */
+  border-radius: 20px;          /* rundade hörn */
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
+  background-color: #111;       /* mörk bakgrund */
+  color: #f5f5dc;               /* ljus text */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   transition: 0.2s ease-in-out;
 }
 
+/* Aktiva kort */
 .card.active {
   cursor: pointer;
   color: gold;
@@ -211,13 +228,22 @@ main h2 {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
+/* Inaktiva kort */
 .card.inactive {
   color: #888;
   border-color: #555;
   background: rgba(255, 255, 255, 0.02);
   cursor: not-allowed;
+  pointer-events: none; /* gör länkar helt oklickbara */
 }
 
+/* Övningskort */
+.card.exercise {
+  background-color: #222; 
+  border-left: 4px solid #d4af37;
+}
+
+/* Taggar i kort */
 .card .tag {
   display: block;
   margin-top: 0.5rem;
@@ -261,89 +287,4 @@ a:hover {
   color: var(--text-light);
   text-decoration: underline;
 }
-
-/* Stress-sidan CSS */
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  background-color: #111; /* mörk bakgrund */
-  color: #f5f5dc; /* ljus text */
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  flex: 1 1 300px; /* flexbaserad layout */
-}
-
-.card.exercise {
-  background-color: #222; /* lite annan färg för övningar */
-  border-left: 4px solid #d4af37; /* accentfärg Haven-guld */
-}
-
-.fact-detail {
-  background-color: #111; /* mörk bakgrund */
-  color: #f5f5dc;         /* ljus text */
-  padding: 20px 30px;
-  margin: 30px 0;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  line-height: 1.6;
-}
-
-.fact-detail a {
-  color: --text-accent; 
-  text-decoration: underline;
-}
-.sources {
-  background-color: #111;
-  padding: 15px 20px;
-  margin-top: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-.sources a {
-  color: #d4af37;
-}
-
-.infobox {
-  background-color: #fff8e1;   /* mjuk gul bakgrund */
-  border-left: 4px solid #d4a017; /* markeringslinje i guld */
-  padding: 1rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.infobox h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.infobox p {
-  margin: 0.5rem 0 0;
-  line-height: 1.5;
-}
-
-
-.alert-urgent {
-  background-color: #2b0000; /* mörkröd bakgrund för allvar */
-  color: #fff;
-  border-left: 6px solid #ffb3b3;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-}
-.alert-urgent h3 {
-  margin: 0 0 .5rem 0;
-  font-size: 1.05rem;
-  color: #ffffff; /* vit färg */
-}
-.alert-urgent p { margin: 0; line-height: 1.5; }
-
 
