@@ -309,7 +309,7 @@ main h2 {
 }
 
 .sources a {
-  color: #d4af37;
+  color:var(--text-accent);
 }
 
 /* Infoboxar */
