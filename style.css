@@ -57,7 +57,7 @@ html, body {
   font-family: 'Averia Serif Libre', serif, 'Times New Roman', Georgia, serif;
   font-size: var(--font-base);
   background-color: var(--bg);
-  background-image: url('kurbits-bg.png');
+  background-image: url('imagesTemp/kurbits-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
