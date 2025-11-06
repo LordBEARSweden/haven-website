@@ -3,32 +3,32 @@
 /* ============================= */
 @font-face {
   font-family: 'Averia Serif Libre';
-  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf') format('truetype');
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf') format('truetype');
   font-weight: 400; font-style: normal;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
-  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf') format('truetype');
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf') format('truetype');
   font-weight: 700; font-style: normal;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
-  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf') format('truetype');
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf') format('truetype');
   font-weight: 400; font-style: italic;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
-  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.ttf') format('truetype');
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.ttf') format('truetype');
   font-weight: 700; font-style: italic;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
-  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf') format('truetype');
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf') format('truetype');
   font-weight: 300; font-style: normal;
 }
 @font-face {
   font-family: 'Averia Serif Libre';
-  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.ttf') format('truetype');
+  src: url('/fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.ttf') format('truetype');
   font-weight: 300; font-style: italic;
 }
 
