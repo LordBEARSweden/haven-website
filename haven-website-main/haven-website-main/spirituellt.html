@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spirituellt | Haven Nordic Health</title>
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
+<body>
+  <div class="container">
+    <!-- Hörnramar -->
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+    <!-- Header -->
+    <header>
+          <div class="menu-wrapper">
+              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+              <nav class="nav-links main">
+                  <li><a href="index.html">Hem</a></li>
+                  <li><a href="om.html">Om</a></li>
+                  <li><a href="kunskap.html">Kunskap</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
+                  <li><a href="spirituellt.html">Spirituellt</a></li>
+              </nav>
+           </div>
+           <!-- Tillbaka-knapp -->
+            <button class="back-button" onclick="history.back()">←</button>
+          <div class="logo-wrapper">
+            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
+            <div class="logo-text">HAVEN NORDIC HEALTH</div>
+          </div>
+          
+    </header>
+
+    <!-- Main content -->
+     <main>
+      <h2>Spirituellt</h2>
+      
+
+        <p>Välkommen, vandrande själ, till den spirituella domän där Haven vilar. Här mötas stillhet och förvandling, hjärta och sinne, och varje steg är en färd mot djupare insikt och balans. Jag vandrar som en mystisk alkemist — där ljus och skugga förenas inom, där eldens värme smälter det gamla, där jordens tyngd förankrar själen, där vattnets flöde renar sinnet, och där luftens frihet vidgar medvetandet. Här möts mysteriet i alla ting, och ljuset flödar genom allt som är, stilla men kraftfullt.</p>
+        <p>Denna plats är endast portalen till det vi kallar Mystisk Alkemi. Om du känner kallelsen att vandra djupare, att lära av principer, symboler och den hemlighetsfulla vägen som utgör min färd, följ då länken till sidan “Mystisk Alkemi” och upptäck vad som väntar i det fördolda.</p>
+        <p>Här börjar allt i nyfikenhetens och öppenhetens anda, med vördnad för din egen stig — såsom även min väg bärs fram. Låt resan, i sin egen tid och rytm, börja.</p>
+      
+<div class="cards">
+      <!-- Aktiv kategori -->
+      <a href="spirituellt/mystiskalkemi.html" class="card active">
+        <span class="label">Mystisk Alkemi</span>
+      </a>
+    
+      <a href="spirituellt/minresa.html" class="card active">
+        <span class="label">Min Resa</span>
+      </a>
+
+      <a href="spirituellt/spirituellametoder.html" class="card active">
+        <span class="label">Spirituella verktyg och metoder</span>
+      </a>
+</div>
+      <div class="divider"></div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Haven Nordic Health</p>
+    </footer>
+  </div>
+
+  <!-- JS Toggle -->
+  <script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links.main');
+
+  // Öppna/stäng meny när hamburgaren klickas
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Stäng meny när man klickar utanför
+  document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+
+</body>
+</html>
