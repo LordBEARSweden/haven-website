@@ -213,153 +213,143 @@ main h2 {
 
 /* Kort-layout */
 .cards {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+display: grid;
+gap: 1rem;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* fluid, anpassar antal kort per rad */
 }
 
 .card {
-  position: relative;
-  padding: 2rem;
-  border: 2px solid gold;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: 0.2s ease-in-out;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+position: relative;
+padding: 2rem;
+border: 2px solid gold;
+border-radius: 20px;  /* behållen större radius */
+text-align: center;
+font-size: 1.2rem;
+font-weight: bold;
+transition: 0.2s ease-in-out;
+word-wrap: break-word;
+overflow-wrap: break-word;
+background-color: #111;  /* behållen för kontrast */
+color: #f5f5dc;
+flex: 1 1 300px;  /* begränsning för minsta och största storlek */
+box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 /* Aktiva kort */
 .card.active {
-  cursor: pointer;
-  color: gold;
-  background: rgba(255, 255, 255, 0.05);
+cursor: pointer;
+color: gold;
+background: rgba(255, 255, 255, 0.05);
 }
 
 .card.active:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+transform: scale(1.05);
+box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 /* Inaktiva kort */
 .card.inactive {
-  color: #888;
-  border-color: #555;
-  background: rgba(255, 255, 255, 0.02);
-  cursor: not-allowed;
+color: #888;
+border-color: #555;
+background: rgba(255, 255, 255, 0.02);
+cursor: not-allowed;
 }
 
 /* Taggar på kort */
 .card .tag {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: silver;
-  font-style: italic;
+display: block;
+margin-top: 0.5rem;
+font-size: 0.9rem;
+color: silver;
+font-style: italic;
 }
 
-/* Stress-sidan och flex-container */
+/* Flex-container för alla kort */
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* Kort-styling för stress/depression */
-.card {
-  background-color: #111;
-  color: #f5f5dc;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  flex: 1 1 300px;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
 }
 
 /* Övningskort */
 .card.exercise {
-  background-color: #222;
-  border-left: 4px solid #d4af37;
+background-color: #222;
+border-left: 4px solid #d4af37;
 }
 
 /* Faktarutor */
 .fact-detail {
-  background-color: #111;
-  color: #f5f5dc;
-  padding: 20px 30px;
-  margin: 30px 0;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  line-height: 1.6;
+background-color: #111;
+color: #f5f5dc;
+padding: 20px 30px;
+margin: 30px 0;
+border-radius: 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+line-height: 1.6;
 }
 
 .fact-detail a {
-  color: var(--text-accent); 
-  text-decoration: underline;
+color: var(--text-accent);
+text-decoration: underline;
 }
 
 /* Källor */
 .sources {
-  background-color: #111;
-  padding: 15px 20px;
-  margin-top: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+background-color: #111;
+padding: 15px 20px;
+margin-top: 20px;
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* Infoboxar */
 .infobox {
-  background-color: #fff8e1;
-  border-left: 4px solid #d4a017;
-  padding: 1rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+background-color: #fff8e1;
+border-left: 4px solid #d4a017;
+padding: 1rem;
+margin: 1.5rem 0;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .infobox h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #333;
+margin-top: 0;
+font-size: 1.2rem;
+color: #333;
 }
 
 .infobox p {
-  margin: 0.5rem 0 0;
-  line-height: 1.5;
+margin: 0.5rem 0 0;
+line-height: 1.5;
 }
 
 /* Akuta varningar */
 .alert-urgent {
-  background-color: #2b0000;
-  color: #fff;
-  border-left: 6px solid #ffb3b3;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+background-color: #2b0000;
+color: #fff;
+border-left: 6px solid #ffb3b3;
+padding: 1rem;
+margin: 1rem 0;
+border-radius: 10px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 .alert-urgent h3 {
-  margin: 0 0 .5rem 0;
-  font-size: 1.05rem;
-  color: #ffffff;
+margin: 0 0 .5rem 0;
+font-size: 1.05rem;
+color: #ffffff;
 }
 
 .alert-urgent p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-
-/* Footer */
-footer { margin-top: 50px; text-align: center;
-  padding-bottom: 40px;
+margin: 0;
+line-height: 1.5;
 }
 
 /* Mobil */
 @media (max-width: 768px) {
-  .cards { flex-direction: column; align-items: center; }
+.cards {
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* säkerställer 1-2 kort/rad */
+}
 }
 
 /* ============================= */
@@ -387,3 +377,14 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ============================= */
+/*        FOOTER                 */
+/* ============================= */
+footer { 
+  margin-top: 50px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center; /* centrera horisontellt */
+  align-items: center;     /* centrera vertikalt om höjd finns */
+  text-align: center;      /* fallback för inline-text */
+}
