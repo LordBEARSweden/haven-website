@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om | Haven Nordic Health</title>
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
+<body>
+  <div class="container">
+    <!-- Hörnramar -->
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+
+    <!-- Header -->
+    <header>
+          <div class="menu-wrapper">
+              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+              <nav class="nav-links main">
+                  <li><a href="index.html">Hem</a></li>
+                  <li><a href="om.html">Om</a></li>
+                  <li><a href="kunskap.html">Kunskap</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
+                  <li><a href="spirituellt.html">Spirituellt</a></li>
+              </nav>
+           </div>
+           <!-- Tillbaka-knapp -->
+            <button class="back-button" onclick="history.back()">←</button>
+          <div class="logo-wrapper">
+            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
+            <div class="logo-text">HAVEN NORDIC HEALTH</div>
+          </div>
+          
+    </header>
+
+    <!-- Main content -->
+     <p style="text-align: center;"> ”Ur stillhet växer min livsuppgift.<br>
+          Jag planterar ett frö större än mig själv,<br>
+          ett träd som ger skugga och kraft åt många.<br>
+          <br>
+          Haven är min gåva till världen –<br>
+          född ur prövning, buren av kärlek,<br>
+          skapad för att leva vidare när min tid är slut.<br>
+          <br>
+          De som vandrar med mig en stund<br>
+          är grenar i samma krona.<br>
+          Och en dag ska min dotter vila tryggt<br>
+          under dess lövverk,<br>
+          stolt över arvet som<br> 
+          hon en dag kommer att bära vidare.”<br> - Björn A
+        </p>
+    <main>
+      <h2>Om Haven</h2>
+      <p>
+        Haven är en fristad för återhämtning, stillhet och självläkning. Vi skapar digitalt innehåll med syfte att hjälpa människor hitta tillbaka till sig själva – genom natur, närvaro, vila och kunskap.
+      </p>
+
+      <p>
+        Projektet föddes ur en personlig resa genom utmattning, sjukdom och ett spirituellt uppvaknande. Idag är Haven en levande plattform som växer med varje steg – med visionen att en dag också bli ett retreat/spacenter i Dalarna.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>Vad vi tror på</h2>
+      <ul>
+        <li>Inre stillhet är tillgänglig för alla</li>
+        <li>Riktig återhämtning tar tid</li>
+        <li>Du behöver inte vara perfekt för att vara hel</li>
+      </ul>
+
+      <p>Vi tror på ett liv där du får vara närvarande. På riktigt.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Haven Nordic Health</p>
+    </footer>
+  </div>
+
+  <!-- JS Toggle -->
+  <script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links.main');
+
+  // Öppna/stäng meny när hamburgaren klickas
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Stäng meny när man klickar utanför
+  document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+
+</body>
+</html>

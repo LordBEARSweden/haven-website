@@ -1,0 +1,389 @@
+/* ============================= */
+/*         FONTER & VARIABLER    */
+/* ============================= */
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf') format('truetype');
+  font-weight: 400; font-style: italic;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.ttf') format('truetype');
+  font-weight: 700; font-style: italic;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf') format('truetype');
+  font-weight: 300; font-style: normal;
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.ttf') format('truetype');
+  font-weight: 300; font-style: italic;
+}
+
+:root {
+  --bg: #0e0e0e;
+  --gold: #d4af37;
+  --gold-light: #f0c75e;
+  --gold-muted: #b79e3b;
+  --text-light: #ffffff;        /* för titlar och viktig text */
+  --text-muted: #cccccc;        /* mindre viktig text eller brödtext */
+  --text-accent: #a8d5ba;       /* accentfärg för länkar, hover, knappar */
+
+  --max-width: 1600px;
+  --padding-inline: 2rem;
+  --font-base: clamp(1rem, 2vw, 1.15rem);
+  --font-h1: clamp(2rem, 5vw, 3rem);
+  --font-h2: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+/* ============================= */
+/*        BASSTILAR & RESET      */
+/* ============================= */
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  font-family: 'Averia Serif Libre', serif, 'Times New Roman', Georgia, serif;
+  font-size: var(--font-base);
+  background-color: var(--bg);
+  background-image: url('images/kurbits-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  color: var(--gold);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 1rem var(--padding-inline);
+  margin: 0 auto;
+  background-color: rgba(14,14,14,0.7);
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Hörnramar */
+.corner {
+  position: absolute;
+  width: 150px;   /* Justera storleken */
+  height: auto;
+  pointer-events: none; /* så de inte stör klick */
+  opacity: 0.8; /* ev. transparens */
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; transform: rotate(90deg); }
+.bottom-left { bottom: 0; left: 0; transform: rotate(-90deg); }
+.bottom-right { bottom: 0; right: 0; transform: rotate(180deg); }
+
+
+/* ============================= */
+/*       HEADER & NAVIGATION     */
+/* ============================= */
+
+header {
+  position: relative;
+  width: 100%;
+}
+
+/* Meny högst upp */
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.5rem var(--padding-inline);
+  z-index: 1000;
+}
+
+/* Toggle-knapp */
+.menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+}
+.menu-toggle:hover {
+  transform: scale(1.2);  /* samma effekt som back-knappen */
+  transition: transform 0.2s ease-in-out;
+}
+
+
+/* Dropdown-menyn */
+.nav-links.main {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(14,14,14,0.95);
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.nav-links.main.show {
+  display: flex;
+}
+
+.nav-links.main a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links.main a:hover {
+  text-decoration: underline;
+}
+
+.back-button {
+  position: fixed;        /* följer med vid scroll */
+  top: 0.7rem;            /* justera vertikalt */
+  left: 2rem;           /* justera horisontellt */
+  background: none;       /* ingen bakgrund */
+  border: none;           /* ingen ram */
+  color: white;           /* vit färg */
+  font-size: 2rem;      /* stor pil */
+  cursor: pointer;
+  z-index: 1001;          /* ovanför menyn om behövs */
+  padding: 0;             /* ingen extra padding */
+}
+.back-button:hover {
+  transform: scale(1.2);  /* liten förstoring på hover */
+}
+
+
+
+/* Logga centrerad under menyn */
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem; /* kan justeras för avstånd från toppen */
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+.logo-text {
+  margin-top: 0.25rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Main content */
+main { 
+  margin-top: 2rem; 
+  min-height: 100vh; /* fyller hela desktop-fönstret */
+  display: flex;      /* gör det flexibelt om du vill centrera innehåll vertikalt */
+  flex-direction: column;
+}
+
+main h2 { 
+  text-align: center; 
+  font-size: var(--font-h2); 
+  margin-bottom: 1.5rem; 
+}
+
+
+/* ============================= */
+/*           CARDS CSS           */
+/* ============================= */
+
+/* Kort-layout */
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  border: 2px solid gold;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Aktiva kort */
+.card.active {
+  cursor: pointer;
+  color: gold;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card.active:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Inaktiva kort */
+.card.inactive {
+  color: #888;
+  border-color: #555;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: not-allowed;
+}
+
+/* Taggar på kort */
+.card .tag {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: silver;
+  font-style: italic;
+}
+
+/* Stress-sidan och flex-container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Kort-styling för stress/depression */
+.card {
+  background-color: #111;
+  color: #f5f5dc;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  flex: 1 1 300px;
+}
+
+/* Övningskort */
+.card.exercise {
+  background-color: #222;
+  border-left: 4px solid #d4af37;
+}
+
+/* Faktarutor */
+.fact-detail {
+  background-color: #111;
+  color: #f5f5dc;
+  padding: 20px 30px;
+  margin: 30px 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  line-height: 1.6;
+}
+
+.fact-detail a {
+  color: var(--text-accent); 
+  text-decoration: underline;
+}
+
+/* Källor */
+.sources {
+  background-color: #111;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Infoboxar */
+.infobox {
+  background-color: #fff8e1;
+  border-left: 4px solid #d4a017;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.infobox h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.infobox p {
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+/* Akuta varningar */
+.alert-urgent {
+  background-color: #2b0000;
+  color: #fff;
+  border-left: 6px solid #ffb3b3;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.alert-urgent h3 {
+  margin: 0 0 .5rem 0;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.alert-urgent p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* Footer */
+footer { margin-top: 50px; text-align: center;
+  padding-bottom: 40px;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .cards { flex-direction: column; align-items: center; }
+}
+
+/* ============================= */
+/*        TYPOGRAFI & FÄRGER     */
+/* ============================= */
+
+/* Rubriker */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-light);
+}
+
+/* Brödtext */
+p, li {
+  color: var(--gold-muted);
+}
+
+/* Länkar */
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+

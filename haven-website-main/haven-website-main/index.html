@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index | Haven Nordic Health</title>
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
+<body>
+  <div class="container">
+    <!-- Hörnramar -->
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+
+
+    <!-- Header -->
+    <header>
+          <div class="menu-wrapper">
+              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+              <nav class="nav-links main">
+                  <li><a href="index.html">Hem</a></li>
+                  <li><a href="om.html">Om</a></li>
+                  <li><a href="kunskap.html">Kunskap</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
+                  <li><a href="spirituellt.html">Spirituellt</a></li>
+              </nav>
+           </div>
+
+           <!-- Tillbaka-knapp -->
+            <button class="back-button" onclick="history.back()">←</button>
+
+          <div class="logo-wrapper">
+            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
+            <div class="logo-text">HAVEN NORDIC HEALTH</div>
+          </div>
+          
+    </header>
+
+    <!-- Main content -->
+    <p style="text-align: center;"> En Fristad för återhämtning, närvaro, inre balans och utveckling</p>
+      <main>
+        <section>
+          <h2>Välkommen</h2>
+          <p>Haven är en plats där stillhet inte behöver skapas – den finns redan här.
+            Vi tror att inre frid uppstår naturligt när vi får vila från krav, prestation och brus. Haven erbjuder återhämtning, närvaro och fördjupning – en väg tillbaka till den stillhet som redan finns inom dig. Här finns inga färdiga former du måste passa in i, utan en trygg plats för att landa, andas och låta ditt eget inre visa vägen.
+          </p>
+          <p>Detta är ett tryggt utrymme där vi tillsammans utforskar hälsa, återhämtning och självläkning – både i det digitala och så småningom i verkliga möten.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+          <h2>Vad vi gör</h2>
+          <ul>
+            <li>videos, shorts/Reels och livestreams om hälsa, mental hälsa, återhämtning och allt annat som handlar om hälsa och välbefinnande</li>
+            <li>Innehåll om naturens kraft, meditation, tystnad, träning, kallbad och naturliga hjälpmedel</li>
+            <li>Kommande retreatcenter och Spaanläggning i Dalarna</li>
+          </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+          <h2>Följ oss</h2>
+          <p>Instagram, Threads, TikTok, YouTube och Facebook – sök på <strong>Haven Nordic Health</strong></p>
+          <p><a href="https://gofund.me/866c9bf9" target="_blank">Stöd vårt arbete här</a></p>
+        </section>
+      </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Haven Nordic Health</p>
+    </footer>
+  </div>
+
+  <!-- JS Toggle -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links.main');
+
+    // Öppna/stäng meny när hamburgaren klickas
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Stäng meny när man klickar utanför
+    document.addEventListener('click', (event) => {
+      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+        navLinks.classList.remove('show');
+      }
+    });
+
+    
+
+  </script>
+
+</body>
+</html>

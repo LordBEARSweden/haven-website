@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gåvor & Köp | Haven Nordic Health</title>
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
+<body>
+  <div class="container">
+    <!-- Hörnramar -->
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
+    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+
+
+    <!-- Header -->
+    <header>
+          <div class="menu-wrapper">
+              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+              <nav class="nav-links main">
+                  <li><a href="index.html">Hem</a></li>
+                  <li><a href="om.html">Om</a></li>
+                  <li><a href="kunskap.html">Kunskap</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
+                  <li><a href="spirituellt.html">Spirituellt</a></li>
+              </nav>
+           </div>
+           <!-- Tillbaka-knapp -->
+            <button class="back-button" onclick="history.back()">←</button>
+          <div class="logo-wrapper">
+            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
+            <div class="logo-text">HAVEN NORDIC HEALTH</div>
+          </div>
+          
+    </header>
+
+    <!-- Main content -->
+    <main>
+  <h2>Gåvor & Köp</h2>
+  <div class="cards">
+
+    <!-- Aktiv kategori -->
+    <!--<a href="E-böcker.html" class="card active">
+      <span class="label">E-böcker</span>
+    </a>-->
+    
+    <!-- Inaktiva kategorier -->
+    <div class="card inactive">
+      <span class="label">E-böcker</span>
+      <span class="tag">Kommer snart</span>
+    </div>
+
+    <div class="card inactive">
+      <span class="label">Ljud</span>
+      <span class="tag">Kommer snart</span>
+    </div>
+
+    <div class="card inactive">
+      <span class="label">Kläder</span>
+      <span class="tag">Kommer snart</span>
+    </div>
+
+    <div class="card inactive">
+      <span class="label">Saker</span>
+      <span class="tag">Kommer snart</span>
+    </div>
+
+    <div class="card inactive">
+      <span class="label">Boka</span>
+      <span class="tag">Kommer snart</span>
+    </div>
+
+    <div class="card inactive">
+      <span class="label">Gåvor</span>
+      <span class="tag">Kommer snart</span>
+    </div>
+
+  </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Haven Nordic Health</p>
+    </footer>
+  </div>
+
+  <!-- JS Toggle -->
+  <script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links.main');
+
+  // Öppna/stäng meny när hamburgaren klickas
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Stäng meny när man klickar utanför
+  document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+
+</body>
+</html>
