@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaching Philosophy | Haven Nordic Health</title>
+  <link rel="stylesheet" href="../style.css?v=7" />
+</head>
+<body>
+  <div class="container">
+    <!-- Hörnramar -->
+    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-left">
+    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
+    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
+    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+
+
+    <!-- Header -->
+    <header>
+          <div class="menu-wrapper">
+              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+              <nav class="nav-links main">
+                  <li><a href="../index.html">Hem</a></li>
+                  <li><a href="../om.html">Om</a></li>
+                  <li><a href="../kunskap.html">Kunskap</a></li>
+                  <li><a href="../coaching.html">Coaching</a></li>
+                  <li><a href="../kontakt.html">Kontakt</a></li>
+                  <li><a href="../gavorochkop.html">Gåvor & Köp</a></li>
+                  <li><a href="../spirituellt.html">Spirituellt</a></li>
+              </nav>
+           </div>
+           <!-- Tillbaka-knapp -->
+            <button class="back-button" onclick="history.back()">←</button>
+          <div class="logo-wrapper">
+            <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
+            <div class="logo-text">HAVEN NORDIC HEALTH</div>
+          </div>
+          
+    </header>
+
+    <!-- Main content -->
+      </header>
+      <main>
+        <!-- Praktiskt och bokning -->
+        <section id="Praktiskt & bokning">
+          <h2>Praktiskt och Bokning hos Haven Nordic Health</h2>
+          <p>Välkommen till Haven Nordic Healths coaching. Här får du en trygg och strukturerad start på din process mot ett mer fungerande och hållbart liv.</p>
+          
+          <div class="divider"></div>
+          
+          <section>
+            <h3>Första samtalet</h3>
+            <p>Det första samtalet är ett inledande möte där vi tillsammans ser om coaching hos Haven är rätt för dig just nu. Du får möjlighet att ställa frågor, berätta om din situation och få en tydlig bild av hur processen fungerar.</p>
+            <p>Samtalet sker i första hand digitalt via Teams och tar cirka 30–60 minuter. I särskilda fall kan det första samtalet även ske via telefon.</p>
+            <p>Pågående coaching sker digitalt via Teams med kamera, för att möjliggöra helhet, närvaro och kvalitet i processen.</p>
+          </section>
+        
+          <div class="cards">
+          
+            <a href="bokning.html" class="card active single-card">
+              <span class="label">Första samtalet</span>
+            </a>
+
+          </div>
+
+          <section>
+              <h3>Hur du bokar</h3>
+              <p>För att boka första samtal fyller du i vårt korta digitala formulär. Det hjälper oss att förbereda oss och säkerställa att vi kan ge dig bästa möjliga stöd.</p>
+              <ul>
+                  <li>[Länk till digitalt formulär / bokningskalender]</li>
+                  <li>Efter ifyllt formulär kontaktar vi dig för att bekräfta tid och eventuella praktiska detaljer</li>
+              </ul>
+          </section>
+
+          <div class="divider"></div>
+
+          <section>
+            <h3>Förberedelser för dig</h3>
+            <p>Du behöver inte vara "klar" eller ha alla svar. Det viktigaste är att du:</p>
+            <ul>
+                <li>är ärlig om din situation</li>
+                <li>är redo att stanna upp och reflektera över din vardag</li>
+                <li>är villig att följa de ramar och riktlinjer som coachingprocessen erbjuder</li>
+            </ul>
+          </section>
+
+          <div class="divider"></div>
+
+          <section>
+            <h3>Urval och ansvar</h3>
+            <p>Haven coaching är för dig som vill arbeta strukturerat och hållbart med dig själv.</p>
+            <ul>
+                <li>Om vi ser att du är i behov av annan eller mer specialiserad vård, kommer vi att hänvisa dig vidare till rätt instans.</li>
+                <li>Detta är en del av vårt ansvar och etik, och säkerställer att processen är trygg och professionell.</li>
+            </ul>
+            <p>Vi ser fram emot att träffa dig och ta första steget tillsammans mot ett mer balanserat och hållbart liv.</p>
+          </section>
+
+          <div class="divider"></div>
+        </section>
+          
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Haven Nordic Health</p>
+    </footer>
+  </div>
+
+  <!-- JS Toggle -->
+  <script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links.main');
+
+  // Öppna/stäng meny när hamburgaren klickas
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Stäng meny när man klickar utanför
+  document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+
+</body>
+</html>

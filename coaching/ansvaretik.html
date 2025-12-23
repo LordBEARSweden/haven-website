@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ansvar & Etik | Haven Nordic Health</title>
+  <link rel="stylesheet" href="../style.css?v=7" />
+</head>
+<body>
+  <div class="container">
+    <!-- Hörnramar -->
+    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-left">
+    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
+    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
+    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+
+
+    <!-- Header -->
+    <header>
+          <div class="menu-wrapper">
+              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
+              <nav class="nav-links main">
+                  <li><a href="../index.html">Hem</a></li>
+                  <li><a href="../om.html">Om</a></li>
+                  <li><a href="../kunskap.html">Kunskap</a></li>
+                  <li><a href="../coaching.html">Coaching</a></li>
+                  <li><a href="../kontakt.html">Kontakt</a></li>
+                  <li><a href="../gavorochkop.html">Gåvor & Köp</a></li>
+                  <li><a href="../spirituellt.html">Spirituellt</a></li>
+              </nav>
+           </div>
+           <!-- Tillbaka-knapp -->
+            <button class="back-button" onclick="history.back()">←</button>
+          <div class="logo-wrapper">
+            <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
+            <div class="logo-text">HAVEN NORDIC HEALTH</div>
+          </div>
+          
+    </header>
+
+    <!-- Main content -->
+      </header>
+      <main>
+        <!-- Ansvar och Etik -->
+        <section id="Ansvar & Etik">
+          <h2>Ansvar och etik hos Haven Nordic Health</h2>
+          <p>Hos Haven Nordic Health bygger coaching på tydliga ramar, ansvar och respekt – både för dig som klient och för oss som coacher. Vår intention är att skapa trygghet, transparens och hållbar utveckling.</p>
+          
+          <div class="divider"></div>
+          
+        <section>
+            <h3>Klientens ansvar</h3>
+            <p>Som klient är ditt ansvar:</p>
+            <ul>
+                <li>Att vara ärlig om din situation, behov och mål</li>
+                <li>Att delta aktivt och följa de överenskomna ramarna i coachingprocessen</li>
+                <li>Att förstå att coaching inte ersätter medicinsk eller psykiatrisk vård</li>
+                <li>Att informera om eventuell pågående behandling eller andra relevanta omständigheter</li>
+            </ul>
+            <p>Vi ser engagemang och ansvar som nyckeln till att processen fungerar.</p>
+        </section>
+        
+        <div class="divider"></div>
+
+        <section>
+            <h3>Coachens ansvar</h3>
+            <p>Som coach hos Haven Nordic Health ansvarar vi för att:</p>
+            <ul>
+                <li>Erbjuda en trygg och strukturerad process</li>
+                <li>Guida utan att ta över beslut eller ansvar</li>
+                <li>Upptäcka när annan vård eller stöd behövs och hänvisa korrekt</li>
+                <li>Upprätthålla sekretess, transparens och etiska principer</li>
+            </ul>
+            <p>Vi tar professionellt ansvar för ramarna, processen och vår närvaro.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h3>Etiska principer</h3>
+            <p>Våra grundprinciper är:</p>
+            <ul>
+                <li>Sekretess: All information delas inte med någon utanför processen utan ditt samtycke</li>
+                <li>Trygghet: Du ska alltid känna dig säker och respekterad</li>
+                <li>Transparens: Vi är tydliga med vad coaching hos Haven erbjuder och vad vi inte gör</li>
+                <li>Ansvar: Både klient och coach tar ansvar för sin roll och processens framdrift</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h3>Hänvisning till annan vård</h3>
+            <p>Om vi bedömer att du behöver annan eller mer specialiserad hjälp, kommer vi:</p>
+            <ul>
+                <li>Att tydligt och respektfullt informera om detta</li>
+                <li>Ge förslag på lämpliga instanser eller vårdgivare</li>
+                <li>Alltid prioritera din säkerhet och långsiktiga hälsa</li>
+            </ul>
+            <p>Detta är en del av vårt etiska ansvar och visar vårt engagemang för din helhet.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h3>Sammanfattning</h3>
+            <p>Ansvar och etik är kärnan i Haven Nordic Healths coaching. Genom tydliga ramar, respekt och transparens säkerställer vi att coachingprocessen är hållbar, trygg och professionell – för både dig och oss.</p>
+        </section>
+
+          
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Haven Nordic Health</p>
+    </footer>
+  </div>
+
+  <!-- JS Toggle -->
+  <script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links.main');
+
+  // Öppna/stäng meny när hamburgaren klickas
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Stäng meny när man klickar utanför
+  document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+      navLinks.classList.remove('show');
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -218,6 +218,22 @@ gap: 1rem;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* fluid, anpassar antal kort per rad */
 }
 
+/* Ny modifierad container för ensamt kort */
+.single-card {
+  flex: none;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.cards-single .card {
+  width: 100%;         /* fyller kolumnen, men påverkas inte av flex */
+  max-width: 400px;    /* begränsar kortets bredd på stora skärmar */
+  flex: none;          /* neutraliserar flex-egenskapen på ensamt kort */
+}
+
+
 .card {
 position: relative;
 padding: 2rem;
@@ -377,6 +393,16 @@ a:hover {
   text-decoration: underline;
 }
 
+strong, b {
+    font-weight: 700;
+    color: var(--gold-light);
+    background-color: rgba(212, 175, 55, 0.2); /* transparent guldton */
+    padding: 0 0.15rem; 
+    border-radius: 2px;
+}
+
+
+
 /* ============================= */
 /*        FOOTER                 */
 /* ============================= */
@@ -387,4 +413,25 @@ footer {
   justify-content: center; /* centrera horisontellt */
   align-items: center;     /* centrera vertikalt om höjd finns */
   text-align: center;      /* fallback för inline-text */
+}
+
+
+.form-intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f5f5dc;
+}
+
+.form-embed {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-embed iframe {
+  width: 100%;
+  min-height: 900px;
+  border: none;
 }
