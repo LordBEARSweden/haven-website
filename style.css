@@ -206,6 +206,16 @@ main h2 {
   margin-bottom: 1.5rem; 
 }
 
+/* ============================= */
+/*          HERO / INTRO         */
+/* ============================= */
+
+.hero-text {
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 /* ============================= */
 /*           CARDS CSS           */
@@ -399,6 +409,23 @@ strong, b {
     background-color: rgba(212, 175, 55, 0.2); /* transparent guldton */
     padding: 0 0.15rem; 
     border-radius: 2px;
+}
+
+.what-we-do {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.what-we-do-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.what-we-do-list li {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 
