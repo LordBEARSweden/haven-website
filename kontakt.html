@@ -46,7 +46,11 @@
       <h2>Kontakt</h2>
    <p>
       Kontakta oss på 
-      <a href="mailto:havennordichealth@gmail.com">havennordichealth@gmail.com</a>
+      <div class="copy-box" id="copyEmail">
+      <span>havennordichealth@gmail.com</span>
+</div>
+
+<div id="copyMsg"></div>
   </p>
 
     <a href="mailto:havennordichealth@gmail.com" class="email-button">Skicka e-post</a>
@@ -71,6 +75,22 @@
     if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
       navLinks.classList.remove('show');
     }
+  });
+</script>
+<script>
+  const box = document.getElementById("copyEmail");
+  const msg = document.getElementById("copyMsg");
+
+  box.addEventListener("click", () => {
+    const email = "havennordichealth@gmail.com";
+
+    navigator.clipboard.writeText(email).then(() => {
+      msg.textContent = "Kopierad till urklipp";
+      
+      setTimeout(() => {
+        msg.textContent = "";
+      }, 2000);
+    });
   });
 </script>
 
