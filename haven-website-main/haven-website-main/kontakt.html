@@ -50,7 +50,7 @@
     <a href="mailto:havennordichealth@gmail.com" class="email-button">Skicka e-post</a>
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Haven Nordic Health</p>
+      <p>© <span id="year"></span> Haven Nordic Health</p>
     </footer>
   </div>
 
@@ -70,6 +70,7 @@
       navLinks.classList.remove('show');
     }
   });
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>

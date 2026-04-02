@@ -170,7 +170,7 @@ Det psykologiska perspektivet visar att individer reagerar olika på stress. Tan
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Haven Nordic Health</p>
+      <p>© <span id="year"></span> Haven Nordic Health</p>
     </footer>
   </div>
 
@@ -190,6 +190,7 @@ Det psykologiska perspektivet visar att individer reagerar olika på stress. Tan
       navLinks.classList.remove('show');
     }
   });
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
