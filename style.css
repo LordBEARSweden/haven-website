@@ -499,3 +499,16 @@ footer {
   font-size: 0.85rem;
   color: #c9a24b;
 }
+
+/* Endast Koalender-widgeten på bokningssidan */
+#inline-widget-haven-nordic-health {
+    width: 100%;         /* fyller hela tillgängliga bredden */
+    min-height: 1200px;   /* justera höjd efter behov */
+    max-width: 1200px;   /* begränsar bredd på stora skärmar */
+    margin: 0 auto;      /* centrerar widgeten */
+}
+@media (max-width: 1024px) {
+  #inline-widget-haven-nordic-health {
+    min-height: 80vh; /* 80% av skärmen på surfplatta/mobil */
+  }
+}

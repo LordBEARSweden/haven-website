@@ -35,8 +35,8 @@
                   <li><a href="kunskap.html">Kunskap</a></li>
                   <li><a href="coaching.html">Coaching</a></li>
                   <li><a href="samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
                   <li><a href="bokatid.html">Boka tid</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
                   <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
                   <li><a href="spirituellt.html">Spirituellt</a></li>
               </nav>
@@ -53,36 +53,14 @@
     </header>
 
     <!-- Main content -->
-    <p style="text-align: center;"> Boka tider</p>
       <main>
         <section>
-          <div class="hero-text">
-            <p  >Haven är en plats där stillhet inte behöver skapas – den finns redan här...</p>
-            <p>När tempot sänks och kraven får vila, blir det möjligt att lyssna inåt och återknyta till det som redan finns inom dig.</p>
-            <p>Haven finns för dig som längtar efter återhämtning, fördjupning och ett mer hållbart sätt att leva. Här möts kropp, sinne och närvaro i en trygg miljö där inget behöver presteras, lösas eller förbättras i förtid.</p>
-            <p>Detta är en plats att landa. Att andas.</p>
-            <p>Och att låta ditt eget inre visa vägen vidare.</p>
-          </div>
+          <div id="inline-widget-haven-nordic-health"></div>
           
         </section>
 
         <div class="divider"></div>
 
-        <section class="what-we-do">
-          <h2>Vad vi gör</h2>
-            <ul class="what-we-do-list">
-              <li><strong>Inspiration och kunskap:</strong> om hälsa, mental balans och återhämtning.</li>
-              <li><strong>Praktiska verktyg:</strong> meditation, mindfulness, träning och naturliga hjälpmedel.</li>
-              <li><strong>Insikter om naturens kraft:</strong> hur du kan använda den för din egen balans.</li>
-              <li><strong>Produkter relaterade till hälsa och välbefinnande</strong></li>
-              <li><strong>Förhandsinformation:</strong> om vårt kommande retreatcenter och spaanläggning i Dalarna.</li>
-            </ul>
-        </section>
-
-
-        <div class="divider"></div>
-
-        
       </main>
 
     <!-- Footer -->
@@ -109,8 +87,15 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
-
   </script>
-
+  <script>
+    window.Koalendar = window.Koalendar || function() {(Koalendar.props = Koalendar.props || []).push(arguments)
+  };
+    Koalendar('inline', {
+    "url":"https://koalendar.com/e/haven-nordic-health",
+    "selector":"#inline-widget-haven-nordic-health",
+  });
+</script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
 </body>
 </html>

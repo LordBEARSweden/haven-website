@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coaching Philosophy | Haven Nordic Health</title>
+  <title>Praktiskt | Haven Nordic Health</title>
   <link rel="stylesheet" href="../style.css?v=7" />
 </head>
 <body>
@@ -44,9 +44,9 @@
     <!-- Main content -->
       </header>
       <main>
-        <!-- Praktiskt och bokning -->
-        <section id="Praktiskt & bokning">
-          <h2>Praktiskt och Bokning hos Haven Nordic Health</h2>
+        <!-- Praktiskt -->
+        <section id="Praktiskt">
+          <h2>Praktiskt</h2>
           <p>Välkommen till Haven Nordic Healths coaching. Här får du en trygg och strukturerad start på din process mot ett mer fungerande och hållbart liv.</p>
           
           <div class="divider"></div>
@@ -57,38 +57,24 @@
             <p>Samtalet sker i första hand digitalt via Teams och tar cirka 30–60 minuter. I särskilda fall kan det första samtalet även ske via telefon.</p>
             <p>Pågående coaching sker digitalt via Teams med kamera, för att möjliggöra helhet, närvaro och kvalitet i processen.</p>
           </section>
-        
-          <div class="cards">
-          
-              <!--
-              <a href="bokning.html" class="card active single-card">
-                <span class="label">Första samtalet</span>
-              </a> 
-                -->
-
-              <div class="card inactive">
-                <span class="label">Första samtalet</span>
-                <span class="tag">Kommer snart</span>
-              </div>
-             </div>
-         
 
           <section>
               <h3>Hur du bokar</h3>
-              <p>Första steget är att fylla i vårt digitala formulär för första samtal. Det ger oss en grundläggande bild av din situation och hjälper oss att avgöra om coaching hos Haven är rätt för dig just nu.</p>
-              <p>När formuläret är inskickat går vi igenom dina svar och återkommer med förslag på tid samt eventuella praktiska detaljer inför samtalet.</p>
+              <p>Bokning sker via <strong>Boka tid</strong> knappen längst ned till höger på sidan.</p>
+
+            
           </section>
 
           <div class="divider"></div>
 
           <section>
               <h3>Priser</h3>
-              <p>Första samtalet är kostnadsfritt.</p>
+              <p>Inledande är kostnadsfritt.</p>
               <p>Detta samtal är till för att vi tillsammans ska avgöra om coaching hos Haven är rätt för dig just nu.</p>
               <p>Pågående coaching</p>
               <ul>
                   <li>Pris per session: 1 100 kr</li>
-                  <li>Tid: cirka 60 minuter</li>
+                  <li>Tid: cirka 50 minuter</li>
                   <li>Format: digitalt via Teams</li>
               </ul>
               <p>Coaching sker vanligtvis en gång per vecka. Antalet sessioner anpassas efter dina behov och den överenskommelse vi gör tillsammans efter det första samtalet.</p>
@@ -146,6 +132,21 @@
   });
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<!-- Koalendar Popup Widget Start -->
+<script>window.Koalendar = window.Koalendar || function(){(Koalendar.props = Koalendar.props || []).push(arguments)};</script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('widget', {
+    "url": "https://koalendar.com/e/haven-nordic-health",
+    "text": "Boka tid",
+    "shape": "rounded-full",
+    "backgroundColor": "#d4af37",
+    "textColor": "#000000",
+    "position": "bottom-right",
+    "icon": "calendar"
+  });
+</script>
+<!-- Koalendar Popup Widget End -->
 
 </body>
 </html>

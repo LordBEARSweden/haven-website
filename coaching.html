@@ -49,26 +49,13 @@
       <div class="divider"></div>
 
          <section>
-            <h3>Första samtalet</h3>
-            <p>Det första samtalet är ett kostnadsfritt inledande möte där vi tillsammans ser om coaching hos Haven är rätt för dig just nu. Du får möjlighet att ställa frågor, berätta om din situation och få en tydlig bild av hur processen fungerar.</p>
+            <h3>Introduktionssamtal</h3>
+            <p>Introduktionssamtalet är ett kostnadsfritt inledande möte där vi tillsammans ser om coaching hos Haven är rätt för dig just nu. Du får möjlighet att ställa frågor, berätta om din situation och få en tydlig bild av hur processen fungerar.</p>
             <p>Samtalet sker i första hand digitalt via Teams och tar cirka 30–60 minuter. I särskilda fall kan det första samtalet även ske via telefon.</p>
+            <p>Bokning av ett intriduktionssamtal sker via <strong>boka tid</strong> knappen längst ned i det högra hörnet på sidan</p>
             <p>Pågående coaching sker digitalt via Teams med kamera, för att möjliggöra helhet, närvaro och kvalitet i processen.</p>
+            <p>Bokning av ett coachingsamtal sker även dessa via <strong>boka tid</strong> knappen längst ned i det högra hörnet på sidan</p>
           </section>
-      <section>
-          <div class="cards">
-          
-              <!--
-              <a href="bokning.html" class="card active single-card">
-                <span class="label">Första samtalet</span>
-              </a> 
-                -->
-
-              <div class="card inactive">
-                <span class="label">Första samtalet</span>
-                <span class="tag">Kommer snart</span>
-              </div>
-             </div>
-      </section>
 
         <section>
           <h4>Coaching hos oss passar dig som:</h4>
@@ -117,7 +104,7 @@
       </a>
 
       <a href="coaching/praktisktbokning.html" class="card active">
-        <span class="label">Praktiskt & Bokning</span>
+        <span class="label">Praktiskt</span>
       </a>
 </div>
       <div class="divider"></div>
@@ -147,6 +134,21 @@
   });
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<!-- Koalendar Popup Widget Start -->
+<script>window.Koalendar = window.Koalendar || function(){(Koalendar.props = Koalendar.props || []).push(arguments)};</script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('widget', {
+    "url": "https://koalendar.com/e/haven-nordic-health",
+    "text": "Boka tid",
+    "shape": "rounded-full",
+    "backgroundColor": "#d4af37",
+    "textColor": "#000000",
+    "position": "bottom-right",
+    "icon": "calendar"
+  });
+</script>
+<!-- Koalendar Popup Widget End -->
 
 </body>
 </html>

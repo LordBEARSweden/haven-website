@@ -48,23 +48,6 @@
      
       <div class="divider"></div>
 
-
-      <section>
-          <div class="cards">
-          
-              <!--
-              <a href="" class="card active single-card">
-                <span class="label">Boka samtal</span>
-              </a> 
-                -->
-
-              <div class="card inactive">
-                <span class="label">Boka samtal</span>
-                <span class="tag">Kommer snart</span>
-              </div>
-             </div>
-      </section>
-
     <section>
         <h4>Samtalsstöd hos oss passar dig som:</h4>
         <ul>
@@ -80,6 +63,8 @@
 
         <p>Här får du ett tryggt utrymme att tala om det som är viktigt för dig just nu. Samtalsstödet är strukturerat på ett enkelt sätt, där fokus ligger på att du får reflektera och ventilera – alltid med respekt för din egen process och utan press på prestation.</p>
 
+        <p>Bokning av tid för samtalsstöd sker via <Strong>Boka tid</Strong> knappen längst ner i det högra hörnet på sidan</p>
+        <p>Priset för samtalsstöd är 1000 kr/sessison</p>
 
         <div class="divider"></div>
 
@@ -122,6 +107,21 @@
   });
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<!-- Koalendar Popup Widget Start -->
+<script>window.Koalendar = window.Koalendar || function(){(Koalendar.props = Koalendar.props || []).push(arguments)};</script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('widget', {
+    "url": "https://koalendar.com/e/haven-nordic-health",
+    "text": "Boka tid",
+    "shape": "rounded-full",
+    "backgroundColor": "#d4af37",
+    "textColor": "#000000",
+    "position": "bottom-right",
+    "icon": "calendar"
+  });
+</script>
+<!-- Koalendar Popup Widget End -->
 
 </body>
 </html>
