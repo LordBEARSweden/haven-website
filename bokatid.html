@@ -88,14 +88,8 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-  <script>
-    window.Koalendar = window.Koalendar || function() {(Koalendar.props = Koalendar.props || []).push(arguments)
-  };
-    Koalendar('inline', {
-    "url":"https://koalendar.com/e/haven-nordic-health",
-    "selector":"#inline-widget-haven-nordic-health",
-  });
-</script>
-<script async src="https://koalendar.com/assets/widget.js"></script>
+  <script>window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};</script>
+  <script async src="https://koalendar.com/assets/widget.js"></script>
+  <script>Koalendar('inline', {"url":"https://koalendar.com/e/haven-nordic-health","selector":"#inline-widget-haven-nordic-health"});</script>
 </body>
 </html>
