@@ -465,7 +465,7 @@ footer {
 
 
 /* ============================= */
-/*        Copy E-mail            */
+/*        Copy-box styling       */
 /* ============================= */
 .copy-box {
   display: inline-flex;
@@ -478,6 +478,7 @@ footer {
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 0.95rem;
+  margin-bottom: 10px; /* separation mellan knapparna */
 }
 
 .copy-box:hover {
@@ -485,7 +486,7 @@ footer {
   border-color: #e0b95a;
 }
 
-.copy-icon {
+.copy-box .copy-icon {
   opacity: 0.7;
   transition: opacity 0.2s ease;
 }
@@ -494,10 +495,17 @@ footer {
   opacity: 1;
 }
 
-#copyMsg {
-  margin-top: 8px;
-  font-size: 0.85rem;
+/* Telefonnummer i guld */
+.phone-box {
   color: #c9a24b;
+  border-color: #c9a24b;
+}
+
+/* Öppettider */
+.opening-hours {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #fff; /* vit text mot mörk bakgrund */
 }
 
 /* Endast Koalender-widgeten på bokningssidan */
@@ -512,3 +520,4 @@ footer {
     min-height: 80vh; /* 80% av skärmen på surfplatta/mobil */
   }
 }
+
