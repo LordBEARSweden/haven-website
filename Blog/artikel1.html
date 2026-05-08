@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>spirituellametoder | Haven Nordic Health</title>
+  <title>Haven Nordic Health</title>
   <link rel="stylesheet" href="../style.css?v=7" />
 </head>
 <body>
@@ -13,6 +13,7 @@
     <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
     <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
     <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
 
 
     <!-- Header -->
@@ -32,8 +33,10 @@
                   <li><a href="../spirituellt.html">Spirituellt</a></li>
               </nav>
            </div>
+
            <!-- Tillbaka-knapp -->
             <button class="back-button" onclick="history.back()">←</button>
+
           <div class="logo-wrapper">
             <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
             <div class="logo-text">HAVEN NORDIC HEALTH</div>
@@ -42,10 +45,23 @@
     </header>
 
     <!-- Main content -->
-      </header>
-      <main>
-        <!-- Spirituella verktyg och metoder-sidan -->
-        
+            <main class="article-content">
+  <h1>Stress i vardagen – varför återhämtning är viktigt</h1>
+  <p class="article-date">2026-05-08</p>
+
+  <p>Vi lever i ett samhälle där tempot aldrig verkar sakta ner. Mail, notiser, deadlines och krav på att alltid prestera tar mer energi än vi ofta inser. Stressen påverkar både kropp och sinne – sömn, koncentration och kreativitet tar stryk, och känslan av närvaro försvinner.</p>
+
+  <p>Men det finns ett kraftfullt motmedel: <strong>återhämtning</strong>. Att ge sig själv utrymme att andas, reflektera och ladda om är inte ett lyxigt alternativ – det är ett fundament för hälsa och balans. Det kan vara små pauser under dagen, en promenad i naturen, meditation, yoga eller bara tid att vara med sina egna tankar.</p>
+
+  <p>På <strong>Haven Nordic Health</strong> tror vi på att skapa medvetna stunder för återhämtning. Vi hjälper dig hitta vägar att balansera vardagens krav med inre lugn, så att du kan känna dig hel, närvarande och levande.</p>
+
+  <p><strong>Fråga till dig:</strong> Hur ger du dig själv utrymme för återhämtning? Dela dina tankar i kommentarsfältet på våra sociala medier – vi vill höra din erfarenhet.</p>
+
+  <div class="read-more-section">
+    <a href="index.html">← Tillbaka till Bloggen</a>
+  </div>
+</main>
+
 
     <!-- Footer -->
     <footer>
@@ -55,22 +71,23 @@
 
   <!-- JS Toggle -->
   <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links.main');
 
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+    // Öppna/stäng meny när hamburgaren klickas
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
 
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    // Stäng meny när man klickar utanför
+    document.addEventListener('click', (event) => {
+      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+        navLinks.classList.remove('show');
+      }
+    });
 
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  </script>
 </body>
 </html>

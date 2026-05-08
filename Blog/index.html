@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>spirituellametoder | Haven Nordic Health</title>
+  <title>Haven Nordic Health</title>
   <link rel="stylesheet" href="../style.css?v=7" />
 </head>
 <body>
@@ -13,6 +13,7 @@
     <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
     <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
     <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
 
 
     <!-- Header -->
@@ -32,8 +33,10 @@
                   <li><a href="../spirituellt.html">Spirituellt</a></li>
               </nav>
            </div>
+
            <!-- Tillbaka-knapp -->
             <button class="back-button" onclick="history.back()">←</button>
+
           <div class="logo-wrapper">
             <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
             <div class="logo-text">HAVEN NORDIC HEALTH</div>
@@ -41,11 +44,31 @@
           
     </header>
 
+        <h2 style="text-align: center;">BLOG</h2>
     <!-- Main content -->
-      </header>
       <main>
-        <!-- Spirituella verktyg och metoder-sidan -->
+        <section class="blog-list">
+
+  <!-- Artikel 1 -->
+  <article class="blog-item">
+    <h2><a href="artikel1.html">Stress i vardagen – varför återhämtning är viktigt</a></h2>
+    <p class="blog-date">2026-05-08</p>
+    <p>Kort introduktion till hur stress påverkar oss och varför återhämtning är fundamentalt för hälsa och balans…</p>
+    <a href="artikel1.html" class="read-more">Läs mer →</a>
+  </article>
+
+  <!-- Artikel 2
+  <article class="blog-item">
+    <h2><a href="artikel2.html">Mindfulness i praktiken – enkla övningar för vardagen</a></h2>
+    <p class="blog-date">2026-05-15</p>
+    <p>Så kan du integrera mindfulness i din dagliga rutin för mer närvaro och mindre stress…</p>
+    <a href="artikel2.html" class="read-more">Läs mer →</a>
+  </article> -->
+
+  <!-- Fler artiklar läggs till på samma sätt -->
+</section>
         
+      </main>
 
     <!-- Footer -->
     <footer>
@@ -55,22 +78,23 @@
 
   <!-- JS Toggle -->
   <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links.main');
 
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+    // Öppna/stäng meny när hamburgaren klickas
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
 
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    // Stäng meny när man klickar utanför
+    document.addEventListener('click', (event) => {
+      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
+        navLinks.classList.remove('show');
+      }
+    });
 
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  </script>
 </body>
 </html>

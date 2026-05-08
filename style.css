@@ -550,3 +550,78 @@ footer {
 .copy-box:hover .copy-icon {
   opacity: 1;
 }
+
+/* Container */
+.blog-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: #f5f5dc;
+  line-height: 1.7;
+}
+
+/* Blogg-index */
+.blog-list .blog-item {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #d4af37;
+  padding-bottom: 1.5rem;
+}
+
+.blog-list .blog-item h2 {
+  color: #d4af37;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-list .blog-date {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-list .read-more {
+  color: #000;
+  background-color: #d4af37;
+  padding: 0.4rem 0.8rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* blogg Artikelinnehåll */
+.article-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.article-content .article-date {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+}
+
+.article-content img {
+  max-width: 100%;
+  margin: 1rem 0;
+  display: block;
+}
+
+.article-content .read-more-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.article-content .read-more-section a {
+  text-decoration: none;
+  color: #000;
+  background-color: #d4af37;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+}
