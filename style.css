@@ -521,3 +521,32 @@ footer {
   }
 }
 
+/* Samma styling som copy-box för telefon/e-post */
+.copy-box {
+  display: inline-flex;
+  max-width: fit-content;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #c9a24b;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  margin-bottom: 10px; /* separation mellan knappar */
+  color: #c9a24b; /* guld text */
+}
+
+.copy-box:hover {
+  background-color: rgba(201, 162, 75, 0.1);
+  border-color: #e0b95a;
+}
+
+.copy-box .copy-icon {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.copy-box:hover .copy-icon {
+  opacity: 1;
+}

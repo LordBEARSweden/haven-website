@@ -68,8 +68,16 @@
   <div class="copy-box" id="copyEmail">
     <span>info@havennordichealth.se</span>
   </div>
-
   <div id="copyMsg"></div>
+
+<!-- Bankgiro på kontaktsidan -->
+<div style="margin-top: 12px; margin-bottom: 12px;">
+    <a href="javascript:void(0)" class="copy-box bankgiro-box" onclick="copyToClipboard('123-4567', this)">
+    <span class="copy-icon">🏦</span>
+    <span class="copy-text">Bankgiro: 123-4567</span>
+    </a>
+</div>
+
 </main>
     <!-- Footer -->
     <footer>
@@ -102,7 +110,7 @@
     const email = "havennordichealth@gmail.com";
 
     navigator.clipboard.writeText(email).then(() => {
-      msg.textContent = "Kopierad till urklipp";
+      msg.textContent = "E-mail kopierat!";
       
       setTimeout(() => {
         msg.textContent = "";
@@ -110,7 +118,20 @@
     });
   });
   document.getElementById('year').textContent = new Date().getFullYear();
-  
+</script>
+<script>
+function copyToClipboard(text, el) {
+  navigator.clipboard.writeText(text).then(() => {
+    let msg = el.nextElementSibling;
+    if(!msg || !msg.classList.contains('copy-msg')) {
+      msg = document.createElement('div');
+      msg.className = 'copy-msg';
+      el.parentNode.insertBefore(msg, el.nextSibling);
+    }
+    msg.textContent = 'Bankgiro kopierat!';
+    setTimeout(() => { msg.textContent = ''; }, 2000);
+  });
+}
 </script>
 
 </body>
