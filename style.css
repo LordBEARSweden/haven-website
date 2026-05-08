@@ -625,3 +625,12 @@ footer {
   border-radius: 25px;
   font-weight: bold;
 }
+
+.recovery-strategies {
+  margin-left: 2rem;
+}
+
+.recovery-strategies ul {
+  margin-left: 1.5rem;
+  list-style-type: disc; /* punkter */
+}
