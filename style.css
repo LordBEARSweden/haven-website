@@ -634,3 +634,55 @@ footer {
   margin-left: 1.5rem;
   list-style-type: disc; /* punkter */
 }
+
+/* Social section */
+.social-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.social-section h2 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Flex-container för ikoner */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* för mobil */
+}
+
+/* Gemensam storlek */
+.social-icon {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Specifik justering för Threads */
+.social-icon.threads {
+  width: 40px; /* samma som de andra */
+  height: 40px; 
+  background-size: 80%; /* skala ner loggan inom boxen */
+}
+
+/* Hover-effekt */
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2); /* kan ändras till guldfärg via filter om du vill */
+  cursor: pointer;
+}
+
+/* Specifika logotyper */
+.social-icon.instagram { background-image: url('images/Instagram-Logo.wine.svg'); }
+.social-icon.tiktok { background-image: url('images/TikTok-Logo.wine.svg'); }
+.social-icon.youtube { background-image: url('images/YouTube-Icon-Full-Color-Logo.wine.svg'); }
+.social-icon.threads { background-image: url('images/threads-logo-white.svg'); }
+.social-icon.facebook { background-image: url('images/Facebook-f_Logo-Blue-Logo.wine.svg'); }
