@@ -54,16 +54,7 @@
           
     </header>
 
-    <!-- Main content -->
-      <main>
-        <section>
-          <div id="inline-widget-haven-nordic-health-3"></div>
-
-        </section>
-
-        <div class="divider"></div>
-
-      </main>
+    
 
     <!-- Footer -->
     <footer>
@@ -89,10 +80,8 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
   </script>
-  <script>window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};</script>
-  <script async src="https://koalendar.com/assets/widget.js"></script>
-  <script>Koalendar('inline', {"url":"https://koalendar.com/e/haven-nordic-health-3","selector":"#inline-widget-haven-nordic-health-3"});</script>
   
 </body>
 </html>
