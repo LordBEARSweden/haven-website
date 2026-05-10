@@ -720,19 +720,47 @@ footer {
   color: #ddd; /* lätt kontrast mot bakgrund */
 }
 
-/* Donation-sidan */
+/* ============================= */
+/*       Stöd Haven-sidan        */
+/* ============================= */
+
 .donation-page {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 800px;            /* begränsar bredd för läsbarhet */
+  margin: 0 auto;              /* centrering horisontellt */
   padding: 20px;
   color: #fff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Rubriker */
+.donation-page h1,
+.donation-page h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Brödtext */
+.donation-page > p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Sektioner */
 .donation-section {
+  width: 100%;
   margin-top: 40px;
 }
 
+/* Copy-box / Bankgiro */
 .copy-box-container {
+  display: flex;
+  justify-content: center; /* centrera horisontellt */
   margin: 12px 0;
 }
 
@@ -747,12 +775,13 @@ footer {
   transition: all 0.2s ease;
   color: #c9a24b;
   text-decoration: none;
+  font-size: 0.95rem;
 }
 
 .copy-box:hover {
   background-color: rgba(201, 162, 75, 0.1);
   border-color: #e0b95a;
-  color: #fff; /* Byt text till vit vid hover */
+  color: #fff; /* vit text på hover */
 }
 
 .copy-box .copy-icon {
@@ -764,18 +793,57 @@ footer {
   opacity: 1;
 }
 
+/* Digital betalning */
+.digital-payment {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 12px 0;
+  flex-wrap: wrap; /* bryter automatiskt på små skärmar */
+}
+
 .digital-payment .donate-btn {
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 18px;
   background-color: #c9a24b;
   color: #000;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.2s ease;
+  margin: 5px; /* separation mellan flera knappar */
 }
 
 .digital-payment .donate-btn:hover {
   background-color: #e0b95a;
   color: #000;
+}
+
+/* Projektrutor (för framtida specifika insamlingar) */
+.project {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrera innehåll */
+}
+
+.project h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.project p {
+  text-align: center;
+  max-width: 700px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Kopiera funktion för Bankgiro */
+.copy-msg {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #c9a24b;
+  text-align: center;
 }
