@@ -54,6 +54,52 @@
           
     </header>
 
+    <main class="donation-page">
+
+  <h1>Stöd Haven</h1>
+  <p>Haven finns för att skapa utrymme för barn, unga och hälsa. Ditt stöd hjälper oss att fortsätta vårt arbete och starta projekt som gör skillnad. Du kan bidra på flera sätt:</p>
+
+  <!-- Generell gåva -->
+  <section class="donation-section">
+    <h2>Gåva</h2>
+    <p>Om du vill bidra till den generella insamlingen, välj “Gåva” i digital betalning eller skriv “Gåva” i meddelandefältet på Bankgiro. Pengarna används där de bäst behövs.</p>
+    
+    <!-- Bankgiro -->
+    <div class="copy-box-container">
+      <a href="javascript:void(0)" class="copy-box" onclick="copyToClipboard('5247-0390', this)">
+        <span class="copy-icon">🏦</span>
+        <span class="copy-text">Bankgiro: 123-4567</span>
+      </a>
+    </div>
+
+    <!-- Digital betalning -->
+    <div class="digital-payment">
+      <a href="stripe-link-gava" target="_blank" class="donate-btn">Donera via kort / Klarna / PayPal</a>
+    </div>
+  </section>
+
+  <!-- Specifika projekt -->
+  <section class="donation-section">
+    <h2>Pågående projekt</h2>
+    <p>Om du vill stödja ett specifikt projekt, skriv namnet på projektet i meddelandefältet på Bankgiro eller välj projektets produkt i digital betalning.</p>
+
+    <!-- Exempelprojekt 
+    <div class="project">
+      <h3>Gratis bowlingkväll – Malungs Bowlingcenter</h3>
+      <p>Vi samlar in pengar för att barnfamiljer ska kunna bowla gratis under en kväll. Ange “Bowling” i meddelandefältet eller välj projektet i digital betalning.</p>
+      <div class="copy-box-container">
+        <a href="javascript:void(0)" class="copy-box" onclick="copyToClipboard('5247-0390', this)">
+          <span class="copy-icon">🏦</span>
+          <span class="copy-text">Bankgiro: 123-4567</span>
+        </a>
+      </div>
+      <div class="digital-payment">
+        <a href="stripe-link-bowling" target="_blank" class="donate-btn">Donera via kort / Klarna / PayPal</a>
+      </div>
+    </div> -->
+  </section>
+
+</main>
     
 
     <!-- Footer -->
@@ -80,8 +126,21 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
-
   </script>
+  <script>
+function copyToClipboard(text, el) {
+  navigator.clipboard.writeText(text).then(() => {
+    let msg = el.nextElementSibling;
+    if(!msg || !msg.classList.contains('copy-msg')) {
+      msg = document.createElement('div');
+      msg.className = 'copy-msg';
+      el.parentNode.insertBefore(msg, el.nextSibling);
+    }
+    msg.textContent = 'Numret kopierat!';
+    setTimeout(() => { msg.textContent = ''; }, 2000);
+  });
+}
+</script>
   
 </body>
 </html>
