@@ -864,3 +864,37 @@ footer {
   color: #c9a24b;
   text-align: center;
 }
+
+.share-buttons {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.share-buttons p {
+  margin-bottom: 10px;
+}
+
+/* Centrerar AddToAny ikoner */
+.share-buttons .a2a_kit {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Styling för ikoner */
+.a2a_kit a {
+  margin: 0;
+  border-radius: 8px;
+  padding: 6px;
+  background-color: rgba(255,255,255,0.05);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.a2a_kit a:hover {
+  transform: scale(1.1);
+  /* ingen guldfärg som du nämnde */
+  filter: brightness(1.2);
+}
