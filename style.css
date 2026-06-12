@@ -635,6 +635,36 @@ footer {
   list-style-type: disc; /* punkter */
 }
 
+.article-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 24px auto;
+  text-align: center;
+}
+
+/* Bildsystem – stabilt, responsivt och konsekvent */
+.article-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+  /* säkrar att rundning alltid visas korrekt */
+  overflow: hidden;
+}
+
+/* Caption */
+.article-image figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  font-style: italic;
+  text-align: center;
+}
+
 /* Social section */
 .social-section {
   text-align: center;
