@@ -124,34 +124,67 @@ header {
 }
 
 
-/* Dropdown-menyn */
+/* ============================= */
+/*       DROPDOWN-MENYN          */
+/* ============================= */
+
+/* Huvudnav */
 .nav-links.main {
-  display: none;
+  display: none;                 /* default: dold */
   position: absolute;
   top: 100%;
   right: 0;
   flex-direction: column;
   gap: 10px;
-  list-style: none;
   margin: 0;
   padding: 10px;
   background-color: rgba(14,14,14,0.95);
   border-radius: 8px;
   align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* premium touch */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
 }
 
+/* Visa menyn */
 .nav-links.main.show {
   display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
+/* UL i menyn – tar bort bullits */
+.nav-links.main ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* LI – inga punkter, lite spacing */
+.nav-links.main li {
+  list-style: none;
+  width: 100%;
+}
+
+/* Länkar i menyn */
 .nav-links.main a {
+  display: block;             /* större klickyta */
+  padding: 6px 10px;          /* lite luftigare */
   color: var(--gold-light);
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease, background 0.2s ease;
+  border-radius: 4px;         /* mjuka hörn på hover */
 }
 
+/* Hover-effekt */
 .nav-links.main a:hover {
-  text-decoration: underline;
+  background-color: rgba(212, 175, 55, 0.1); /* subtil guldton */
+  color: var(--text-light);
 }
 
 .back-button {
