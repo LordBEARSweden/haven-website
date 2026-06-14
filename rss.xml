@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
-  <channel>
-
-    <title>Haven Nordic Health</title>
-    <link>https://www.havennordichealth.se/blogg</link>
-    <description>Reflektioner om återhämtning, närvaro och inre balans</description>
-
-    <!-- POST 1 -->
+<channel>
+  <title>Haven Nordic Health</title>
+  <link>https://www.havennordichealth.se/blogg</link>
+  <description>Reflektioner om återhämtning, närvaro och inre balans</description>
+  
     <item>
-      <title>Exempel inlägg</title>
-      <link>https://www.havennordichealth.se/blogg/posts/exempel-inlagg</link>
-      <pubDate>Sun, 14 Jun 2026 10:00:00 +0200</pubDate>
-      <description>Kort beskrivning av inlägget.</description>
+      <title>Sömn och återhämtning – nyckeln till energi, fokus och balans i vardagen</title>
+      <link>https://www.havennordichealth.se/blogg/posts/somn-och-aterhamtning.html</link>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.</description>
     </item>
-
-  </channel>
+    <item>
+      <title>Vänskap och energi – hur våra relationer påverkar vårt välmående</title>
+      <link>https://www.havennordichealth.se/blogg/posts/vanskap-och-enegi.html</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+      <description>Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.</description>
+    </item>
+    <item>
+      <title>Energi och fokus i vardagen – nyckeln till ett balanserat liv</title>
+      <link>https://www.havennordichealth.se/blogg/posts/fokus-i-vardagen.html</link>
+      <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
+      <description>Upptäck hur dagens distraktioner och tempo dränerar din energi – och lär dig enkla sätt att återfå fokus, balans och kraft i vardagen.</description>
+    </item>
+    <item>
+      <title>Stress i vardagen – varför återhämtning är viktigt</title>
+      <link>https://www.havennordichealth.se/blogg/posts/stress-i-vardagen.html</link>
+      <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+      <description>Upptäck hur stress påverkar kropp och sinne, och varför regelbunden återhämtning är nyckeln till balans, energi och inre närvaro.</description>
+    </item>
+</channel>
 </rss>
