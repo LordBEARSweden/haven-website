@@ -1,0 +1,29 @@
+name: Generate RSS
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-rss:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run RSS generator
+        run: node scripts/generate-rss.js
+
+      - name: Commit RSS file
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add rss.xml
+          git commit -m "auto: update rss" || echo "no changes"
+          git push
