@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const POSTS_DIR = path.join(__dirname, "../blogg/posts");
+const POSTS_DIR = path.join(__dirname, "../blog");
 const OUTPUT_FILE = path.join(__dirname, "../rss.xml");
 
 const siteUrl = "https://www.havennordichealth.se";
@@ -15,19 +15,21 @@ function extractMeta(content) {
 function getPosts() {
   const files = fs.readdirSync(POSTS_DIR);
 
-  return files.map(file => {
-    const filePath = path.join(POSTS_DIR, file);
-    const content = fs.readFileSync(filePath, "utf8");
+  return files
+    .filter(file => file.endsWith(".html") && file !== "index.html")
+    .map(file => {
+      const content = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
+      const meta = extractMeta(content);
 
-    const meta = extractMeta(content);
-    if (!meta) return null;
+      if (!meta) return null;
 
-    return {
-      ...meta,
-      slug: file.replace(".html", "")
-    };
-  }).filter(Boolean)
-   .sort((a, b) => new Date(b.date) - new Date(a.date));
+      return {
+        ...meta,
+        slug: file.replace(".html", "")
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
 function buildRSS(posts) {
