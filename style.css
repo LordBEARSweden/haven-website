@@ -617,12 +617,23 @@ footer {
   font-weight: bold;
 }
 
-.read-more:hover {
+.blog-list .read-more {
+  color: #000;
   background-color: #d4af37;
-  color: #0b0b0b;
-  transform: translateY(-2px);
-  box-shadow: 0 0 18px rgba(212, 175, 55, 0.35);
+  padding: 0.4rem 0.8rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  display: inline-block;
 }
+
+.blog-list .read-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.05);
+}
+
 
 .subscribe {
   text-align: center;
@@ -984,3 +995,4 @@ footer {
   /* ingen guldfärg som du nämnde */
   filter: brightness(1.2);
 }
+
