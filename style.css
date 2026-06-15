@@ -48,6 +48,13 @@
   --font-h2: clamp(1.5rem, 4vw, 2.2rem);
 }
 
+.script-text {
+  font-family: "Allura", cursive;
+  font-size: 1.5em;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
 /* ============================= */
 /*        BASSTILAR & RESET      */
 /* ============================= */
