@@ -63,11 +63,21 @@
           </div>
           
     </header>
+        <h2 style="text-align: center;">BLOGG</h2>
+        <h3 style="text-align: center;">Följ Havens blogg</h3>
 
-        <h2 style="text-align: center;">BLOG</h2>
-        <div class="subscribe">
-            <a href="/rss.xml">Prenumerera via RSS</a>
-          </div>
+          <div class="subscribe">
+  <a href="/rss.xml">Prenumerera via RSS</a>
+
+  <button id="email-toggle">Följ via e-post</button>
+
+  <form id="email-form" class="email-form-hidden">
+    <input type="email" id="email" placeholder="Din e-post" />
+    <button type="submit">→</button>
+  </form>
+</div>
+         
+
           
     <!-- Main content -->
       <main>
@@ -134,5 +144,25 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
   </script>
+  <script>
+const toggleBtn = document.getElementById("email-toggle");
+const form = document.getElementById("email-form");
+
+toggleBtn.addEventListener("click", function () {
+  form.style.display = form.style.display === "flex" ? "none" : "flex";
+});
+
+document.addEventListener("click", function (e) {
+  if (!form || !toggleBtn) return;
+
+  const clickedInsideForm = form.contains(e.target);
+  const clickedToggle = toggleBtn.contains(e.target);
+
+  if (!clickedInsideForm && !clickedToggle) {
+    form.style.display = "none";
+  }
+});
+</script>
+<script src="/script.js"></script>
 </body>
 </html>

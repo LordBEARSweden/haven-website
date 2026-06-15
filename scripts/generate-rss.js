@@ -104,3 +104,4 @@ const rss = buildRSS(posts);
 fs.writeFileSync(OUTPUT_FILE, rss);
 
 console.log("RSS generated");
+

@@ -641,25 +641,53 @@ footer {
   filter: brightness(1.05);
 }
 
-
 .subscribe {
   text-align: center;
   margin: 20px 0 40px 0;
 }
 
-.subscribe a {
+/* GEMENSAM KNAPP-STIL (RSS + EMAIL TOGGLE) */
+.subscribe a,
+.subscribe button {
   display: inline-block;
   padding: 10px 18px;
-  border: 1px solid #c8a85a; /* guldfärg-känsla */
+  border: 1px solid #c8a85a;
   color: #c8a85a;
+  background: transparent;
   text-decoration: none;
   letter-spacing: 0.5px;
   transition: 0.2s ease;
+  cursor: pointer;
+  font: inherit;
 }
 
-.subscribe a:hover {
+/* HOVER (EXAKT SAMMA SOM RSS) */
+.subscribe a:hover,
+.subscribe button:hover {
   background: #c8a85a;
-  color: #0b0b0b; /* mörk kontrast */
+  color: #0b0b0b;
+}
+
+/* EMAIL FORM DEFAULT HIDDEN */
+.email-form-hidden {
+  display: none;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* VISAS NÄR AKTIV */
+.email-form-visible {
+  display: flex;
+}
+
+/* INPUT */
+#email {
+  padding: 10px;
+  border: 1px solid #c8a85a;
+  background: transparent;
+  color: #c8a85a;
+  outline: none;
 }
 
 /* blogg Artikelinnehåll */
