@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     body: JSON.stringify({ email })
   });
 
-  const data = await res.json();
-
   if (!res.ok) throw new Error("Request failed");
 
   console.log("Saved:", data);
