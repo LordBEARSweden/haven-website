@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avregistrera</title>
+</head>
+<body>
+
+  <h1>Avregistrering</h1>
+  <p id="status">Bearbetar...</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get("email");
+
+    const status = document.getElementById("status");
+
+    if (!email) {
+      status.textContent = "Ingen email hittades.";
+    } else {
+      fetch("https://api.github.com/repos/LordBEARSweden/haven-website/dispatches", {
+        method: "POST",
+        headers: {
+          "Accept": "application/vnd.github+json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          event_type: "unsubscribe_email",
+          client_payload: {
+            email: email
+          }
+        })
+      });
+
+      status.textContent = "Du är avregistrerad.";
+    }
+  </script>
+
+</body>
+</html>

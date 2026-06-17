@@ -1,0 +1,36 @@
+name: Subscribe Email
+
+on:
+  repository_dispatch:
+    types: [new_email]
+
+jobs:
+  subscribe:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Add email to list
+        run: |
+          EMAIL="${{ github.event.client_payload.email }}"
+          FILE="subscribers.json"
+
+          if [ ! -f "$FILE" ]; then
+            echo "[]" > $FILE
+          fi
+
+          jq --arg email "$EMAIL" '
+            if any(. == $email) then .
+            else . + [$email]
+            end
+          ' $FILE > tmp.json && mv tmp.json $FILE
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add subscribers.json
+          git commit -m "subscribe email" || echo "No changes"
+          git push

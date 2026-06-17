@@ -1,33 +1,24 @@
-const fs = require("fs");
-const path = require("path");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-const EMAIL_FILE = path.join(__dirname, "../emails.json");
+  const email = document.getElementById("email").value;
 
-function loadEmails() {
-  if (!fs.existsSync(EMAIL_FILE)) return [];
-  return JSON.parse(fs.readFileSync(EMAIL_FILE, "utf8"));
-}
+  console.log("Saving email:", email);
 
-function saveEmail(email) {
-  const emails = loadEmails();
+  await fetch("https://api.github.com/repos/LordBEARSweden/haven-website/dispatches", {
+    method: "POST",
+    headers: {
+      "Accept": "application/vnd.github+json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      event_type: "new_email",
+      client_payload: {
+        email: email
+      }
+    })
+  });
 
-  if (emails.includes(email)) {
-    return { status: "exists" };
-  }
-
-  emails.push(email);
-  fs.writeFileSync(EMAIL_FILE, JSON.stringify(emails, null, 2));
-
-  return { status: "added" };
-}
-
-// enkel test (kommer från CLI eller API senare)
-const email = process.argv[2];
-
-if (!email) {
-  console.log("No email provided");
-  process.exit(1);
-}
-
-const result = saveEmail(email);
-console.log(result);
+  alert("Tack! Du är registrerad för blog alerts.");
+  form.reset();
+});
