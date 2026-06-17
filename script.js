@@ -23,8 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("Saved:", data);
 
-  alert("Tack! Du är registrerad för blog alerts.");
-  form.reset();
+ const data = await res.json();
+
+if (data.message === "already exists") {
+  alert("Du är redan registrerad");
+  return;
+}
+
+alert("Tack! Du är registrerad");
 
 } catch (err) {
   console.error(err);
