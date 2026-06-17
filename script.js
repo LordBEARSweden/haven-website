@@ -9,30 +9,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email").value;
 
     try {
-  const res = await fetch("https://withered-mode-96d3.lord-bear.workers.dev/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ email })
-  });
+      const res = await fetch("https://withered-mode-96d3.lord-bear.workers.dev/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email })
+      });
 
-  if (!res.ok) throw new Error("Request failed");
+      const data = await res.json();
 
-  console.log("Saved:", data);
+      console.log("Saved:", data);
 
- const data = await res.json();
+      if (!res.ok) {
+        throw new Error("Request failed");
+      }
 
-if (data.message === "already exists") {
-  alert("Du är redan registrerad");
-  return;
-}
+      if (data.message === "already exists") {
+        alert("Du är redan registrerad");
+        return;
+      }
 
-alert("Tack! Du är registrerad");
+      alert("Tack! Du är registrerad");
+      form.reset();
 
-} catch (err) {
-  console.error(err);
-  alert("Något gick fel.");
-}
+    } catch (err) {
+      console.error(err);
+      alert("Något gick fel.");
+    }
   });
 });
