@@ -8,10 +8,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const email = document.getElementById("email").value;
 
-    console.log("Saving email:", email);
+    try {
+  const res = await fetch("https://withered-mode-96d3.lord-bear.workers.dev/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ email })
+  });
 
-    alert("Tack! Du är registrerad för blog alerts.");
+  const data = await res.json();
 
-    form.reset();
+  if (!res.ok) throw new Error("Request failed");
+
+  console.log("Saved:", data);
+
+  alert("Tack! Du är registrerad för blog alerts.");
+  form.reset();
+
+} catch (err) {
+  console.error(err);
+  alert("Något gick fel.");
+}
   });
 });
