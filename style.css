@@ -1031,3 +1031,15 @@ footer {
   filter: brightness(1.2);
 }
 
+.founder-image {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem auto;
+}
+
+.founder-image img {
+  width: min(100%, 420px);
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+}
