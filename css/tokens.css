@@ -1,0 +1,37 @@
+/* HAVEN NORDIC HEALTH — Design tokens
+   Samma variabler används på alla nya sidor.
+   Hero-bilden kan senare bytas mot en lokalt sparad fil.
+   Sökvägen till ett lokalt foto i denna CSS-fil börjar med ../images/.
+*/
+
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('../fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averia Serif Libre';
+  src: url('../fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+body.website-v2 {
+  --v2-bg: #0f0f0f;
+  --v2-panel: #191818;
+  --v2-panel-2: #23211f;
+  --v2-gold: #c9a36c;
+  --v2-gold-light: #dfbe85;
+  --v2-ivory: #f1ece3;
+  --v2-ivory-deep: #e5ddd0;
+  --v2-white: #fcf9f3;
+  --v2-muted: #b8b1a7;
+  --v2-border: rgba(201,163,108,.36);
+  --v2-display: "Averia Serif Libre", Georgia, serif;
+  --v2-body: "Segoe UI", system-ui, sans-serif;
+  --v2-hero-image: url("https://images.pexels.com/photos/29523898/pexels-photo-29523898.jpeg?auto=compress&cs=tinysrgb&w=1800");
+}

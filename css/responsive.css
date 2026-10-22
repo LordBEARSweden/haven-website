@@ -1,0 +1,232 @@
+/* Samlad responsiv anpassning för komponenter och startsidan. */
+
+@media (max-width:1180px) {
+  body.website-v2 .v2-pathway-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  body.website-v2 .v2-pathway-card {
+    min-height: 290px;
+  }
+
+  body.website-v2 .v2-perspective {
+    gap: 35px;
+  }
+}
+
+@media (max-width:920px) {
+  body.website-v2 .v2-header-inner {
+    min-height: 76px;
+  }
+
+  body.website-v2 .v2-brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  body.website-v2 .v2-menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    background: transparent;
+    color: var(--v2-ivory);
+    border: 0;
+    padding: 12px 0 12px 12px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  body.website-v2 .v2-menu-toggle-lines {
+    display: grid;
+    gap: 5px;
+  }
+
+  body.website-v2 .v2-menu-toggle-lines span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--v2-gold);
+  }
+
+  body.website-v2 .v2-main-navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100dvh - 76px);
+    overflow-y: auto;
+    padding: 18px clamp(22px,5vw,86px) 28px;
+    box-shadow: 0 20px 30px rgba(0,0,0,.35);
+    border-bottom: 1px solid var(--v2-border);
+    background: #161515;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  body.website-v2 .v2-main-navigation.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.website-v2 .v2-main-navigation>a:not(.v2-nav-book),body.website-v2 .v2-main-navigation summary {
+    padding: 13px 3px;
+    border-bottom: 1px solid rgba(201,163,108,.18);
+    font-size: 1rem;
+  }
+
+  body.website-v2 .v2-nav-submenu {
+    position: static;
+    box-shadow: none;
+    border: 0;
+    background: #211f1d;
+    padding: 5px 11px;
+    margin-bottom: 10px;
+  }
+
+  body.website-v2 .v2-main-navigation>.v2-nav-book {
+    align-self: start;
+    margin-top: 19px;
+  }
+
+  body.website-v2 .v2-perspective {
+    grid-template-columns: 1fr;
+  }
+
+  body.website-v2 .v2-perspective-visual {
+    min-height: 320px;
+  }
+
+  body.website-v2 .v2-footer-main {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+
+  body.website-v2 .v2-footer-about {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width:650px) {
+  body.website-v2 .v2-section {
+    padding: 70px 22px;
+  }
+
+  body.website-v2 .v2-hero {
+    min-height: 700px;
+    align-items: end;
+  }
+
+  body.website-v2 .v2-hero-photo {
+    background-position: center center;
+  }
+
+  body.website-v2 .v2-hero-shade {
+    background: linear-gradient(0deg,rgba(6,6,6,.95) 0%,rgba(6,6,6,.75) 38%,rgba(6,6,6,.13) 95%);
+  }
+
+  body.website-v2 .v2-hero-content {
+    padding: 110px 23px 103px;
+  }
+
+  body.website-v2 .v2-hero h1 {
+    font-size: clamp(2.65rem,10.5vw,4.4rem);
+  }
+
+  body.website-v2 .v2-hero-foot {
+    padding: 16px 23px;
+    font-size: .61rem;
+  }
+
+  body.website-v2 .v2-hero-foot a {
+    display: none;
+  }
+
+  body.website-v2 .v2-section-heading {
+    display: block;
+    margin-bottom: 33px;
+  }
+
+  body.website-v2 .v2-section-heading>p {
+    margin-top: 15px;
+  }
+
+  body.website-v2 .v2-pathway-grid,body.website-v2 .v2-current-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.website-v2 .v2-pathway-card {
+    min-height: 255px;
+  }
+
+  body.website-v2 .v2-perspective-visual {
+    padding: 40px 30px;
+    min-height: 315px;
+  }
+
+  body.website-v2 .v2-music {
+    display: block;
+  }
+
+  body.website-v2 .v2-music-art {
+    justify-content: center;
+    padding: 20px 0 0;
+    height: 170px;
+    gap: 9px;
+  }
+
+  body.website-v2 .v2-music-art span {
+    max-height: 145px;
+  }
+
+  body.website-v2 .v2-current-item {
+    border-right: 0;
+    padding: 29px 12px;
+  }
+
+  body.website-v2 .v2-footer-main {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    column-gap: 20px;
+    padding: 54px 0;
+  }
+
+  body.website-v2 .v2-footer-about {
+    grid-column: 1/-1;
+  }
+
+  body.website-v2 .v2-footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width:380px) {
+  body.website-v2 .v2-brand-name {
+    font-size: 1rem;
+  }
+
+  body.website-v2 .v2-brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  body.website-v2 .v2-menu-toggle>span:last-child {
+    display: none;
+  }
+
+  body.website-v2 .v2-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  body.website-v2 .v2-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  body.website-v2 *,body.website-v2 *::before,body.website-v2 *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

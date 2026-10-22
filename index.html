@@ -1,145 +1,157 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haven Nordic Health</title>
-  <link rel="stylesheet" href="style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-  <link rel="manifest" href="/site.webmanifest">
- 
-  <!-- Favicon för olika storlekar -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Haven Nordic Health – kunskap, inspiration, coaching och samtalsstöd för återhämtning, välmående och personlig utveckling.">
+  <title>Haven Nordic Health | Återhämtning, kunskap och personlig utveckling</title>
+  <link rel="manifest" href="site.webmanifest">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  
-  <!-- Google tag (gtag.js) -->
+
+  <!-- Haven 2.0 — gemensamt designsystem + startsidans specifika CSS. -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Befintlig Google Analytics. Kontrollera samtyckeshantering inför lansering. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-QFYE06CQFW');
 </script>
+
 </head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+<body class="website-v2">
+  <a class="v2-skip-link" href="#main-content">Hoppa till innehållet</a>
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="index.html">
+<img alt="" class="v2-brand-logo" height="60" src="images/Haven Transparent No buffer no text.png" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a aria-current="page" href="index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="kunskap.html">Kunskap</a>
+<a href="blog/index.html">Blogg</a>
+<a href="spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="coaching.html">Coaching</a>
+<a href="samtalsstod.html">Samtalsstöd</a>
+<a href="gavorochkop.html">Gåvor &amp; Köp</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="om.html">Om verksamheten</a>
+<a href="stodhaven.html">Stöd Haven</a>
+</div>
+</details>
+<a href="kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
 
 
+  <main id="main-content">
+<!-- HERO: bild och text är frikopplade. Byt enbart CSS-variabeln --v2-hero-image för ny bild. -->
+<section aria-labelledby="v2-hero-title" class="v2-hero">
+<div aria-hidden="true" class="v2-hero-photo"></div>
+<div aria-hidden="true" class="v2-hero-shade"></div>
+<div class="v2-hero-content">
+<p class="v2-kicker">VÄLKOMMEN TILL HAVEN NORDIC HEALTH</p>
+<h1 id="v2-hero-title">En plats att landa.<br/><em>En möjlighet att växa.</em></h1>
+<p class="v2-hero-lead">Kunskap, återhämtning och personlig vägledning för ett liv med mer närvaro, balans och utrymme att vara dig själv.</p>
+<div class="v2-actions">
+<a class="v2-button v2-button-gold" href="#upptack-haven">Utforska Haven</a>
+<a class="v2-button v2-button-ghost" href="om.html">Lär känna Haven</a>
+</div>
+</div>
+<div class="v2-hero-foot"><span>STILLHET · NATUR · NÄRVARO</span><a href="#v2-intro">Fortsätt utforska <span aria-hidden="true">↓</span></a></div>
+</section>
+<section aria-labelledby="v2-intro-title" class="v2-intro v2-section" id="v2-intro">
+<div aria-hidden="true" class="v2-section-rule"></div>
+<p class="v2-kicker">EN ANNAN TAKT</p>
+<h2 id="v2-intro-title">Här behöver du inte prestera för att få en stunds ro.</h2>
+<p>Haven är en plats där stillhet inte behöver skapas – den finns redan här. När tempot sänks och kraven får vila kan det bli lättare att lyssna inåt och återknyta till det som betyder något för dig.</p>
+<p>Här möts kunskap, reflektion och praktiska verktyg för återhämtning och utveckling. Du får utforska i din egen takt.</p>
+</section>
+<section aria-labelledby="v2-pathways-title" class="v2-pathways v2-section" id="upptack-haven">
+<div class="v2-section-heading">
+<div><p class="v2-kicker">UPPTÄCK HAVEN</p><h2 id="v2-pathways-title">Vad söker du i dag?</h2></div>
+<p>Olika behov, olika vägar. Utforska det som känns relevant för just dig.</p>
+</div>
+<div class="v2-pathway-grid">
+<a class="v2-pathway-card" href="kunskap.html"><span class="v2-pathway-number">01 <span></span> KUNSKAP</span><h3>Kunskap &amp; inspiration</h3><p>Fördjupning om hälsa, återhämtning, balans och naturens betydelse för vårt välmående.</p><span class="v2-card-link">Till kunskapsbiblioteket</span></a>
+<a class="v2-pathway-card" href="coaching.html"><span class="v2-pathway-number">02 <span></span> VÄGLEDNING</span><h3>Coaching &amp; samtalsstöd</h3><p>Personliga samtal och vägledning för reflektion, utveckling och ett mer hållbart sätt att leva.</p><span class="v2-card-link">Utforska våra tjänster</span></a>
+<a class="v2-pathway-card" href="blog/index.html"><span class="v2-pathway-number">03 <span></span> REFLEKTION</span><h3>Blogg &amp; perspektiv</h3><p>Tankar, erfarenheter och fördjupande texter om livet, välmående och personlig utveckling.</p><span class="v2-card-link">Läs bloggen</span></a>
+<a class="v2-pathway-card" href="spirituellt.html"><span class="v2-pathway-number">04 <span></span> UTFORSKANDE</span><h3>Medveten utveckling</h3><p>Utforska närvaro, filosofi och existentiella perspektiv på livet – om det intresserar dig.</p><span class="v2-card-link">Utforska vidare</span></a>
+</div>
+</section>
+<section aria-labelledby="v2-perspective-title" class="v2-perspective v2-section">
+<!-- Textbaserad redaktionell yta. Här kan vi senare sätta in ett valfritt foto eller annat motiv. -->
+<div class="v2-perspective-visual"><span aria-hidden="true" class="v2-large-quote">“</span><p>Att hitta sin egen väg börjar ibland med att få utrymme att lyssna.</p><span aria-hidden="true" class="v2-visual-rule"></span></div>
+<div class="v2-perspective-copy"><p class="v2-kicker">HAVENS FILOSOFI</p><h2 id="v2-perspective-title">Det finns mer än ett sätt att må bra.</h2><p>Vårt fokus är inte att tala om för dig hur du ska leva. Vi vill erbjuda kunskap, perspektiv och utrymme för dig att upptäcka vad som fungerar i ditt eget liv.</p><p>Genom nyfikenhet, omtanke och respekt för varje människas resa vill Haven bidra till en mer hållbar syn på välmående.</p><a class="v2-inline-link" href="om.html">Mer om Haven och vår filosofi</a></div>
+</section>
+<section aria-labelledby="v2-music-title" class="v2-music v2-section">
+<div class="v2-music-content"><p class="v2-kicker">KREATIVITET &amp; ÅTERHÄMTNING</p><h2 id="v2-music-title">När orden inte räcker till, finns också musiken.</h2><p>Musik är en del av Haven – som inspiration och som ett sätt att skapa utrymme för stillhet, känslor och reflektion.</p></div>
+<div aria-hidden="true" class="v2-music-art"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</section>
+<section aria-labelledby="v2-current-title" class="v2-current v2-section">
+<div class="v2-section-heading"><div><p class="v2-kicker">DET SOM VÄXER FRAM</p><h2 id="v2-current-title">Aktuellt hos Haven</h2></div><p>En liten inblick i några av de saker vi arbetar med just nu.</p></div>
+<!-- Enkla HTML-block. Lägg till, ta bort eller ändra fritt; gridden anpassar sig. -->
+<div class="v2-current-grid">
+<article class="v2-current-item"><h3>Haven på engelska</h3><p>Vi förbereder en engelsk version av webbplatsen för att kunna nå fler människor.</p></article>
+<article class="v2-current-item"><h3>En bok tar form</h3><p>Arbetet med en bok om välmående och personlig utveckling fortsätter.</p></article>
+<article class="v2-current-item"><h3>Mystisk Alkemi</h3><p>Vi utvecklar vidare innehållet inom Haven och Mystisk Alkemi.</p></article>
+<article class="v2-current-item"><h3>Mer på YouTube</h3><p>Vi utforskar längre videoformat med plats för mer fördjupning.</p></article>
+</div>
+</section>
+<section aria-labelledby="v2-closing-title" class="v2-closing v2-section"><p class="v2-kicker">DIN VÄG, DIN TAKT</p><h2 id="v2-closing-title">Ta nästa steg i din egen takt.</h2><p>Vill du utforska vidare, ställa en fråga eller boka ett samtal? Du är varmt välkommen.</p><div class="v2-actions"><a class="v2-button v2-button-gold" href="bokatid.html">Boka ett samtal</a><a class="v2-button v2-button-ghost" href="kontakt.html">Kontakta Haven</a></div></section>
+</main>
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                <ul>
-                  <li><a href="index.html">Hem</a></li>
-                  <li><a href="om.html">Om</a></li>
-                  <li><a href="kunskap.html">Kunskap</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
-                  <li><a href="samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="bokatid.html">Boka tid</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-                  <li><a href="stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="blog/index.html">Blogg</a></li>
-                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="kunskap.html">Kunskap</a><a href="blog/index.html">Blogg</a><a href="spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="coaching.html">Coaching</a><a href="samtalsstod.html">Samtalsstöd</a><a href="bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="stodhaven.html">Stöd Haven</a><a href="gavorochkop.html">Gåvor &amp; Köp</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
 
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-
-          <div class="logo-wrapper">
-            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
-
-    <!-- Main content -->
-    <p style="text-align: center;"> En Fristad för återhämtning, närvaro, inre balans och utveckling</p>
-      <main>
-        <section>
-          <div class="hero-text">
-            <p  >Haven är en plats där stillhet inte behöver skapas – den finns redan här...</p>
-            <p>När tempot sänks och kraven får vila, blir det möjligt att lyssna inåt och återknyta till det som redan finns inom dig.</p>
-            <p>Haven finns för dig som längtar efter återhämtning, fördjupning och ett mer hållbart sätt att leva. Här möts kropp, sinne och närvaro i en trygg miljö där inget behöver presteras, lösas eller förbättras i förtid.</p>
-            <p>Detta är en plats att landa. Att andas.</p>
-            <p>Och att låta ditt eget inre visa vägen vidare.</p>
-          </div>
-          
-        </section>
-
-        <div class="divider"></div>
-
-        <section class="what-we-do">
-          <h2>Vad vi gör</h2>
-            <ul class="what-we-do-list">
-              <li><strong>Inspiration och kunskap:</strong> om hälsa, mental balans och återhämtning</li>
-              <li><strong>Praktiska verktyg:</strong> meditation, mindfulness, träning och naturliga hjälpmedel</li>
-              <li><strong>Musik för välmående:</strong> avslappnande musik som främjar reflektion och inre stillhet</li>
-              <li><strong>Coaching & samtalsstöd</strong> Personlig vägledning och stöd för inre balans</li>
-              <li><strong>Insikter om naturens kraft:</strong> hur du kan använda den för din egen balans</li>
-              <li><strong>Produkter relaterade till hälsa och välbefinnande</strong></li>
-              <li><strong>Mystisk alkemi</strong> Spirituell vägledning och medveten utveckling</li>
-              <li><strong>Förhandsinformation:</strong> om vårt kommande retreatcenter och spaanläggning i Dalarna</li>
-            </ul>
-        </section>
-
-
-        <div class="divider"></div>
-
-        
-      </main>
-
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
-
-  <!-- JS Toggle -->
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links.main');
-
-    // Öppna/stäng meny när hamburgaren klickas
-    toggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Stäng meny när man klickar utanför
-    document.addEventListener('click', (event) => {
-      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-        navLinks.classList.remove('show');
-      }
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <!-- Koalendar Popup Widget Start -->
-<script>window.Koalendar = window.Koalendar || function(){(Koalendar.props = Koalendar.props || []).push(arguments)};</script>
+  <script defer src="js/site.js"></script>
+  <!-- Befintlig Koalendar-widget från Haven 1.0. -->
+<script>
+  window.Koalendar = window.Koalendar || function () {
+    (Koalendar.props = Koalendar.props || []).push(arguments);
+  };
+</script>
 <script async src="https://koalendar.com/assets/widget.js"></script>
 <script>
   Koalendar('widget', {
-    "url": "https://koalendar.com/e/haven-nordic-health-3",
-    "text": "Boka tid",
-    "shape": "rounded-full",
-    "backgroundColor": "#d4af37",
-    "textColor": "#000000",
-    "position": "bottom-right",
-    "icon": "calendar"
+    url: 'https://koalendar.com/e/haven-nordic-health-3',
+    text: 'Boka tid',
+    shape: 'rounded-full',
+    backgroundColor: '#c9a36c',
+    textColor: '#0f0f0f',
+    position: 'bottom-right',
+    icon: 'calendar'
   });
 </script>
-<!-- Koalendar Popup Widget End -->
 
 </body>
 </html>

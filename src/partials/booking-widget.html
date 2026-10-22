@@ -1,0 +1,18 @@
+<!-- Befintlig Koalendar-widget från Haven 1.0. -->
+<script>
+  window.Koalendar = window.Koalendar || function () {
+    (Koalendar.props = Koalendar.props || []).push(arguments);
+  };
+</script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('widget', {
+    url: 'https://koalendar.com/e/haven-nordic-health-3',
+    text: 'Boka tid',
+    shape: 'rounded-full',
+    backgroundColor: '#c9a36c',
+    textColor: '#0f0f0f',
+    position: 'bottom-right',
+    icon: 'calendar'
+  });
+</script>

@@ -1,0 +1,289 @@
+/* Gemensamma navigations-, knapp-, kort- och sidfotskomponenter. */
+
+body.website-v2 .v2-site-header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background: rgba(15,15,15,.96);
+  border-bottom: 2px solid rgba(201,163,108,.38);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+body.website-v2 .v2-header-inner {
+  max-width: 1540px;
+  min-height: 92px;
+  padding: 12px clamp(22px,4.8vw,74px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+body.website-v2 .v2-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+body.website-v2 .v2-brand-logo {
+  height: 56px;
+  width: 56px;
+  object-fit: contain;
+  flex: none;
+}
+
+body.website-v2 .v2-brand-name {
+  color: var(--v2-ivory);
+  white-space: nowrap;
+  font: 400 1.28rem/1.1 var(--v2-display);
+  letter-spacing: .07em;
+}
+
+body.website-v2 .v2-brand-name small {
+  display: block;
+  margin-top: 5px;
+  color: var(--v2-gold-light);
+  font: 600 .57rem/1.35 var(--v2-body);
+  letter-spacing: .27em;
+}
+
+body.website-v2 .v2-main-navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px,1.65vw,27px);
+  font-size: .87rem;
+  font-weight: 500;
+}
+
+body.website-v2 .v2-main-navigation>a:not(.v2-nav-book),body.website-v2 .v2-main-navigation summary {
+  display: block;
+  cursor: pointer;
+  padding: 12px 0;
+  white-space: nowrap;
+  color: #ede9e1;
+  transition: color .18s ease;
+}
+
+body.website-v2 .v2-main-navigation>a[aria-current="page"] {
+  color: var(--v2-gold-light);
+}
+
+body.website-v2 .v2-main-navigation>a:hover,body.website-v2 .v2-main-navigation summary:hover {
+  color: var(--v2-gold-light);
+}
+
+body.website-v2 .v2-nav-group {
+  position: relative;
+}
+
+body.website-v2 .v2-nav-group summary {
+  list-style: none;
+}
+
+body.website-v2 .v2-nav-group summary::-webkit-details-marker {
+  display: none;
+}
+
+body.website-v2 .v2-nav-group[open] summary {
+  color: var(--v2-gold-light);
+  border-bottom: 1px solid var(--v2-gold);
+}
+
+body.website-v2 .v2-nav-submenu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: -16px;
+  min-width: 204px;
+  padding: 10px;
+  border: 1px solid var(--v2-border);
+  background: #191818;
+  box-shadow: 0 16px 34px rgba(0,0,0,.32);
+  display: grid;
+  gap: 2px;
+}
+
+body.website-v2 .v2-nav-submenu a {
+  padding: 10px 12px;
+  color: var(--v2-ivory);
+}
+
+body.website-v2 .v2-nav-submenu a:hover {
+  background: #2e2922;
+  color: var(--v2-gold-light);
+}
+
+body.website-v2 .v2-main-navigation>.v2-nav-book {
+  background: var(--v2-gold);
+  color: #0f0f0f;
+  border: 1px solid var(--v2-gold);
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 2px;
+  transition: background .2s ease;
+}
+
+body.website-v2 .v2-main-navigation>.v2-nav-book:hover {
+  background: var(--v2-gold-light);
+  color: #101010;
+}
+
+body.website-v2 .v2-menu-toggle {
+  display: none;
+}
+
+body.website-v2 .v2-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+body.website-v2 .v2-button {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  border-radius: 2px;
+  font-size: .9rem;
+  font-weight: 650;
+  letter-spacing: .015em;
+  transition: background .2s,border-color .2s,transform .2s;
+}
+
+body.website-v2 .v2-button:hover {
+  transform: translateY(-2px);
+}
+
+body.website-v2 .v2-button-gold {
+  background: var(--v2-gold);
+  color: #0e0e0e;
+  border: 1px solid var(--v2-gold);
+}
+
+body.website-v2 .v2-button-gold:hover {
+  background: var(--v2-gold-light);
+  color: #0e0e0e;
+}
+
+body.website-v2 .v2-button-ghost {
+  background: rgba(12,12,12,.15);
+  border: 1px solid rgba(247,236,213,.72);
+  color: #faf5ed;
+}
+
+body.website-v2 .v2-button-ghost:hover {
+  background: rgba(250,247,239,.14);
+  color: #fff;
+}
+
+body.website-v2 .v2-section-rule {
+  height: 2px;
+  width: 68px;
+  background: var(--v2-gold);
+  margin-bottom: 29px;
+}
+
+body.website-v2 .v2-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  max-width: 1490px;
+  margin: 0 auto 43px;
+}
+
+body.website-v2 .v2-section-heading>p {
+  max-width: 330px;
+  color: var(--v2-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+body.website-v2 .v2-inline-link {
+  display: inline-block;
+  margin-top: 13px;
+  color: var(--v2-gold-light);
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--v2-gold);
+}
+
+body.website-v2 .v2-inline-link:hover {
+  color: #fff;
+}
+
+body.website-v2 .v2-footer {
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding: 0 clamp(22px,5vw,86px);
+  background: #0b0b0b;
+  border-top: 1px solid rgba(201,163,108,.4);
+}
+
+body.website-v2 .v2-footer-main {
+  max-width: 1490px;
+  margin: auto;
+  padding: 75px 0;
+  display: grid;
+  grid-template-columns: minmax(0,2.2fr) repeat(3,minmax(0,1fr));
+  gap: 45px;
+}
+
+body.website-v2 .v2-footer-brand {
+  font: 400 1.48rem/1.1 var(--v2-display);
+  letter-spacing: .08em;
+  color: var(--v2-white);
+  margin-bottom: 22px;
+}
+
+body.website-v2 .v2-footer-brand span {
+  display: block;
+  font: 700 .63rem/1.8 var(--v2-body);
+  letter-spacing: .2em;
+  color: var(--v2-gold-light);
+}
+
+body.website-v2 .v2-footer-about>p:last-child {
+  font-size: .9rem;
+  color: #a9a196;
+  max-width: 340px;
+}
+
+body.website-v2 .v2-footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+body.website-v2 .v2-footer-col h2 {
+  font: 700 .85rem/1.4 var(--v2-body);
+  color: var(--v2-gold-light);
+  margin-bottom: 13px;
+}
+
+body.website-v2 .v2-footer-col a {
+  color: #b7b0a7;
+  font-size: .9rem;
+}
+
+body.website-v2 .v2-footer-col a:hover {
+  color: #fff;
+}
+
+body.website-v2 .v2-footer-bottom {
+  max-width: 1490px;
+  margin: auto;
+  padding: 23px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(201,163,108,.25);
+  color: #8f8980;
+  font-size: .79rem;
+}
