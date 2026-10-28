@@ -1,148 +1,247 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samtalsstöd | Haven Nordic Health</title>
-  <link rel="stylesheet" href="style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-  <link rel="manifest" href="/site.webmanifest">
- 
-  <!-- Favicon för olika storlekar -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Sidans individuella SEO-information -->
+  <title>Samtalsstöd | Haven Nordic Health</title>
+  <meta name="description" content="Samtalsstöd hos Haven Nordic Health – ett tryggt utrymme för reflektion, vardagliga frågor och nya perspektiv, utan krav på prestation. Pris 1 000 kr per samtal.">
+
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="images/apple-touch-icon.png">
+
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="css/pages/samtalsstod.css">
+
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Befintlig Google Analytics. Kontrollera samtyckeshantering inför lansering. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-QFYE06CQFW');
 </script>
+
 </head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="index.html">Hem</a></li>
-                  <li><a href="om.html">Om</a></li>
-                  <li><a href="kunskap.html">Kunskap</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
-                  <li><a href="samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="bokatid.html">Boka tid</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-                  <li><a href="stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="blog/index.html">Blogg</a></li>
-                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-          <div class="logo-wrapper">
-            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
+<body class="website-v2">
 
-    <!-- Main content -->
-     <main>
-      <h2>Samtalsstöd</h2>
-      <H3>Samtalsstöd hos Haven Nordic Health</H3>
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
 
-      <p>Välkommen till samtalsstöd hos Haven Nordic Health. Här får du ett tryggt utrymme att samtala om det som är viktigt just nu. Fokus ligger på att lyssna, ge stöd och erbjuda perspektiv, så att du kan reflektera och landa i dina tankar. Samtalet är en enkel session där du är i centrum och får uttrycka det som känns mest angeläget.</p>  
-     
-      <div class="divider"></div>
-
-    <section>
-        <h4>Samtalsstöd hos oss passar dig som:</h4>
-        <ul>
-            <li>behöver ett tryggt utrymme för att samtala om det som är viktigt just nu</li>
-            <li>vill reflektera och få stöd eller perspektiv kring vardagliga utmaningar</li>
-            <li>är nyfiken på att landa i dina tankar och känslor utan press på prestation</li>
-        </ul>
-    </section>
-
-        <div class="divider"></div>
-
-        <p>Samtalsstöd hos Haven är inte för dig som befinner dig i akut kris eller behöver psykiatrisk vård. Om vi ser att du är i behov av annan hjälp, är vårt ansvar att vägleda dig vidare till rätt instans.</p>
-
-        <p>Här får du ett tryggt utrymme att tala om det som är viktigt för dig just nu. Samtalsstödet är strukturerat på ett enkelt sätt, där fokus ligger på att du får reflektera och ventilera – alltid med respekt för din egen process och utan press på prestation.</p>
-
-        <p>Bokning av tid för samtalsstöd sker via <Strong>Boka tid</Strong> knappen längst ner i det högra hörnet på sidan</p>
-        <p>Priset för samtalsstöd är 1000 kr/sessison</p>
-
-        <div class="divider"></div>
-
-        <h4>Vad samtalsstöd hos Haven är – och inte är</h4>
-
-        <p>Samtalsstöd hos Haven Nordic Health erbjuder en plats för reflektion, perspektiv och stöd i vardagliga frågor och utmaningar. Fokus ligger på att du ska känna dig lyssnad på, få stöd i dina tankar och landa i dina känslor.</p>
-
-        <p>Detta är inte coaching, terapi, psykologisk behandling eller krishantering. Vi arbetar inte med diagnoser, traumabearbetning eller akuta tillstånd. Samtalsstöd förutsätter att du kan delta utan risk för skada och att dina behov är av vardaglig eller reflekterande karaktär.</p>
-       
-        <p>Om vi under ett samtal bedömer att du är i behov av annan eller mer specialiserad hjälp, är det vårt ansvar att vägleda dig vidare till rätt instans.</p>
-
-        <p>Samtalsstödet är kortfattat, respektfullt och fokuserat på nuet. Vi erbjuder lyssnande, perspektiv och stöd – steg för steg – utan löften om förändring.</p>
-
-        <div class="divider"></div>
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="index.html">
+<img alt="" class="v2-brand-logo" height="60" src="images/Haven Transparent No buffer no text.png" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="kunskap.html">Kunskap</a>
+<a href="blog/index.html">Blogg</a>
+<a href="spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="coaching.html">Coaching</a>
+<a href="samtalsstod.html">Samtalsstöd</a>
+<a href="gavorochkop.html">Gåvor &amp; Köp</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="om.html">Om verksamheten</a>
+<a href="stodhaven.html">Stöd Haven</a>
+</div>
+</details>
+<a href="kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
 
 
-    </main>
-    
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
+  <main id="main-content">
+    <!-- Samtalsstöd 2.0. Gemensam navigation, bokning och sidfot ingår i base.html. -->
+<div class="v2-support-page">
 
-  <!-- JS Toggle -->
-  <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
+  <section class="v2-support-hero v2-section" aria-labelledby="support-title">
+    <div class="v2-support-shell v2-support-hero-grid">
+      <div class="v2-support-hero-copy">
+        <p class="v2-kicker">SAMTALSSTÖD HOS HAVEN</p>
+        <h1 id="support-title">Ibland behöver tankarna <em>få ta plats.</em></h1>
+        <div class="v2-support-accent" aria-hidden="true"></div>
+        <p class="v2-support-lead">Ett tryggt utrymme att prata om det som är viktigt just nu. Här får du bli lyssnad på, reflektera och hitta nya perspektiv – utan krav på prestation eller förändring.</p>
+        <a class="v2-support-inline-link" href="#nar-ett-samtal">Upptäck samtalsstödet <span aria-hidden="true">↗</span></a>
+      </div>
+      <aside class="v2-support-hero-aside" aria-label="Samtalets utgångspunkt">
+        <span class="v2-support-aside-eyebrow">ETT UTRYMME FÖR DIG</span>
+        <div class="v2-support-aside-mark" aria-hidden="true">“</div>
+        <p>Det behöver inte finnas en lösning på allt. Ibland är det värdefullt att bara få sätta ord på det som känns.</p>
+        <span class="v2-support-aside-foot">LYSSNANDE · RESPEKT · NÄRVARO</span>
+      </aside>
+    </div>
+  </section>
 
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+  <section class="v2-support-reasons v2-section" id="nar-ett-samtal" aria-labelledby="support-reasons-title">
+    <div class="v2-support-shell">
+      <div class="v2-support-section-intro">
+        <p class="v2-kicker">NÄR SAMTAL KAN VARA VÄRDEFULLA</p>
+        <h2 id="support-reasons-title">Du behöver inte bära alla tankar själv.</h2>
+        <p>Samtalsstöd kan passa när du vill stanna upp, få sätta ord på din situation och möta det som händer i vardagen med lite mer klarhet.</p>
+      </div>
+      <div class="v2-support-reason-grid">
+        <article>
+          <span class="v2-support-index">01</span>
+          <h3>Få prata till punkt</h3>
+          <p>Ge plats åt tankar och känslor som du kanske inte haft möjlighet att uttrycka.</p>
+        </article>
+        <article>
+          <span class="v2-support-index">02</span>
+          <h3>Sortera vardagen</h3>
+          <p>Reflektera över relationer, situationer och utmaningar som tar utrymme just nu.</p>
+        </article>
+        <article>
+          <span class="v2-support-index">03</span>
+          <h3>Se nya perspektiv</h3>
+          <p>Utforska dina tankar tillsammans med någon som lyssnar utan krav på prestation.</p>
+        </article>
+      </div>
+      <div class="v2-support-coaching-link">
+        <span class="v2-support-coaching-symbol" aria-hidden="true">↗</span>
+        <p><strong>Vill du arbeta mer målinriktat med personlig utveckling?</strong> Då kan <a href="coaching.html">Havens coaching</a> vara ett bättre alternativ.</p>
+      </div>
+    </div>
+  </section>
 
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
+  <section class="v2-support-experience v2-section" aria-labelledby="support-experience-title">
+    <div class="v2-support-shell v2-support-experience-grid">
+      <div class="v2-support-experience-intro">
+        <p class="v2-kicker">SÅ FUNGERAR SAMTALET</p>
+        <h2 id="support-experience-title">Du sätter orden. <em>Vi lyssnar.</em></h2>
+        <p>Utgångspunkten är alltid det du vill prata om. Samtalet är en stund för reflektion, stöd och nya perspektiv – inte ett program med mål som måste uppnås.</p>
+      </div>
+      <div class="v2-support-experience-details">
+        <article>
+          <span class="v2-support-small-num">01 /</span>
+          <div><h3>Det som är viktigt just nu</h3><p>Du får ta upp det som känns angeläget, utan att behöva ha en färdig plan eller tydlig frågeställning.</p></div>
+        </article>
+        <article>
+          <span class="v2-support-small-num">02 /</span>
+          <div><h3>Lyssnande och perspektiv</h3><p>Vi lyssnar, ställer frågor och ger utrymme för dina egna reflektioner.</p></div>
+        </article>
+        <article>
+          <span class="v2-support-small-num">03 /</span>
+          <div><h3>Utan prestationskrav</h3><p>Du behöver inte komma fram till ett beslut eller åstadkomma en förändring under samtalet.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-support-practical v2-section" id="praktiskt" aria-labelledby="support-practical-title">
+    <div class="v2-support-shell v2-support-practical-grid">
+      <div class="v2-support-practical-intro">
+        <p class="v2-kicker">PRAKTISKT &amp; BOKNING</p>
+        <h2 id="support-practical-title">Enkelt att ta första steget.</h2>
+        <p>Du bokar samtalsstöd via <strong>Boka tid</strong> uppe till höger i webbplatsens meny. Välj den tid som passar dig.</p>
+      </div>
+      <div class="v2-support-price-card" aria-label="Pris för samtalsstöd">
+        <span class="v2-support-price-label">SAMTALSSTÖD</span>
+        <div class="v2-support-price-row"><strong>1 000 kr</strong><span>per samtal</span></div>
+        <div class="v2-support-price-rule" aria-hidden="true"></div>
+        <dl class="v2-support-session-details">
+          <div><dt>Tid</dt><dd>Cirka 50 minuter</dd></div>
+          <div><dt>Format</dt><dd>Digitalt eller via telefon</dd></div>
+        </dl>
+        <p>För dig som vill ha en trygg plats för samtal, reflektion och stöd i vardagliga frågor.</p>
+        <a class="v2-support-price-link" href="bokatid.html">Till bokningen <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-support-trust v2-section" aria-labelledby="support-trust-title">
+    <div class="v2-support-shell v2-support-trust-grid">
+      <div>
+        <p class="v2-kicker">TRYGGHET &amp; TYDLIGA RAMAR</p>
+        <h2 id="support-trust-title">Respekt för dig. <em>Och för samtalets gränser.</em></h2>
+      </div>
+      <div class="v2-support-trust-copy">
+        <p>Hos Haven möts du av ett respektfullt, lyhört förhållningssätt där du själv står i centrum. Vi arbetar med lyssnande och reflektion, inte med att styra dina beslut.</p>
+        <div class="v2-support-trust-rule"></div>
+        <h3>Vad samtalsstöd inte är</h3>
+        <p>Samtalsstöd är inte coaching, terapi, psykologisk behandling eller krishantering. Vi arbetar inte med diagnoser, traumabearbetning eller akuta tillstånd.</p>
+        <p>Om det framkommer att du behöver annan eller mer specialiserad hjälp, vägleder vi dig vidare till rätt instans. Samtalsstödet är inte avsett för akuta kriser.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-support-closing v2-section" aria-labelledby="support-closing-title">
+    <div class="v2-support-closing-inner">
+      <p class="v2-kicker">NÄR DU VILL PRATA</p>
+      <h2 id="support-closing-title">Det börjar med ett samtal.</h2>
+      <p>Du behöver inte förbereda de rätta orden. Välkommen att boka en stund där det som är viktigt för dig får ta plats.</p>
+      <a class="v2-button v2-button-gold" href="bokatid.html">Boka samtalsstöd <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+</div>
+
+  </main>
+
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="kunskap.html">Kunskap</a><a href="blog/index.html">Blogg</a><a href="spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="coaching.html">Coaching</a><a href="samtalsstod.html">Samtalsstöd</a><a href="bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="stodhaven.html">Stöd Haven</a><a href="gavorochkop.html">Gåvor &amp; Köp</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="js/site.js"></script>
+  <!-- Befintlig Koalendar-widget från Haven 1.0. -->
+<script>
+  window.Koalendar = window.Koalendar || function () {
+    (Koalendar.props = Koalendar.props || []).push(arguments);
+  };
 </script>
-<!-- Koalendar Popup Widget Start -->
-<script>window.Koalendar = window.Koalendar || function(){(Koalendar.props = Koalendar.props || []).push(arguments)};</script>
 <script async src="https://koalendar.com/assets/widget.js"></script>
 <script>
   Koalendar('widget', {
-    "url": "https://koalendar.com/e/haven-nordic-health-3",
-    "text": "Boka tid",
-    "shape": "rounded-full",
-    "backgroundColor": "#d4af37",
-    "textColor": "#000000",
-    "position": "bottom-right",
-    "icon": "calendar"
+    url: 'https://koalendar.com/e/haven-nordic-health-3',
+    text: 'Boka tid',
+    shape: 'rounded-full',
+    backgroundColor: '#c9a36c',
+    textColor: '#0f0f0f',
+    position: 'bottom-right',
+    icon: 'calendar'
   });
 </script>
-<!-- Koalendar Popup Widget End -->
+
 
 </body>
 </html>

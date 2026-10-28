@@ -4,6 +4,17 @@
   body.website-v2 .v2-pathway-grid {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
+  body.website-v2 .v2-pathway-grid > .v2-pathway-card {
+    grid-column: auto;
+  }
+  body.website-v2 .v2-pathway-grid > .v2-pathway-card:nth-child(4) {
+    grid-column: auto;
+  }
+  body.website-v2 .v2-pathway-grid > .v2-pathway-card:nth-child(5) {
+    grid-column: 1 / -1;
+    width: calc((100% - 15px) / 2);
+    justify-self: center;
+  }
 
   body.website-v2 .v2-pathway-card {
     min-height: 290px;
@@ -152,6 +163,10 @@
 
   body.website-v2 .v2-pathway-grid,body.website-v2 .v2-current-grid {
     grid-template-columns: 1fr;
+  }
+  body.website-v2 .v2-pathway-grid > .v2-pathway-card:nth-child(5) {
+    grid-column: auto;
+    width: 100%;
   }
 
   body.website-v2 .v2-pathway-card {

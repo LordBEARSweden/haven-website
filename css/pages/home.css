@@ -113,8 +113,19 @@ body.website-v2 .v2-pathway-grid {
   max-width: 1490px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
+  grid-template-columns: repeat(6,minmax(0,1fr));
   gap: 15px;
+}
+
+/* Fem kort: tre överst och två centrerade under. */
+body.website-v2 .v2-pathway-grid > .v2-pathway-card {
+  grid-column: span 2;
+}
+body.website-v2 .v2-pathway-grid > .v2-pathway-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+body.website-v2 .v2-pathway-grid > .v2-pathway-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 body.website-v2 .v2-pathway-card {
