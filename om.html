@@ -1,207 +1,235 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Om | Haven Nordic Health</title>
-  <link rel="stylesheet" href="style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-  <link rel="manifest" href="/site.webmanifest">
- 
-  <!-- Favicon för olika storlekar -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Sidans individuella SEO-information -->
+  <title>Om Haven | Haven Nordic Health</title>
+  <meta name="description" content="Lär känna Haven Nordic Health, människan bakom verksamheten, vår filosofi och varför Haven finns.">
+
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="images/apple-touch-icon.png">
+
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="css/pages/about.css">
+
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Befintlig Google Analytics. Kontrollera samtyckeshantering inför lansering. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-QFYE06CQFW');
 </script>
+
 </head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+<body class="website-v2">
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="index.html">
+<img alt="" class="v2-brand-logo" height="60" src="images/Haven Transparent No buffer no text.png" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="kunskap.html">Kunskap</a>
+<a href="blog/index.html">Blogg</a>
+<a href="spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="coaching.html">Coaching</a>
+<a href="samtalsstod.html">Samtalsstöd</a>
+<a href="gavorochkop.html">Gåvor &amp; Köp</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="om.html">Om verksamheten</a>
+<a href="stodhaven.html">Stöd Haven</a>
+</div>
+</details>
+<a href="kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
 
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="index.html">Hem</a></li>
-                  <li><a href="om.html">Om</a></li>
-                  <li><a href="kunskap.html">Kunskap</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
-                  <li><a href="samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="bokatid.html">Boka tid</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-                  <li><a href="stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="blog/index.html">Blogg</a></li>
-                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-          <div class="logo-wrapper">
-            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
-
-    <!-- Main content -->
-     <p class="script-text", style="text-align: center;">
+  <main id="main-content">
+    <!-- Om Haven: sidans individuella innehåll. Gemensam header/footer skapas av base.html. -->
+<div class="v2-about-page">
+  <section class="v2-about-intro v2-section" aria-labelledby="v2-about-title">
+    <div class="v2-about-intro-inner">
+      <p class="v2-kicker">BERÄTTELSEN BAKOM HAVEN</p>
+      <h1 id="v2-about-title">Om Haven</h1>
+      <span class="v2-about-rule" aria-hidden="true"></span>
+      <blockquote class="v2-about-poem">
+        <p>
           ”Ur stillhet växer min livsuppgift.<br>
           Jag planterar ett frö större än mig själv,<br>
-          ett träd som ger skugga och kraft åt många.<br>
-          <br>
+          ett träd som ger skugga och kraft åt många.
+        </p>
+        <p>
           Haven är min gåva till världen –<br>
           född ur prövning, buren av kärlek,<br>
-          skapad för att leva vidare när min tid är slut.<br>
-          <br>
+          skapad för att leva vidare när min tid är slut.
+        </p>
+        <p>
           De som vandrar med mig en stund<br>
           är grenar i samma krona.<br>
           Och en dag ska min dotter vila tryggt<br>
           under dess lövverk,<br>
-          stolt över arvet som<br> 
-          hon en dag kommer att bära vidare.”<br> - Björn A
-      </p>
-    <main>
-<h2>Om Haven</h2>
+          stolt över arvet som<br>
+          hon en dag kommer att bära vidare.”
+        </p>
+        <footer>– Björn A</footer>
+      </blockquote>
+    </div>
+  </section>
 
-<p>
-Jag heter Björn Andersson och jag grundade Haven Nordic Health utifrån en övertygelse om att det finns en väg till ett mer balanserat och hållbart liv.
-</p>
+  <section class="v2-about-story v2-about-section v2-section" aria-labelledby="v2-about-story-title">
+    <div class="v2-about-copy">
+      <p class="v2-kicker">GRUNDEN TILL HAVEN</p>
+      <h2 id="v2-about-story-title">Om Haven</h2>
+      <p>Jag heter Björn Andersson och jag grundade Haven Nordic Health utifrån en övertygelse om att det finns en väg till ett mer balanserat och hållbart liv.</p>
+      <p>Jag har alltid varit nyfiken på människan. Varför vi tänker som vi gör, varför vi agerar som vi gör och hur våra erfarenheter formar vilka vi blir. Under många år har mitt intresse för personlig utveckling, relationer och mänsklig förståelse vuxit fram genom både egna erfarenheter och en vilja att förstå livet på djupet.</p>
+      <p>Min bakgrund finns inom flera olika områden. Jag har arbetat med teknik som systemutvecklare, med kreativt skapande som ljudtekniker och producent, och genom livet mött många olika människor och miljöer. Det som har följt mig genom alla dessa delar är en stark vilja att förstå hur saker fungerar. Först system och teknik, sedan människor, relationer och det mest komplexa systemet av alla – oss själva.</p>
+    </div>
+  </section>
 
-<p>
-Jag har alltid varit nyfiken på människan. Varför vi tänker som vi gör, varför vi agerar som vi gör och hur våra erfarenheter formar vilka vi blir. Under många år har mitt intresse för personlig utveckling, relationer och mänsklig förståelse vuxit fram genom både egna erfarenheter och en vilja att förstå livet på djupet.
-</p>
+  <section class="v2-about-founder v2-about-section v2-section" aria-labelledby="v2-about-founder-title">
+    <div class="v2-about-founder-inner">
+      <div class="v2-about-founder-photo">
+        <img src="images/bjorn-haven.JPEG"
+             alt="Björn Andersson, grundare av Haven Nordic Health"
+             loading="lazy" decoding="async">
+      </div>
+      <div class="v2-about-copy">
+        <p class="v2-kicker">PERSONEN BAKOM VERKSAMHETEN</p>
+        <h2 id="v2-about-founder-title">Människan bakom Haven</h2>
+        <p>Min egen väg har också format den jag är idag. Under perioder i livet har jag behövt stanna upp och omvärdera hur jag levt, vad jag prioriterat och vad som faktiskt är viktigt.</p>
+        <p>Efter en tid av hög belastning kom en punkt där jag inte längre kunde fortsätta på samma sätt som tidigare. Det blev början på en djupare resa där jag fick lära mig att lyssna på kroppen, förstå mina egna mönster och hitta en annan väg framåt.</p>
+        <p>Den resan har lärt mig att verkligt välmående är något mycket djupare än att bara fungera i vardagen. Att må bra är ett uttryck som används ofta, men jag tror att många av oss sällan får möjlighet att verkligen förstå vad det innebär.</p>
+        <p>För mig handlar välmående om en balans mellan kropp, sinne och hur vi lever våra liv. Det handlar om återhämtning, närvaro och att skapa en relation till sig själv där man inte bara kämpar vidare, utan faktiskt får möjlighet att känna sig levande.</p>
+      </div>
+    </div>
+  </section>
 
-<p>
-Min bakgrund finns inom flera olika områden. Jag har arbetat med teknik som systemutvecklare, med kreativt skapande som ljudtekniker och producent, och genom livet mött många olika människor och miljöer. Det som har följt mig genom alla dessa delar är en stark vilja att förstå hur saker fungerar. Först system och teknik, sedan människor, relationer och det mest komplexa systemet av alla – oss själva.
-</p>
+  <section class="v2-about-purpose v2-about-section v2-section" aria-labelledby="v2-about-purpose-title">
+    <div class="v2-about-copy">
+      <p class="v2-kicker">VÅRT VARFÖR</p>
+      <h2 id="v2-about-purpose-title">Varför Haven finns</h2>
+      <p>Haven föddes ur en önskan att skapa något som jag själv hade behövt under tidigare perioder i livet. En plats där människor kan stanna upp, reflektera och få verktyg för att hitta tillbaka till balans och riktning.</p>
+      <p>Jag tror inte att förändring handlar om att bli någon annan. Jag tror att det handlar om att återknyta kontakten med den man redan är och skapa förutsättningar för att leva mer i linje med sig själv.</p>
+      <p>Genom Haven vill jag dela de erfarenheter, insikter och perspektiv som hjälpt mig på min egen väg. Inte som någon som har alla svar, utan som någon som själv har gått igenom en förändring och vill hjälpa andra att hitta sin egen väg framåt.</p>
+      <p>Min egen resa har också lett till en djupare förståelse för närvaro, mening och vårt inre liv. För vissa människor handlar det om personlig utveckling, för andra om något mer existentiellt. På Haven finns utrymme för båda.</p>
+      <p>Det viktigaste för mig är att skapa en plats där människor känner sig välkomna, sedda och inspirerade att ta nästa steg i sin egen resa.</p>
+    </div>
+  </section>
 
-<div class="divider"></div>
+  <section class="v2-about-beliefs v2-about-section v2-section" aria-labelledby="v2-about-beliefs-title">
+    <div class="v2-about-section-heading">
+      <p class="v2-kicker">HAVENS GRUNDVÄRDERINGAR</p>
+      <h2 id="v2-about-beliefs-title">Vad vi tror på</h2>
+    </div>
+    <ul class="v2-about-beliefs-grid">
+      <li>
+        <h3>Inre stillhet är tillgänglig för alla</h3>
+        <p>Vi tror att varje människa kan hitta ett inre lugn, oavsett livssituation. Det handlar inte om prestation, utan om att ge sig själv utrymme att andas och vara närvarande.</p>
+      </li>
+      <li>
+        <h3>Riktig återhämtning tar tid</h3>
+        <p>Äkta återhämtning är en process, inte en snabbfix. Vi tror på att ge sig själv tid och tillåtelse att sakta hitta balans, utan krav och stress.</p>
+      </li>
+      <li>
+        <h3>Du behöver inte vara perfekt för att vara hel</h3>
+        <p>Att vara människa innebär att vara hel med alla sina skavanker, erfarenheter och känslor. Vi tror på att acceptera och omfamna hela sig själv, här och nu.</p>
+      </li>
+      <li>
+        <h3>Närvaro och medvetenhet</h3>
+        <p>Vi tror på ett liv där du får vara närvarande. På riktigt. Att se, känna och uppleva varje ögonblick ger kraft att leva fullt ut och skapar utrymme för tillväxt och läkning.</p>
+      </li>
+    </ul>
+  </section>
 
-<h2>Människan bakom Haven</h2>
-
-<!-- Bild på Björn placeras här -->
- <div class="founder-image">
-  <img src="images/bjorn-haven.JPEG" alt="Björn Andersson, grundare av Haven Nordic Health">
+  <section class="v2-about-social v2-about-section v2-section" aria-labelledby="v2-about-social-title">
+    <div class="v2-about-section-heading">
+      <p class="v2-kicker">FÖLJ MED PÅ RESAN</p>
+      <h2 id="v2-about-social-title">Följ oss</h2>
+    </div>
+    <nav class="v2-about-social-links" aria-label="Haven Nordic Health i sociala medier">
+      <a href="https://www.instagram.com/havennordichealth" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@havennordichealth" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://www.youtube.com/@havennordichealth" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.threads.net/@havennordichealth" target="_blank" rel="noopener noreferrer">Threads</a>
+      <a href="https://www.facebook.com/havennordichealth" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.snapchat.com/t/qQ1lpqng" target="_blank" rel="noopener noreferrer">Snapchat</a>
+    </nav>
+  </section>
 </div>
 
-<p>
-Min egen väg har också format den jag är idag. Under perioder i livet har jag behövt stanna upp och omvärdera hur jag levt, vad jag prioriterat och vad som faktiskt är viktigt.
-</p>
+  </main>
 
-<p>
-Efter en tid av hög belastning kom en punkt där jag inte längre kunde fortsätta på samma sätt som tidigare. Det blev början på en djupare resa där jag fick lära mig att lyssna på kroppen, förstå mina egna mönster och hitta en annan väg framåt.
-</p>
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="kunskap.html">Kunskap</a><a href="blog/index.html">Blogg</a><a href="spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="coaching.html">Coaching</a><a href="samtalsstod.html">Samtalsstöd</a><a href="bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="stodhaven.html">Stöd Haven</a><a href="gavorochkop.html">Gåvor &amp; Köp</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
 
-<p>
-Den resan har lärt mig att verkligt välmående är något mycket djupare än att bara fungera i vardagen. Att må bra är ett uttryck som används ofta, men jag tror att många av oss sällan får möjlighet att verkligen förstå vad det innebär.
-</p>
 
-<p>
-För mig handlar välmående om en balans mellan kropp, sinne och hur vi lever våra liv. Det handlar om återhämtning, närvaro och att skapa en relation till sig själv där man inte bara kämpar vidare, utan faktiskt får möjlighet att känna sig levande.
-</p>
-
-<div class="divider"></div>
-
-<h2>Varför Haven finns</h2>
-
-<p>
-Haven föddes ur en önskan att skapa något som jag själv hade behövt under tidigare perioder i livet. En plats där människor kan stanna upp, reflektera och få verktyg för att hitta tillbaka till balans och riktning.
-</p>
-
-<p>
-Jag tror inte att förändring handlar om att bli någon annan. Jag tror att det handlar om att återknyta kontakten med den man redan är och skapa förutsättningar för att leva mer i linje med sig själv.
-</p>
-
-<p>
-Genom Haven vill jag dela de erfarenheter, insikter och perspektiv som hjälpt mig på min egen väg. Inte som någon som har alla svar, utan som någon som själv har gått igenom en förändring och vill hjälpa andra att hitta sin egen väg framåt.
-</p>
-
-<p>
-Min egen resa har också lett till en djupare förståelse för närvaro, mening och vårt inre liv. För vissa människor handlar det om personlig utveckling, för andra om något mer existentiellt. På Haven finns utrymme för båda.
-</p>
-
-<p>
-Det viktigaste för mig är att skapa en plats där människor känner sig välkomna, sedda och inspirerade att ta nästa steg i sin egen resa.
-</p>
-
-<div class="divider"></div>
-
-<h2>Vad vi tror på</h2>
-
-<ul class="beliefs-list">
-  <li>
-    <strong>Inre stillhet är tillgänglig för alla</strong>
-    <p>Vi tror att varje människa kan hitta ett inre lugn, oavsett livssituation. Det handlar inte om prestation, utan om att ge sig själv utrymme att andas och vara närvarande.</p>
-  </li>
-  <li>
-    <strong>Riktig återhämtning tar tid</strong>
-    <p>Äkta återhämtning är en process, inte en snabbfix. Vi tror på att ge sig själv tid och tillåtelse att sakta hitta balans, utan krav och stress.</p>
-  </li>
-  <li>
-    <strong>Du behöver inte vara perfekt för att vara hel</strong>
-    <p>Att vara människa innebär att vara hel med alla sina skavanker, erfarenheter och känslor. Vi tror på att acceptera och omfamna hela sig själv, här och nu.</p>
-  </li>
-  <li>
-    <strong>Närvaro och medvetenhet</strong>
-    <p>Vi tror på ett liv där du får vara närvarande. På riktigt. Att se, känna och uppleva varje ögonblick ger kraft att leva fullt ut och skapar utrymme för tillväxt och läkning.</p>
-  </li>
-</ul>
-
-<section class="social-section">
-  <h2>Följ oss</h2>
-  <div class="social-icons">
-    <a href="https://www.instagram.com/havennordichealth" target="_blank" class="social-icon instagram" aria-label="Instagram"></a>
-    <a href="https://www.tiktok.com/@havennordichealth" target="_blank" class="social-icon tiktok" aria-label="TikTok"></a>
-    <a href="https://www.youtube.com/@havennordichealth" target="_blank" class="social-icon youtube" aria-label="YouTube"></a>
-    <a href="https://www.threads.net/@havennordichealth" target="_blank" class="social-icon threads" aria-label="Threads"></a>
-    <a href="https://www.facebook.com/havennordichealth" target="_blank" class="social-icon facebook" aria-label="Facebook"></a>
-    <a href="https://www.snapchat.com/t/qQ1lpqng" target="_blank" class="social-icon snapchat" aria-label="snapchat"></a>
-  </div>
-</section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
-
-  <!-- JS Toggle -->
-  <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
-
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
+  <script defer src="js/site.js"></script>
+  <!-- Befintlig Koalendar-widget från Haven 1.0. -->
+<script>
+  window.Koalendar = window.Koalendar || function () {
+    (Koalendar.props = Koalendar.props || []).push(arguments);
+  };
 </script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('widget', {
+    url: 'https://koalendar.com/e/haven-nordic-health-3',
+    text: 'Boka tid',
+    shape: 'rounded-full',
+    backgroundColor: '#c9a36c',
+    textColor: '#0f0f0f',
+    position: 'bottom-right',
+    icon: 'calendar'
+  });
+</script>
+
 
 </body>
 </html>

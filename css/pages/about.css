@@ -1,0 +1,200 @@
+/* Om Haven – sidans egen presentation. Använder det gemensamma Haven 2.0-designsystemet.
+   Ändringar här påverkar inte startsidan eller andra undersidor. */
+
+body.website-v2 .v2-about-page {
+  background: var(--v2-bg);
+}
+
+body.website-v2 .v2-about-intro {
+  background: linear-gradient(155deg, #171616 0%, #0f0f0f 75%);
+  text-align: center;
+  border-bottom: 2px solid var(--v2-border);
+}
+
+body.website-v2 .v2-about-intro-inner,
+body.website-v2 .v2-about-copy {
+  width: min(100%, 740px);
+  margin-inline: auto;
+}
+
+body.website-v2 .v2-about-intro h1 {
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  color: var(--v2-white);
+  letter-spacing: -.025em;
+}
+
+body.website-v2 .v2-about-rule {
+  display: block;
+  width: 84px;
+  height: 2px;
+  margin: 34px auto 42px;
+  background: var(--v2-gold);
+}
+
+body.website-v2 .v2-about-poem {
+  margin: 0;
+  color: var(--v2-ivory);
+  font-family: var(--v2-display);
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.9;
+}
+
+body.website-v2 .v2-about-poem p + p {
+  margin-top: 1.5rem;
+}
+
+body.website-v2 .v2-about-poem footer {
+  margin-top: 1.5rem;
+  font: 500 .95rem/1.6 var(--v2-body);
+  color: var(--v2-gold-light);
+}
+
+body.website-v2 .v2-about-section {
+  border-bottom: 2px solid rgba(201, 163, 108, .2);
+}
+
+body.website-v2 .v2-about-copy h2,
+body.website-v2 .v2-about-section-heading h2 {
+  color: var(--v2-ivory);
+  margin-bottom: 1.5rem;
+}
+
+body.website-v2 .v2-about-copy > p:not(.v2-kicker) {
+  color: var(--v2-muted);
+  font-size: clamp(1.05rem, 1.4vw, 1.15rem);
+  line-height: 1.9;
+  margin-top: 1.3rem;
+}
+
+body.website-v2 .v2-about-founder {
+  background: var(--v2-panel);
+}
+
+body.website-v2 .v2-about-founder-inner {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  max-width: 1240px;
+  margin-inline: auto;
+  align-items: start;
+  gap: clamp(32px, 6vw, 90px);
+}
+
+body.website-v2 .v2-about-founder-photo {
+  border: 1px solid var(--v2-border);
+  padding: 9px;
+  background: #141312;
+}
+
+body.website-v2 .v2-about-founder-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+body.website-v2 .v2-about-purpose {
+  background: var(--v2-ivory);
+}
+
+body.website-v2 .v2-about-purpose .v2-kicker {
+  color: #76582e;
+}
+
+body.website-v2 .v2-about-purpose .v2-about-copy h2 {
+  color: #191818;
+}
+
+body.website-v2 .v2-about-purpose .v2-about-copy > p:not(.v2-kicker) {
+  color: #39342f;
+}
+
+body.website-v2 .v2-about-section-heading {
+  max-width: 1240px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+body.website-v2 .v2-about-beliefs-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1240px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+body.website-v2 .v2-about-beliefs-grid li {
+  padding: clamp(25px, 3vw, 42px);
+  background: var(--v2-panel);
+  border: 1px solid var(--v2-border);
+  border-top: 2px solid var(--v2-gold);
+}
+
+body.website-v2 .v2-about-beliefs-grid h3 {
+  color: var(--v2-ivory);
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  margin-bottom: 16px;
+}
+
+body.website-v2 .v2-about-beliefs-grid p {
+  color: var(--v2-muted);
+  line-height: 1.85;
+}
+
+body.website-v2 .v2-about-social {
+  background: var(--v2-panel);
+  text-align: center;
+}
+
+body.website-v2 .v2-about-social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+body.website-v2 .v2-about-social-links a {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1px solid var(--v2-border);
+  color: var(--v2-ivory);
+  font-size: .95rem;
+  transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+}
+
+body.website-v2 .v2-about-social-links a:hover,
+body.website-v2 .v2-about-social-links a:focus-visible {
+  color: var(--v2-gold-light);
+  border-color: var(--v2-gold);
+  background-color: var(--v2-panel-2);
+}
+
+@media (max-width: 880px) {
+  body.website-v2 .v2-about-founder-inner {
+    grid-template-columns: 1fr;
+  }
+
+  body.website-v2 .v2-about-founder-photo {
+    width: min(100%, 430px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  body.website-v2 .v2-about-beliefs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.website-v2 .v2-about-poem {
+    font-size: 1.04rem;
+    line-height: 1.85;
+  }
+
+  body.website-v2 .v2-about-social-links a {
+    flex: 1 1 125px;
+  }
+}
