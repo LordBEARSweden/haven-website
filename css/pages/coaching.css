@@ -1,0 +1,339 @@
+/* Coaching 2.0 – tjänstesida. Endast komponenter under .v2-coaching-page.
+   Designens färger, typografi och knappar kommer från Havens gemensamma system. */
+
+body.website-v2 .v2-coaching-page {
+  background: var(--v2-bg);
+}
+
+body.website-v2 .v2-coaching-shell {
+  width: min(100%, 1210px);
+  margin-inline: auto;
+}
+
+/* Inledning: varm mörk ton med redaktionell textyta. */
+body.website-v2 .v2-coaching-hero.v2-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding-top: clamp(95px, 9vw, 145px);
+  padding-bottom: clamp(100px, 10vw, 155px);
+  background:
+    radial-gradient(ellipse at 91% 22%, rgba(176, 124, 69, .13), transparent 46%),
+    linear-gradient(130deg, #111110 0%, #1c1a18 55%, #0c0c0c 100%);
+  border-bottom: 1px solid var(--v2-border);
+}
+body.website-v2 .v2-coaching-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: .22;
+  pointer-events: none;
+  background-image: linear-gradient(110deg, transparent 52%, rgba(201,163,108,.12) 52.08%, transparent 52.17%);
+}
+body.website-v2 .v2-coaching-hero-inner {
+  max-width: 1290px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(280px, .78fr);
+  align-items: center;
+  gap: clamp(35px, 7vw, 105px);
+}
+body.website-v2 .v2-coaching-hero-copy { min-width: 0; }
+body.website-v2 .v2-coaching-hero h1 {
+  max-width: 830px;
+  color: var(--v2-white);
+  font-size: clamp(3.1rem, 5.85vw, 5.9rem);
+  letter-spacing: -.045em;
+  line-height: 1.07;
+}
+body.website-v2 .v2-coaching-hero h1 em,
+body.website-v2 .v2-coaching-approach h2 em {
+  font-weight: 400;
+  color: var(--v2-gold-light);
+}
+body.website-v2 .v2-coaching-accent {
+  width: 74px;
+  height: 2px;
+  background: var(--v2-gold);
+  margin: 34px 0 28px;
+}
+body.website-v2 .v2-coaching-hero-lead {
+  max-width: 615px;
+  font-size: clamp(1.06rem, 1.5vw, 1.23rem);
+  line-height: 1.8;
+  color: var(--v2-ivory);
+}
+body.website-v2 .v2-coaching-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--v2-gold);
+  font-weight: 600;
+  color: var(--v2-gold-light);
+}
+body.website-v2 .v2-coaching-text-link:hover { color: var(--v2-white); }
+body.website-v2 .v2-coaching-hero-note {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 370px;
+  padding: clamp(30px, 3.9vw, 58px);
+  border: 1px solid rgba(201,163,108,.45);
+  background: linear-gradient(148deg, rgba(42,37,31,.85), rgba(18,17,16,.75));
+  box-shadow: 15px 17px 0 rgba(201,163,108,.045);
+}
+body.website-v2 .v2-coaching-note-top,
+body.website-v2 .v2-coaching-note-bottom {
+  color: var(--v2-gold-light);
+  font-size: .68rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: .16em;
+}
+body.website-v2 .v2-coaching-hero-note p {
+  color: var(--v2-ivory);
+  font: italic 400 clamp(1.4rem, 2.55vw, 2.1rem)/1.5 var(--v2-display);
+  margin: 34px 0;
+}
+body.website-v2 .v2-coaching-note-rule { width: 46px; height: 1px; background: var(--v2-gold); margin-bottom: 22px; }
+
+/* Vem sidan är för – ljust och luftigt, utan att bygga en artikelsida. */
+body.website-v2 .v2-coaching-fit { background: var(--v2-ivory); color: #25221f; }
+body.website-v2 .v2-coaching-fit .v2-kicker,
+body.website-v2 .v2-coaching-process .v2-kicker,
+body.website-v2 .v2-coaching-trust .v2-kicker { color: #80603a; }
+body.website-v2 .v2-coaching-fit-heading { max-width: 790px; }
+body.website-v2 .v2-coaching-fit-heading h2 { font-size: clamp(2.25rem, 4.5vw, 4rem); max-width: 750px; }
+body.website-v2 .v2-coaching-fit-heading > p:not(.v2-kicker) {
+  margin-top: 22px;
+  max-width: 715px;
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #544b43;
+}
+body.website-v2 .v2-coaching-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: clamp(50px, 6vw, 80px);
+}
+body.website-v2 .v2-coaching-benefits article {
+  border-top: 2px solid #ad8a58;
+  padding-top: 26px;
+  min-width: 0;
+}
+body.website-v2 .v2-coaching-index { color: #8c6b40; font-weight: 700; font-size: .77rem; letter-spacing: .18em; }
+body.website-v2 .v2-coaching-benefits h3 { margin: 15px 0; color: #25201c; }
+body.website-v2 .v2-coaching-benefits p { color: #534c46; line-height: 1.8; }
+body.website-v2 .v2-coaching-alternative {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-top: clamp(56px, 6vw, 80px);
+  padding: 25px 29px;
+  border: 1px solid #cabba6;
+  background: #e9e2d7;
+}
+body.website-v2 .v2-coaching-alternative-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #a2835b;
+  color: #6e4b2c;
+}
+body.website-v2 .v2-coaching-alternative p { color: #37302b; line-height: 1.75; }
+body.website-v2 .v2-coaching-alternative a { color: #674522; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+body.website-v2 .v2-coaching-alternative a:hover { color: #1e1b18; }
+
+/* Förhållningssätt. */
+body.website-v2 .v2-coaching-approach {
+  background: linear-gradient(150deg, #1f1c19, #121211 78%);
+  border-top: 1px solid var(--v2-border);
+  border-bottom: 1px solid var(--v2-border);
+}
+body.website-v2 .v2-coaching-approach-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(38px, 7vw, 115px);
+  align-items: start;
+}
+body.website-v2 .v2-coaching-approach h2 { color: var(--v2-ivory); }
+body.website-v2 .v2-coaching-approach-copy > p {
+  color: var(--v2-muted);
+  line-height: 1.9;
+  font-size: 1.075rem;
+}
+body.website-v2 .v2-coaching-approach-copy > p + p { margin-top: 20px; }
+body.website-v2 .v2-coaching-approach-principles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+body.website-v2 .v2-coaching-approach-principles span {
+  padding: 9px 14px;
+  border: 1px solid var(--v2-border);
+  color: var(--v2-gold-light);
+  font-size: .81rem;
+  letter-spacing: .035em;
+}
+
+/* Samtalets gång. */
+body.website-v2 .v2-coaching-process { background: #e7dfd2; color: #29241f; }
+body.website-v2 .v2-coaching-section-head { max-width: 690px; }
+body.website-v2 .v2-coaching-section-head > p:not(.v2-kicker) {
+  margin-top: 18px;
+  color: #554c42;
+  font-size: 1.075rem;
+  line-height: 1.8;
+}
+body.website-v2 .v2-coaching-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 38px;
+  margin-top: clamp(48px, 6vw, 78px);
+}
+body.website-v2 .v2-coaching-step {
+  border-top: 1px solid #ae9477;
+  padding-top: 20px;
+  min-width: 0;
+}
+body.website-v2 .v2-coaching-step-number {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #8a673c;
+  letter-spacing: .15em;
+  font-size: .76rem;
+  font-weight: 750;
+}
+body.website-v2 .v2-coaching-step-number span { height: 1px; width: 26px; background: #ad916c; }
+body.website-v2 .v2-coaching-step h3 { margin: 25px 0 16px; }
+body.website-v2 .v2-coaching-step p { color: #544b42; line-height: 1.85; }
+
+/* Bokningsinformation. Undvik en tredje separat undersida. */
+body.website-v2 .v2-coaching-practical {
+  color: var(--v2-ivory);
+  background: #121110;
+  border-top: 1px solid var(--v2-border);
+  border-bottom: 1px solid var(--v2-border);
+}
+body.website-v2 .v2-coaching-section-head--dark > p:not(.v2-kicker) { color: var(--v2-muted); }
+body.website-v2 .v2-coaching-pricing {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+body.website-v2 .v2-coaching-price-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(27px, 4vw, 53px);
+  border: 1px solid rgba(201,163,108,.35);
+  background: #1d1b19;
+}
+body.website-v2 .v2-coaching-price-card--intro { background: #eee8de; color: #24201d; border-color: #eee8de; }
+body.website-v2 .v2-coaching-price-label { color: var(--v2-gold-light); font-weight: 750; letter-spacing: .14em; font-size: .7rem; }
+body.website-v2 .v2-coaching-price-card--intro .v2-coaching-price-label { color: #86623a; }
+body.website-v2 .v2-coaching-price-card h3,
+body.website-v2 .v2-coaching-price-amount strong {
+  display: block;
+  font: 400 clamp(1.95rem, 3.5vw, 3.2rem)/1.18 var(--v2-display);
+  margin-top: 20px;
+  color: inherit;
+}
+body.website-v2 .v2-coaching-price-amount span {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: .85rem;
+  color: var(--v2-muted);
+}
+body.website-v2 .v2-coaching-price-divider {
+  height: 1px;
+  width: 100%;
+  margin: 28px 0 19px;
+  background: currentColor;
+  opacity: .2;
+}
+body.website-v2 .v2-coaching-price-card dl { margin: 0 0 21px; }
+body.website-v2 .v2-coaching-price-card dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(120,103,82,.18);
+}
+body.website-v2 .v2-coaching-price-card dt { font-weight: 700; }
+body.website-v2 .v2-coaching-price-card dd { margin: 0; text-align: right; }
+body.website-v2 .v2-coaching-price-card > p:last-child { margin-top: auto; color: inherit; opacity: .8; line-height: 1.75; }
+body.website-v2 .v2-coaching-booking-note { margin: 23px 0 0; color: var(--v2-muted); font-size: .95rem; line-height: 1.8; }
+body.website-v2 .v2-coaching-booking-note strong { color: var(--v2-ivory); }
+
+/* Tydliga, icke-medicinska ramar. */
+body.website-v2 .v2-coaching-trust { background: var(--v2-ivory); color: #28231e; }
+body.website-v2 .v2-coaching-trust-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: clamp(40px, 7vw, 115px);
+}
+body.website-v2 .v2-coaching-trust-lead { max-width: 430px; margin-top: 20px; color: #5c5248; line-height: 1.85; font-size: 1.075rem; }
+body.website-v2 .v2-coaching-trust-details article { padding: 23px 0; border-top: 1px solid #c2b6a5; }
+body.website-v2 .v2-coaching-trust-details h3 { font-size: clamp(1.37rem, 2vw, 1.7rem); }
+body.website-v2 .v2-coaching-trust-details p { margin-top: 11px; color: #564e44; line-height: 1.82; }
+
+/* Lugn, enkel avslutning. */
+body.website-v2 .v2-coaching-closing {
+  background: radial-gradient(ellipse at center top, rgba(201,163,108,.11), transparent 70%), #111110;
+  text-align: center;
+}
+body.website-v2 .v2-coaching-closing-inner { max-width: 770px; margin-inline: auto; }
+body.website-v2 .v2-coaching-closing h2 { color: var(--v2-ivory); }
+body.website-v2 .v2-coaching-closing-inner > p:not(.v2-kicker) {
+  margin: 25px auto 30px;
+  max-width: 610px;
+  color: var(--v2-muted);
+  font-size: 1.075rem;
+  line-height: 1.85;
+}
+body.website-v2 .v2-coaching-closing .v2-button { gap: 12px; }
+
+@media (max-width: 1020px) {
+  body.website-v2 .v2-coaching-hero-inner { grid-template-columns: minmax(0, 1fr) minmax(240px, .65fr); gap: 35px; }
+  body.website-v2 .v2-coaching-hero-note { min-height: 330px; padding: 30px; }
+  body.website-v2 .v2-coaching-benefits,
+  body.website-v2 .v2-coaching-steps { gap: 23px; }
+}
+@media (max-width: 780px) {
+  body.website-v2 .v2-coaching-hero-inner,
+  body.website-v2 .v2-coaching-approach-layout,
+  body.website-v2 .v2-coaching-trust-layout { grid-template-columns: 1fr; }
+  body.website-v2 .v2-coaching-hero-note { max-width: 540px; min-height: 270px; }
+  body.website-v2 .v2-coaching-benefits,
+  body.website-v2 .v2-coaching-steps { grid-template-columns: 1fr; gap: 28px; }
+  body.website-v2 .v2-coaching-benefits { margin-top: 42px; }
+  body.website-v2 .v2-coaching-steps { margin-top: 45px; }
+  body.website-v2 .v2-coaching-pricing { grid-template-columns: 1fr; }
+  body.website-v2 .v2-coaching-approach-layout,
+  body.website-v2 .v2-coaching-trust-layout { gap: 34px; }
+}
+@media (max-width: 650px) {
+  body.website-v2 .v2-coaching-hero.v2-section { padding-top: 80px; padding-bottom: 72px; }
+  body.website-v2 .v2-coaching-hero h1 { font-size: clamp(2.7rem, 10.8vw, 4.1rem); overflow-wrap: anywhere; }
+  body.website-v2 .v2-coaching-hero-note { padding: 26px; min-height: 230px; }
+  body.website-v2 .v2-coaching-hero-note p { font-size: 1.48rem; }
+  body.website-v2 .v2-coaching-benefits article { padding-top: 20px; }
+  body.website-v2 .v2-coaching-alternative { align-items: flex-start; padding: 22px 18px; gap: 12px; }
+  body.website-v2 .v2-coaching-alternative-icon { flex-basis: 31px; width: 31px; height: 31px; }
+  body.website-v2 .v2-coaching-approach-principles { gap: 8px; }
+  body.website-v2 .v2-coaching-approach-principles span { padding: 8px 10px; }
+  body.website-v2 .v2-coaching-price-card dl > div { flex-direction: column; gap: 2px; }
+  body.website-v2 .v2-coaching-price-card dd { text-align: left; }
+  body.website-v2 .v2-coaching-price-card { padding: 28px 25px; }
+}
