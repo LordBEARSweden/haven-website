@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+
+  <!-- Sidans individuella SEO-information -->
+  <title>{{page_title}}</title>
+  <meta name="description" content="{{page_description}}">
+
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="{{root}}site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="{{root}}images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="{{root}}images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="{{root}}images/apple-touch-icon.png">
+
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="{{root}}css/tokens.css">
+  <link rel="stylesheet" href="{{root}}css/base.css">
+  <link rel="stylesheet" href="{{root}}css/components.css">
+
+  <!-- Sidspecifik CSS -->
+  {{page_styles}}
+
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="{{root}}css/responsive.css">
+
+  {{analytics}}
+</head>
+
+<body class="website-v2">
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  {{header}}
+
+  <main id="main-content">
+    {{page_content}}
+  </main>
+
+  {{footer}}
+
+  <script defer src="{{root}}js/site.js"></script>
+  {{booking_widget}}
+
+</body>
+</html>
