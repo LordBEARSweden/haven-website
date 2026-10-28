@@ -1,174 +1,181 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kunskap | Haven Nordic Health</title>
-  <link rel="stylesheet" href="style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-  <link rel="manifest" href="/site.webmanifest">
- 
-  <!-- Favicon för olika storlekar -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Sidans individuella SEO-information -->
+  <title>Kunskap | Haven Nordic Health</title>
+  <meta name="description" content="Utforska Haven Nordic Healths kunskapsbibliotek om stress, depression, ångest, självkänsla, utmattning och kallterapi.">
+
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="images/apple-touch-icon.png">
+
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="css/pages/knowledge.css">
+
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Befintlig Google Analytics. Kontrollera samtyckeshantering inför lansering. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-QFYE06CQFW');
 </script>
+
 </head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+<body class="website-v2">
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="index.html">
+<img alt="" class="v2-brand-logo" height="60" src="images/Haven Transparent No buffer no text.png" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="kunskap.html">Kunskap</a>
+<a href="blog/index.html">Blogg</a>
+<a href="spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="coaching.html">Coaching</a>
+<a href="samtalsstod.html">Samtalsstöd</a>
+<a href="gavorochkop.html">Gåvor &amp; Köp</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="om.html">Om verksamheten</a>
+<a href="stodhaven.html">Stöd Haven</a>
+</div>
+</details>
+<a href="kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
 
 
+  <main id="main-content">
+    <!-- Kunskapsöversikt. Sidhuvud, sidfot och gemensamma resurser skapas av base.html. -->
+<div class="v2-knowledge-page">
+  <section class="v2-knowledge-hero v2-section" aria-labelledby="knowledge-title">
+    <div class="v2-knowledge-hero-inner">
+      <p class="v2-kicker">HAVEN NORDIC HEALTH / KUNSKAP</p>
+      <h1 id="knowledge-title">Kunskap som ger <em>nya perspektiv.</em></h1>
+      <span class="v2-knowledge-rule" aria-hidden="true"></span>
+      <p class="v2-knowledge-intro">Utforska ämnen som berör hälsa, återhämtning och hur vi förstår oss själva. Här finns utrymme att läsa, reflektera och upptäcka mer i din egen takt.</p>
+    </div>
+  </section>
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="index.html">Hem</a></li>
-                  <li><a href="om.html">Om</a></li>
-                  <li><a href="kunskap.html">Kunskap</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
-                  <li><a href="samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="bokatid.html">Boka tid</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-                  <li><a href="stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="blog/index.html">Blogg</a></li>
-                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-          <div class="logo-wrapper">
-            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
+  <section class="v2-knowledge-library v2-section" aria-labelledby="knowledge-library-title">
+    <div class="v2-knowledge-section-head">
+      <div>
+        <p class="v2-kicker">VÅRT KUNSKAPSBIBLIOTEK</p>
+        <h2 id="knowledge-library-title">Utforska våra ämnen</h2>
+      </div>
+      <p>Välj ett område som intresserar dig.</p>
+    </div>
 
-    <!-- Main content -->
-     <main>
-      <h2>Kunskap</h2>
-      <div class="cards">
+    <!-- Publicerade ämnen. Behåll befintliga URL:er för att skydda länkar och SEO. -->
+    <div class="v2-knowledge-grid">
+      <a class="v2-knowledge-card" href="kunskap/stress.html">
+        <span class="v2-knowledge-number" aria-hidden="true">01</span>
+        <h3>Stress</h3>
+        <span class="v2-knowledge-card-label">Läs mer</span>
+      </a>
+      <a class="v2-knowledge-card" href="kunskap/depression.html">
+        <span class="v2-knowledge-number" aria-hidden="true">02</span>
+        <h3>Depression</h3>
+        <span class="v2-knowledge-card-label">Läs mer</span>
+      </a>
+      <a class="v2-knowledge-card" href="kunskap/ångest.html">
+        <span class="v2-knowledge-number" aria-hidden="true">03</span>
+        <h3>Ångest</h3>
+        <span class="v2-knowledge-card-label">Läs mer</span>
+      </a>
+      <a class="v2-knowledge-card" href="kunskap/självkänsla.html">
+        <span class="v2-knowledge-number" aria-hidden="true">04</span>
+        <h3>Självkänsla</h3>
+        <span class="v2-knowledge-card-label">Läs mer</span>
+      </a>
+      <a class="v2-knowledge-card" href="kunskap/utmattningssyndrom.html">
+        <span class="v2-knowledge-number" aria-hidden="true">05</span>
+        <h3>Utmattning</h3>
+        <span class="v2-knowledge-card-label">Läs mer</span>
+      </a>
+      <a class="v2-knowledge-card" href="kunskap/kallterapi.html">
+        <span class="v2-knowledge-number" aria-hidden="true">06</span>
+        <h3>Kallterapi</h3>
+        <span class="v2-knowledge-card-label">Läs mer</span>
+      </a>
+    </div>
+  </section>
 
-    <!-- Aktiv kategori -->
-    <a href="kunskap/stress.html" class="card active">
-      <span class="label">Stress</span>
-    </a>
-
-    <a href="kunskap/depression.html" class="card active">
-      <span class="label">Depression</span>
-    </a>
-
-    <a href="kunskap/ångest.html" class="card active">
-      <span class="label">Ångest</span>
-    </a>
-
-    <a href="kunskap/självkänsla.html" class="card active">
-      <span class="label">Självkänsla</span>
-    </a>
-
-    <a href="kunskap/utmattningssyndrom.html" class="card active">
-      <span class="label">Utmattning</span>
-    </a>
-
-    <a href="kunskap/kallterapi.html" class="card active">
-      <span class="label">Kallterapi</span>
-    </a>
-
-    <!-- Inaktiva kategorier -->
   
+</div>
 
-    <div class="card inactive">
-      <span class="label">Värk</span>
-      <span class="tag">Kommer snart</span>
-    </div>
+  </main>
 
-    <div class="card inactive">
-      <span class="label">Fasta</span>
-      <span class="tag">Kommer snart</span>
-    </div>
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="kunskap.html">Kunskap</a><a href="blog/index.html">Blogg</a><a href="spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="coaching.html">Coaching</a><a href="samtalsstod.html">Samtalsstöd</a><a href="bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="stodhaven.html">Stöd Haven</a><a href="gavorochkop.html">Gåvor &amp; Köp</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
 
-    <div class="card inactive">
-      <span class="label">Sömn & återhämtning</span>
-      <span class="tag">Kommer snart</span>
-    </div>
 
-    <div class="card inactive">
-      <span class="label">Näringsämnen</span>
-      <span class="tag">Kommer snart</span>
-    </div>
-
-    <div class="card inactive">
-      <span class="label">Träning</span>
-      <span class="tag">Kommer snart</span>
-    </div>
-
-    <div class="card inactive">
-      <span class="label">Mindfulness</span>
-      <span class="tag">Kommer snart</span>
-    </div>
-
-    <div class="card inactive">
-      <span class="label">meditation</span>
-      <span class="tag">Kommer snart</span>
-    </div>
-
-    <div class="card inactive">
-      <span class="label">Digital detox</span>
-      <span class="tag">Kommer snart</span>
-    </div>
-
-    <div class="card inactive">
-      <span class="label">Vardagshälsa</span>
-      <span class="tag">Kommer snart</span>
-    </div>
-  </div>
-     
-
-      <div class="divider"></div>
-    </main>
-    
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
-
-  <!-- JS Toggle -->
-  <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
-
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
+  <script defer src="js/site.js"></script>
+  <!-- Befintlig Koalendar-widget från Haven 1.0. -->
+<script>
+  window.Koalendar = window.Koalendar || function () {
+    (Koalendar.props = Koalendar.props || []).push(arguments);
+  };
 </script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('widget', {
+    url: 'https://koalendar.com/e/haven-nordic-health-3',
+    text: 'Boka tid',
+    shape: 'rounded-full',
+    backgroundColor: '#c9a36c',
+    textColor: '#0f0f0f',
+    position: 'bottom-right',
+    icon: 'calendar'
+  });
+</script>
+
 
 </body>
 </html>
