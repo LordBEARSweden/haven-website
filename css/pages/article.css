@@ -291,3 +291,21 @@ body.website-v2 .v2-article-sources li {
     font-size: clamp(3.1rem, 14vw, 4.5rem);
   }
 }
+
+/* Återanvändbar variant för akut hjälpinformation i kunskapsartiklar.
+   Använd enbart för verkligt brådskande innehåll. */
+body.website-v2 .v2-article-callout--urgent {
+  background: #341b1c;
+  border: 1px solid #d69a9a;
+  border-left: 5px solid #e7a8a8;
+  color: #fff4f0;
+}
+
+body.website-v2 .v2-article-callout--urgent h3,
+body.website-v2 .v2-article-callout--urgent strong {
+  color: #fff7f2;
+}
+
+body.website-v2 .v2-article-callout--urgent p {
+  color: #fff4f0;
+}
