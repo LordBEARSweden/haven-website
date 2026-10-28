@@ -309,3 +309,11 @@ body.website-v2 .v2-article-callout--urgent strong {
 body.website-v2 .v2-article-callout--urgent p {
   color: #fff4f0;
 }
+
+/* Återanvändbart underavsnitt för artiklar med en extra grupp av faktakort. */
+body.website-v2 .v2-article-subsection {
+  margin-top: clamp(65px, 7vw, 105px);
+  padding-top: clamp(45px, 5vw, 75px);
+  border-top: 1px solid var(--v2-border);
+  scroll-margin-top: 110px;
+}
