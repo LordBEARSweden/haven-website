@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101010">
-  <meta name="description" content="Haven Nordic Health – kunskap, inspiration, coaching och samtalsstöd för återhämtning, välmående och personlig utveckling.">
-  <title>Haven Nordic Health | Återhämtning, kunskap och personlig utveckling</title>
-  <link rel="manifest" href="{{root}}site.webmanifest">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{root}}images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{root}}images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{root}}images/apple-touch-icon.png">
+<!-- HAVEN_PAGE
+title: Haven Nordic Health | Återhämtning, kunskap och personlig utveckling
+description: Haven Nordic Health – kunskap, inspiration, coaching och samtalsstöd för återhämtning, välmående och personlig utveckling.
+nav: home
+styles: css/pages/home.css
+-->
 
-  <!-- Haven 2.0 — gemensamt designsystem + startsidans specifika CSS. -->
-  <link rel="stylesheet" href="{{root}}css/tokens.css">
-  <link rel="stylesheet" href="{{root}}css/base.css">
-  <link rel="stylesheet" href="{{root}}css/components.css">
-  <link rel="stylesheet" href="{{root}}css/pages/home.css">
-  <link rel="stylesheet" href="{{root}}css/responsive.css">
-  {{analytics}}
-</head>
-<body class="website-v2">
-  <a class="v2-skip-link" href="#main-content">Hoppa till innehållet</a>
-  {{header}}
-
-  <main id="main-content">
+<main id="main-content">
 <!-- HERO: bild och text är frikopplade. Byt enbart CSS-variabeln --v2-hero-image för ny bild. -->
 <section aria-labelledby="v2-hero-title" class="v2-hero">
 <div aria-hidden="true" class="v2-hero-photo"></div>
@@ -78,10 +60,3 @@
 </div>
 </section>
 <section aria-labelledby="v2-closing-title" class="v2-closing v2-section"><p class="v2-kicker">DIN VÄG, DIN TAKT</p><h2 id="v2-closing-title">Ta nästa steg i din egen takt.</h2><p>Vill du utforska vidare, ställa en fråga eller boka ett samtal? Du är varmt välkommen.</p><div class="v2-actions"><a class="v2-button v2-button-gold" href="{{root}}bokatid.html">Boka ett samtal</a><a class="v2-button v2-button-ghost" href="{{root}}kontakt.html">Kontakta Haven</a></div></section>
-</main>
-
-  {{footer}}
-  <script defer src="{{root}}js/site.js"></script>
-  {{booking_widget}}
-</body>
-</html>

@@ -1,22 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101010">
-  <meta name="description" content="Haven Nordic Health – kunskap, inspiration, coaching och samtalsstöd för återhämtning, välmående och personlig utveckling.">
-  <title>Haven Nordic Health | Återhämtning, kunskap och personlig utveckling</title>
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
-  <!-- Haven 2.0 — gemensamt designsystem + startsidans specifika CSS. -->
+  <!-- Sidans individuella SEO-information -->
+  <title>Haven Nordic Health | Återhämtning, kunskap och personlig utveckling</title>
+  <meta name="description" content="Haven Nordic Health – kunskap, inspiration, coaching och samtalsstöd för återhämtning, välmående och personlig utveckling.">
+
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="images/apple-touch-icon.png">
+
+  <!-- Gemensamt designsystem -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/home.css">
+
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="css/pages/home.css">
+
+  <!-- Responsiva anpassningar -->
   <link rel="stylesheet" href="css/responsive.css">
+
   <!-- Befintlig Google Analytics. Kontrollera samtyckeshantering inför lansering. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
 <script>
@@ -27,8 +40,13 @@
 </script>
 
 </head>
+
 <body class="website-v2">
-  <a class="v2-skip-link" href="#main-content">Hoppa till innehållet</a>
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
   <!-- Gemensam header för Haven 2.0. -->
 <header class="v2-site-header">
 <div class="v2-header-inner">
@@ -74,6 +92,7 @@
 
 
   <main id="main-content">
+    <main id="main-content">
 <!-- HERO: bild och text är frikopplade. Byt enbart CSS-variabeln --v2-hero-image för ny bild. -->
 <section aria-labelledby="v2-hero-title" class="v2-hero">
 <div aria-hidden="true" class="v2-hero-photo"></div>
@@ -128,10 +147,12 @@
 </div>
 </section>
 <section aria-labelledby="v2-closing-title" class="v2-closing v2-section"><p class="v2-kicker">DIN VÄG, DIN TAKT</p><h2 id="v2-closing-title">Ta nästa steg i din egen takt.</h2><p>Vill du utforska vidare, ställa en fråga eller boka ett samtal? Du är varmt välkommen.</p><div class="v2-actions"><a class="v2-button v2-button-gold" href="bokatid.html">Boka ett samtal</a><a class="v2-button v2-button-ghost" href="kontakt.html">Kontakta Haven</a></div></section>
-</main>
+
+  </main>
 
   <!-- Gemensam sidfot för Haven 2.0. -->
 <footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="kunskap.html">Kunskap</a><a href="blog/index.html">Blogg</a><a href="spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="coaching.html">Coaching</a><a href="samtalsstod.html">Samtalsstöd</a><a href="bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="stodhaven.html">Stöd Haven</a><a href="gavorochkop.html">Gåvor &amp; Köp</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
 
   <script defer src="js/site.js"></script>
   <!-- Befintlig Koalendar-widget från Haven 1.0. -->
@@ -152,6 +173,7 @@
     icon: 'calendar'
   });
 </script>
+
 
 </body>
 </html>
