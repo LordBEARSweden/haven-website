@@ -1,199 +1,261 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+
+  <!-- Sidans individuella SEO-information -->
   <title>Utmattningssyndrom | Haven Nordic Health</title>
-  <link rel="stylesheet" href="../style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-<link rel="manifest" href="/site.webmanifest">
+  <meta name="description" content="Läs om utmattningssyndrom, tecken på utmattning, återhämtning och stöd i vardagen.">
 
-<!-- Favicon för olika storlekar -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="../images/apple-touch-icon.png">
 
-<!-- Google tag (gtag.js) -->
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="../css/pages/article.css">
+
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- Befintlig Google Analytics. Kontrollera samtyckeshantering inför lansering. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-QFYE06CQFW');
 </script>
+
 </head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
 
+<body class="website-v2">
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="../index.html">Hem</a></li>
-                  <li><a href="../om.html">Om</a></li>
-                  <li><a href="../kunskap.html">Kunskap</a></li>
-                  <li><a href="../coaching.html">Coaching</a></li>
-                  <li><a href="../samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="../bokatid.html">Boka tid</a></li>
-                  <li><a href="../kontakt.html">Kontakt</a></li>
-                  <li><a href="../stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="../blog/index.html">Blogg</a></li>
-                  <li><a href="../gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="../spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-          <div class="logo-wrapper">
-            <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
 
-    <!-- Main content -->
-      </header>
-      <main>
-        <!-- Utmattningssyndrom sidan -->
-<section id="Intro´duktion">
-  <h2>Utmattningssyndrom</h2>
-    <h3>Introduktion</h3>
-    <h4>Vad är Utmattningssyndrom</h4>
-    <p>Utmattningssyndrom är ett tillstånd som uppstår efter långvarig stress utan tillräcklig återhämtning. Det kännetecknas av en djup fysisk, psykisk och emotionell trötthet som inte går över efter vila eller semester. Personer med utmattningssyndrom kan uppleva koncentrationssvårigheter, minnesproblem, sömnsvårigheter, irritabilitet, nedstämdhet och en känsla av att vara överväldigad av vardagens krav.
-        Tillståndet utvecklas ofta gradvis och kan påverka arbetsförmåga, relationer och det dagliga livet. Utmattningssyndrom handlar inte om svaghet eller brist på vilja, utan är en reaktion från kroppen och hjärnan på långvarig stressbelastning. Medveten återhämtning, stöd och strategier för att hantera stress är centrala för att återhämta sig och bygga långsiktig resiliens.</p>
-</section>
-
-<section id="fakta">
-  <h2>Fakta om Utmattningssyndrom</h2>
-  <div class="card-container">
-    <div class="card">
-      <h3>Tecken på utmattning</h3>
-      <ul>
-        <li>Konstant fysisk och psykisk trötthet</li>
-        <li>Svårigheter att koncentrera sig eller minnas</li>
-        <li>Sömnproblem trots trötthet</li>
-        <li>Känsla av att inte räcka till eller att allt blir överväldigande</li>
-        <li>Irritabilitet och låg stresströskel</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Vanliga beteenden vid utmattning</h3>
-      <ul>
-        <li>Undviker sociala situationer eller aktiviteter som tidigare varit roliga</li>
-        <li>Tar på sig mer ansvar än man orkar, för att känna kontroll</li>
-        <li>Svårt att säga nej eller sätta gränser</li>
-        <li>Prokrastinerar eller blir ineffektiv trots ansträngning</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Effekter på kroppen och psyket</h3>
-      <ul>
-        <li>Huvudvärk, muskelspänningar och magbesvär</li>
-        <li>Hjärtklappning eller yrsel vid stress</li>
-        <li>Nedstämdhet, oro eller ångest</li>
-        <li>Minskad motivation och energi</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Viktigt att veta</h3>
-      <ul>
-        <li>Utmattningssyndrom är en medicinsk reaktion på långvarig stress, inte personlig svaghet</li>
-        <li>Tidig igenkänning och återhämtning är avgörande för att undvika fördjupad sjukdom</li>
-        <li>Återhämtning kan ta tid och kräver ofta stöd, struktur och förändringar i vardagen</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="rekommendationer">
-  <h2>Havens rekommendationer</h2>
-  <div class="card-container">
-    <div class="card exercise">
-      <h3>Lyssna på kroppen</h3>
-      <p>Känn efter när kroppen behöver vila och tillåt dig att pausa utan skuld.</p>
-    </div>
-    <div class="card exercise">
-      <h3>Sänk kraven</h3>
-      <p>Anpassa vardagen efter orken. Det är okej att säga nej och låta vissa saker vänta.</p>
-    </div>
-    <div class="card exercise">
-      <h3>Sök stöd</h3>
-      <p>Prata med någon du litar på, professionellt eller privat. Att bli sedd och förstådd är centralt.</p>
-    </div>
-    <div class="card exercise">
-        <h3>Gradvis återgång</h3>
-        <p>Återgå till arbete eller aktiviteter i små steg, i takt med återhämtning.</p>
-    </div>
-    <div class="card exercise">
-        <h3>Acceptera långsam återhämtning</h3>
-        <p>Utmattning kan ta lång tid att läka, och vissa kan aldrig återgå till fullt energiläge. Det är viktigt att acceptera begränsningarna och inte stressa kroppen med prestation.</p>
-    </div>
-    <div class="card exercise">
-        <h3>Skapa trygghet och stabilitet</h3>
-        <p>Små rutiner, regelbunden sömn och förutsägbarhet i vardagen hjälper hjärnan och kroppen att återhämta sig.</p>
-    </div>
-  </div>
-</section>
-
-<section id="fakta-detaljer">
-  <h2>Utmattningssyndrom på djupet</h2>
-  <div class="fact-detail">
-    <p>Utmattningssyndrom är ett komplext tillstånd som påverkar både kropp och psyke. Det uppstår efter långvarig exponering för stress utan tillräcklig återhämtning, vilket leder till att kroppens och hjärnans resurser töms gradvis. Till skillnad från vanlig trötthet är utmattning djupgående och långvarig; vila under kortare perioder räcker ofta inte för återhämtning.</p>
-    <p>Kroppsligt påverkas bland annat nervsystemet, hormonbalansen och energimetabolismen. Långvarig stress aktiverar konstant kroppens “kamp- eller flykt”-respons, vilket leder till höga nivåer av stresshormoner som kortisol och adrenalin. Om denna aktivering pågår för länge kan det skapa skador på hjärnans stresshanteringssystem, vilket påverkar koncentration, minne och emotionell reglering. Personer med utmattningssyndrom kan uppleva yrsel, hjärtklappning, muskelspänningar, huvudvärk och nedsatt immunförsvar.</p>
-    <p>Psykologiskt påverkas motivation, känsloreglering och självkänsla. Det är vanligt att känna sig otillräcklig, överväldigad och kraftlös inför vardagliga uppgifter. Utmattningssyndrom kan också leda till nedstämdhet eller ångest, vilket inte alltid är primära psykiatriska tillstånd utan snarare konsekvenser av långvarig belastning och utmattning.</p>
-    <p>Diagnosen utmattningssyndrom har varit viktig för att ge erkännande åt personer som drabbas av extrem stress och för att vägleda vårdinsatser. Under senare år har det dock påbörjats en diskussion inom psykiatrin och socialmedicin om att diagnosen kan ersättas av mer specifika kategorier som tar hänsyn till underliggande faktorer som stressrelaterade depressiva symtom, ångest eller andra psykosociala stressreaktioner. Orsaken är att “utmattningssyndrom” ibland upplevs som för generell och kan sakna tydliga biologiska markörer, vilket gör det svårt att följa i statistiken eller jämföra över tid. Samtidigt kvarstår behovet av att identifiera och stödja personer med extrem belastning på ett sätt som erkänner den allvarliga påverkan på både kropp och psyke.</p>
-    <p>Återhämtning från utmattningssyndrom är ofta långsam och individuell. Vissa människor återvinner stora delar av sin funktion, medan andra upplever kvarstående begränsningar i ork och koncentration under lång tid eller permanent. Därför är det centralt att tidigt identifiera signaler på överbelastning, reducera stressfaktorer och ge realistiskt stöd utan att sätta krav på snabb återhämtning. Att acceptera begränsningar, skapa trygghet och stabilitet i vardagen, och ha tillgång till professionellt stöd är avgörande för att livet ska bli hanterbart och för att personen ska kunna bevara värdighet och livskvalitet trots sjukdomens allvar.</p>
-
-    <a href="https://www.1177.se/Dalarna/utmattningssyndrom">Läs mer på 1177</a>
-    <h4>Sammanfattning</h4>
-    <p>Utmattningssyndrom är ett tillstånd som uppstår efter långvarig stress utan tillräcklig återhämtning och påverkar både kropp och psyke. Det kännetecknas av djup fysisk och psykisk trötthet, koncentrationssvårigheter, sömnproblem, emotionell instabilitet och nedsatt motivation. Diagnosen har varit viktig för att ge erkännande åt personer med extrem stressbelastning, men den börjar fasas ut inom vissa delar av psykiatrin till förmån för mer specifika kategorier.</p>
-    <p>Återhämtning är långsam och individuell; vissa återhämtar sig till stor del, andra får kvarstående begränsningar. Tidig igenkänning, minskad stress, trygghet och stöd är centralt, och det är viktigt att acceptera att återhämtningen kan ta tid och ibland inte blir fullständig. Målet är inte prestation utan att skapa förutsättningar för hanterbarhet, livskvalitet och bevarad värdighet under och efter utmattningen.</p>
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="../index.html">
+<img alt="" class="v2-brand-logo" height="60" src="../images/Haven Transparent No buffer no text.png" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="../index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="../kunskap.html">Kunskap</a>
+<a href="../blog/index.html">Blogg</a>
+<a href="../spirituellt.html">Spirituellt</a>
 </div>
-    <div class="sources">
-        <h4>Källor</h4>
-        <ul>
-            <li><a href="https://www.1177.se/Dalarna/utmattningssyndrom">1177 – Utmattning</a></li>
-        </ul>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="../coaching.html">Coaching</a>
+<a href="../samtalsstod.html">Samtalsstöd</a>
+<a href="../gavorochkop.html">Gåvor &amp; Köp</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="../om.html">Om verksamheten</a>
+<a href="../stodhaven.html">Stöd Haven</a>
+</div>
+</details>
+<a href="../kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="../bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
+
+
+  <main id="main-content">
+    <div class="v2-article-page">
+  <section class="v2-article-hero v2-section" aria-labelledby="article-title">
+    <div class="v2-article-hero-inner">
+      <p class="v2-kicker">HAVENS KUNSKAPSBIBLIOTEK</p>
+      <nav class="v2-article-breadcrumb" aria-label="Brödsmulor">
+        <a href="../kunskap.html">Kunskap</a><span aria-hidden="true">/</span><span>Utmattningssyndrom</span>
+      </nav>
+      <h1 id="article-title">Utmattnings<wbr>syndrom</h1>
+      <span aria-hidden="true" class="v2-article-rule"></span>
+      <p class="v2-article-lead">Om långvarig stress, utmattningens påverkan och vägar till återhämtning.</p>
     </div>
+  </section>
 
-</section>
+  <nav class="v2-article-contents" aria-label="Artikelns avsnitt">
+    <div class="v2-article-contents-inner">
+      <span>På den här sidan</span>
+      <a href="#introduktion">Introduktion</a>
+      <a href="#fakta">Fakta</a>
+      <a href="#rekommendationer">Rekommendationer</a>
+      <a href="#fakta-detaljer">Fördjupning</a>
+      <a href="#kallor">Källor</a>
+    </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer>
-            <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
+  <section class="v2-article-band v2-article-band--light v2-section" id="introduktion" aria-labelledby="intro-title">
+    <div class="v2-article-prose">
+      <p class="v2-kicker">INTRODUKTION</p>
+      <h2 id="intro-title">Vad är utmattningssyndrom?</h2>
+      <p>Utmattningssyndrom &auml;r ett tillst&aring;nd som uppst&aring;r efter l&aring;ngvarig stress utan tillr&auml;cklig &aring;terh&auml;mtning. Det k&auml;nnetecknas av en djup fysisk, psykisk och emotionell tr&ouml;tthet som inte g&aring;r &ouml;ver efter vila eller semester. Personer med utmattningssyndrom kan uppleva koncentrationssv&aring;righeter, minnesproblem, s&ouml;mnsv&aring;righeter, irritabilitet, nedst&auml;mdhet och en k&auml;nsla av att vara &ouml;verv&auml;ldigad av vardagens krav.</p>
+      <p>Tillst&aring;ndet utvecklas ofta gradvis och kan p&aring;verka arbetsf&ouml;rm&aring;ga, relationer och det dagliga livet. Utmattningssyndrom handlar inte om svaghet eller brist p&aring; vilja, utan &auml;r en reaktion fr&aring;n kroppen och hj&auml;rnan p&aring; l&aring;ngvarig stressbelastning. Medveten &aring;terh&auml;mtning, st&ouml;d och strategier f&ouml;r att hantera stress &auml;r centrala f&ouml;r att &aring;terh&auml;mta sig och bygga l&aring;ngsiktig resiliens.</p>
+    </div>
+  </section>
 
-  <!-- JS Toggle -->
-  <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
+  <section class="v2-article-band v2-article-band--dark v2-section" id="fakta" aria-labelledby="facts-title">
+    <div class="v2-article-wide">
+      <div class="v2-article-section-heading">
+        <p class="v2-kicker">ÖVERSIKT</p>
+        <h2 id="facts-title">Fakta om utmattningssyndrom</h2>
+      </div>
+      <div class="v2-article-card-grid">
+      <article class="v2-article-card">
+        <h3>Tecken p&aring; utmattning</h3>
+        <ul>
+          <li>Konstant fysisk och psykisk tr&ouml;tthet</li>
+          <li>Sv&aring;righeter att koncentrera sig eller minnas</li>
+          <li>S&ouml;mnproblem trots tr&ouml;tthet</li>
+          <li>K&auml;nsla av att inte r&auml;cka till eller att allt blir &ouml;verv&auml;ldigande</li>
+          <li>Irritabilitet och l&aring;g stresstr&ouml;skel</li>
+        </ul>
+      </article>
+      <article class="v2-article-card">
+        <h3>Vanliga beteenden vid utmattning</h3>
+        <ul>
+          <li>Undviker sociala situationer eller aktiviteter som tidigare varit roliga</li>
+          <li>Tar p&aring; sig mer ansvar &auml;n man orkar, f&ouml;r att k&auml;nna kontroll</li>
+          <li>Sv&aring;rt att s&auml;ga nej eller s&auml;tta gr&auml;nser</li>
+          <li>Prokrastinerar eller blir ineffektiv trots anstr&auml;ngning</li>
+        </ul>
+      </article>
+      <article class="v2-article-card">
+        <h3>Effekter p&aring; kroppen och psyket</h3>
+        <ul>
+          <li>Huvudv&auml;rk, muskelsp&auml;nningar och magbesv&auml;r</li>
+          <li>Hj&auml;rtklappning eller yrsel vid stress</li>
+          <li>Nedst&auml;mdhet, oro eller &aring;ngest</li>
+          <li>Minskad motivation och energi</li>
+        </ul>
+      </article>
+      <article class="v2-article-card">
+        <h3>Viktigt att veta</h3>
+        <ul>
+          <li>Utmattningssyndrom &auml;r en medicinsk reaktion p&aring; l&aring;ngvarig stress, inte personlig svaghet</li>
+          <li>Tidig igenk&auml;nning och &aring;terh&auml;mtning &auml;r avg&ouml;rande f&ouml;r att undvika f&ouml;rdjupad sjukdom</li>
+          <li>&Aring;terh&auml;mtning kan ta tid och kr&auml;ver ofta st&ouml;d, struktur och f&ouml;r&auml;ndringar i vardagen</li>
+        </ul>
+      </article>
+      </div>
+    </div>
+  </section>
 
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+  <section class="v2-article-band v2-article-band--light v2-section" id="rekommendationer" aria-labelledby="recommendations-title">
+    <div class="v2-article-wide">
+      <div class="v2-article-section-heading">
+        <p class="v2-kicker">VERKTYG I VARDAGEN</p>
+        <h2 id="recommendations-title">Havens rekommendationer</h2>
+      </div>
+      <div class="v2-article-card-grid">
+      <article class="v2-article-card v2-article-card--exercise">
+        <h3>Lyssna p&aring; kroppen</h3>
+        <p>K&auml;nn efter n&auml;r kroppen beh&ouml;ver vila och till&aring;t dig att pausa utan skuld.</p>
+      </article>
+      <article class="v2-article-card v2-article-card--exercise">
+        <h3>S&auml;nk kraven</h3>
+        <p>Anpassa vardagen efter orken. Det &auml;r okej att s&auml;ga nej och l&aring;ta vissa saker v&auml;nta.</p>
+      </article>
+      <article class="v2-article-card v2-article-card--exercise">
+        <h3>S&ouml;k st&ouml;d</h3>
+        <p>Prata med n&aring;gon du litar p&aring;, professionellt eller privat. Att bli sedd och f&ouml;rst&aring;dd &auml;r centralt.</p>
+      </article>
+      <article class="v2-article-card v2-article-card--exercise">
+        <h3>Gradvis &aring;terg&aring;ng</h3>
+        <p>&Aring;terg&aring; till arbete eller aktiviteter i sm&aring; steg, i takt med &aring;terh&auml;mtning.</p>
+      </article>
+      <article class="v2-article-card v2-article-card--exercise">
+        <h3>Acceptera l&aring;ngsam &aring;terh&auml;mtning</h3>
+        <p>Utmattning kan ta l&aring;ng tid att l&auml;ka, och vissa kan aldrig &aring;terg&aring; till fullt energil&auml;ge. Det &auml;r viktigt att acceptera begr&auml;nsningarna och inte stressa kroppen med prestation.</p>
+      </article>
+      <article class="v2-article-card v2-article-card--exercise">
+        <h3>Skapa trygghet och stabilitet</h3>
+        <p>Sm&aring; rutiner, regelbunden s&ouml;mn och f&ouml;ruts&auml;gbarhet i vardagen hj&auml;lper hj&auml;rnan och kroppen att &aring;terh&auml;mta sig.</p>
+      </article>
+      </div>
+    </div>
+  </section>
 
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <section class="v2-article-band v2-article-band--dark v2-section" id="fakta-detaljer" aria-labelledby="deep-title">
+    <div class="v2-article-prose">
+      <p class="v2-kicker">FÖRDJUPNING</p>
+      <h2 id="deep-title">Utmattningssyndrom på djupet</h2>
+      <p>Utmattningssyndrom &auml;r ett komplext tillst&aring;nd som p&aring;verkar b&aring;de kropp och psyke. Det uppst&aring;r efter l&aring;ngvarig exponering f&ouml;r stress utan tillr&auml;cklig &aring;terh&auml;mtning, vilket leder till att kroppens och hj&auml;rnans resurser t&ouml;ms gradvis. Till skillnad fr&aring;n vanlig tr&ouml;tthet &auml;r utmattning djupg&aring;ende och l&aring;ngvarig; vila under kortare perioder r&auml;cker ofta inte f&ouml;r &aring;terh&auml;mtning.</p>
+      <p>Kroppsligt p&aring;verkas bland annat nervsystemet, hormonbalansen och energimetabolismen. L&aring;ngvarig stress aktiverar konstant kroppens &ldquo;kamp- eller flykt&rdquo;-respons, vilket leder till h&ouml;ga niv&aring;er av stresshormoner som kortisol och adrenalin. Om denna aktivering p&aring;g&aring;r f&ouml;r l&auml;nge kan det skapa skador p&aring; hj&auml;rnans stresshanteringssystem, vilket p&aring;verkar koncentration, minne och emotionell reglering. Personer med utmattningssyndrom kan uppleva yrsel, hj&auml;rtklappning, muskelsp&auml;nningar, huvudv&auml;rk och nedsatt immunf&ouml;rsvar.</p>
+      <p>Psykologiskt p&aring;verkas motivation, k&auml;nsloreglering och sj&auml;lvk&auml;nsla. Det &auml;r vanligt att k&auml;nna sig otillr&auml;cklig, &ouml;verv&auml;ldigad och kraftl&ouml;s inf&ouml;r vardagliga uppgifter. Utmattningssyndrom kan ocks&aring; leda till nedst&auml;mdhet eller &aring;ngest, vilket inte alltid &auml;r prim&auml;ra psykiatriska tillst&aring;nd utan snarare konsekvenser av l&aring;ngvarig belastning och utmattning.</p>
+      <p>Diagnosen utmattningssyndrom har varit viktig f&ouml;r att ge erk&auml;nnande &aring;t personer som drabbas av extrem stress och f&ouml;r att v&auml;gleda v&aring;rdinsatser. Under senare &aring;r har det dock p&aring;b&ouml;rjats en diskussion inom psykiatrin och socialmedicin om att diagnosen kan ers&auml;ttas av mer specifika kategorier som tar h&auml;nsyn till underliggande faktorer som stressrelaterade depressiva symtom, &aring;ngest eller andra psykosociala stressreaktioner. Orsaken &auml;r att &ldquo;utmattningssyndrom&rdquo; ibland upplevs som f&ouml;r generell och kan sakna tydliga biologiska mark&ouml;rer, vilket g&ouml;r det sv&aring;rt att f&ouml;lja i statistiken eller j&auml;mf&ouml;ra &ouml;ver tid. Samtidigt kvarst&aring;r behovet av att identifiera och st&ouml;dja personer med extrem belastning p&aring; ett s&auml;tt som erk&auml;nner den allvarliga p&aring;verkan p&aring; b&aring;de kropp och psyke.</p>
+      <p>&Aring;terh&auml;mtning fr&aring;n utmattningssyndrom &auml;r ofta l&aring;ngsam och individuell. Vissa m&auml;nniskor &aring;tervinner stora delar av sin funktion, medan andra upplever kvarst&aring;ende begr&auml;nsningar i ork och koncentration under l&aring;ng tid eller permanent. D&auml;rf&ouml;r &auml;r det centralt att tidigt identifiera signaler p&aring; &ouml;verbelastning, reducera stressfaktorer och ge realistiskt st&ouml;d utan att s&auml;tta krav p&aring; snabb &aring;terh&auml;mtning. Att acceptera begr&auml;nsningar, skapa trygghet och stabilitet i vardagen, och ha tillg&aring;ng till professionellt st&ouml;d &auml;r avg&ouml;rande f&ouml;r att livet ska bli hanterbart och f&ouml;r att personen ska kunna bevara v&auml;rdighet och livskvalitet trots sjukdomens allvar.</p>
+      <p><a href="https://www.1177.se/Dalarna/utmattningssyndrom" target="_blank" rel="noopener noreferrer">L&auml;s mer p&aring; 1177</a></p>
+      <h3>Sammanfattning</h3>
+      <p>Utmattningssyndrom &auml;r ett tillst&aring;nd som uppst&aring;r efter l&aring;ngvarig stress utan tillr&auml;cklig &aring;terh&auml;mtning och p&aring;verkar b&aring;de kropp och psyke. Det k&auml;nnetecknas av djup fysisk och psykisk tr&ouml;tthet, koncentrationssv&aring;righeter, s&ouml;mnproblem, emotionell instabilitet och nedsatt motivation. Diagnosen har varit viktig f&ouml;r att ge erk&auml;nnande &aring;t personer med extrem stressbelastning, men den b&ouml;rjar fasas ut inom vissa delar av psykiatrin till f&ouml;rm&aring;n f&ouml;r mer specifika kategorier.</p>
+      <p>&Aring;terh&auml;mtning &auml;r l&aring;ngsam och individuell; vissa &aring;terh&auml;mtar sig till stor del, andra f&aring;r kvarst&aring;ende begr&auml;nsningar. Tidig igenk&auml;nning, minskad stress, trygghet och st&ouml;d &auml;r centralt, och det &auml;r viktigt att acceptera att &aring;terh&auml;mtningen kan ta tid och ibland inte blir fullst&auml;ndig. M&aring;let &auml;r inte prestation utan att skapa f&ouml;ruts&auml;ttningar f&ouml;r hanterbarhet, livskvalitet och bevarad v&auml;rdighet under och efter utmattningen.</p>
+    </div>
+    <div class="v2-article-prose v2-article-sources" id="kallor">
+      <h2>Källor</h2>
+      <ul>
+        <li><a href="https://www.1177.se/Dalarna/utmattningssyndrom" target="_blank" rel="noopener noreferrer">1177 &ndash; Utmattning</a></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+  </main>
+
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="../kunskap.html">Kunskap</a><a href="../blog/index.html">Blogg</a><a href="../spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="../coaching.html">Coaching</a><a href="../samtalsstod.html">Samtalsstöd</a><a href="../bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="../om.html">Om oss</a><a href="../kontakt.html">Kontakt</a><a href="../stodhaven.html">Stöd Haven</a><a href="../gavorochkop.html">Gåvor &amp; Köp</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="../js/site.js"></script>
+  <!-- Befintlig Koalendar-widget från Haven 1.0. -->
+<script>
+  window.Koalendar = window.Koalendar || function () {
+    (Koalendar.props = Koalendar.props || []).push(arguments);
+  };
 </script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('widget', {
+    url: 'https://koalendar.com/e/haven-nordic-health-3',
+    text: 'Boka tid',
+    shape: 'rounded-full',
+    backgroundColor: '#c9a36c',
+    textColor: '#0f0f0f',
+    position: 'bottom-right',
+    icon: 'calendar'
+  });
+</script>
+
 
 </body>
 </html>
