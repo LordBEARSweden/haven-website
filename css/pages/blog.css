@@ -1,0 +1,136 @@
+/* Haven 2.0 / Bloggöversikt. Enbart komponenter inom .v2-blog-page. */
+body.website-v2 .v2-blog-page { background: var(--v2-bg); }
+body.website-v2 .v2-blog-shell { width: min(100%, 1240px); margin-inline: auto; }
+
+/* Mörk redaktionell introduktion */
+body.website-v2 .v2-blog-hero.v2-section {
+  background: radial-gradient(ellipse at 88% 15%, rgba(182,130,81,.14), transparent 51%), linear-gradient(135deg,#171615,#101010 70%);
+  border-bottom: 1px solid rgba(201,163,108,.28);
+  padding-block: clamp(98px, 10vw, 158px);
+  position: relative;
+  overflow: hidden;
+}
+body.website-v2 .v2-blog-hero-inner {
+  width:min(100%,1240px); margin-inline:auto;
+  display:grid; grid-template-columns: minmax(0,1.3fr) minmax(245px,.55fr);
+  gap:clamp(40px,7vw,105px); align-items:end;
+}
+body.website-v2 .v2-blog-hero-primary {min-width:0;}
+body.website-v2 .v2-blog-hero h1 {color:var(--v2-white); font-size:clamp(3.4rem,7vw,7.4rem); letter-spacing:-.06em; line-height:1.03; max-width:900px;}
+body.website-v2 .v2-blog-hero h1 em {color:var(--v2-gold-light);font-weight:400;}
+body.website-v2 .v2-blog-hero-rule {display:block; width:92px; height:2px; background:var(--v2-gold); margin-block:34px 27px;}
+body.website-v2 .v2-blog-hero-lead {font-size:clamp(1.05rem,1.65vw,1.2rem); line-height:1.82; max-width:650px; color:#d1c9bf;}
+body.website-v2 .v2-blog-hero-aside {border-left:1px solid rgba(201,163,108,.4); padding:0 0 5px 30px; color:#ddd2c5;}
+body.website-v2 .v2-blog-aside-ornament {display:block; font:normal 5.6rem/.65 Georgia,serif; color:var(--v2-gold); margin-bottom:17px;}
+body.website-v2 .v2-blog-hero-aside p {font:italic clamp(1.2rem,1.8vw,1.6rem)/1.5 var(--v2-display);}
+body.website-v2 .v2-blog-aside-label {display:block; color:var(--v2-gold); font-size:.66rem; font-weight:700; letter-spacing:.18em; margin-top:22px;}
+
+/* Ett långsamt, läsvänligt utvalt inlägg */
+body.website-v2 .v2-blog-highlight.v2-section {background:#e9e1d4; padding-block:clamp(70px,8vw,116px);}
+body.website-v2 .v2-blog-feature {display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); min-height:470px; color:#22201c; background:#faf7f1; border:1px solid #d3c6b5; overflow:hidden; transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
+body.website-v2 .v2-blog-feature:hover,body.website-v2 .v2-blog-feature:focus-visible {transform:translateY(-4px);box-shadow:0 20px 50px rgba(35,26,18,.12);border-color:#b68f57;}
+/* Haven Journal använder artikelns första bild, inte abstrakta dekorationer. */
+body.website-v2 .v2-blog-feature-visual {
+  position: relative;
+  min-height: 370px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #24211e;
+}
+body.website-v2 .v2-blog-feature-image {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+body.website-v2 .v2-blog-feature-image[hidden] { display: none; }
+body.website-v2 .v2-blog-feature-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 40%, rgba(9, 10, 10, .64));
+  pointer-events: none;
+}
+body.website-v2 .v2-blog-art-word {
+  position: absolute;
+  bottom: 27px;
+  left: 35px;
+  z-index: 2;
+  color: #fbf5e9;
+  font-size: .63rem;
+  letter-spacing: .23em;
+  font-weight: 700;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, .48);
+}
+body.website-v2 .v2-blog-feature-copy {display:flex; flex-direction:column; align-items:flex-start; padding:clamp(33px,4.4vw,74px);}
+body.website-v2 .v2-blog-overline {font-size:.72rem;letter-spacing:.14em;font-weight:700;color:#7c603b;}
+body.website-v2 .v2-blog-overline span {margin-inline:7px;color:#b4a18a;}
+body.website-v2 .v2-blog-feature h2 {font-size:clamp(2.2rem,4vw,3.75rem);line-height:1.13;letter-spacing:-.035em;color:#25211d; margin-top:30px; max-width:680px;}
+body.website-v2 .v2-blog-feature-copy>p {font-size:1rem;line-height:1.85;color:#61584f;max-width:600px;margin-top:24px;}
+body.website-v2 .v2-blog-read {font-weight:650;color:#664825;font-size:.92rem; border-bottom:1px solid #ac8756; padding-bottom:5px; margin-top:auto;padding-top:27px;}
+body.website-v2 .v2-blog-read span {margin-left:12px;}
+
+/* Arkivet som helt klickbara, stabila artikelytor */
+body.website-v2 .v2-blog-library.v2-section {background:var(--v2-ivory);color:#211f1c;}
+body.website-v2 .v2-blog-section-head {display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:46px;}
+body.website-v2 .v2-blog-section-head .v2-kicker {color:#795a34;}
+body.website-v2 .v2-blog-section-head h2 {color:#221f1b;}
+body.website-v2 .v2-blog-section-head > p {color:#665e55;max-width:300px;line-height:1.7;}
+body.website-v2 .v2-blog-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+body.website-v2 .v2-blog-card {display:flex;flex-direction:column;align-items:flex-start;min-width:0;min-height:320px;padding:clamp(25px,3.3vw,46px);background:#faf7f1;border:1px solid #d6cabc;border-top:3px solid #b69161;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+body.website-v2 .v2-blog-card:hover,body.website-v2 .v2-blog-card:focus-visible {transform:translateY(-3px);border-color:#b18957;box-shadow:0 12px 28px rgba(33,24,13,.09);}
+body.website-v2 .v2-blog-card-top {display:flex;justify-content:space-between;align-items:center;gap:20px;width:100%;color:#766854;font-weight:600;font-size:.79rem;}
+body.website-v2 .v2-blog-card-index {font-size:.74rem;font-weight:750;letter-spacing:.18em;color:#9c7850;}
+body.website-v2 .v2-blog-card h3 {font-size:clamp(1.58rem,2.6vw,2.2rem);line-height:1.25;letter-spacing:-.02em;margin-top:28px;max-width:560px;overflow-wrap:anywhere;color:#25211e;}
+body.website-v2 .v2-blog-card p {font-size:.93rem;line-height:1.75;color:#625a51;margin-top:17px;max-width:630px;}
+body.website-v2 .v2-blog-card-link {margin-top:auto;padding-top:28px;font-weight:700;font-size:.82rem;color:#76532b;}
+body.website-v2 .v2-blog-card-link span {margin-left:10px;}
+body.website-v2 .v2-blog-grid>.v2-blog-card:nth-child(odd):last-child {grid-column:1/-1; min-height:230px;}
+body.website-v2 .v2-blog-grid>.v2-blog-card:nth-child(odd):last-child h3 {max-width:940px;}
+body.website-v2 .v2-blog-grid>.v2-blog-card:nth-child(odd):last-child p {max-width:900px;}
+
+/* Lugn avslutning */
+body.website-v2 .v2-blog-outro.v2-section {background:radial-gradient(ellipse at 92% 20%,rgba(201,163,108,.09),transparent 46%),#151413;border-top:1px solid var(--v2-border);}
+body.website-v2 .v2-blog-outro-inner {width:min(100%,1240px);margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:45px;align-items:center;}
+body.website-v2 .v2-blog-outro h2 {color:var(--v2-ivory);font-size:clamp(2.1rem,3.7vw,3.5rem);}
+body.website-v2 .v2-blog-outro p:not(.v2-kicker) {max-width:630px;color:#c4bbb0;line-height:1.8;margin-top:17px;}
+body.website-v2 .v2-blog-outro-link {display:inline-flex;gap:30px;align-items:center;border:1px solid var(--v2-border);padding:19px 25px;color:var(--v2-ivory);font-size:.93rem;font-weight:650;transition:background .2s ease,border-color .2s ease;}
+body.website-v2 .v2-blog-outro-link:hover,body.website-v2 .v2-blog-outro-link:focus-visible {background:rgba(201,163,108,.09);border-color:var(--v2-gold);}
+body.website-v2 .v2-blog-outro-link span {color:var(--v2-gold-light);}
+
+@media (max-width: 960px) {
+  body.website-v2 .v2-blog-hero-inner {grid-template-columns:1fr; gap:48px;}
+  body.website-v2 .v2-blog-hero-aside {max-width:430px;}
+  body.website-v2 .v2-blog-feature {grid-template-columns:1fr 1.1fr; min-height:400px;}
+  body.website-v2 .v2-blog-feature-copy {padding:35px;}
+  body.website-v2 .v2-blog-feature h2 {font-size:clamp(2rem,4.3vw,3rem);}
+  body.website-v2 .v2-blog-outro-inner {grid-template-columns:1fr;}
+}
+@media (max-width: 720px) {
+  body.website-v2 .v2-blog-hero.v2-section {padding-block:85px;}
+  body.website-v2 .v2-blog-hero h1 {font-size:clamp(3.2rem,11vw,5.6rem);}
+  body.website-v2 .v2-blog-hero-aside {display:none;}
+  body.website-v2 .v2-blog-feature {grid-template-columns:1fr;}
+  body.website-v2 .v2-blog-feature-visual {min-height:255px;}
+  body.website-v2 .v2-blog-feature-copy {padding:32px 28px 36px;}
+  body.website-v2 .v2-blog-feature h2 {font-size:clamp(2.05rem,7vw,3rem);margin-top:24px;}
+  body.website-v2 .v2-blog-section-head {display:block;margin-bottom:30px;}
+  body.website-v2 .v2-blog-section-head>p {margin-top:15px;}
+  body.website-v2 .v2-blog-grid {grid-template-columns:1fr;}
+  body.website-v2 .v2-blog-card {min-height:0;}
+  body.website-v2 .v2-blog-grid>.v2-blog-card:nth-child(odd):last-child {grid-column:auto;min-height:0;}
+}
+@media (max-width: 380px) {
+ body.website-v2 .v2-blog-hero h1 {font-size:3rem;}
+ body.website-v2 .v2-blog-overline {font-size:.66rem;letter-spacing:.1em;}
+ body.website-v2 .v2-blog-card-top {gap:8px;flex-wrap:wrap;}
+ body.website-v2 .v2-blog-card h3 {font-size:1.65rem;}
+ body.website-v2 .v2-blog-outro-link {justify-content:space-between;width:100%;gap:10px;}
+}
+@media (prefers-reduced-motion:reduce) {
+ body.website-v2 .v2-blog-feature,body.website-v2 .v2-blog-card,body.website-v2 .v2-blog-outro-link {transition:none;}
+}
