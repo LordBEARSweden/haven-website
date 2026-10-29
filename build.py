@@ -4,6 +4,7 @@
 from pathlib import Path
 from html import escape
 from html.parser import HTMLParser
+import json
 from urllib.parse import quote
 import re
 
@@ -135,6 +136,101 @@ def render_missing_social_tags(fields, existing_keys):
     return "\n".join(lines)
 
 
+
+def create_structured_data(title, description, canonical_url, relative):
+    """Build conservative JSON-LD from confirmed page metadata only.
+
+    Organization and WebSite are defined on the homepage. All pages identify
+    themselves as WebPage; blog posts and knowledge articles add an article
+    node. Authorship, publishing dates, and article images are deliberately
+    omitted until the page sources supply verified values.
+    """
+    homepage_url = f"{SITE_URL}/"
+    organization_id = f"{homepage_url}#organization"
+    website_id = f"{homepage_url}#website"
+    webpage_id = f"{canonical_url}#webpage"
+
+    graph = []
+
+    if relative == Path("index.html"):
+        graph.extend([
+            {
+                "@type": "Organization",
+                "@id": organization_id,
+                "name": SITE_NAME,
+                "url": homepage_url,
+                "logo": f"{SITE_URL}/{DEFAULT_SOCIAL_IMAGE}",
+            },
+            {
+                "@type": "WebSite",
+                "@id": website_id,
+                "url": homepage_url,
+                "name": SITE_NAME,
+                "inLanguage": "sv-SE",
+                "publisher": {"@id": organization_id},
+            },
+        ])
+
+    webpage = {
+        "@type": "WebPage",
+        "@id": webpage_id,
+        "url": canonical_url,
+        "name": title,
+        "inLanguage": "sv-SE",
+        "isPartOf": {"@id": website_id},
+    }
+    if description:
+        webpage["description"] = description
+    graph.append(webpage)
+
+    if len(relative.parts) == 2 and relative.suffix == ".html":
+        category = relative.parts[0]
+        if category in ("blog", "kunskap") and relative.name != "index.html":
+            article_id = f"{canonical_url}#article"
+            webpage["mainEntity"] = {"@id": article_id}
+            headline = title.removesuffix(f" | {SITE_NAME}").strip()
+            article = {
+                "@type": "BlogPosting" if category == "blog" else "Article",
+                "@id": article_id,
+                "headline": headline,
+                "inLanguage": "sv-SE",
+                "mainEntityOfPage": {"@id": webpage_id},
+                "publisher": {"@id": organization_id},
+            }
+            if description:
+                article["description"] = description
+            graph.append(article)
+
+    payload = json.dumps(
+        {"@context": "https://schema.org", "@graph": graph},
+        ensure_ascii=False,
+        indent=2,
+    )
+    # JSON-LD is embedded inside HTML; neutralize special HTML characters so
+    # even a title containing '</script>' cannot terminate the script tag.
+    return (payload.replace("<", "\\u003c")
+                   .replace(">", "\\u003e")
+                   .replace("&", "\\u0026"))
+
+
+def append_structured_data(document, title, description, canonical_url, relative):
+    """Insert one JSON-LD graph into <head> without duplicating legacy data."""
+    head = re.search(r"<head\b[^>]*>.*?</head\s*>", document,
+                     re.IGNORECASE | re.DOTALL)
+    if not head:
+        return document
+
+    # Preserve any structured data already maintained by a standalone page.
+    if re.search(r'<script\b(?=[^>]*\btype\s*=\s*["\']application/ld\+json["\'])[^>]*>',
+                 head.group(0), re.IGNORECASE):
+        return document
+
+    payload = create_structured_data(title, description, canonical_url, relative)
+    script = '  <script type="application/ld+json">\n' + payload + '\n  </script>'
+    return re.sub(r"</head\s*>", lambda m: script + "\n" + m.group(0),
+                  document, count=1, flags=re.IGNORECASE)
+
+
 def build_page(source, partials, layout):
     relative = source.relative_to(PAGES)
     destination = ROOT / relative
@@ -227,6 +323,11 @@ def build_page(source, partials, layout):
                     count=1,
                     flags=re.IGNORECASE,
                 )
+
+    # Add Schema.org JSON-LD to the document head.
+    result = append_structured_data(
+        result, page_title, page_description, canonical_url, relative
+    )
 
     # Mark the active navigation link.
     result = re.sub(
