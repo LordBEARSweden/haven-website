@@ -1,105 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <!-- Open Graph för sociala medier -->
-<meta property="og:title" content="Stress i vardagen – varför återhämtning är viktigt">
-<meta property="og:description" content="Upptäck hur stress påverkar kropp och sinne, och varför regelbunden återhämtning är nyckeln till balans, energi och inre närvaro.">
-<meta property="og:image" content="https://www.havennordichealth.se/images//Haven Transparent No buffer no text.png"> <!-- fallback-bild -->
-<meta property="og:url" content="https://www.havennordichealth.se/blog/stress-i-vardagen.html">
-<meta property="og:type" content="article">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
 
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Stress i vardagen – varför återhämtning är viktigt">
-<meta name="twitter:description" content="Upptäck hur stress påverkar kropp och sinne, och varför regelbunden återhämtning är nyckeln till balans, energi och inre närvaro.">
-<meta name="twitter:image" content="https://www.dindomän.se/images/default-og-image.jpg"> <!-- fallback-bild -->
+  <!-- Sidans individuella SEO-information -->
+  <title>Stress i vardagen – varför återhämtning är viktigt | Haven Nordic Health</title>
+  <meta name="description" content="Upptäck hur stress påverkar kropp och sinne, och varför regelbunden återhämtning är nyckeln till balans, energi och inre närvaro.">
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haven Nordic Health</title>
-  <link rel="stylesheet" href="../style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-<link rel="manifest" href="/site.webmanifest">
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="../images/apple-touch-icon.png">
 
-<!-- Favicon för olika storlekar -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
 
-<!-- Google tag (gtag.js) -->
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="../css/pages/blog-article.css">
+
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- Befintlig Google Analytics. Kontrollera samtyckeshantering inför lansering. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-QFYE06CQFW');
 </script>
+
 </head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+<body class="website-v2">
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="../index.html">
+<img alt="" class="v2-brand-logo" height="60" src="../images/Haven Transparent No buffer no text.png" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="../index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="../kunskap.html">Kunskap</a>
+<a href="../blog/index.html">Blogg</a>
+<a href="../spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="../coaching.html">Coaching</a>
+<a href="../samtalsstod.html">Samtalsstöd</a>
+<a href="../gavorochkop.html">Gåvor &amp; Köp</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="../om.html">Om verksamheten</a>
+<a href="../stodhaven.html">Stöd Haven</a>
+</div>
+</details>
+<a href="../kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="../bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
 
 
+  <main id="main-content">
+    <article class="v2-journal-article">
+  <header class="v2-journal-hero v2-section">
+    <div class="v2-journal-hero-inner">
+      <nav class="v2-journal-breadcrumb" aria-label="Brödsmulor">
+        <a href="../blog/index.html">Blogg</a><span aria-hidden="true">/</span><span>Artikel</span>
+      </nav>
+      <p class="v2-kicker">HAVEN JOURNAL <span aria-hidden="true">/</span> <time datetime="2026-05-08">8 MAJ 2026</time></p>
+      <h1>Stress i vardagen – varför återhämtning är viktigt</h1>
+      <p class="v2-journal-intro">Upptäck hur stress påverkar kropp och sinne, och varför regelbunden återhämtning är nyckeln till balans, energi och inre närvaro.</p>
+    </div>
+  </header>
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="../index.html">Hem</a></li>
-                  <li><a href="../om.html">Om</a></li>
-                  <li><a href="../kunskap.html">Kunskap</a></li>
-                  <li><a href="../coaching.html">Coaching</a></li>
-                  <li><a href="../samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="../bokatid.html">Boka tid</a></li>
-                  <li><a href="../kontakt.html">Kontakt</a></li>
-                  <li><a href="../stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="../blog/index.html">Blogg</a></li>
-                  <li><a href="../gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="../spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-
-          <div class="logo-wrapper">
-            <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
-
- <main class="article-content">
-
-   <script type="application/json" class="post-meta">
-{
-  "title": "Stress i vardagen – varför återhämtning är viktigt",
-  "date": "2026-05-08",
-  "description": "Upptäck hur stress påverkar kropp och sinne, och varför regelbunden återhämtning är nyckeln till balans, energi och inre närvaro."
-}
-</script>
-
-  <section class="blog-intro">
-    <h1>Stress i vardagen – varför återhämtning är viktigt</h1>
-    <p class="article-date">2026-05-08</p>
-  </section>
-
-  <figure class="article-image">
+  <div class="v2-journal-content v2-section">
+    <div class="v2-journal-image-wrap v2-journal-image-wrap--cover">
+<figure class="article-image">
   <img src="../images/bloggimages/briana-tozour-hkkQbPa49UA-unsplash.jpg" alt="Vänskap och energi">
     <figcaption>
       Foto: Briana Tozour
     </figcaption>
   </figure>
-
-  <section class="stress-tempo">
+    </div>
+    <div class="v2-journal-copy">
+<section class="stress-tempo">
     <h2>Dagens tempo och stress</h2>
     <p>Vi lever i en tid där tempot aldrig verkar sakta ner. Mail, notiser, möten och krav på ständig prestation fyller våra dagar, ofta utan att vi ens hinner reflektera över det. Många känner en osynlig press att ständigt vara produktiva, effektiva och uppdaterade – samtidigt som kroppen och sinnet skriker efter vila.</p>
 
@@ -107,8 +122,9 @@
 
     <p>Men det finns en väg tillbaka. Att ge sig själv utrymme att andas, reflektera och ladda om är inte ett lyxigt tillval – det är en nödvändighet för att leva ett balanserat och hållbart liv. Den här artikeln är en inbjudan att förstå stressens påverkan, utforska återhämtningens kraft och hitta konkreta vägar för att skapa mer balans i din vardag.</p>
   </section>
-
-  <section class="stress-effekter">
+    </div>
+    <div class="v2-journal-copy">
+<section class="stress-effekter">
     <h2>Vad stress gör med kroppen och sinnet</h2>
     <p>När vi utsätts för stress aktiveras kroppens alarmberedskap, ofta kallad “fight or flight”-responsen. Kortisol och adrenalin pumpas ut i blodet, hjärtfrekvensen ökar och blodflödet styrs om från matsmältning till muskler. På kort sikt är detta livsviktigt – kroppen förbereder sig för att hantera en utmaning.</p>
 
@@ -124,8 +140,9 @@
 
     <p>Att förstå dessa mekanismer är första steget mot att kunna bryta mönstret. Det är här återhämtning kommer in som en kraftfull motvikt – ett sätt att ge kroppen signaler om att det är säkert att slappna av och låta systemet återställa sig.</p>
   </section>
-
-  <section class="recover-role">
+    </div>
+    <div class="v2-journal-copy">
+<section class="recover-role">
     <h2>Återhämtningens roll</h2>
     <p>Återhämtning är mer än bara vila – det är kroppens och sinnets möjlighet att ladda om, reparera och återställa balans efter stress och påfrestningar. Utan medveten återhämtning fungerar vi på autopilot: vi blir trötta, distraherade och mindre närvarande i våra egna liv.</p>
 
@@ -140,15 +157,17 @@
 
     <p>Att regelbundet ge sig själv utrymme för återhämtning är alltså inte bara skönt – det är nödvändigt för långsiktig hälsa, kreativitet och närvaro. Det är också en förutsättning för att kunna möta livets krav utan att tappa energi, fokus eller balans.</p>
   </section>
-
-  <figure class="article-image">
+    </div>
+    <div class="v2-journal-image-wrap">
+<figure class="article-image">
   <img src="../images/bloggimages/casey-horner-D4TooCIEyF4-unsplash.jpg" alt="Vänskap och energi">
     <figcaption>
       Foto: Casey Horner
     </figcaption>
   </figure>
-
-  <section class="recovery-strategies">
+    </div>
+    <div class="v2-journal-copy">
+<section class="recovery-strategies">
     <h2>Praktiska strategier för återhämtning</h2>
     <p>Att förstå vikten av återhämtning är ett steg – att faktiskt implementera det i vardagen är nästa. Här är några konkreta strategier som hjälper dig skapa balans och närvaro:</p>
 
@@ -193,8 +212,9 @@
 
     <p>Små, medvetna handlingar varje dag gör större skillnad än sporadiska, längre pauser. Genom att införa dessa strategier skapar du en balans där kroppen och sinnet kan återhämta sig naturligt – utan att du behöver fly från vardagen.</p>
   </section>
-
-  <section class="recovery-culture">
+    </div>
+    <div class="v2-journal-copy">
+<section class="recovery-culture">
   <h2>Att skapa en återhämtningskultur i vardagen</h2>
   <p>Att planera in återhämtning behöver inte vara krångligt eller tidskrävande. Nyckeln är att göra det till en naturlig del av vardagen, inte ett extra moment som skapar stress.</p>
   
@@ -210,14 +230,16 @@
   
   <p>Genom att aktivt införa dessa små principer kan återhämtning bli en självklar del av vardagen. Kropp och sinne lär sig att den här tiden är viktig, och du bygger långsiktigt ett mer hållbart och balanserat liv.</p>
 </section>
-
-  <figure class="article-image">
+    </div>
+    <div class="v2-journal-image-wrap">
+<figure class="article-image">
   <img src="../images/bloggimages/andrew-neel-cckf4TsHAuw-unsplash.jpg" alt="Vänskap och energi">
     <figcaption>
       Foto: Andrew Neel
     </figcaption>
   </figure>
-
+    </div>
+    <div class="v2-journal-copy">
 <section class="haven-perspective">
   <h2>Haven Nordic Health-perspektivet</h2>
   <p>På Haven Nordic Health ser vi återhämtning som hjärtat i ett hållbart liv. Vi erbjuder både kunskap och praktiska verktyg som hjälper människor att hitta balans, närvaro och energi i vardagen.</p>
@@ -232,7 +254,8 @@
   
   <p>Vår vision är att varje person ska kunna skapa en vardag där återhämtning inte är ett undantag, utan en självklar del av livet.</p>
 </section>
-
+    </div>
+    <div class="v2-journal-reflection">
 <section class="call-to-action">
   <h2>Reflektera och dela</h2>
   <p>Ta några minuter att reflektera över hur du ger dig själv utrymme för återhämtning. Fundera på små steg du kan ta idag för att skapa mer balans, närvaro och energi.</p>
@@ -241,9 +264,9 @@
   
   <p>Följ Haven Nordic Health på Instagram och Facebook för fler tips, artiklar och inspiration om återhämtning och balans i vardagen.</p>
 </section>
-
- <!-- AddToAny Share Buttons -->
-  <div class="share-buttons">
+    </div>
+    <div class="v2-journal-copy">
+<div class="share-buttons">
   <p>Dela gärna artikeln:</p>
   <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
     <a class="a2a_button_facebook"></a>
@@ -253,41 +276,46 @@
     <a class="a2a_button_email"></a>
   </div>
 </div>
-</article>
-
-  <div class="read-more-section">
+    </div>
+    <div class="v2-journal-copy">
+<div class="read-more-section">
     <a href="index.html">← Tillbaka till Bloggen</a>
   </div>
-</main>
-
-
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
+    </div>
   </div>
 
-  <!-- JS Toggle -->
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links.main');
+  <footer class="v2-journal-footer v2-section">
+    <div class="v2-journal-footer-inner">
+      <div class="v2-journal-share">
+<div class="share-buttons">
+  <p>Dela gärna artikeln:</p>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_button_whatsapp"></a>
+    <a class="a2a_button_email"></a>
+  </div>
+</div>
+      </div>
+      <a class="v2-journal-back" href="../blog/index.html"><span aria-hidden="true">←</span> Tillbaka till bloggen</a>
+    </div>
+  </footer>
+</article>
 
-    // Öppna/stäng meny när hamburgaren klickas
-    toggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Stäng meny när man klickar utanför
-    document.addEventListener('click', (event) => {
-      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-        navLinks.classList.remove('show');
-      }
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-  </script>
-  <!-- AddToAny script -->
 <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+  </main>
+
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="../kunskap.html">Kunskap</a><a href="../blog/index.html">Blogg</a><a href="../spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="../coaching.html">Coaching</a><a href="../samtalsstod.html">Samtalsstöd</a><a href="../bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="../om.html">Om oss</a><a href="../kontakt.html">Kontakt</a><a href="../stodhaven.html">Stöd Haven</a><a href="../gavorochkop.html">Gåvor &amp; Köp</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="../js/site.js"></script>
+  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
+     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
+     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
+
+
 </body>
 </html>
