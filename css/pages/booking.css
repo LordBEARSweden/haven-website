@@ -1,0 +1,110 @@
+/* Haven Boka tid 2.0. Sidregler är avgränsade till .v2-booking-page. */
+body.website-v2 .v2-booking-page { background: var(--v2-bg); }
+body.website-v2 .v2-booking-shell { width: min(100%, 1140px); margin-inline: auto; }
+
+/* Kortare hero än tjänstesidorna: besökaren ska nå kalendern snabbt. */
+body.website-v2 .v2-booking-hero.v2-section {
+  padding-top: clamp(86px, 9vw, 134px);
+  padding-bottom: clamp(83px, 9vw, 130px);
+  background: radial-gradient(ellipse at 78% 18%, rgba(201,163,108,.12), transparent 48%),
+              linear-gradient(126deg,#111010 0%,#231e1a 58%,#10100f 100%);
+  border-bottom: 1px solid rgba(201,163,108,.34);
+}
+body.website-v2 .v2-booking-hero-inner {
+  max-width: 1220px; margin-inline: auto;
+  display: grid; grid-template-columns: minmax(0,1.27fr) minmax(270px,.73fr);
+  gap: clamp(35px,6vw,105px); align-items: center;
+}
+body.website-v2 .v2-booking-hero-main { min-width: 0; }
+body.website-v2 .v2-booking-hero h1 {
+  font-size: clamp(3.1rem,5.65vw,5.7rem);
+  line-height: 1.075; letter-spacing: -.04em;
+  color: var(--v2-white);
+}
+body.website-v2 .v2-booking-hero h1 em { font-weight: 400; color: var(--v2-gold-light); }
+body.website-v2 .v2-booking-accent { display: block; width: 74px; height: 2px; background: var(--v2-gold); margin: 32px 0 25px; }
+body.website-v2 .v2-booking-hero-lead {
+  max-width: 640px; color: var(--v2-ivory);
+  font-size: clamp(1.06rem,1.48vw,1.22rem); line-height: 1.85;
+}
+body.website-v2 .v2-booking-jump {
+  display: inline-flex; align-items: center; gap: 16px;
+  margin-top: 25px; border-bottom: 1px solid var(--v2-gold);
+  padding: 7px 0; color: var(--v2-gold-light); font-weight: 650;
+}
+body.website-v2 .v2-booking-jump:hover { color: #fff; }
+body.website-v2 .v2-booking-hero-aside {
+  display: flex; flex-direction: column; justify-content: space-between;
+  min-height: 268px; padding: clamp(26px,3.6vw,45px);
+  border: 1px solid rgba(201,163,108,.4); background: rgba(24,21,19,.54);
+}
+body.website-v2 .v2-booking-aside-label,
+body.website-v2 .v2-booking-aside-foot { font-size: .7rem; letter-spacing: .14em; font-weight: 750; color: var(--v2-gold-light); }
+body.website-v2 .v2-booking-hero-aside p {
+  margin: 23px 0 30px; color: var(--v2-ivory);
+  font: italic 400 clamp(1.4rem,2.1vw,1.9rem)/1.52 var(--v2-display);
+}
+body.website-v2 .v2-booking-aside-rule { width: 54px; height: 1px; margin-bottom: 20px; background: var(--v2-gold); }
+
+/* Kalendern har en dedikerad ljus yta, med luft runt tredjepartsinnehållet. */
+body.website-v2 .v2-booking-calendar-section.v2-section { background: var(--v2-ivory); color: #2c2721; }
+body.website-v2 .v2-booking-calendar-section .v2-kicker { color: #85613c; }
+body.website-v2 .v2-booking-heading { max-width: 770px; margin-bottom: clamp(35px,5vw,58px); }
+body.website-v2 .v2-booking-heading h2 { font-size: clamp(2.2rem,4.2vw,3.95rem); }
+body.website-v2 .v2-booking-heading > p:last-child { margin-top: 17px; color: #5d5348; font-size: 1.07rem; line-height: 1.8; }
+body.website-v2 .v2-booking-calendar-panel {
+  background: #fffdf9; border: 1px solid #cdbfae;
+  box-shadow: 0 14px 40px rgba(56,40,20,.075);
+  min-width: 0; overflow: hidden;
+}
+body.website-v2 .v2-booking-panel-header {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 12px;
+  padding: 21px clamp(19px,3vw,34px); color: #77583b;
+  font: 750 .68rem/1.5 var(--v2-body); letter-spacing: .14em;
+  border-bottom: 1px solid #e9e0d3;
+}
+body.website-v2 .v2-booking-panel-dot { width: 5px; height: 5px; background: #ba9464; border-radius: 50%; }
+body.website-v2 .v2-booking-calendar {
+  min-height: 650px; min-width: 0;
+  padding: clamp(12px,2.5vw,30px);
+  color: #282521; overflow-x: auto;
+}
+body.website-v2 .v2-booking-calendar iframe { width: 100%; max-width: 100%; border: 0; }
+body.website-v2 .v2-booking-fallback { margin-top: 25px; color: #63584d; font-size: .94rem; line-height: 1.75; }
+body.website-v2 .v2-booking-fallback a { color: #77512c; text-decoration: underline; text-underline-offset: 4px; font-weight: 650; }
+body.website-v2 .v2-booking-fallback a:hover { color: #201a14; }
+
+/* Diskret sekundär väg till mer information om tjänsterna. */
+body.website-v2 .v2-booking-more.v2-section {
+  background: #191716; color: var(--v2-ivory); border-top: 1px solid var(--v2-border);
+}
+body.website-v2 .v2-booking-more-inner {
+  width: min(100%,1140px); margin-inline: auto;
+  display: grid; grid-template-columns: minmax(0,1.1fr) minmax(260px,.9fr);
+  align-items: center; gap: clamp(40px,7vw,115px);
+}
+body.website-v2 .v2-booking-more h2 { max-width: 530px; font-size: clamp(2.2rem,3.6vw,3.6rem); }
+body.website-v2 .v2-booking-more p:not(.v2-kicker) { color: #d0c7bc; max-width: 580px; margin-top: 23px; font-size: 1rem; line-height: 1.85; }
+body.website-v2 .v2-booking-more-links { border-top: 1px solid rgba(201,163,108,.45); }
+body.website-v2 .v2-booking-more-links a {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  padding: 22px 5px; border-bottom: 1px solid rgba(201,163,108,.36);
+  color: var(--v2-ivory); font-size: 1.06rem; font-weight: 600;
+}
+body.website-v2 .v2-booking-more-links a span:last-child { color: var(--v2-gold-light); }
+body.website-v2 .v2-booking-more-links a:hover { color: var(--v2-gold-light); }
+
+@media (max-width: 850px) {
+  body.website-v2 .v2-booking-hero-inner,
+  body.website-v2 .v2-booking-more-inner { grid-template-columns: 1fr; }
+  body.website-v2 .v2-booking-hero-aside { max-width: 610px; min-height: 210px; }
+  body.website-v2 .v2-booking-more-inner { gap: 44px; }
+}
+@media (max-width: 650px) {
+  body.website-v2 .v2-booking-hero.v2-section { padding-top: 70px; padding-bottom: 70px; }
+  body.website-v2 .v2-booking-hero h1 { font-size: clamp(2.65rem,10.2vw,4.1rem); overflow-wrap: anywhere; }
+  body.website-v2 .v2-booking-hero-aside { padding: 26px; }
+  body.website-v2 .v2-booking-panel-header { padding: 18px; gap: 9px; font-size: .62rem; letter-spacing: .08em; }
+  body.website-v2 .v2-booking-calendar { min-height: 590px; padding: 10px 7px; }
+  body.website-v2 .v2-booking-heading { margin-bottom: 30px; }
+}

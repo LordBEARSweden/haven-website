@@ -211,24 +211,9 @@
 
 
   <script defer src="js/site.js"></script>
-  <!-- Befintlig Koalendar-widget från Haven 1.0. -->
-<script>
-  window.Koalendar = window.Koalendar || function () {
-    (Koalendar.props = Koalendar.props || []).push(arguments);
-  };
-</script>
-<script async src="https://koalendar.com/assets/widget.js"></script>
-<script>
-  Koalendar('widget', {
-    url: 'https://koalendar.com/e/haven-nordic-health-3',
-    text: 'Boka tid',
-    shape: 'rounded-full',
-    backgroundColor: '#c9a36c',
-    textColor: '#0f0f0f',
-    position: 'bottom-right',
-    icon: 'calendar'
-  });
-</script>
+  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
+     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
+     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
 
 
 </body>
