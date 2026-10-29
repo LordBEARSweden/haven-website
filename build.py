@@ -3,6 +3,7 @@
 
 from pathlib import Path
 from html import escape
+from html.parser import HTMLParser
 from urllib.parse import quote
 import re
 
@@ -11,6 +12,9 @@ PAGES = ROOT / "src" / "pages"
 PARTIALS = ROOT / "src" / "partials"
 LAYOUT = ROOT / "src" / "layouts" / "base.html"
 SITE_URL = "https://" + (ROOT / "CNAME").read_text(encoding="utf-8").strip()
+SITE_NAME = "Haven Nordic Health"
+# Existing 512 x 512 brand icon. A dedicated sharing image can replace it later.
+DEFAULT_SOCIAL_IMAGE = "images/android-chrome-512x512.png"
 
 REQUIRED_PARTIALS = (
     "header",
@@ -55,6 +59,82 @@ def parse_page(source_text):
     return metadata, content
 
 
+class DocumentHeadParser(HTMLParser):
+    """Read existing head metadata without relying on HTML attribute order."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.in_head = False
+        self.in_title = False
+        self.title_parts = []
+        self.description = ""
+        self.meta_keys = set()
+
+    def handle_starttag(self, tag, attrs):
+        tag = tag.lower()
+        if tag == "head":
+            self.in_head = True
+        elif self.in_head and tag == "title":
+            self.in_title = True
+        elif self.in_head and tag == "meta":
+            attrs = dict(attrs)
+            kind = (attrs.get("property") or attrs.get("name") or "").lower()
+            if kind:
+                self.meta_keys.add(kind)
+            if kind == "description":
+                self.description = attrs.get("content") or ""
+
+    def handle_endtag(self, tag):
+        tag = tag.lower()
+        if tag == "title":
+            self.in_title = False
+        elif tag == "head":
+            self.in_head = False
+
+    def handle_data(self, data):
+        if self.in_title:
+            self.title_parts.append(data)
+
+    @property
+    def title(self):
+        return "".join(self.title_parts).strip()
+
+
+def create_social_tags(title, description, canonical_url, relative, image_path):
+    """Create Open Graph and Twitter summary tags for one published URL."""
+    image_path = image_path.lstrip("/")
+    image_url = f"{SITE_URL}/{quote(image_path, safe='/')}"
+    is_article = len(relative.parts) > 1 and relative.name != "index.html"
+    og_type = "article" if is_article else "website"
+    fields = [
+        ("property", "og:locale", "sv_SE"),
+        ("property", "og:type", og_type),
+        ("property", "og:site_name", SITE_NAME),
+        ("property", "og:title", title),
+        ("property", "og:description", description),
+        ("property", "og:url", canonical_url),
+        ("property", "og:image", image_url),
+        ("property", "og:image:type", "image/png" if image_path.lower().endswith(".png") else "image/jpeg"),
+        ("property", "og:image:alt", SITE_NAME),
+        ("name", "twitter:card", "summary"),
+        ("name", "twitter:title", title),
+        ("name", "twitter:description", description),
+        ("name", "twitter:image", image_url),
+    ]
+    return fields
+
+
+def render_missing_social_tags(fields, existing_keys):
+    lines = []
+    for attribute, key, value in fields:
+        if key.lower() in existing_keys or not value:
+            continue
+        lines.append(
+            f'  <meta {attribute}="{key}" content="{escape(value, quote=True)}">'
+        )
+    return "\n".join(lines)
+
+
 def build_page(source, partials, layout):
     relative = source.relative_to(PAGES)
     destination = ROOT / relative
@@ -72,9 +152,17 @@ def build_page(source, partials, layout):
     if re.match(r"^\s*<!doctype html", source_text, re.IGNORECASE):
         result = source_text
         nav_key = "home" if relative == Path("index.html") else relative.stem
+        head = DocumentHeadParser()
+        head.feed(result)
+        page_title = head.title or SITE_NAME
+        page_description = head.description
+        image_path = DEFAULT_SOCIAL_IMAGE
 
     else:
         metadata, content = parse_page(source_text)
+        page_title = metadata["title"]
+        page_description = metadata["description"]
+        image_path = metadata.get("social_image", DEFAULT_SOCIAL_IMAGE)
 
         nav_key = metadata["nav"]
 
@@ -116,6 +204,29 @@ def build_page(source, partials, layout):
         # A legacy full HTML document may have no layout placeholder.
         result = re.sub(r'<head\b[^>]*>', lambda m: m.group(0) + "\n  " + canonical_tag, result,
                         count=1, flags=re.IGNORECASE)
+
+    # Add social sharing tags. Existing tags in a standalone page are retained.
+    social_fields = create_social_tags(
+        page_title, page_description, canonical_url, relative, image_path
+    )
+    if "{{social_meta}}" in result:
+        result = result.replace(
+            "{{social_meta}}", render_missing_social_tags(social_fields, set())
+        )
+    else:
+        head_match = re.search(r"<head\b[^>]*>.*?</head\s*>", result, re.IGNORECASE | re.DOTALL)
+        if head_match:
+            head_parser = DocumentHeadParser()
+            head_parser.feed(head_match.group(0))
+            additions = render_missing_social_tags(social_fields, head_parser.meta_keys)
+            if additions:
+                result = re.sub(
+                    r"</head\s*>",
+                    lambda match: additions + "\n" + match.group(0),
+                    result,
+                    count=1,
+                    flags=re.IGNORECASE,
+                )
 
     # Mark the active navigation link.
     result = re.sub(
