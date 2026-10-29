@@ -4,8 +4,9 @@
 from pathlib import Path
 from html import escape
 from html.parser import HTMLParser
+from datetime import date
+from urllib.parse import quote, unquote, urljoin, urlsplit, urlunsplit
 import json
-from urllib.parse import quote
 import re
 
 ROOT = Path(__file__).resolve().parent
@@ -14,6 +15,9 @@ PARTIALS = ROOT / "src" / "partials"
 LAYOUT = ROOT / "src" / "layouts" / "base.html"
 SITE_URL = "https://" + (ROOT / "CNAME").read_text(encoding="utf-8").strip()
 SITE_NAME = "Haven Nordic Health"
+# The public About page identifies the author of Havens articles.
+ARTICLE_AUTHOR = "Björn Andersson"
+ARTICLE_AUTHOR_URL = f"{SITE_URL}/om.html"
 # Existing 512 x 512 brand icon. A dedicated sharing image can replace it later.
 DEFAULT_SOCIAL_IMAGE = "images/android-chrome-512x512.png"
 
@@ -101,6 +105,54 @@ class DocumentHeadParser(HTMLParser):
         return "".join(self.title_parts).strip()
 
 
+
+class ArticleMediaParser(HTMLParser):
+    """Read publication date and representative image from article markup.
+
+    Photo credit lines remain in the article; image use does not imply that
+    the article author or publisher owns the photograph.
+    """
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.date_published = None
+        self.image_src = None
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "time" and self.date_published is None:
+            candidate = (attrs.get("datetime") or "").strip()
+            try:
+                # Preserve the source's date; do not fabricate a time of day.
+                if len(candidate) == 10 and date.fromisoformat(candidate):
+                    self.date_published = candidate
+            except ValueError:
+                pass
+        elif tag == "img" and self.image_src is None:
+            candidate = (attrs.get("src") or "").strip()
+            if candidate and not candidate.startswith(("data:", "blob:", "#")):
+                self.image_src = candidate
+
+
+def article_media(source_text, canonical_url, root_prefix):
+    """Convert the first article image to an absolute, URL-encoded URL."""
+    parser = ArticleMediaParser()
+    parser.feed(source_text)
+    image_url = None
+    if parser.image_src:
+        src = parser.image_src.replace("{{root}}", root_prefix)
+        url = urljoin(canonical_url, src)
+        parsed = urlsplit(url)
+        if parsed.scheme in ("http", "https") and parsed.netloc:
+            # Names such as 'Höstfika vid den gyllene sjön-2.png' need encoding.
+            image_url = urlunsplit((
+                parsed.scheme, parsed.netloc,
+                quote(unquote(parsed.path), safe="/-_.~"),
+                parsed.query, parsed.fragment,
+            ))
+    return parser.date_published, image_url
+
+
 def create_social_tags(title, description, canonical_url, relative, image_path):
     """Create Open Graph and Twitter summary tags for one published URL."""
     image_path = image_path.lstrip("/")
@@ -137,14 +189,8 @@ def render_missing_social_tags(fields, existing_keys):
 
 
 
-def create_structured_data(title, description, canonical_url, relative):
-    """Build conservative JSON-LD from confirmed page metadata only.
-
-    Organization and WebSite are defined on the homepage. All pages identify
-    themselves as WebPage; blog posts and knowledge articles add an article
-    node. Authorship, publishing dates, and article images are deliberately
-    omitted until the page sources supply verified values.
-    """
+def create_structured_data(title, description, canonical_url, relative, article_date, article_image):
+    """Build JSON-LD from confirmed page metadata and article source markup."""
     homepage_url = f"{SITE_URL}/"
     organization_id = f"{homepage_url}#organization"
     website_id = f"{homepage_url}#website"
@@ -199,6 +245,15 @@ def create_structured_data(title, description, canonical_url, relative):
             }
             if description:
                 article["description"] = description
+            article["author"] = {
+                "@type": "Person",
+                "name": ARTICLE_AUTHOR,
+                "url": ARTICLE_AUTHOR_URL,
+            }
+            if article_date:
+                article["datePublished"] = article_date
+            if article_image:
+                article["image"] = article_image
             graph.append(article)
 
     payload = json.dumps(
@@ -213,7 +268,7 @@ def create_structured_data(title, description, canonical_url, relative):
                    .replace("&", "\\u0026"))
 
 
-def append_structured_data(document, title, description, canonical_url, relative):
+def append_structured_data(document, title, description, canonical_url, relative, article_date, article_image):
     """Insert one JSON-LD graph into <head> without duplicating legacy data."""
     head = re.search(r"<head\b[^>]*>.*?</head\s*>", document,
                      re.IGNORECASE | re.DOTALL)
@@ -225,7 +280,7 @@ def append_structured_data(document, title, description, canonical_url, relative
                  head.group(0), re.IGNORECASE):
         return document
 
-    payload = create_structured_data(title, description, canonical_url, relative)
+    payload = create_structured_data(title, description, canonical_url, relative, article_date, article_image)
     script = '  <script type="application/ld+json">\n' + payload + '\n  </script>'
     return re.sub(r"</head\s*>", lambda m: script + "\n" + m.group(0),
                   document, count=1, flags=re.IGNORECASE)
@@ -324,9 +379,15 @@ def build_page(source, partials, layout):
                     flags=re.IGNORECASE,
                 )
 
+    # Read article dates and images from the original page source.
+    article_date = article_image = None
+    if len(relative.parts) == 2 and relative.parts[0] in ("blog", "kunskap") and relative.name != "index.html":
+        article_date, article_image = article_media(source_text, canonical_url, root_prefix)
+
     # Add Schema.org JSON-LD to the document head.
     result = append_structured_data(
-        result, page_title, page_description, canonical_url, relative
+        result, page_title, page_description, canonical_url, relative,
+        article_date, article_image
     )
 
     # Mark the active navigation link.
