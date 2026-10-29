@@ -1,0 +1,90 @@
+<!-- HAVEN_PAGE
+title: Kontakt | Haven Nordic Health
+description: Kontakta Haven Nordic Health via telefon eller e-post. Här hittar du våra kontaktuppgifter, öppettider och bankgiro.
+nav: kontakt
+styles: css/pages/contact.css
+-->
+
+<!-- Kontakt 2.0: gemensam meny, sidfot, analys och bokning hanteras av baslayouten. -->
+<div class="v2-contact-page">
+
+  <section class="v2-contact-hero v2-section" aria-labelledby="contact-title">
+    <div class="v2-contact-shell v2-contact-hero-grid">
+      <div class="v2-contact-hero-copy">
+        <p class="v2-kicker">KONTAKT MED HAVEN</p>
+        <h1 id="contact-title">Ett samtal kan börja<br><em>med ett hej.</em></h1>
+        <span class="v2-contact-accent" aria-hidden="true"></span>
+        <p class="v2-contact-lead">Har du frågor om Haven, coaching eller samtalsstöd? Du är varmt välkommen att höra av dig på det sätt som passar dig.</p>
+        <a class="v2-contact-jump" href="#kontaktuppgifter">Se våra kontaktuppgifter <span aria-hidden="true">↘</span></a>
+      </div>
+      <aside class="v2-contact-hero-note" aria-label="En personlig kontakt">
+        <span class="v2-contact-note-label">NÄRA &amp; PERSONLIGT</span>
+        <p>Det behöver inte vara komplicerat att ta kontakt.</p>
+        <span class="v2-contact-note-rule" aria-hidden="true"></span>
+        <span class="v2-contact-note-foot">EN FRÅGA · ETT FÖRSTA STEG</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-contact-details v2-section" id="kontaktuppgifter" aria-labelledby="contact-details-title">
+    <div class="v2-contact-shell">
+      <div class="v2-contact-section-head">
+        <p class="v2-kicker">VI HÖRS</p>
+        <h2 id="contact-details-title">Välj det som passar dig.</h2>
+        <p>Ring oss eller skriv ett mejl. Kontaktuppgifterna finns samlade här så att du enkelt hittar rätt.</p>
+      </div>
+
+      <div class="v2-contact-info-grid">
+        <div class="v2-contact-primary">
+          <article class="v2-contact-method">
+            <div class="v2-contact-method-top"><span class="v2-contact-index">01</span><span class="v2-contact-method-kind">TELEFON</span></div>
+            <h3>Ring oss</h3>
+            <a class="v2-contact-value v2-contact-action-link" href="tel:+46280771719">+46 280 77 17 19 <span aria-hidden="true">↗</span></a>
+            <p>Tryck på numret för att ringa från en enhet som stöder telefonsamtal.</p>
+          </article>
+          <article class="v2-contact-method">
+            <div class="v2-contact-method-top"><span class="v2-contact-index">02</span><span class="v2-contact-method-kind">E-POST</span></div>
+            <h3>Skriv till oss</h3>
+            <a class="v2-contact-value v2-contact-action-link" href="mailto:info@havennordichealth.se"><span id="v2-contact-email">info@havennordichealth.se</span><span aria-hidden="true">↗</span></a>
+            <div class="v2-contact-method-bottom">
+              <p>Öppnar ditt e-postprogram, eller kopiera adressen.</p>
+              <button type="button" class="v2-contact-copy" data-copy-target="v2-contact-email" data-copy-label="E-postadress">Kopiera e-postadress <span aria-hidden="true">⧉</span></button>
+            </div>
+          </article>
+        </div>
+
+        <aside class="v2-contact-aside" aria-label="Öppettider och betalningsuppgifter">
+          <section class="v2-contact-hours" aria-labelledby="contact-hours-title">
+            <p class="v2-contact-aside-kicker">NÄR VI HAR ÖPPET</p>
+            <h3 id="contact-hours-title">Öppettider</h3>
+            <dl>
+              <div><dt>Måndag–fredag</dt><dd>09.00–17.00</dd></div>
+              <div><dt>Lördag–söndag</dt><dd>Stängt</dd></div>
+            </dl>
+          </section>
+          <section class="v2-contact-payment" aria-labelledby="contact-payment-title">
+            <p class="v2-contact-aside-kicker">BETALNINGSUPPGIFTER</p>
+            <h3 id="contact-payment-title">Bankgiro</h3>
+            <p id="v2-contact-bankgiro" class="v2-contact-bankgiro">5247-0390</p>
+            <button type="button" class="v2-contact-copy v2-contact-copy--light" data-copy-target="v2-contact-bankgiro" data-copy-label="Bankgironummer">Kopiera bankgiro <span aria-hidden="true">⧉</span></button>
+          </section>
+        </aside>
+      </div>
+      <p class="v2-contact-copy-status" id="v2-contact-copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="v2-contact-next v2-section" aria-labelledby="contact-next-title">
+    <div class="v2-contact-next-inner">
+      <p class="v2-kicker">VILL DU BOKA ETT SAMTAL?</p>
+      <h2 id="contact-next-title">Det finns också en väg direkt till bokningen.</h2>
+      <p>För coaching och samtalsstöd kan du läsa om våra tjänster eller gå direkt till bokningssidan.</p>
+      <div class="v2-contact-next-actions">
+        <a class="v2-button v2-button-gold" href="{{root}}bokatid.html">Boka tid <span aria-hidden="true">↗</span></a>
+        <a class="v2-contact-next-link" href="{{root}}coaching.html">Om coaching <span aria-hidden="true">↗</span></a>
+        <a class="v2-contact-next-link" href="{{root}}samtalsstod.html">Om samtalsstöd <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+<script defer src="{{root}}js/contact.js"></script>

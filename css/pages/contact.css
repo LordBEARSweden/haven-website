@@ -1,0 +1,95 @@
+/* Kontakt 2.0 – endast sidspecifika regler, avgränsade till .v2-contact-page. */
+body.website-v2 .v2-contact-page { background: var(--v2-bg); }
+body.website-v2 .v2-contact-shell { width: min(100%, 1210px); margin-inline: auto; }
+
+/* Inbjudande, textbaserad hero i samma nordiska formspråk som tjänstesidorna. */
+body.website-v2 .v2-contact-hero.v2-section {
+  position: relative;
+  isolation: isolate;
+  padding-top: clamp(100px, 11vw, 160px);
+  padding-bottom: clamp(95px, 10vw, 145px);
+  overflow: hidden;
+  background: radial-gradient(ellipse at 83% 18%, rgba(201,163,108,.14), transparent 46%), linear-gradient(135deg, #0f0e0e 3%, #201b17 61%, #0d0c0c 100%);
+  border-bottom: 1px solid var(--v2-border);
+}
+body.website-v2 .v2-contact-hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr); gap: clamp(38px, 6vw, 105px); align-items: center; }
+body.website-v2 .v2-contact-hero-copy { min-width: 0; }
+body.website-v2 .v2-contact-hero h1 { color: var(--v2-white); font-size: clamp(3rem, 5.9vw, 5.7rem); line-height: 1.075; letter-spacing: -.042em; }
+body.website-v2 .v2-contact-hero h1 em { color: var(--v2-gold-light); font-weight: 400; }
+body.website-v2 .v2-contact-accent { display: block; width: 72px; height: 2px; background: var(--v2-gold); margin: 35px 0 29px; }
+body.website-v2 .v2-contact-lead { max-width: 630px; color: var(--v2-ivory); font-size: clamp(1.05rem, 1.48vw, 1.23rem); line-height: 1.88; }
+body.website-v2 .v2-contact-jump { display: inline-flex; align-items: center; gap: 15px; margin-top: 27px; padding: 6px 0; color: var(--v2-gold-light); border-bottom: 1px solid rgba(201,163,108,.8); font-weight: 650; }
+body.website-v2 .v2-contact-jump:hover { color: var(--v2-white); }
+body.website-v2 .v2-contact-hero-note { display: flex; flex-direction: column; justify-content: space-between; min-height: 324px; padding: clamp(27px, 3.5vw, 48px); border: 1px solid rgba(201,163,108,.36); background: rgba(23,20,18,.55); }
+body.website-v2 .v2-contact-note-label,
+body.website-v2 .v2-contact-note-foot { font-size: .71rem; letter-spacing: .16em; font-weight: 750; color: var(--v2-gold-light); }
+body.website-v2 .v2-contact-hero-note p { color: var(--v2-ivory); margin: 35px 0; font: italic 400 clamp(1.35rem, 2.15vw, 1.95rem)/1.5 var(--v2-display); }
+body.website-v2 .v2-contact-note-rule { display: block; width: 48px; height: 1px; background: var(--v2-gold); margin-bottom: 24px; }
+body.website-v2 .v2-contact-note-foot { letter-spacing: .12em; }
+
+/* Kontaktuppgifter – stora länkar och väl avskilda kopieringsknappar. */
+body.website-v2 .v2-contact-details { background: #f1ece3; color: #29231e; }
+body.website-v2 .v2-contact-details .v2-kicker { color: #82603e; }
+body.website-v2 .v2-contact-section-head { max-width: 780px; margin-bottom: clamp(42px, 6vw, 70px); }
+body.website-v2 .v2-contact-section-head h2 { font-size: clamp(2.15rem, 4.5vw, 4rem); }
+body.website-v2 .v2-contact-section-head > p:last-child { margin-top: 20px; color: #5a5148; font-size: 1.075rem; line-height: 1.8; }
+body.website-v2 .v2-contact-info-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr); gap: clamp(30px, 5vw, 78px); align-items: start; }
+body.website-v2 .v2-contact-primary { min-width: 0; }
+body.website-v2 .v2-contact-method { padding: 26px 0 38px; border-top: 1px solid #c5b7a5; }
+body.website-v2 .v2-contact-method + .v2-contact-method { padding-top: 37px; }
+body.website-v2 .v2-contact-method-top { display: flex; align-items: center; gap: 17px; margin-bottom: 17px; }
+body.website-v2 .v2-contact-index { color: #916943; font-size: .8rem; font-weight: 750; }
+body.website-v2 .v2-contact-method-kind { color: #7d654f; letter-spacing: .18em; font-size: .7rem; font-weight: 750; }
+body.website-v2 .v2-contact-method h3 { margin-bottom: 12px; font-size: clamp(1.7rem, 2.35vw, 2.25rem); }
+body.website-v2 .v2-contact-action-link { display: inline-flex; gap: 12px; align-items: baseline; max-width: 100%; min-width: 0; font-size: clamp(1.13rem, 2.2vw, 1.75rem); font-family: var(--v2-display); color: #724b2c; border-bottom: 1px solid #997a59; padding-bottom: 4px; overflow-wrap: anywhere; }
+body.website-v2 .v2-contact-action-link:hover { color: #30241b; border-color: #30241b; }
+body.website-v2 .v2-contact-action-link span[aria-hidden] { white-space: nowrap; font-family: var(--v2-body); font-size: 1rem; }
+body.website-v2 .v2-contact-method > p,
+body.website-v2 .v2-contact-method-bottom > p { margin-top: 16px; max-width: 570px; color: #5a5148; line-height: 1.8; }
+body.website-v2 .v2-contact-copy { display: inline-flex; gap: 9px; align-items: center; justify-content: center; margin-top: 15px; padding: 9px 13px; color: #6e482a; background: transparent; border: 1px solid #a28b71; cursor: pointer; font-weight: 650; font-size: .91rem; transition: background-color .2s ease, border-color .2s ease; }
+body.website-v2 .v2-contact-copy:hover { background: #e0d4c4; border-color: #765332; }
+body.website-v2 .v2-contact-copy--light { color: #e8d6bc; border-color: #aa8961; }
+body.website-v2 .v2-contact-copy--light:hover { background: rgba(201,163,108,.12); border-color: var(--v2-gold-light); }
+body.website-v2 .v2-contact-aside { display: grid; min-width: 0; }
+body.website-v2 .v2-contact-hours { padding: clamp(27px, 3.6vw, 43px); background: #e6deD1; border: 1px solid #d5c8b6; }
+body.website-v2 .v2-contact-payment { padding: clamp(27px, 3.6vw, 43px); background: #25211e; color: var(--v2-ivory); }
+body.website-v2 .v2-contact-aside-kicker { margin-bottom: 15px; color: #82603e; font-weight: 750; letter-spacing: .16em; font-size: .68rem; }
+body.website-v2 .v2-contact-payment .v2-contact-aside-kicker { color: var(--v2-gold-light); }
+body.website-v2 .v2-contact-aside h3 { margin-bottom: 26px; font-size: clamp(1.7rem, 2.2vw, 2.05rem); }
+body.website-v2 .v2-contact-hours dl { margin: 0; }
+body.website-v2 .v2-contact-hours dl > div { display: flex; gap: 11px; justify-content: space-between; padding: 13px 0; border-top: 1px solid #cbbda9; }
+body.website-v2 .v2-contact-hours dt { color: #665a4d; }
+body.website-v2 .v2-contact-hours dd { color: #2d261e; font-weight: 700; margin: 0; text-align: right; white-space: nowrap; }
+body.website-v2 .v2-contact-bankgiro { color: var(--v2-white); font-family: var(--v2-display); font-size: clamp(2rem, 2.8vw, 2.7rem); letter-spacing: .02em; }
+body.website-v2 .v2-contact-payment .v2-contact-copy { margin-top: 21px; }
+body.website-v2 .v2-contact-copy-status { min-height: 1.5em; margin-top: 15px; color: #60492f; font-size: .9rem; }
+
+/* Enkel serviceingång, medan Boka tid fortsatt är gemensam huvudfunktion. */
+body.website-v2 .v2-contact-next { text-align: center; background: radial-gradient(ellipse at center top, rgba(201,163,108,.095), transparent 68%), #131211; }
+body.website-v2 .v2-contact-next-inner { max-width: 810px; margin-inline: auto; }
+body.website-v2 .v2-contact-next h2 { color: var(--v2-ivory); }
+body.website-v2 .v2-contact-next-inner > p:not(.v2-kicker) { max-width: 630px; margin: 23px auto 0; color: var(--v2-muted); line-height: 1.85; font-size: 1.05rem; }
+body.website-v2 .v2-contact-next-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 28px; margin-top: 30px; }
+body.website-v2 .v2-contact-next-link { color: var(--v2-gold-light); border-bottom: 1px solid var(--v2-gold); padding: 9px 0; font-size: .96rem; font-weight: 650; }
+body.website-v2 .v2-contact-next-link:hover { color: var(--v2-white); }
+
+@media (max-width: 920px) {
+  body.website-v2 .v2-contact-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(235px, .7fr); gap: 30px; }
+  body.website-v2 .v2-contact-info-grid { grid-template-columns: minmax(0, 1.2fr) minmax(245px, .8fr); gap: 28px; }
+}
+@media (max-width: 760px) {
+  body.website-v2 .v2-contact-hero-grid,
+  body.website-v2 .v2-contact-info-grid { grid-template-columns: 1fr; }
+  body.website-v2 .v2-contact-hero-note { min-height: 215px; max-width: 550px; }
+  body.website-v2 .v2-contact-hero-note p { margin: 20px 0; }
+  body.website-v2 .v2-contact-info-grid { gap: 20px; }
+  body.website-v2 .v2-contact-hero.v2-section { padding-top: 90px; }
+}
+@media (max-width: 430px) {
+  body.website-v2 .v2-contact-hero h1 { font-size: clamp(2.5rem, 11vw, 3.1rem); }
+  body.website-v2 .v2-contact-hero-note { padding: 25px; }
+  body.website-v2 .v2-contact-hours dl > div { flex-wrap: wrap; }
+  body.website-v2 .v2-contact-hours dd { white-space: normal; }
+  body.website-v2 .v2-contact-next-actions { flex-direction: column; align-items: stretch; }
+  body.website-v2 .v2-contact-next-actions .v2-button { justify-content: center; }
+}
