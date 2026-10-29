@@ -1,15 +1,16 @@
-
 #!/usr/bin/env python3
 """Haven Nordic Health 2.0 - Static site builder."""
 
 from pathlib import Path
 from html import escape
+from urllib.parse import quote
 import re
 
 ROOT = Path(__file__).resolve().parent
 PAGES = ROOT / "src" / "pages"
 PARTIALS = ROOT / "src" / "partials"
 LAYOUT = ROOT / "src" / "layouts" / "base.html"
+SITE_URL = "https://" + (ROOT / "CNAME").read_text(encoding="utf-8").strip()
 
 REQUIRED_PARTIALS = (
     "header",
@@ -58,6 +59,12 @@ def build_page(source, partials, layout):
     relative = source.relative_to(PAGES)
     destination = ROOT / relative
 
+    # Canonical URLs use the public domain and preserve nested page paths.
+    url_path = relative.as_posix()
+    if relative.name == "index.html":
+        url_path = url_path[:-len("index.html")]
+    canonical_url = f"{SITE_URL}/{quote(url_path)}"
+
     root_prefix = "../" * (len(relative.parts) - 1)
     source_text = source.read_text(encoding="utf-8")
 
@@ -99,6 +106,16 @@ def build_page(source, partials, layout):
     for name, fragment in partials.items():
         placeholder = "{{" + name.replace("-", "_") + "}}"
         result = result.replace(placeholder, fragment)
+
+    # Canonical placeholder can occur in the layout, content, or partials.
+    # Resolve it after all fragments have been assembled, for every page type.
+    canonical_tag = f'<link rel="canonical" href="{escape(canonical_url, quote=True)}">'
+    if "{{page_canonical}}" in result:
+        result = result.replace("{{page_canonical}}", escape(canonical_url, quote=True))
+    elif not re.search(r'<link\b[^>]*\brel\s*=\s*["\']canonical["\']', result, re.IGNORECASE):
+        # A legacy full HTML document may have no layout placeholder.
+        result = re.sub(r'<head\b[^>]*>', lambda m: m.group(0) + "\n  " + canonical_tag, result,
+                        count=1, flags=re.IGNORECASE)
 
     # Mark the active navigation link.
     result = re.sub(
