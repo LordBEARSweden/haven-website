@@ -1,0 +1,209 @@
+/* Haven Spirituellt 2.0 – endast sidans egna komponenter.
+   Ingen navigation, gemensam sidfot eller andra godkända sidor ändras. */
+
+body.website-v2 .v2-spiritual-page {
+  background: var(--v2-bg);
+}
+
+body.website-v2 .v2-spiritual-shell {
+  width: min(100%, 1220px);
+  margin-inline: auto;
+}
+
+/* Introduktionen är avsiktligt ren från dekorativa cirklar och diagonaler. */
+body.website-v2 .v2-spiritual-hero.v2-section {
+  padding-top: clamp(105px, 10vw, 165px);
+  padding-bottom: clamp(105px, 11vw, 180px);
+  background: linear-gradient(135deg, #141311 0%, #201b17 47%, #100f0e 100%);
+  border-bottom: 1px solid var(--v2-border);
+}
+body.website-v2 .v2-spiritual-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  gap: clamp(52px, 8vw, 130px);
+  align-items: center;
+}
+body.website-v2 .v2-spiritual-hero-heading {
+  min-width: 0;
+}
+body.website-v2 .v2-spiritual-hero-heading h1 {
+  color: var(--v2-ivory);
+  font-size: clamp(3.6rem, 6.6vw, 6.8rem);
+  letter-spacing: -.038em;
+  line-height: 1.03;
+  overflow-wrap: anywhere;
+}
+body.website-v2 .v2-spiritual-heading-sub {
+  color: var(--v2-gold-light);
+  font: 400 clamp(.82rem, 1.3vw, .97rem)/1.6 var(--v2-body);
+  letter-spacing: .085em;
+  margin-top: clamp(28px, 4vw, 52px);
+}
+body.website-v2 .v2-spiritual-heading-sub span {
+  color: rgba(223,190,133,.55);
+  padding-inline: 7px;
+}
+body.website-v2 .v2-spiritual-hero-prose {
+  max-width: 650px;
+  padding-left: clamp(0px, 2vw, 30px);
+}
+body.website-v2 .v2-spiritual-hero-prose p {
+  font: 400 clamp(1.08rem, 1.58vw, 1.27rem)/1.94 var(--v2-display);
+  color: #e3dbce;
+  text-wrap: pretty;
+}
+
+/* Ljust läsavsnitt för de två återstående originalstyckena. */
+body.website-v2 .v2-spiritual-invitation.v2-section {
+  background: var(--v2-ivory);
+  color: #24201d;
+  padding-block: clamp(85px, 9vw, 142px);
+}
+body.website-v2 .v2-spiritual-reading {
+  max-width: 850px;
+  margin-inline: auto;
+}
+body.website-v2 .v2-spiritual-invitation .v2-kicker {
+  color: #795933;
+}
+body.website-v2 .v2-spiritual-invitation h2 {
+  color: #25201b;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  max-width: 750px;
+  margin-bottom: 32px;
+}
+body.website-v2 .v2-spiritual-invitation h2 em {
+  font-weight: 400;
+  color: #8a6239;
+}
+body.website-v2 .v2-spiritual-reading-prose {
+  max-width: 730px;
+}
+body.website-v2 .v2-spiritual-reading-prose p {
+  color: #454039;
+  font-size: clamp(1.04rem, 1.35vw, 1.17rem);
+  line-height: 1.97;
+  text-wrap: pretty;
+}
+body.website-v2 .v2-spiritual-reading-prose p + p {
+  margin-top: 25px;
+}
+
+/* Mystisk Alkemi – ett centrerat, fullt klickbart fördjupningskort. */
+body.website-v2 .v2-spiritual-paths.v2-section {
+  background: #141312;
+  border-top: 1px solid rgba(201,163,108,.2);
+  padding-block: clamp(88px, 9vw, 138px);
+}
+body.website-v2 .v2-spiritual-paths-heading {
+  margin-bottom: clamp(35px, 5vw, 60px);
+}
+body.website-v2 .v2-spiritual-paths-heading h2 {
+  max-width: 790px;
+  font-size: clamp(2.4rem, 5.15vw, 4.65rem);
+  color: var(--v2-ivory);
+}
+body.website-v2 .v2-spiritual-paths-heading h2 em {
+  color: var(--v2-gold-light);
+  font-weight: 400;
+}
+body.website-v2 .v2-spiritual-path-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 740px;
+  margin-inline: auto;
+  gap: 20px;
+}
+body.website-v2 .v2-spiritual-path {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(28px, 4vw, 56px);
+  background: #211d19;
+  border: 1px solid rgba(201,163,108,.37);
+  color: var(--v2-ivory);
+  transition: background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+body.website-v2 .v2-spiritual-path:hover,
+body.website-v2 .v2-spiritual-path:focus-visible {
+  background: #312820;
+  border-color: var(--v2-gold-light);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 28px rgba(0,0,0,.2);
+}
+body.website-v2 .v2-spiritual-path-number {
+  display: block;
+  color: #dfbd8a;
+  letter-spacing: .15em;
+  font-size: .71rem;
+  font-weight: 700;
+}
+body.website-v2 .v2-spiritual-path h3 {
+  margin-top: clamp(35px, 4vw, 55px);
+  color: var(--v2-white);
+  font-size: clamp(1.65rem, 2.9vw, 2.6rem);
+  line-height: 1.23;
+}
+body.website-v2 .v2-spiritual-path-description {
+  margin-top: 18px;
+  max-width: 390px;
+  color: #cfc3b5;
+  line-height: 1.75;
+  font-size: .97rem;
+}
+body.website-v2 .v2-spiritual-path-action {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 36px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(223,190,133,.75);
+  color: var(--v2-gold-light);
+  font-size: .91rem;
+  font-weight: 650;
+}
+body.website-v2 .v2-spiritual-path-action span {
+  padding-left: 5px;
+}
+
+@media (max-width: 920px) {
+  body.website-v2 .v2-spiritual-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  body.website-v2 .v2-spiritual-hero-prose {
+    max-width: 740px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  body.website-v2 .v2-spiritual-path-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  body.website-v2 .v2-spiritual-path {
+    min-height: 280px;
+  }
+  body.website-v2 .v2-spiritual-hero.v2-section {
+    padding-block: 80px 100px;
+  }
+  body.website-v2 .v2-spiritual-hero-heading h1 {
+    font-size: clamp(2.9rem, 12vw, 4.7rem);
+  }
+  body.website-v2 .v2-spiritual-heading-sub {
+    letter-spacing: .04em;
+  }
+  body.website-v2 .v2-spiritual-hero-prose p {
+    font-size: 1.11rem;
+    line-height: 1.85;
+  }
+  body.website-v2 .v2-spiritual-path h3 {
+    margin-top: 32px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.website-v2 .v2-spiritual-path {
+    transition: none;
+  }
+}
