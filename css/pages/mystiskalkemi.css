@@ -1,0 +1,211 @@
+/* Mystisk Alkemi 2.0 – ENDAST denna undersida.
+   Ingen ändring av den godkända Spirituellt-översikten eller gemensamma komponenter. */
+
+body.website-v2 .v2-alchemy-page {
+  background: #f2ece2;
+  color: #29231d;
+}
+
+/* Ren mörk inledning. Inga dekorativa cirklar, diagonaler eller nya bilder. */
+body.website-v2 .v2-alchemy-hero.v2-section {
+  background: linear-gradient(135deg, #141311 0%, #211b17 54%, #121110 100%);
+  border-bottom: 1px solid rgba(201,163,108,.36);
+  padding-block: clamp(64px,7vw,118px) clamp(86px,10vw,155px);
+}
+body.website-v2 .v2-alchemy-hero-inner {
+  max-width: 1110px;
+  margin-inline: auto;
+}
+body.website-v2 .v2-alchemy-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  font-size: .86rem;
+  margin-bottom: clamp(56px,7vw,98px);
+  color: #cdc1b1;
+}
+body.website-v2 .v2-alchemy-breadcrumb a {
+  color: #e4d3bd;
+  text-decoration: underline;
+  text-decoration-color: rgba(201,163,108,.68);
+  text-underline-offset: 6px;
+}
+body.website-v2 .v2-alchemy-breadcrumb span[aria-hidden] { color: #b88d55; }
+body.website-v2 .v2-alchemy-hero .v2-kicker {
+  color: var(--v2-gold-light);
+  margin-bottom: 24px;
+}
+body.website-v2 .v2-alchemy-hero h1 {
+  max-width: 1000px;
+  color: var(--v2-white);
+  font-size: clamp(3.4rem, 7.7vw, 7.5rem);
+  letter-spacing: -.052em;
+  line-height: 1.03;
+}
+body.website-v2 .v2-alchemy-hero-subtitle {
+  max-width: 690px;
+  margin-top: clamp(30px,4.5vw,52px);
+  color: #d6c4ab;
+  font-family: var(--v2-display);
+  font-size: clamp(1.22rem,2.2vw,1.8rem);
+  line-height: 1.55;
+}
+
+/* Kapitelindex och huvudinnehåll */
+body.website-v2 .v2-alchemy-reading.v2-section {
+  padding-top: clamp(62px,7vw,112px);
+  padding-bottom: clamp(100px,11vw,170px);
+}
+body.website-v2 .v2-alchemy-shell {
+  max-width: 1210px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0,230px) minmax(0,780px);
+  gap: clamp(56px,7vw,125px);
+  align-items: start;
+}
+body.website-v2 .v2-alchemy-sidebar { min-width: 0; }
+body.website-v2 .v2-alchemy-toc {
+  position: sticky;
+  top: 128px;
+  border-top: 1px solid rgba(101,78,48,.32);
+  padding-top: 24px;
+}
+body.website-v2 .v2-alchemy-toc-title,
+body.website-v2 .v2-alchemy-chapter-label {
+  font: 700 .70rem/1.65 var(--v2-body);
+  letter-spacing: .19em;
+  color: #8a6239;
+}
+body.website-v2 .v2-alchemy-toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 19px 0 0;
+}
+body.website-v2 .v2-alchemy-toc li + li { margin-top: 2px; }
+body.website-v2 .v2-alchemy-toc a {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+  padding-block: 11px;
+  color: #463a30;
+  line-height: 1.45;
+  font-size: .91rem;
+  transition: color .16s ease;
+}
+body.website-v2 .v2-alchemy-toc a span {
+  flex: none;
+  color: #9e7548;
+  font-size: .73rem;
+  font-weight: 750;
+  letter-spacing: .07em;
+}
+body.website-v2 .v2-alchemy-toc a:hover,
+body.website-v2 .v2-alchemy-toc a:focus-visible { color: #986536; }
+body.website-v2 .v2-alchemy-chapters { min-width: 0; }
+body.website-v2 .v2-alchemy-chapter {
+  scroll-margin-top: 125px;
+}
+body.website-v2 .v2-alchemy-chapter + .v2-alchemy-chapter {
+  margin-top: clamp(74px,9vw,134px);
+  padding-top: clamp(64px,7vw,106px);
+  border-top: 1px solid rgba(101,78,48,.26);
+}
+body.website-v2 .v2-alchemy-chapter-label { margin-bottom: clamp(28px,3vw,42px); }
+body.website-v2 .v2-alchemy-chapter h2 {
+  font-size: clamp(2.05rem,3.1vw,2.85rem);
+  line-height: 1.22;
+  letter-spacing: -.027em;
+  color: #33291f;
+  max-width: 760px;
+}
+body.website-v2 .v2-alchemy-chapter h2:not(:first-of-type) {
+  margin-top: clamp(46px,5.1vw,76px);
+}
+body.website-v2 .v2-alchemy-chapter h3 {
+  font-family: var(--v2-display);
+  font-weight: 400;
+  font-size: clamp(1.27rem,1.9vw,1.65rem);
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  color: #876036;
+  margin-top: clamp(25px,3vw,38px);
+}
+body.website-v2 .v2-alchemy-chapter h2 + h3 {
+  margin-top: 13px;
+}
+body.website-v2 .v2-alchemy-chapter p:not(.v2-alchemy-chapter-label) {
+  font-size: clamp(1.035rem,1.15vw,1.115rem);
+  line-height: 1.98;
+  letter-spacing: .003em;
+  color: #453e36;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+body.website-v2 .v2-alchemy-chapter :is(h2,h3) + p { margin-top: 24px; }
+body.website-v2 .v2-alchemy-chapter p:not(.v2-alchemy-chapter-label) + p { margin-top: 23px; }
+body.website-v2 .v2-alchemy-chapter p:not(.v2-alchemy-chapter-label) + h2 { margin-top: clamp(56px,6.2vw,88px); }
+body.website-v2 .v2-alchemy-chapter p:not(.v2-alchemy-chapter-label) + h3 { margin-top: clamp(44px,4.7vw,67px); }
+body.website-v2 .v2-alchemy-chapter i { font-style: italic; }
+body.website-v2 .v2-alchemy-chapter b { color: #34271a; font-weight: 700; }
+
+/* Enkel utgång från den långa läsningen */
+body.website-v2 .v2-alchemy-return.v2-section {
+  background: #151311;
+  border-top: 1px solid rgba(201,163,108,.32);
+  padding-block: clamp(66px,7vw,110px);
+}
+body.website-v2 .v2-alchemy-return-inner { max-width: 1110px; margin-inline: auto; }
+body.website-v2 .v2-alchemy-return .v2-kicker { color: #cfac77; }
+body.website-v2 .v2-alchemy-return a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 24px;
+  max-width: 100%;
+  border-bottom: 1px solid rgba(223,190,133,.72);
+  padding-bottom: 11px;
+  font: 400 clamp(1.65rem,3vw,2.6rem)/1.3 var(--v2-display);
+  color: #f3eadc;
+  transition: color .16s ease;
+}
+body.website-v2 .v2-alchemy-return a:hover { color: #dfbe85; }
+body.website-v2 .v2-alchemy-return a span { font-size: .85em; color: #dfbe85; }
+
+@media (max-width: 950px) {
+  body.website-v2 .v2-alchemy-shell {
+    grid-template-columns: minmax(0,1fr);
+    gap: 60px;
+    max-width: 800px;
+  }
+  body.website-v2 .v2-alchemy-toc {
+    position: static;
+    border: 1px solid rgba(101,78,48,.27);
+    padding: 24px 28px;
+  }
+  body.website-v2 .v2-alchemy-toc ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    column-gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  body.website-v2 .v2-alchemy-hero.v2-section { padding-top: 60px; padding-bottom: 85px; }
+  body.website-v2 .v2-alchemy-breadcrumb { margin-bottom: 55px; }
+  body.website-v2 .v2-alchemy-hero h1 { font-size: clamp(3rem,13.8vw,5.15rem); }
+  body.website-v2 .v2-alchemy-hero-subtitle { font-size: 1.24rem; margin-top: 28px; }
+  body.website-v2 .v2-alchemy-reading.v2-section { padding-inline: clamp(18px,5.3vw,30px); }
+  body.website-v2 .v2-alchemy-shell { gap: 51px; }
+  body.website-v2 .v2-alchemy-toc { padding: 23px; }
+  body.website-v2 .v2-alchemy-toc ol { grid-template-columns: minmax(0,1fr); margin-top: 14px; }
+  body.website-v2 .v2-alchemy-toc a { padding-block: 8px; }
+  body.website-v2 .v2-alchemy-chapter h2 { font-size: clamp(1.95rem,8vw,2.35rem); }
+  body.website-v2 .v2-alchemy-chapter h3 { font-size: 1.29rem; }
+  body.website-v2 .v2-alchemy-chapter p:not(.v2-alchemy-chapter-label) { line-height: 1.87; hyphens: none; }
+  body.website-v2 .v2-alchemy-chapter + .v2-alchemy-chapter { margin-top: 84px; padding-top: 72px; }
+  body.website-v2 .v2-alchemy-return a { gap: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.website-v2 .v2-alchemy-toc a,
+  body.website-v2 .v2-alchemy-return a { transition: none; }
+}

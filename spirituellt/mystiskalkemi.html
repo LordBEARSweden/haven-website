@@ -1,326 +1,333 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mystiskalkemi | Haven Nordic Health</title>
-  <link rel="stylesheet" href="../style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-<link rel="manifest" href="/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
 
-<!-- Favicon för olika storlekar -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <!-- Sidans individuella SEO-information -->
+  <title>Mystisk Alkemi | Haven Nordic Health</title>
+  <meta name="description" content="Upptäck Mystisk Alkemi, den levda vägen mot inre förvandling, genom symboler, element, processer och reflektion.">
 
-<!-- Google tag (gtag.js) -->
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="../images/apple-touch-icon.png">
+
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="../css/pages/mystiskalkemi.css">
+
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- Befintlig Google Analytics. Kontrollera samtyckeshantering inför lansering. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-
   gtag('config', 'G-QFYE06CQFW');
 </script>
+
 </head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+
+<body class="website-v2">
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="../index.html">
+<img alt="" class="v2-brand-logo" height="60" src="../images/Haven Transparent No buffer no text.png" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="../index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="../kunskap.html">Kunskap</a>
+<a href="../blog/index.html">Blogg</a>
+<a href="../spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="../coaching.html">Coaching</a>
+<a href="../samtalsstod.html">Samtalsstöd</a>
+<a href="../gavorochkop.html">Gåvor &amp; Köp</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="../om.html">Om verksamheten</a>
+<a href="../stodhaven.html">Stöd Haven</a>
+</div>
+</details>
+<a href="../kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="../bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
 
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="../index.html">Hem</a></li>
-                  <li><a href="../om.html">Om</a></li>
-                  <li><a href="../kunskap.html">Kunskap</a></li>
-                  <li><a href="../coaching.html">Coaching</a></li>
-                  <li><a href="../samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="../bokatid.html">Boka tid</a></li>
-                  <li><a href="../kontakt.html">Kontakt</a></li>
-                  <li><a href="../stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="../blog/index.html">Blogg</a></li>
-                  <li><a href="../gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="../spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-          <div class="logo-wrapper">
-            <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
- <section id="Del 1">
-  <h2>Mystisk Alkemi</h2>
-  <h3>Den levda vägen mot inre förvandling</h3>
+  <main id="main-content">
+    <!-- Mystisk Alkemi 2.0: originalets 60 textstycken och fem delar bevarade. Endast struktur och presentation är ändrade. -->
+<div class="v2-alchemy-page">
+  <section class="v2-alchemy-hero v2-section" aria-labelledby="alchemy-title">
+    <div class="v2-alchemy-hero-inner">
+      <nav class="v2-alchemy-breadcrumb" aria-label="Brödsmulor">
+        <a href="../spirituellt.html">Spirituellt</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Mystisk Alkemi</span>
+      </nav>
+      <p class="v2-kicker">HAVEN NORDIC HEALTH / SPIRITUELL FÖRDJUPNING</p>
+      <h1 id="alchemy-title">Mystisk Alkemi</h1>
+      <p class="v2-alchemy-hero-subtitle">Den levda vägen mot inre förvandling</p>
+    </div>
+  </section>
 
-  <h4>Vad är Mystisk Alkemi?</h4>
+  <div class="v2-alchemy-reading v2-section">
+    <div class="v2-alchemy-shell">
+      <aside class="v2-alchemy-sidebar" aria-label="Innehållsförteckning">
+        <nav class="v2-alchemy-toc" aria-label="Artikelns fem delar">
+          <p class="v2-alchemy-toc-title">INNEHÅLL</p>
+          <ol>
+            <li><a href="#del-1"><span>01</span>Inledning</a></li>
+            <li><a href="#del-2"><span>02</span>Ursprung och grund</a></li>
+            <li><a href="#del-3"><span>03</span>De fyra elementen</a></li>
+            <li><a href="#del-4"><span>04</span>Processen</a></li>
+            <li><a href="#del-5"><span>05</span>De sju stadierna</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <div class="v2-alchemy-chapters">
+<section aria-label="Inledning" class="v2-alchemy-chapter" id="del-1"><p class="v2-alchemy-chapter-label">DEL 01 / INLEDNING</p>
 
-  <p>
+
+<h2>Vad är Mystisk Alkemi?</h2>
+<p>
     Mystisk alkemi är den tysta konsten att förvandla mörker till ljus,
     smärta till visdom och rädsla till kärlek.
     Den är inte en religion eller en filosofi, utan en väg och en levd erfarenhet.
     Den som vandrar denna väg söker inte enbart svar genom yttre kunskap,
     utan genom stillheten inom sig själv.
   </p>
-
-  <p>
+<p>
     Den mystiska alkemisten ser livet som ett laboratorium för själen.
     Allt som sker, varje möte, varje prövning och varje känsla,
     blir en del av den stora processen.
     Genom eld, jord, luft och vatten renas det mänskliga,
     så att det djupare ljuset inom människan kan träda fram.
   </p>
-
-  <p>
+<p>
     Det handlar inte om att fly världen, utan om att förstå den.
     Att låta transformationen ske naturligt i kroppen, i hjärtat och i anden.
     Att låta livet självt vara den stora läraren.
   </p>
-
-  <p>
+<p>
     Den som vandrar denna väg lär sig att den djupaste kunskapen inte alltid
     finns utanför oss, utan också vilar inom oss.
     Det behövs ingen kamp för att finna den, endast närvaro, mod och stillhet.
     Ljuset kan inte tvingas fram, utan lågan måste tändas varsamt.
   </p>
-
-  <p>
+<p>
     Mystisk alkemi är därför inte bara något man gör, utan något man blir.
     Ett tillstånd där människan återvänder till sin sanna natur,
     där själen minns sitt ursprung och där varje andetag blir en del av den
     större helheten.
   </p>
-
-
-  <h4>Vad betyder Mystisk Alkemi?</h4>
-
-  <p>
+<h2>Vad betyder Mystisk Alkemi?</h2>
+<p>
     Mystisk alkemi förenar två gamla vägar för människans inre utveckling:
     mystiken och alkemin.
   </p>
-
-  <p>
+<p>
     Mystiken handlar om den direkta erfarenheten av det större än oss själva.
     Det är sökandet efter en djupare förståelse av livet, där människan genom
     stillhet, närvaro och inre insikt kan uppleva sin förbindelse med det heliga.
   </p>
-
-  <p>
+<p>
     Alkemin handlar om förvandling.
     Den gamla bilden av alkemisten som förädlar bly till guld är samtidigt en
     symbol för människans egen inre resa.
     Det tunga och omedvetna inom oss kan genom medvetenhet och arbete förvandlas
     till visdom, klarhet och inre guld.
   </p>
-
-  <p>
+<p>
     Mystisk alkemi är mötet mellan dessa två vägar.
     Den beskriver människans resa från det begränsade till det helare,
     från sökandet efter svar till en djupare förståelse av vem hon är.
   </p>
 </section>
-<section id="Del 2">
 
-  <h3>Ursprung och grund</h3>
-  <h4>En uråldrig väg genom symboler och erfarenhet</h4>
-
-  <p>
+<section aria-label="Ursprung och grund" class="v2-alchemy-chapter" id="del-2"><p class="v2-alchemy-chapter-label">DEL 02 / URSPRUNG OCH GRUND</p>
+<h2>Ursprung och grund</h2>
+<h3>En uråldrig väg genom symboler och erfarenhet</h3>
+<p>
     Mystisk alkemi har sina rötter i mötet mellan flera gamla traditioner
     där människans inre utveckling har utforskats genom symboler,
     berättelser och direkt erfarenhet.
     Den bär spår från både mystikens sökande efter det gudomliga och
     alkemins språk för förvandling.
   </p>
-
-  <p>
+<p>
     Den klassiska alkemin beskrevs ofta genom bilder av metaller,
     eld, vatten och förädling.
     Under dessa symboler fanns en djupare förståelse:
     att den största förvandlingen inte sker utanför människan,
     utan inom henne själv.
   </p>
-
-  <p>
+<p>
     Alkemistens sökande efter guldet kan därför också förstås som
     människans sökande efter sitt eget inre ljus.
     Det handlar om att rena, förädla och förena de delar av oss själva
     som tidigare varit splittrade.
   </p>
-
-  <p>
+<p>
     En central tanke inom den hermetiska traditionen är:
     <i>Som ovan, så nedan.</i>
-  </p>
-
-  <p>
+</p>
+<p>
     Det betyder att människan och universum speglar varandra.
     Den inre världen och den yttre världen är sammanlänkade,
     och själens förvandling är en del av en större helhet.
   </p>
-
-
-  <h3>De tre vägarna</h3>
-  <h4>Ande, kropp och materia i helig förening</h4>
-
-  <p>
+<h2>De tre vägarna</h2>
+<h3>Ande, kropp och materia i helig förening</h3>
+<p>
     Inom mystisk alkemi talar man om tre vägar som tillsammans formar
     människans inre resa:
     den mystiska vägen, den alkemiska vägen och den enande vägen.
     De är inte separata steg, utan tre uttryck för samma sökande efter
     helhet och förening.
   </p>
-
-
-  <h3>Den mystiska vägen</h3>
-
-  <p>
+<h2>Den mystiska vägen</h2>
+<p>
     Den mystiska vägen är vägen inåt.
     Här söker själen förening med det större genom stillhet,
     meditation, bön och inre insikt.
     Det är vägen där slöjorna lyfts, där hjärtat öppnas och där människan
     börjar minnas sin djupare förbindelse med Skapelsen.
   </p>
-
-  <p>
+<p>
     Den mystiska vägen handlar inte enbart om tro, utan om erfarenhet.
     Den som vandrar här lär sig att lyssna till den stilla rösten inom sig
     och upptäcka den kunskap som finns bortom det yttre.
   </p>
-
-
-  <h3>Den alkemiska vägen</h3>
-
-  <p>
+<h2>Den alkemiska vägen</h2>
+<p>
     Den alkemiska vägen är vägen genom materien.
     Här sker arbetet i det mänskliga, i kroppen, i vardagen och i livets
     prövningar.
     Det är här själens tyngre metaller, såsom rädsla, smärta och begränsningar,
     kan förvandlas till guld.
   </p>
-
-  <p>
+<p>
     Detta är vägen av handling, disciplin och mod.
     Den kräver närvaro, men ger i gengäld styrka, förståelse och visdom.
   </p>
-
-
-  <h3>Den enande vägen</h3>
-
-  <p>
+<h2>Den enande vägen</h2>
+<p>
     När den mystiska och den alkemiska vägen möts föds den tredje vägen:
     den enande vägen.
     Här förenas himmel och jord, ande och kropp, tanke och känsla.
     Det som tidigare upplevdes som motsatser börjar återvända till sin
     naturliga helhet.
   </p>
-
-  <p>
+<p>
     Den som vandrar denna väg söker inte längre enbart efter svar,
     utan börjar leva i samklang med livet självt.
     Att förverkliga denna förening blir det högsta uttrycket av mystisk alkemi.
   </p>
-
 </section>
-<section id="Del 3">
 
-  <h3>De fyra elementen</h3>
-  <h4>Jord, vatten, luft och eld som själens krafter</h4>
-
-  <p>
+<section aria-label="De fyra elementen" class="v2-alchemy-chapter" id="del-3"><p class="v2-alchemy-chapter-label">DEL 03 / DE FYRA ELEMENTEN</p>
+<h2>De fyra elementen</h2>
+<h3>Jord, vatten, luft och eld som själens krafter</h3>
+<p>
     Inom mystisk alkemi representerar de fyra elementen olika krafter
     som finns både i naturen och inom människan.
     De beskriver inte enbart den värld vi lever i, utan också de inre
     aspekter som behöver förstås, balanseras och förenas.
   </p>
-
-  <p>
+<p>
     Människan bär inom sig alla dessa element.
     Genom att förstå deras uttryck kan vi lära känna våra egna styrkor,
     obalanser och den väg som leder mot större helhet.
   </p>
-
-
-  <h3>Jord – kroppens och förankringens element</h3>
-
-  <p>
+<h2>Jord – kroppens och förankringens element</h2>
+<p>
     Jorden står för det fysiska, det stabila och det som ger oss rötter.
     Den representerar kroppen, närvaron i det materiella och förmågan
     att stå stadigt även när livet förändras.
   </p>
-
-  <p>
+<p>
     Genom jord lär vi oss att acceptera vår mänsklighet och att skapa
     en grund där den inre förvandlingen kan växa.
   </p>
-
-
-  <h3>Vatten – känslornas och flödets element</h3>
-
-  <p>
+<h2>Vatten – känslornas och flödets element</h2>
+<p>
     Vattnet står för känslor, intuition och rörelse.
     Det lär oss att släppa det som inte längre tjänar oss och att låta
     livet få flöda genom oss.
   </p>
-
-  <p>
+<p>
     Genom vatten möter vi djupet inom oss själva och lär oss att lyssna
     till det som inte alltid kan förstås genom tanken.
   </p>
-
-
-  <h3>Luft – medvetandets och insiktens element</h3>
-
-  <p>
+<h2>Luft – medvetandets och insiktens element</h2>
+<p>
     Luften står för tanken, perspektivet och den inre förståelsen.
     Den hjälper oss att se klarare, urskilja det väsentliga från det
     oväsentliga och öppna oss för nya insikter.
   </p>
-
-  <p>
+<p>
     Genom luft får människan möjlighet att höja sitt medvetande och
     se världen med större klarhet.
   </p>
-
-
-  <h3>Eld – transformationens och viljans element</h3>
-
-  <p>
+<h2>Eld – transformationens och viljans element</h2>
+<p>
     Elden står för kraften som förändrar.
     Den representerar vilja, passion och den inre låga som driver
     människan genom förvandlingens process.
   </p>
-
-  <p>
+<p>
     Genom elden bränns det gamla bort och det som är sant och levande
     får möjlighet att träda fram.
   </p>
-
-
-<h3>Kvintessensen – den förenande principen</h3>
-
+<h2>Kvintessensen – den förenande principen</h2>
 <p>
   När jord, vatten, luft och eld återfinner sin balans träder den femte essensen fram,
   kvintessensen.
   Den symboliserar anden, livskraften och den förenande princip som binder samman
   alla delar till en helhet.
 </p>
-
 <p>
   Kvintessensen är inte ett ytterligare element, utan den subtila kraft som förenar
   de fyra elementen och förbinder det materiella med det andliga.
   Det är här alkemin möter mystiken.
 </p>
-
 <p>
   Genom elementen arbetar människan med sin egen förvandling, men genom
   kvintessensen öppnas förståelsen för att denna förvandling är en del av något
@@ -328,268 +335,213 @@
   Den representerar kontakten med det högre, den inre anden och den djupare
   enhet som finns bakom allt liv.
 </p>
-
 <p>
   Kvintessensen är därför den osynliga länken mellan kropp och själ,
   mellan människan och det gudomliga.
   Det är den punkt där den alkemiska processen inte längre bara handlar om
   förändring, utan om förening.
 </p>
-
 </section>
-<section id="Del 4">
 
-  <h3>Processen</h3>
-  <h4>De inre faserna av själens förvandling</h4>
-
-  <p>
+<section aria-label="Processen" class="v2-alchemy-chapter" id="del-4"><p class="v2-alchemy-chapter-label">DEL 04 / PROCESSEN</p>
+<h2>Processen</h2>
+<h3>De inre faserna av själens förvandling</h3>
+<p>
     I mystisk alkemi beskrivs själens resa som ett heligt verk,
     <i>opus divinum</i>.
     Det är inte en yttre process, utan en inre alkemisk omvandling där
     människans djupare natur renas, förädlas och slutligen förenas med
     sitt högsta ljus.
   </p>
-
-  <p>
+<p>
     Denna resa beskrivs genom fyra huvudsakliga faser:
     <b>Nigredo, Albedo, Citrinitas och Rubedo.</b>
     De ska inte förstås som fasta steg som människan lämnar bakom sig,
     utan som återkommande rörelser i själens förvandling där varje fas
     bär sin egen visdom.
   </p>
-
-
-  <h3>Nigredo – upplösningen</h3>
-  <h4>Den svarta fasen, där det gamla bryts ner för att ge plats åt det nya</h4>
-
-  <p>
+<h2>Nigredo – upplösningen</h2>
+<h3>Den svarta fasen, där det gamla bryts ner för att ge plats åt det nya</h3>
+<p>
     Här möter människan mörkret inom sig.
     Det är perioden av prövning, smärta, förlust och desillusion.
     Det som inte längre tjänar själen börjar lösas upp:
     gamla tankar, rädslor och identiteter.
     Det är slutet på det gamla sättet att vara.
   </p>
-
-  <p>
+<p>
     I denna fas kan världen kännas tung och meningslös,
     men det är också här den djupaste reningen sker.
     Mörkret är inte fienden, utan den plats där något nytt kan börja växa.
     Den som vågar möta mörkret utan att fly kan upptäcka det ljus som
     alltid funnits där.
   </p>
-
-
-  <h3>Albedo – reningen</h3>
-  <h4>Den vita fasen, där själen återföds i klarhet</h4>
-
-  <p>
+<h2>Albedo – reningen</h2>
+<h3>Den vita fasen, där själen återföds i klarhet</h3>
+<p>
     Efter mörkret kommer ljuset.
     Själen börjar se med nya ögon.
     Tankarna stillas, hjärtat renas och en ny förståelse börjar växa fram.
     Detta är fasen där människan lär sig skilja sanning från illusion.
   </p>
-
-  <p>
+<p>
     I Albedo lär man sig att leva mer medvetet, att lyssna till den stilla
     rösten inom sig och följa den vägledning som växer fram ur djupet.
     Det gamla har förlorat sitt grepp, men det nya är ännu i sin början.
     Här krävs tålamod och varsamhet.
   </p>
-
-
-  <h3>Citrinitas – uppvaknandets ljus</h3>
-  <h4>Den gula fasen, där själens inre sol börjar lysa</h4>
-
-  <p>
+<h2>Citrinitas – uppvaknandets ljus</h2>
+<h3>Den gula fasen, där själens inre sol börjar lysa</h3>
+<p>
     Efter reningen kommer gryningen.
     Citrinitas är fasen där människan inte längre enbart befrias från det
     gamla, utan börjar upptäcka och förkroppsliga sitt inre ljus.
     Det är solens återkomst, en symbol för visdom, medvetande och en djupare
     förståelse av livets sammanhang.
   </p>
-
-  <p>
+<p>
     Här börjar insikten att bli levd erfarenhet.
     Det som tidigare bara anats börjar få form i människans sätt att tänka,
     känna och handla.
     Själen börjar inte bara se ljuset, utan bära det.
   </p>
-
-  <p>
+<p>
     Citrinitas är gryningen före fullbordandet.
     Det är övergången där människan förbereds inför den slutliga föreningen
     mellan det mänskliga och det gudomliga.
   </p>
-
-
-  <h3>Rubedo – föreningen</h3>
-  <h4>Den röda fasen, där ande och materia förenas till ett</h4>
-
-  <p>
+<h2>Rubedo – föreningen</h2>
+<h3>Den röda fasen, där ande och materia förenas till ett</h3>
+<p>
     I den sista fasen sker den inre föreningen,
     själens alkemiska bröllop.
     Här börjar motsatserna återförenas:
     ljus och mörker, himmel och jord, ande och kropp.
   </p>
-
-  <p>
+<p>
     Rubedo handlar inte om att lämna det mänskliga bakom sig,
     utan om att helt förkroppsliga den helhet som har upptäckts.
     Människan blir en levande förening mellan det jordiska och det högre.
   </p>
-
-  <p>
+<p>
     Rubedo är inte slutet på resan, utan början på ett nytt sätt att leva.
     Den som når denna punkt vandrar inte längre enbart som sökare,
     utan som en människa som bär sin egen inre eld.
     Det är här den mystiska alkemisten föds.
   </p>
-
 </section>
-<section id="Del 5">
 
-  <h3>De sju stadierna</h3>
-  <h4>Stegen genom själens stora förvandling</h4>
-
-  <p>
+<section aria-label="De sju stadierna" class="v2-alchemy-chapter" id="del-5"><p class="v2-alchemy-chapter-label">DEL 05 / DE SJU STADIERNA</p>
+<h2>De sju stadierna</h2>
+<h3>Stegen genom själens stora förvandling</h3>
+<p>
     Inom mystisk alkemi talas ofta om de sju stadierna,
     de subtila rörelser där själens djup renas och förädlas.
     Varje steg är både en inre prövning och en möjlighet till större förståelse.
   </p>
-
-  <p>
+<p>
     De sju stadierna ska inte ses som en rak väg där människan lämnar
     varje steg bakom sig för alltid.
     De beskriver återkommande processer i själens utveckling,
     där samma lärdomar kan återvända på nya och djupare nivåer.
   </p>
-
-
-  <h4>Calcination – Eldens prövning</h4>
-
-  <p>
+<h3>Calcination – Eldens prövning</h3>
+<p>
     Här bränns det gamla bort.
     Tankar, begär och mönster som inte längre tjänar själen möts av
     eldens renande kraft.
     Det är den första smärtan, men också början på frigörelse.
   </p>
-
-
-  <h4>Dissolution – Vattnets flöde</h4>
-
-  <p>
+<h3>Dissolution – Vattnets flöde</h3>
+<p>
     Det som tidigare varit hårt och fast börjar lösas upp i känslornas
     och intuitionens flöde.
     Gränser mjuknar och själen börjar ana en djupare enhet.
     Det som varit bundet får möjlighet att åter röra sig.
   </p>
-
-
-  <h4>Separation – Skiljandets konst</h4>
-
-  <p>
+<h3>Separation – Skiljandets konst</h3>
+<p>
     I denna fas lär sig den sökande att urskilja det väsentliga från det
     oväsentliga.
     Vad som tjänar ljuset får finnas kvar, medan det som inte längre hör
     till vägen får släppas.
     Det är en tid av klarhet och inre urskiljning.
   </p>
-
-
-  <h4>Conjunction – Föreningens dans</h4>
-
-  <p>
+<h3>Conjunction – Föreningens dans</h3>
+<p>
     Två aspekter av själens natur börjar mötas:
     mörker och ljus, kropp och ande, det mänskliga och det högre.
     Det är en förening där motsatser inte längre behöver bekämpa varandra,
     utan kan skapa harmoni och kraft tillsammans.
   </p>
-
-
-  <h4>Fermentation – Spirans återkomst</h4>
-
-  <p>
+<h3>Fermentation – Spirans återkomst</h3>
+<p>
     Efter upplösning och rening börjar något nytt växa fram.
     Livets djupare essens väcks åter till liv och en ny vision börjar ta form.
     Det är den första spirande känslan av en ny riktning.
   </p>
-
-
-  <h4>Distillation – Den rena källan</h4>
-
-  <p>
+<h3>Distillation – Den rena källan</h3>
+<p>
     Här förfinas och renas människans olika delar.
     Tankar, känslor och handlingar blir mer genomskinliga för det ljus
     som finns inom och omkring oss.
     Det är en fas av djupare insikt och stillhet.
   </p>
-
-
-  <h4>Coagulation – Helhetens krön</h4>
-
-  <p>
+<h3>Coagulation – Helhetens krön</h3>
+<p>
     Slutligen förenas det som tidigare varit splittrat.
     Människan står mer hel och klar, förenad med sin inre eld och den större
     helhet som omger allt.
   </p>
-
-  <p>
+<p>
     Coagulation speglar den fullbordade alkemiska processen där ande och
     materia återförenas.
     Det är inte slutet på vägen, utan början på ett liv där den inre
     förvandlingen får uttryck genom närvaro, skapande och medvetenhet.
   </p>
-
-
-  <h3>Den levda alkemin</h3>
-  <h4>När förvandlingen blir en del av livet</h4>
-
-  <p>
+<h2>Den levda alkemin</h2>
+<h3>När förvandlingen blir en del av livet</h3>
+<p>
     Mystisk alkemi handlar inte om att bli någon annan.
     Den handlar om att avtäcka det som redan finns inom människan.
     Genom att möta både ljuset och mörkret inom oss kan erfarenheter
     förvandlas till förståelse och visdom.
   </p>
-
-  <p>
+<p>
     Vägen handlar inte om att lämna världen bakom sig,
     utan om att återvända till den med större närvaro.
     När människan förenar kropp och ande, det jordiska och det högre,
     blir livet självt den plats där alkemin fortsätter att verka.
   </p>
-
-  <p>
+<p>
     Den mystiska alkemisten söker inte längre guldet utanför sig själv.
     Hon upptäcker att det alltid har funnits där,
     väntande på att bli funnet, förädlat och levt.
   </p>
-
 </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
+      </div>
+    </div>
   </div>
 
-  <!-- JS Toggle -->
-  <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
+  <section class="v2-alchemy-return v2-section" aria-label="Tillbaka till Spirituellt">
+    <div class="v2-alchemy-return-inner">
+      <p class="v2-kicker">HAVEN NORDIC HEALTH</p>
+      <a href="../spirituellt.html">Tillbaka till Spirituellt <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</div>
 
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+  </main>
 
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="../kunskap.html">Kunskap</a><a href="../blog/index.html">Blogg</a><a href="../spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="../coaching.html">Coaching</a><a href="../samtalsstod.html">Samtalsstöd</a><a href="../bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="../om.html">Om oss</a><a href="../kontakt.html">Kontakt</a><a href="../stodhaven.html">Stöd Haven</a><a href="../gavorochkop.html">Gåvor &amp; Köp</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="../js/site.js"></script>
+  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
+     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
+     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
+
 
 </body>
 </html>
