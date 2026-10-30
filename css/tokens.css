@@ -33,5 +33,5 @@ body.website-v2 {
   --v2-border: rgba(201,163,108,.36);
   --v2-display: "Averia Serif Libre", Georgia, serif;
   --v2-body: "Segoe UI", system-ui, sans-serif;
-  --v2-hero-image: url("https://images.pexels.com/photos/29523898/pexels-photo-29523898.jpeg?auto=compress&cs=tinysrgb&w=1800");
+  --v2-hero-image: url("/images/haven-hero-original.webp");
 }
