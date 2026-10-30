@@ -404,6 +404,20 @@ def build_page(source, partials, layout):
     # Resolve relative asset and page paths.
     result = result.replace("{{root}}", root_prefix)
 
+    # Discover the homepage LCP background in HTML before CSS is parsed.
+    if relative == Path("index.html"):
+        hero_preload = (
+            '  <link rel="preload" as="image" '
+            'href="/images/haven-hero-original.webp" fetchpriority="high">'
+        )
+        result = re.sub(
+            r"<head\b[^>]*>",
+            lambda match: match.group(0) + "\n" + hero_preload,
+            result,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+
     # Detect unresolved placeholders.
     unresolved = re.findall(r"\{\{[^{}]+\}\}", result)
 

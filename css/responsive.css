@@ -128,8 +128,8 @@
   }
 
   body.website-v2 .v2-hero-photo {
-    background-position: center center;
-  }
+  background-position: 75% center;
+}
 
   body.website-v2 .v2-hero-shade {
     background: linear-gradient(0deg,rgba(6,6,6,.95) 0%,rgba(6,6,6,.75) 38%,rgba(6,6,6,.13) 95%);
