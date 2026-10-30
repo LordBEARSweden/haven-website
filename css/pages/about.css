@@ -198,3 +198,57 @@ body.website-v2 .v2-about-social-links a:focus-visible {
     flex: 1 1 125px;
   }
 }
+
+
+/* Sociala plattformsikoner – Haven V2 */
+body.website-v2 .v2-about-social-links a.social-icon {
+  display: inline-block;
+  box-sizing: border-box;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+body.website-v2 .v2-about-social-links a.social-icon:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+  background-color: transparent;
+}
+
+body.website-v2 .v2-about-social-links a.social-icon:focus-visible {
+  outline: 2px solid var(--v2-gold);
+  outline-offset: 3px;
+}
+
+body.website-v2 .v2-about-social-links a.social-icon.instagram {
+  background-image: url('/images/Instagram-Logo.wine.svg');
+}
+
+body.website-v2 .v2-about-social-links a.social-icon.tiktok {
+  background-image: url('/images/TikTok-Logo.wine.svg');
+}
+
+body.website-v2 .v2-about-social-links a.social-icon.youtube {
+  background-image: url('/images/YouTube-Icon-Full-Color-Logo.wine.svg');
+}
+
+body.website-v2 .v2-about-social-links a.social-icon.facebook {
+  background-image: url('/images/Facebook-f_Logo-Blue-Logo.wine.svg');
+}
+
+body.website-v2 .v2-about-social-links a.social-icon.threads {
+  background-image: url('/images/threads-logo-white.svg');
+  background-size: 30%;
+}
+
+body.website-v2 .v2-about-social-links a.social-icon.snapchat {
+  background-image: url('/images/snapchat-logo-svgrepo-com.svg');
+  background-size: 35%;
+}
