@@ -1,176 +1,297 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+
+  <!-- Sidans individuella SEO-information -->
   <title>Coaching | Haven Nordic Health</title>
-  <link rel="stylesheet" href="style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-  <link rel="manifest" href="/site.webmanifest">
- 
-  <!-- Favicon för olika storlekar -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta name="description" content="Utforska personlig coaching hos Haven Nordic Health. Ett individuellt upplägg för självförståelse och hållbar förändring, med tydliga priser och ett kostnadsfritt introduktionssamtal.">
+  <link rel="canonical" href="https://www.havennordichealth.se/coaching.html">
+    <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Haven Nordic Health">
+  <meta property="og:title" content="Coaching | Haven Nordic Health">
+  <meta property="og:description" content="Utforska personlig coaching hos Haven Nordic Health. Ett individuellt upplägg för självförståelse och hållbar förändring, med tydliga priser och ett kostnadsfritt introduktionssamtal.">
+  <meta property="og:url" content="https://www.havennordichealth.se/coaching.html">
+  <meta property="og:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Haven Nordic Health">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Coaching | Haven Nordic Health">
+  <meta name="twitter:description" content="Utforska personlig coaching hos Haven Nordic Health. Ett individuellt upplägg för självförståelse och hållbar förändring, med tydliga priser och ett kostnadsfritt introduktionssamtal.">
+  <meta name="twitter:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="images/apple-touch-icon.png">
 
-  gtag('config', 'G-QFYE06CQFW');
-</script>
-</head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="index.html">Hem</a></li>
-                  <li><a href="om.html">Om</a></li>
-                  <li><a href="kunskap.html">Kunskap</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
-                  <li><a href="samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="bokatid.html">Boka tid</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-                  <li><a href="stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="blog/index.html">Blogg</a></li>
-                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-          <div class="logo-wrapper">
-            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="css/pages/coaching.css">
 
-    <!-- Main content -->
-     <main>
-      <h2>Coaching</h2>
-      <H3>Coaching hos Haven Nordic Health</H3>
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="css/responsive.css">
 
-      <p>Välkommen till coaching hos Haven Nordic Health – en plats för dig som vill skapa ett mer hållbart och fungerande liv. Här arbetar vi långsamt, medvetet och utan genvägar, med fokus på både kropp, sinne och inre närvaro.</p>  
-     
-      <div class="divider"></div>
+  <!-- Google Analytics disabled; no tracking script loaded. -->
 
-         <section>
-            <h3>Introduktionssamtal</h3>
-            <p>Introduktionssamtalet är ett kostnadsfritt inledande möte där vi tillsammans ser om coaching hos Haven är rätt för dig just nu. Du får möjlighet att ställa frågor, berätta om din situation och få en tydlig bild av hur processen fungerar.</p>
-            <p>Samtalet sker i första hand digitalt via Teams och tar cirka 30 minuter. I särskilda fall kan det första samtalet även ske via telefon.</p>
-            <p>Bokning av ett intriduktionssamtal sker via <strong>boka tid</strong> knappen längst ned i det högra hörnet på sidan</p>
-            <p>Pågående coaching sker digitalt via Teams med kamera, för att möjliggöra helhet, närvaro och kvalitet i processen.</p>
-            <p>Bokning av ett coachingsamtal sker även dessa via <strong>boka tid</strong> knappen längst ned i det högra hörnet på sidan</p>
-          </section>
-
-        <section>
-          <h4>Coaching hos oss passar dig som:</h4>
-          <ul>
-            <li>vill förstå dig själv bättre och skapa långsiktiga förändringar</li>
-            <li>känner av stress, trötthet eller inre press</li>
-            <li>är redo att ta eget ansvar för din utveckling</li>
-          </ul>
-        </section>
-
-        <div class="divider"></div>
-
-        <p>Coaching hos Haven är inte för dig som befinner dig i akut kris eller behöver psykiatrisk vård. Om vi ser att du är i behov av annan hjälp, är vårt ansvar att vägleda dig vidare till rätt instans.</p>
-
-        <p>Här får du en trygg struktur, tydliga ramar och en coach som guidar dig utan att ta över – alltid med respekt för din egen process. Vi börjar där du är, tar steg för steg och fokuserar på det som är hållbart i ditt liv, både nu och framåt.</p>
-
-        <p>Vill du veta mer om hur processen ser ut och vad varje fas innebär? Då kan du gå vidare till våra undersidor där vi beskriver filosofin bakom Haven, hur coachingprocessen är uppbyggd och hur vi arbetar för att skapa verklig förändring.</p>
-
-
-        <div class="divider"></div>
-
-        <h4>Vad coaching hos Haven är – och inte är</h4>
-
-        <p>Coaching hos Haven Nordic Health är en strukturerad och ansvarstagande process för personlig utveckling, återhämtning och livsinriktning. Fokus ligger på att stärka din egen förmåga till reflektion, självreglering och hållbara val i vardagen.</p>
-
-        <p>Detta är inte terapi, psykologisk behandling eller sjukvård. Vi arbetar inte med diagnoser, traumabearbetning eller akuta tillstånd. Coaching förutsätter en grundläggande stabilitet och en vilja att ta eget ansvar för sin process.</p>
-       
-        <p>Om vi under ett första samtal eller längre fram i processen bedömer att du är i behov av annan eller mer specialiserad vård, är det en del av vårt ansvar att tydligt och respektfullt vägleda dig vidare till rätt instans.</p>
-
-        <p>Haven Coaching bygger på tydliga ramar, närvaro och långsiktighet. Vi arbetar steg för steg, utan snabba lösningar, med målet att skapa förändring som håller över tid.</p>
-
-        <div class="divider"></div>
-
-<div class="cards">
-      <!-- Aktiv kategori -->
-      <a href="coaching/coachingphilosophy.html" class="card active">
-        <span class="label">Coaching Philosophy</span>
-      </a>
-    
-      <a href="coaching/coachingprocess.html" class="card active">
-        <span class="label">Coaching process</span>
-      </a>
-
-      <a href="coaching/ansvaretik.html" class="card active">
-        <span class="label">Ansvar & Etik</span>
-      </a>
-
-      <a href="coaching/praktisktbokning.html" class="card active">
-        <span class="label">Praktiskt</span>
-      </a>
-</div>
-      <div class="divider"></div>
-    </main>
-    
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
-
-  <!-- JS Toggle -->
-  <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
-
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.havennordichealth.se/coaching.html#webpage",
+      "url": "https://www.havennordichealth.se/coaching.html",
+      "name": "Coaching | Haven Nordic Health",
+      "inLanguage": "sv-SE",
+      "isPartOf": {
+        "@id": "https://www.havennordichealth.se/#website"
+      },
+      "description": "Utforska personlig coaching hos Haven Nordic Health. Ett individuellt upplägg för självförståelse och hållbar förändring, med tydliga priser och ett kostnadsfritt introduktionssamtal."
     }
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<!-- Koalendar Popup Widget Start -->
-<script>window.Koalendar = window.Koalendar || function(){(Koalendar.props = Koalendar.props || []).push(arguments)};</script>
-<script async src="https://koalendar.com/assets/widget.js"></script>
-<script>
-  Koalendar('widget', {
-    "url": "https://koalendar.com/e/haven-nordic-health-3",
-    "text": "Boka tid",
-    "shape": "rounded-full",
-    "backgroundColor": "#d4af37",
-    "textColor": "#000000",
-    "position": "bottom-right",
-    "icon": "calendar"
-  });
-</script>
-<!-- Koalendar Popup Widget End -->
+  ]
+}
+  </script>
+</head>
+
+<body class="website-v2">
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="index.html">
+<img alt="" class="v2-brand-logo" height="60" src="images/haven-logo-header.webp" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="kunskap.html">Kunskap</a>
+<a href="blog/index.html">Blogg</a>
+<a href="spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="coaching.html">Coaching</a>
+<a href="samtalsstod.html">Samtalsstöd</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="om.html">Om verksamheten</a>
+</div>
+</details>
+<a href="kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
+
+
+  <main id="main-content">
+    <!-- Coaching 2.0: samlad tjänstesida. Gemensam navigation, sidfot och bokning sköts av base.html. -->
+<div class="v2-coaching-page">
+
+  <section class="v2-coaching-hero v2-section" aria-labelledby="coaching-title">
+    <div class="v2-coaching-hero-inner">
+      <div class="v2-coaching-hero-copy">
+        <p class="v2-kicker">COACHING HOS HAVEN</p>
+        <h1 id="coaching-title">Utrymme att förstå.<br><em>Mod att förändra.</em></h1>
+        <div class="v2-coaching-accent" aria-hidden="true"></div>
+        <p class="v2-coaching-hero-lead">Personlig coaching för dig som vill hitta mer klarhet, riktning och balans i livet – med respekt för din egen takt.</p>
+        <a class="v2-coaching-text-link" href="#for-dig">Upptäck om coaching passar dig <span aria-hidden="true">↗</span></a>
+      </div>
+      <aside class="v2-coaching-hero-note" aria-label="Havens syn på coaching">
+        <span class="v2-coaching-note-top">EN ANNAN UTGÅNGSPUNKT</span>
+        <p>Du behöver inte bli någon annan. Ibland behöver du bara utrymme att förstå dig själv och välja vägen framåt.</p>
+        <span class="v2-coaching-note-rule" aria-hidden="true"></span>
+        <span class="v2-coaching-note-bottom">NÄRVARO · RESPEKT · EGEN RIKTNING</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-coaching-fit v2-section" id="for-dig" aria-labelledby="coaching-fit-title">
+    <div class="v2-coaching-shell">
+      <div class="v2-coaching-fit-heading">
+        <p class="v2-kicker">EN PLATS FÖR DIN UTVECKLING</p>
+        <h2 id="coaching-fit-title">Det finns många skäl att vilja stanna upp.</h2>
+        <p>Du kanske står inför ett vägval, känner en inre press eller vill förstå varför vissa mönster återkommer. Coaching ger plats för reflektion – och för att göra något av det du upptäcker.</p>
+      </div>
+      <div class="v2-coaching-benefits">
+        <article>
+          <span class="v2-coaching-index">01</span>
+          <h3>Förstå dig själv</h3>
+          <p>Utforska tankar, vanor och reaktioner för att se vad som hjälper dig och vad du vill förändra.</p>
+        </article>
+        <article>
+          <span class="v2-coaching-index">02</span>
+          <h3>Hitta din balans</h3>
+          <p>Se över krav, återhämtning och gränser, och skapa mer utrymme för det som är viktigt för dig.</p>
+        </article>
+        <article>
+          <span class="v2-coaching-index">03</span>
+          <h3>Ta steg framåt</h3>
+          <p>Omsätt reflektion i konkreta, hållbara val som fungerar i din egen vardag.</p>
+        </article>
+      </div>
+      <div class="v2-coaching-alternative">
+        <span class="v2-coaching-alternative-icon" aria-hidden="true">↗</span>
+        <p><strong>Söker du främst någon att prata med?</strong> Coaching och samtalsstöd fyller olika behov. <a href="samtalsstod.html">Läs om Havens samtalsstöd</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-coaching-approach v2-section" aria-labelledby="coaching-approach-title">
+    <div class="v2-coaching-shell v2-coaching-approach-layout">
+      <div>
+        <p class="v2-kicker">VÅR SYN PÅ COACHING</p>
+        <h2 id="coaching-approach-title">Inte färdiga svar.<br><em>Ett samarbete.</em></h2>
+      </div>
+      <div class="v2-coaching-approach-copy">
+        <p>Hos Haven arbetar vi med närvaro, lyhördhet och tydliga ramar. Du får stöd att utforska din situation, sortera tankar och hitta handlingsutrymme – utan att någon annan bestämmer hur ditt liv ska se ut.</p>
+        <p>Vi ser till hela din livssituation och arbetar med både reflektion och praktiska steg. Tempot och innehållet utgår från dina behov. Det finns inget fast program eller ett förutbestämt antal samtal att följa.</p>
+        <div class="v2-coaching-approach-principles" aria-label="Tre grundprinciper">
+          <span>Närvaro</span>
+          <span>Självledarskap</span>
+          <span>Långsiktighet</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-coaching-process v2-section" id="sa-fungerar-det" aria-labelledby="coaching-process-title">
+    <div class="v2-coaching-shell">
+      <div class="v2-coaching-section-head">
+        <p class="v2-kicker">SÅ GÅR DET TILL</p>
+        <h2 id="coaching-process-title">Vi börjar där du är.</h2>
+        <p>Ingen färdig väg att passa in i. Vi börjar med ett samtal och formar sedan fortsättningen tillsammans.</p>
+      </div>
+      <div class="v2-coaching-steps">
+        <article class="v2-coaching-step">
+          <span class="v2-coaching-step-number">01 <span aria-hidden="true"></span></span>
+          <h3>Ett första möte</h3>
+          <p>Vi ses i ett kostnadsfritt introduktionssamtal på cirka 30 minuter. Du kan berätta om din situation, ställa frågor och känna efter om coaching hos Haven är rätt för dig.</p>
+        </article>
+        <article class="v2-coaching-step">
+          <span class="v2-coaching-step-number">02 <span aria-hidden="true"></span></span>
+          <h3>Samtal med riktning</h3>
+          <p>Om vi väljer att gå vidare kommer vi överens om fokus, upplägg och takt. Vi använder reflektion, frågor och konkreta perspektiv som utgår från din vardag.</p>
+        </article>
+        <article class="v2-coaching-step">
+          <span class="v2-coaching-step-number">03 <span aria-hidden="true"></span></span>
+          <h3>Förändring som får hålla</h3>
+          <p>Mellan samtalen finns möjlighet att pröva nya förhållningssätt i praktiken. Vi följer upp det som hjälper dig och anpassar vägen efter hand.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-coaching-practical v2-section" id="praktiskt" aria-labelledby="coaching-practical-title">
+    <div class="v2-coaching-shell">
+      <div class="v2-coaching-section-head v2-coaching-section-head--dark">
+        <p class="v2-kicker">ENKELT ATT KOMMA IGÅNG</p>
+        <h2 id="coaching-practical-title">Praktiskt &amp; priser</h2>
+        <p>Du vet redan från början hur samtalen går till och vad de kostar.</p>
+      </div>
+      <div class="v2-coaching-pricing">
+        <article class="v2-coaching-price-card v2-coaching-price-card--intro">
+          <p class="v2-coaching-price-label">INTRODUKTIONSSAMTAL</p>
+          <h3>Kostnadsfritt</h3>
+          <div class="v2-coaching-price-divider" aria-hidden="true"></div>
+          <dl>
+            <div><dt>Tid</dt><dd>Cirka 30 minuter</dd></div>
+            <div><dt>Format</dt><dd>Digitalt via Teams</dd></div>
+            <div><dt>Alternativ</dt><dd>Telefon i särskilda fall</dd></div>
+          </dl>
+          <p>Ett första möte där vi tillsammans utforskar om coaching hos Haven passar dig.</p>
+        </article>
+        <article class="v2-coaching-price-card v2-coaching-price-card--regular">
+          <p class="v2-coaching-price-label">FORTSATTA COACHINGSAMTAL</p>
+          <div class="v2-coaching-price-amount"><strong>1 100 kr</strong><span>per samtal</span></div>
+          <div class="v2-coaching-price-divider" aria-hidden="true"></div>
+          <dl>
+            <div><dt>Tid</dt><dd>Cirka 50 minuter</dd></div>
+            <div><dt>Format</dt><dd>Digitalt via Teams med kamera</dd></div>
+            <div><dt>Upplägg</dt><dd>Enstaka samtal, utan bindning</dd></div>
+          </dl>
+          <p>Vi träffas ofta en gång i veckan, men antal samtal och frekvens anpassas efter behov. Paketlösningar kan diskuteras om du vill arbeta mer långsiktigt.</p>
+        </article>
+      </div>
+      <p class="v2-coaching-booking-note">Du hittar <strong>Boka tid</strong> i webbplatsens meny. Där kan du ta det första steget när det passar dig.</p>
+    </div>
+  </section>
+
+  <section class="v2-coaching-trust v2-section" aria-labelledby="coaching-trust-title">
+    <div class="v2-coaching-shell v2-coaching-trust-layout">
+      <div>
+        <p class="v2-kicker">TRYGGHET &amp; ANSVAR</p>
+        <h2 id="coaching-trust-title">Tydliga ramar.<br>Plats att vara dig själv.</h2>
+        <p class="v2-coaching-trust-lead">Ett respektfullt samarbete bygger på att båda vet vad de kan förvänta sig.</p>
+      </div>
+      <div class="v2-coaching-trust-details">
+        <article>
+          <h3>Du behåller din riktning</h3>
+          <p>Som klient deltar du aktivt och ansvarar för dina egna beslut. Coachens roll är att lyssna, ställa frågor och hålla en trygg struktur – inte att ta över.</p>
+        </article>
+        <article>
+          <h3>Respekt för din integritet</h3>
+          <p>Vi bemöter det du delar med respekt och diskretion, och arbetar med transparens och tydliga professionella gränser.</p>
+        </article>
+        <article>
+          <h3>Coaching är inte behandling</h3>
+          <p>Vi ställer inte diagnoser och erbjuder inte terapi, traumabehandling eller sjukvård. Om du behöver annat stöd hjälper vi dig att hitta rätt väg vidare.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-coaching-closing v2-section" aria-labelledby="coaching-closing-title">
+    <div class="v2-coaching-closing-inner">
+      <p class="v2-kicker">DIN VÄG BÖRJAR MED ETT SAMTAL</p>
+      <h2 id="coaching-closing-title">Nyfiken på vad ett samtal kan ge?</h2>
+      <p>Du behöver inte ha alla svar innan vi ses. Introduktionssamtalet är en möjlighet att ställa frågor och utforska om coaching känns rätt för dig.</p>
+      <a class="v2-button v2-button-gold" href="bokatid.html">Till bokningen <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+</div>
+
+  </main>
+
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="kunskap.html">Kunskap</a><a href="blog/index.html">Blogg</a><a href="spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="coaching.html">Coaching</a><a href="samtalsstod.html">Samtalsstöd</a><a href="bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="js/site.js"></script>
+  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
+     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
+     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
+
 
 </body>
 </html>
-

@@ -1,0 +1,81 @@
+<!-- HAVEN_PAGE
+title: Boka tid | Haven Nordic Health
+description: Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar.
+nav: bokatid
+styles: css/pages/booking.css
+-->
+
+<!-- Bokningssidan 2.0: sidan har en egen inline-kalender.
+     Den globala flytande widgeten tas bort via src/partials/booking-widget.html. -->
+<div class="v2-booking-page">
+
+  <section class="v2-booking-hero v2-section" aria-labelledby="booking-title">
+    <div class="v2-booking-hero-inner">
+      <div class="v2-booking-hero-main">
+        <p class="v2-kicker">BOKA TID HOS HAVEN</p>
+        <h1 id="booking-title">En stund för<br><em>det som är viktigt.</em></h1>
+        <span class="v2-booking-accent" aria-hidden="true"></span>
+        <p class="v2-booking-hero-lead">Här kan du boka ett samtal hos Haven Nordic Health. Välj en tillgänglig tid i kalendern och ta nästa steg i din egen takt.</p>
+        <a class="v2-booking-jump" href="#bokningskalender">Till kalendern <span aria-hidden="true">↘</span></a>
+      </div>
+      <aside class="v2-booking-hero-aside" aria-label="Inför din bokning">
+        <span class="v2-booking-aside-label">ENKELT ATT KOMMA IGÅNG</span>
+        <p>Du behöver inte ha allt klart för dig innan du bokar.</p>
+        <span class="v2-booking-aside-rule" aria-hidden="true"></span>
+        <span class="v2-booking-aside-foot">TID · NÄRVARO · UTRYMME</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-booking-calendar-section v2-section" id="bokningskalender" aria-labelledby="booking-calendar-title">
+    <div class="v2-booking-shell">
+      <div class="v2-booking-heading">
+        <p class="v2-kicker">DIN BOKNING</p>
+        <h2 id="booking-calendar-title">Hitta en tid som passar.</h2>
+        <p>Se lediga tider och genomför din bokning i kalendern nedan. Själva bokningen hanteras via Koalendar.</p>
+      </div>
+
+      <div class="v2-booking-calendar-panel">
+        <div class="v2-booking-panel-header" aria-hidden="true">
+          <span>HAVEN NORDIC HEALTH</span>
+          <span class="v2-booking-panel-dot"></span>
+          <span>BOKNINGSKALENDER</span>
+        </div>
+        <!-- Koalendar använder detta element som mål för sin inbäddade kalender. -->
+        <div id="inline-widget-haven-nordic-health-3" class="v2-booking-calendar" aria-label="Bokningskalender från Koalendar"></div>
+      </div>
+
+      <p class="v2-booking-fallback">Visas inte kalendern? <a href="https://koalendar.com/e/haven-nordic-health-3" target="_blank" rel="noopener noreferrer">Öppna bokningen i ett eget fönster <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </section>
+
+  <section class="v2-booking-more v2-section" aria-labelledby="booking-more-title">
+    <div class="v2-booking-more-inner">
+      <div>
+        <p class="v2-kicker">VILL DU VETA MER FÖRST?</p>
+        <h2 id="booking-more-title">Hitta rätt sorts samtal.</h2>
+        <p>Läs mer om våra två tjänster och välj den som motsvarar det du söker. Du är också välkommen att höra av dig om du har frågor.</p>
+      </div>
+      <div class="v2-booking-more-links">
+        <a href="{{root}}coaching.html"><span>Coaching</span><span aria-hidden="true">↗</span></a>
+        <a href="{{root}}samtalsstod.html"><span>Samtalsstöd</span><span aria-hidden="true">↗</span></a>
+        <a href="{{root}}kontakt.html"><span>Kontakta Haven</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Den befintliga officiella Koalendar-koden: laddas endast på bokningssidan. -->
+<script>
+  window.Koalendar = window.Koalendar || function () {
+    (Koalendar.props = Koalendar.props || []).push(arguments);
+  };
+</script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('inline', {
+    url: 'https://koalendar.com/e/haven-nordic-health-3',
+    selector: '#inline-widget-haven-nordic-health-3'
+  });
+</script>

@@ -1,112 +1,173 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <!-- Open Graph för sociala medier -->
-<meta property="og:title" content="Vänskap och energi – hur våra relationer påverkar vårt välmående">
-<meta property="og:description" content="Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.">
-<meta property="og:image" content="https://www.dindomän.se/images/default-og-image.jpg"> <!-- fallback-bild -->
-<meta property="og:url" content="https://www.havennordichealth.se/blog/vanskap-och-energi.html">
-<meta property="og:type" content="article">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
 
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vänskap och energi – hur våra relationer påverkar vårt välmående">
-<meta name="twitter:description" content="Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.">
-<meta name="twitter:image" content="https://www.dindomän.se/images/default-og-image.jpg"> <!-- fallback-bild -->
+  <!-- Sidans individuella SEO-information -->
+  <title>Vänskap och energi – hur våra relationer påverkar vårt välmående | Haven Nordic Health</title>
+  <meta name="description" content="Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.">
+  <link rel="canonical" href="https://www.havennordichealth.se/blog/vanskap-och-enegi.html">
+    <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Haven Nordic Health">
+  <meta property="og:title" content="Vänskap och energi – hur våra relationer påverkar vårt välmående | Haven Nordic Health">
+  <meta property="og:description" content="Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.">
+  <meta property="og:url" content="https://www.havennordichealth.se/blog/vanskap-och-enegi.html">
+  <meta property="og:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Haven Nordic Health">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Vänskap och energi – hur våra relationer påverkar vårt välmående | Haven Nordic Health">
+  <meta name="twitter:description" content="Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.">
+  <meta name="twitter:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haven Nordic Health</title>
-  <link rel="stylesheet" href="../style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-<link rel="manifest" href="/site.webmanifest">
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="../images/apple-touch-icon.png">
 
-<!-- Favicon för olika storlekar -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="../css/pages/blog-article.css">
 
-  gtag('config', 'G-QFYE06CQFW');
-</script>
-</head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="../css/responsive.css">
 
+  <!-- Google Analytics disabled; no tracking script loaded. -->
 
-
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="../index.html">Hem</a></li>
-                  <li><a href="../om.html">Om</a></li>
-                  <li><a href="../kunskap.html">Kunskap</a></li>
-                  <li><a href="../coaching.html">Coaching</a></li>
-                  <li><a href="../samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="../bokatid.html">Boka tid</a></li>
-                  <li><a href="../kontakt.html">Kontakt</a></li>
-                  <li><a href="../stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="../blog/index.html">Blogg</a></li>
-                  <li><a href="../gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="../spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-
-          <div class="logo-wrapper">
-            <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
-
- <main class="article-content">
-
-  <script type="application/json" class="post-meta">
+  <script type="application/ld+json">
 {
-  "title": "Vänskap och energi – hur våra relationer påverkar vårt välmående",
-  "date": "2026-05-31",
-  "description": "Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen."
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.havennordichealth.se/blog/vanskap-och-enegi.html#webpage",
+      "url": "https://www.havennordichealth.se/blog/vanskap-och-enegi.html",
+      "name": "Vänskap och energi – hur våra relationer påverkar vårt välmående | Haven Nordic Health",
+      "inLanguage": "sv-SE",
+      "isPartOf": {
+        "@id": "https://www.havennordichealth.se/#website"
+      },
+      "description": "Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.",
+      "mainEntity": {
+        "@id": "https://www.havennordichealth.se/blog/vanskap-och-enegi.html#article"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.havennordichealth.se/blog/vanskap-och-enegi.html#article",
+      "headline": "Vänskap och energi – hur våra relationer påverkar vårt välmående",
+      "inLanguage": "sv-SE",
+      "mainEntityOfPage": {
+        "@id": "https://www.havennordichealth.se/blog/vanskap-och-enegi.html#webpage"
+      },
+      "publisher": {
+        "@id": "https://www.havennordichealth.se/#organization"
+      },
+      "description": "Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.",
+      "author": {
+        "@type": "Person",
+        "name": "Björn Andersson",
+        "url": "https://www.havennordichealth.se/om.html"
+      },
+      "datePublished": "2026-05-31",
+      "image": "https://www.havennordichealth.se/images/bloggimages/helena-lopes-PGnqT0rXWLs-unsplash.jpg"
+    }
+  ]
 }
-</script>
+  </script>
+</head>
 
-  <section class="blog-intro">
-    <h1>Vänskap och energi – hur våra relationer påverkar vårt välmående</h1>
-    <p class="article-date">2026-05-31</p>
-  </section>
+<body class="website-v2">
 
-      <figure class="article-image">
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="../index.html">
+<img alt="" class="v2-brand-logo" height="60" src="../images/haven-logo-header.webp" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="../index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="../kunskap.html">Kunskap</a>
+<a href="../blog/index.html">Blogg</a>
+<a href="../spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="../coaching.html">Coaching</a>
+<a href="../samtalsstod.html">Samtalsstöd</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="../om.html">Om verksamheten</a>
+</div>
+</details>
+<a href="../kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="../bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
+
+
+  <main id="main-content">
+    <article class="v2-journal-article">
+  <header class="v2-journal-hero v2-section">
+    <div class="v2-journal-hero-inner">
+      <nav class="v2-journal-breadcrumb" aria-label="Brödsmulor">
+        <a href="../blog/index.html">Blogg</a><span aria-hidden="true">/</span><span>Artikel</span>
+      </nav>
+      <p class="v2-kicker">HAVEN JOURNAL <span aria-hidden="true">/</span> <time datetime="2026-05-31">31 MAJ 2026</time></p>
+      <h1>Vänskap och energi – hur våra relationer påverkar vårt välmående</h1>
+      <p class="v2-journal-intro">Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.</p>
+    </div>
+  </header>
+
+  <div class="v2-journal-content v2-section">
+    <div class="v2-journal-image-wrap v2-journal-image-wrap--cover">
+<figure class="article-image">
   <img src="../images/bloggimages/helena-lopes-PGnqT0rXWLs-unsplash.jpg" alt="Vänskap och energi">
     <figcaption>
       Foto: Helena Lopes
     </figcaption>
   </figure>
-
-  <section class="importance-of-friends">
+    </div>
+    <div class="v2-journal-copy">
+<section class="importance-of-friends">
     <h2>Varför vänskap spelar roll</h2>
     <p>Vi människor är sociala varelser. Kvaliteten på våra relationer påverkar inte bara vårt humör och energi, utan även vår fysiska hälsa och förmåga att hantera stress. När vi omges av människor som ger stöd, glädje och närvaro, känner vi oss tryggare, mer fokuserade och mer energifyllda i vardagen.</p>
 
     <p>Att vårda vänskapsbanden är inte bara trevligt – det är en investering i vårt eget välmående. I en hektisk vardag kan det vara lätt att prioritera arbete, plikter och prestationer framför relationer, men forskning visar att människor med starkt socialt stöd har lägre stressnivåer, bättre immunförsvar och högre livskvalitet. Den här artikeln utforskar varför djupa vänskapsrelationer är viktiga, hur de påverkar oss och hur vi kan stärka dem medvetet.</p>
   </section>
-
-  <section class="social-support">
+    </div>
+    <div class="v2-journal-copy">
+<section class="social-support">
     <h2>Socialt stöd och stressreduktion</h2>
     <p>Nära vänner fungerar som ett känslomässigt ankare i livet. De ger oss möjlighet att ventilera tankar och känslor, vilket minskar stress och ger oss bättre mental balans. Studier visar att människor med starkt socialt stöd har lägre nivåer av kortisol, kroppens stresshormon, och upplever en större känsla av trygghet.</p>
 
@@ -119,22 +180,25 @@
 
     <p>Genom att medvetet vårda dessa små handlingar stärker vi inte bara vänskapsrelationerna, utan ger oss själva verktyg för att hantera stress och öka vår energi.</p>
   </section>
-
-  <section class="quality-over-quantity">
+    </div>
+    <div class="v2-journal-copy">
+<section class="quality-over-quantity">
     <h2>Kvalitet framför kvantitet</h2>
     <p>Få nära och pålitliga vänner ger ofta mer energi och välmående än många ytliga kontakter. Det handlar om djup och meningsfullhet – relationer där du kan vara dig själv, där samtal och aktiviteter känns givande, och där du får stöd när det behövs.</p>
 
     <p>Det är också viktigt att reflektera över vilka relationer som dränerar mer än de ger. Att medvetet identifiera och sätta gränser för sådana relationer är en nyckel till långsiktig balans. Att värna om de relationer som ger energi stärker både din mentala hälsa och din känsla av närvaro i livet.</p>
   </section>
-
-  <figure class="article-image">
+    </div>
+    <div class="v2-journal-image-wrap">
+<figure class="article-image">
   <img src="../images/bloggimages/omar-lopez-0-uzdU3gUYw-unsplash.jpg" alt="Vänskap och energi">
     <figcaption>
       Foto: Omar Lopes
     </figcaption>
   </figure>
-
-  <section class="friendship-energy">
+    </div>
+    <div class="v2-journal-copy">
+<section class="friendship-energy">
     <h2>Vänskap som energikälla</h2>
     <p>Vänskapsrelationer är mer än sällskap – de kan vara en faktisk källa till energi och motivation. När vi delar våra upplevelser, våra mål och våra känslor med andra skapas en dynamik som både inspirerar och stärker oss.</p>
 
@@ -146,8 +210,9 @@
 
     <p>Vänskap som energikälla handlar alltså både om aktivitet och medveten närvaro – att ge och ta emot stöd i vardagen.</p>
   </section>
-
-  <section class="handling-energy-drainers">
+    </div>
+    <div class="v2-journal-copy">
+<section class="handling-energy-drainers">
     <h2>Hantering av energitjuvar</h2>
     <p>Inte alla relationer ger energi. Vissa kan vara dränerande och skapa stress, skuld eller irritation. Att identifiera dessa relationer och sätta gränser är en viktig del av att skydda sitt eget välmående.</p>
 
@@ -159,8 +224,9 @@
 
     <p>Att hantera energitjuvar medvetet frigör tid och energi för de relationer som faktiskt stärker och inspirerar dig.</p>
   </section>
-
-  <section class="strengthening-bonds">
+    </div>
+    <div class="v2-journal-copy">
+<section class="strengthening-bonds">
     <h2>Bygga djupare vänskapsband</h2>
     <p>Att skapa starka, meningsfulla relationer kräver både närvaro och handling. Genom små, medvetna steg kan vänskap fördjupas och bli en stadig källa till stöd och glädje.</p>
 
@@ -172,24 +238,29 @@
 
     <p>Dessa medvetna handlingar fördjupar relationerna och ger både dig och din vän ökad energi, glädje och närvaro.</p>
   </section>
-
-  <figure class="article-image">
+    </div>
+    <div class="v2-journal-image-wrap">
+<figure class="article-image">
   <img src="../images/bloggimages/briana-tozour-hkkQbPa49UA-unsplash.jpg" alt="Vänskap och energi">
     <figcaption>
       Foto: Briana Tozour
     </figcaption>
   </figure>
-
-  <section class="conclusion">
+    </div>
+    <div class="v2-journal-copy">
+<section class="conclusion">
     <h2>Vänskap – en källa till energi och balans</h2>
     <p>Vänskap handlar om mer än sällskap – det är en källa till energi, balans och närvaro i vardagen. Genom att medvetet vårda relationer som ger styrka och glädje kan vi må bättre själva och inspirera våra vänner till samma sak. När vi prioriterar djupa och meningsfulla vänskapsband skapar vi ett hållbart nätverk som stärker både kropp och sinne.</p>
   </section>
-
-  <section class="call-to-action">
+    </div>
+    <div class="v2-journal-reflection">
+<section class="call-to-action">
     <h2>Reflektera och dela</h2>
     <p>Ta en stund att fundera över vilka relationer som ger dig mest energi och vilka du behöver sätta gränser mot. Dela gärna artikeln med någon som kan behöva påminnas om värdet av riktiga vänner – och inspirera till att bygga djupare, mer närvarande relationer i vardagen.</p>
   </section>
-  <div class="share-buttons">
+    </div>
+    <div class="v2-journal-copy">
+<div class="share-buttons">
   <p>Dela gärna artikeln:</p>
   <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
     <a class="a2a_button_facebook"></a>
@@ -199,41 +270,46 @@
     <a class="a2a_button_email"></a>
   </div>
 </div>
-
-
-  <div class="read-more-section">
+    </div>
+    <div class="v2-journal-copy">
+<div class="read-more-section">
     <a href="index.html">← Tillbaka till Bloggen</a>
   </div>
-
-</main>
-
-
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
+    </div>
   </div>
 
-  <!-- JS Toggle -->
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links.main');
+  <footer class="v2-journal-footer v2-section">
+    <div class="v2-journal-footer-inner">
+      <div class="v2-journal-share">
+<div class="share-buttons">
+  <p>Dela gärna artikeln:</p>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_button_whatsapp"></a>
+    <a class="a2a_button_email"></a>
+  </div>
+</div>
+      </div>
+      <a class="v2-journal-back" href="../blog/index.html"><span aria-hidden="true">←</span> Tillbaka till bloggen</a>
+    </div>
+  </footer>
+</article>
 
-    // Öppna/stäng meny när hamburgaren klickas
-    toggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Stäng meny när man klickar utanför
-    document.addEventListener('click', (event) => {
-      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-        navLinks.classList.remove('show');
-      }
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-<!-- AddToAny script -->
 <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+  </main>
+
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="../kunskap.html">Kunskap</a><a href="../blog/index.html">Blogg</a><a href="../spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="../coaching.html">Coaching</a><a href="../samtalsstod.html">Samtalsstöd</a><a href="../bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="../om.html">Om oss</a><a href="../kontakt.html">Kontakt</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="../js/site.js"></script>
+  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
+     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
+     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
+
+
 </body>
 </html>

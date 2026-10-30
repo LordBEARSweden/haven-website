@@ -1,0 +1,40 @@
+<!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="{{root}}index.html">
+<img alt="" class="v2-brand-logo" height="60" src="{{root}}images/haven-logo-header.webp" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a{{active:home}} href="{{root}}index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="{{root}}kunskap.html">Kunskap</a>
+<a href="{{root}}blog/index.html">Blogg</a>
+<a href="{{root}}spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="{{root}}coaching.html">Coaching</a>
+<a href="{{root}}samtalsstod.html">Samtalsstöd</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="{{root}}om.html">Om verksamheten</a>
+</div>
+</details>
+<a href="{{root}}kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="{{root}}bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>

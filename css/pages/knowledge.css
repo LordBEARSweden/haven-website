@@ -1,0 +1,178 @@
+/* Haven 2.0 – Kunskapsöversikt.
+   Sidspecifik design. Header, footer, knappar och grundtypografi
+   är definierade i det gemensamma designsystemet. */
+
+body.website-v2 .v2-knowledge-page {
+  background: var(--v2-bg);
+}
+
+/* Introduktion: mörk, avskalad och redaktionell. */
+body.website-v2 .v2-knowledge-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 88% 18%, rgba(201, 163, 108, .12), transparent 46%),
+    linear-gradient(140deg, #191817 0%, #0f0f0f 72%);
+  border-bottom: 2px solid var(--v2-border);
+}
+
+body.website-v2 .v2-knowledge-hero-inner {
+  width: min(100%, 1040px);
+  margin-inline: auto;
+  padding-block: clamp(16px, 3vw, 45px);
+  text-align: center;
+}
+
+body.website-v2 .v2-knowledge-hero h1 {
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--v2-white);
+  font-size: clamp(2.8rem, 6.5vw, 5.7rem);
+  letter-spacing: -.035em;
+}
+
+body.website-v2 .v2-knowledge-hero h1 em {
+  color: var(--v2-gold-light);
+  font-weight: 400;
+}
+
+body.website-v2 .v2-knowledge-rule {
+  display: block;
+  width: 88px;
+  height: 2px;
+  margin: 32px auto;
+  background: var(--v2-gold);
+}
+
+body.website-v2 .v2-knowledge-intro {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--v2-muted);
+  font-size: clamp(1.03rem, 1.6vw, 1.18rem);
+  line-height: 1.85;
+}
+
+/* Publicerade ämnen: ljus yta ger samma rytm som startsidan. */
+body.website-v2 .v2-knowledge-library {
+  background: var(--v2-ivory);
+  color: #1a1917;
+}
+
+body.website-v2 .v2-knowledge-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1290px;
+  margin: 0 auto 45px;
+}
+
+body.website-v2 .v2-knowledge-section-head .v2-kicker {
+  color: #765a32;
+}
+
+body.website-v2 .v2-knowledge-section-head h2 {
+  color: #211f1c;
+}
+
+body.website-v2 .v2-knowledge-section-head > p {
+  max-width: 260px;
+  color: #605950;
+  font-size: 1rem;
+}
+
+body.website-v2 .v2-knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+body.website-v2 .v2-knowledge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 265px;
+  padding: clamp(26px, 3vw, 43px);
+  background: #fcfaf6;
+  color: #211f1b;
+  border: 1px solid #d7cabc;
+  border-top: 3px solid var(--v2-gold);
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+body.website-v2 .v2-knowledge-card:hover,
+body.website-v2 .v2-knowledge-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: #b38c57;
+  box-shadow: 0 14px 32px rgba(31, 25, 19, .10);
+}
+
+body.website-v2 .v2-knowledge-number {
+  color: #776146;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+body.website-v2 .v2-knowledge-card h3 {
+  margin-top: 29px;
+  color: #211f1b;
+  font-size: clamp(1.7rem, 2.5vw, 2.25rem);
+  overflow-wrap: anywhere;
+}
+
+body.website-v2 .v2-knowledge-card-label {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 27px;
+  padding-bottom: 4px;
+  color: #72542e;
+  border-bottom: 1px solid #b28c54;
+  font-size: .9rem;
+  font-weight: 650;
+}
+
+
+@media (max-width: 1000px) {
+  body.website-v2 .v2-knowledge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 650px) {
+  body.website-v2 .v2-knowledge-hero-inner {
+    padding-block: 3px;
+  }
+
+  body.website-v2 .v2-knowledge-section-head {
+    display: block;
+    margin-bottom: 29px;
+  }
+
+  body.website-v2 .v2-knowledge-section-head > p {
+    margin-top: 15px;
+  }
+
+  body.website-v2 .v2-knowledge-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  body.website-v2 .v2-knowledge-card {
+    min-height: 185px;
+    padding: 26px;
+  }
+
+  body.website-v2 .v2-knowledge-card h3 {
+    margin-top: 14px;
+  }
+
+  body.website-v2 .v2-knowledge-card-label {
+    padding-top: 12px;
+  }
+}

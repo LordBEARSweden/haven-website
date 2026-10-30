@@ -1,0 +1,319 @@
+/* HAVEN 2.0 — Gemensam layout för kunskapsartiklar.
+   Används av alla framtida kunskapsartiklar via:
+   styles: css/pages/article.css
+   Färger/typografi ärvda från css/tokens.css. */
+
+body.website-v2 .v2-article-page {
+  min-width: 0;
+  background: var(--v2-bg);
+}
+
+body.website-v2 .v2-article-hero {
+  background:
+    radial-gradient(ellipse at 82% 4%, rgba(201, 163, 108, .12), transparent 52%),
+    linear-gradient(140deg, #1a1918, #0f0f0f 76%);
+  border-bottom: 2px solid var(--v2-border);
+}
+
+body.website-v2 .v2-article-hero-inner {
+  max-width: 940px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+body.website-v2 .v2-article-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: .89rem;
+  color: #d4ccc0;
+  margin: 0 auto 24px;
+}
+
+body.website-v2 .v2-article-breadcrumb a {
+  color: var(--v2-gold-light);
+  border-bottom: 1px solid var(--v2-border);
+}
+
+body.website-v2 .v2-article-breadcrumb a:hover {
+  color: var(--v2-white);
+}
+
+body.website-v2 .v2-article-hero h1 {
+  font-size: clamp(3.4rem, 7vw, 6.6rem);
+  color: var(--v2-white);
+  line-height: 1.04;
+}
+
+body.website-v2 .v2-article-rule {
+  display: block;
+  width: 88px;
+  height: 2px;
+  background: var(--v2-gold);
+  margin: 34px auto;
+}
+
+body.website-v2 .v2-article-lead {
+  max-width: 710px;
+  margin-inline: auto;
+  font-size: clamp(1.07rem, 1.7vw, 1.24rem);
+  line-height: 1.8;
+  color: var(--v2-muted);
+}
+
+body.website-v2 .v2-article-contents {
+  background: #181716;
+  border-bottom: 1px solid var(--v2-border);
+}
+
+body.website-v2 .v2-article-contents-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 25px;
+  max-width: 1250px;
+  padding: 20px clamp(22px, 5vw, 70px);
+  margin-inline: auto;
+}
+
+body.website-v2 .v2-article-contents-inner > span {
+  color: var(--v2-gold-light);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+body.website-v2 .v2-article-contents-inner > a {
+  color: var(--v2-ivory);
+  font-size: .9rem;
+  border-bottom: 1px solid transparent;
+}
+
+body.website-v2 .v2-article-contents-inner > a:hover,
+body.website-v2 .v2-article-contents-inner > a:focus-visible {
+  color: var(--v2-gold-light);
+  border-color: var(--v2-gold);
+}
+
+body.website-v2 .v2-article-band {
+  border-bottom: 2px solid rgba(201, 163, 108, .22);
+  scroll-margin-top: 110px;
+}
+
+body.website-v2 .v2-article-band--light {
+  background: var(--v2-ivory);
+  color: #2b2926;
+}
+
+body.website-v2 .v2-article-band--dark {
+  background: #111110;
+  color: var(--v2-ivory);
+}
+
+body.website-v2 .v2-article-prose {
+  width: min(100%, 790px);
+  margin-inline: auto;
+}
+
+body.website-v2 .v2-article-wide {
+  max-width: 1260px;
+  margin-inline: auto;
+}
+
+body.website-v2 .v2-article-prose > h2,
+body.website-v2 .v2-article-section-heading h2 {
+  font-size: clamp(2.1rem, 4.1vw, 3.6rem);
+  margin-bottom: 27px;
+}
+
+body.website-v2 .v2-article-prose h3 {
+  margin-top: 37px;
+  margin-bottom: 17px;
+  font-size: clamp(1.45rem, 2.3vw, 1.95rem);
+}
+
+body.website-v2 .v2-article-prose > p:not(.v2-kicker) {
+  line-height: 1.92;
+  font-size: clamp(1.02rem, 1.3vw, 1.12rem);
+  margin-top: 20px;
+}
+
+body.website-v2 .v2-article-band--light .v2-kicker {
+  color: #805c2d;
+}
+
+body.website-v2 .v2-article-prose ul {
+  margin: 22px 0 30px;
+  padding-left: 25px;
+}
+
+body.website-v2 .v2-article-prose li {
+  padding-left: 7px;
+  margin-bottom: 11px;
+  line-height: 1.8;
+}
+
+body.website-v2 .v2-article-effect-list {
+  border-left: 2px solid var(--v2-gold);
+  list-style: none;
+  padding-left: 22px !important;
+}
+
+body.website-v2 .v2-article-effect-list li {
+  padding-left: 0;
+}
+
+body.website-v2 .v2-article-section-heading {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+body.website-v2 .v2-article-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+body.website-v2 .v2-article-card {
+  min-width: 0;
+  padding: clamp(26px, 3vw, 42px);
+  background: var(--v2-panel);
+  border: 1px solid var(--v2-border);
+  border-top: 3px solid var(--v2-gold);
+}
+
+body.website-v2 .v2-article-card h3 {
+  font-size: clamp(1.4rem, 2.1vw, 1.8rem);
+  margin-bottom: 16px;
+}
+
+body.website-v2 .v2-article-card p,
+body.website-v2 .v2-article-card li {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+body.website-v2 .v2-article-card p + p {
+  margin-top: 15px;
+}
+
+body.website-v2 .v2-article-card ul {
+  padding-left: 20px;
+  margin: 13px 0 0;
+}
+
+body.website-v2 .v2-article-card li + li {
+  margin-top: 8px;
+}
+
+body.website-v2 .v2-article-band--dark .v2-article-card {
+  background: #24221f;
+  color: #eee8dd;
+}
+
+body.website-v2 .v2-article-band--light .v2-article-card {
+  background: #fcfaf6;
+  color: #282521;
+  border-color: #ddcdb9;
+  border-top-color: #b58b54;
+}
+
+body.website-v2 .v2-article-callout {
+  max-width: 1260px;
+  margin: 35px auto 0;
+  border: 1px solid #bf9b66;
+  border-left: 4px solid #a77d43;
+  padding: clamp(24px, 3.5vw, 38px);
+  background: #e7ddcc;
+  color: #302921;
+}
+
+body.website-v2 .v2-article-callout h3 {
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  margin-bottom: 13px;
+}
+
+body.website-v2 .v2-article-callout p {
+  line-height: 1.85;
+}
+
+body.website-v2 .v2-article-callout strong {
+  color: #302921;
+}
+
+body.website-v2 .v2-article-prose a {
+  color: var(--v2-gold-light);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+body.website-v2 .v2-article-sources {
+  margin-top: clamp(60px, 7vw, 100px);
+  padding-top: 35px;
+  border-top: 2px solid var(--v2-border);
+  scroll-margin-top: 110px;
+}
+
+body.website-v2 .v2-article-sources h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+}
+
+body.website-v2 .v2-article-sources ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+body.website-v2 .v2-article-sources li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(201, 163, 108, .18);
+}
+
+@media (max-width: 730px) {
+  body.website-v2 .v2-article-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.website-v2 .v2-article-contents-inner {
+    justify-content: flex-start;
+    gap: 9px 16px;
+  }
+
+  body.website-v2 .v2-article-contents-inner > span {
+    flex-basis: 100%;
+  }
+
+  body.website-v2 .v2-article-hero h1 {
+    font-size: clamp(3.1rem, 14vw, 4.5rem);
+  }
+}
+
+/* Återanvändbar variant för akut hjälpinformation i kunskapsartiklar.
+   Använd enbart för verkligt brådskande innehåll. */
+body.website-v2 .v2-article-callout--urgent {
+  background: #341b1c;
+  border: 1px solid #d69a9a;
+  border-left: 5px solid #e7a8a8;
+  color: #fff4f0;
+}
+
+body.website-v2 .v2-article-callout--urgent h3,
+body.website-v2 .v2-article-callout--urgent strong {
+  color: #fff7f2;
+}
+
+body.website-v2 .v2-article-callout--urgent p {
+  color: #fff4f0;
+}
+
+/* Återanvändbart underavsnitt för artiklar med en extra grupp av faktakort. */
+body.website-v2 .v2-article-subsection {
+  margin-top: clamp(65px, 7vw, 105px);
+  padding-top: clamp(45px, 5vw, 75px);
+  border-top: 1px solid var(--v2-border);
+  scroll-margin-top: 110px;
+}

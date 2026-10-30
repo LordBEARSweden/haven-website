@@ -1,108 +1,205 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haven Nordic Health</title>
-  <link rel="stylesheet" href="style.css?v=7" />
-<!-- Manifest för webbsidan -->
-  <link rel="manifest" href="/site.webmanifest">
- 
-  <!-- Favicon för olika storlekar -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Sidans individuella SEO-information -->
+  <title>Boka tid | Haven Nordic Health</title>
+  <meta name="description" content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar.">
+  <link rel="canonical" href="https://www.havennordichealth.se/bokatid.html">
+    <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Haven Nordic Health">
+  <meta property="og:title" content="Boka tid | Haven Nordic Health">
+  <meta property="og:description" content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar.">
+  <meta property="og:url" content="https://www.havennordichealth.se/bokatid.html">
+  <meta property="og:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Haven Nordic Health">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Boka tid | Haven Nordic Health">
+  <meta name="twitter:description" content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar.">
+  <meta name="twitter:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
 
-  gtag('config', 'G-QFYE06CQFW');
-</script>
-</head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="images/apple-touch-icon.png">
 
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
 
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="css/pages/booking.css">
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="index.html">Hem</a></li>
-                  <li><a href="om.html">Om</a></li>
-                  <li><a href="kunskap.html">Kunskap</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
-                  <li><a href="samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="bokatid.html">Boka tid</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-                  <li><a href="stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="blog/index.html">Blogg</a></li>
-                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="css/responsive.css">
 
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
+  <!-- Google Analytics disabled; no tracking script loaded. -->
 
-          <div class="logo-wrapper">
-            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
-
-    <!-- Main content -->
-      <main>
-        <section>
-          <div id="inline-widget-haven-nordic-health-3"></div>
-
-        </section>
-
-        <div class="divider"></div>
-
-      </main>
-
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
-
-  <!-- JS Toggle -->
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links.main');
-
-    // Öppna/stäng meny när hamburgaren klickas
-    toggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Stäng meny när man klickar utanför
-    document.addEventListener('click', (event) => {
-      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-        navLinks.classList.remove('show');
-      }
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.havennordichealth.se/bokatid.html#webpage",
+      "url": "https://www.havennordichealth.se/bokatid.html",
+      "name": "Boka tid | Haven Nordic Health",
+      "inLanguage": "sv-SE",
+      "isPartOf": {
+        "@id": "https://www.havennordichealth.se/#website"
+      },
+      "description": "Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar."
+    }
+  ]
+}
   </script>
-  <script>window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};</script>
-  <script async src="https://koalendar.com/assets/widget.js"></script>
-  <script>Koalendar('inline', {"url":"https://koalendar.com/e/haven-nordic-health-3","selector":"#inline-widget-haven-nordic-health-3"});</script>
-  
+</head>
+
+<body class="website-v2">
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="index.html">
+<img alt="" class="v2-brand-logo" height="60" src="images/haven-logo-header.webp" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="kunskap.html">Kunskap</a>
+<a href="blog/index.html">Blogg</a>
+<a href="spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="coaching.html">Coaching</a>
+<a href="samtalsstod.html">Samtalsstöd</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="om.html">Om verksamheten</a>
+</div>
+</details>
+<a href="kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
+
+
+  <main id="main-content">
+    <!-- Bokningssidan 2.0: sidan har en egen inline-kalender.
+     Den globala flytande widgeten tas bort via src/partials/booking-widget.html. -->
+<div class="v2-booking-page">
+
+  <section class="v2-booking-hero v2-section" aria-labelledby="booking-title">
+    <div class="v2-booking-hero-inner">
+      <div class="v2-booking-hero-main">
+        <p class="v2-kicker">BOKA TID HOS HAVEN</p>
+        <h1 id="booking-title">En stund för<br><em>det som är viktigt.</em></h1>
+        <span class="v2-booking-accent" aria-hidden="true"></span>
+        <p class="v2-booking-hero-lead">Här kan du boka ett samtal hos Haven Nordic Health. Välj en tillgänglig tid i kalendern och ta nästa steg i din egen takt.</p>
+        <a class="v2-booking-jump" href="#bokningskalender">Till kalendern <span aria-hidden="true">↘</span></a>
+      </div>
+      <aside class="v2-booking-hero-aside" aria-label="Inför din bokning">
+        <span class="v2-booking-aside-label">ENKELT ATT KOMMA IGÅNG</span>
+        <p>Du behöver inte ha allt klart för dig innan du bokar.</p>
+        <span class="v2-booking-aside-rule" aria-hidden="true"></span>
+        <span class="v2-booking-aside-foot">TID · NÄRVARO · UTRYMME</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-booking-calendar-section v2-section" id="bokningskalender" aria-labelledby="booking-calendar-title">
+    <div class="v2-booking-shell">
+      <div class="v2-booking-heading">
+        <p class="v2-kicker">DIN BOKNING</p>
+        <h2 id="booking-calendar-title">Hitta en tid som passar.</h2>
+        <p>Se lediga tider och genomför din bokning i kalendern nedan. Själva bokningen hanteras via Koalendar.</p>
+      </div>
+
+      <div class="v2-booking-calendar-panel">
+        <div class="v2-booking-panel-header" aria-hidden="true">
+          <span>HAVEN NORDIC HEALTH</span>
+          <span class="v2-booking-panel-dot"></span>
+          <span>BOKNINGSKALENDER</span>
+        </div>
+        <!-- Koalendar använder detta element som mål för sin inbäddade kalender. -->
+        <div id="inline-widget-haven-nordic-health-3" class="v2-booking-calendar" aria-label="Bokningskalender från Koalendar"></div>
+      </div>
+
+      <p class="v2-booking-fallback">Visas inte kalendern? <a href="https://koalendar.com/e/haven-nordic-health-3" target="_blank" rel="noopener noreferrer">Öppna bokningen i ett eget fönster <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </section>
+
+  <section class="v2-booking-more v2-section" aria-labelledby="booking-more-title">
+    <div class="v2-booking-more-inner">
+      <div>
+        <p class="v2-kicker">VILL DU VETA MER FÖRST?</p>
+        <h2 id="booking-more-title">Hitta rätt sorts samtal.</h2>
+        <p>Läs mer om våra två tjänster och välj den som motsvarar det du söker. Du är också välkommen att höra av dig om du har frågor.</p>
+      </div>
+      <div class="v2-booking-more-links">
+        <a href="coaching.html"><span>Coaching</span><span aria-hidden="true">↗</span></a>
+        <a href="samtalsstod.html"><span>Samtalsstöd</span><span aria-hidden="true">↗</span></a>
+        <a href="kontakt.html"><span>Kontakta Haven</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Den befintliga officiella Koalendar-koden: laddas endast på bokningssidan. -->
+<script>
+  window.Koalendar = window.Koalendar || function () {
+    (Koalendar.props = Koalendar.props || []).push(arguments);
+  };
+</script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>
+  Koalendar('inline', {
+    url: 'https://koalendar.com/e/haven-nordic-health-3',
+    selector: '#inline-widget-haven-nordic-health-3'
+  });
+</script>
+
+  </main>
+
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="kunskap.html">Kunskap</a><a href="blog/index.html">Blogg</a><a href="spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="coaching.html">Coaching</a><a href="samtalsstod.html">Samtalsstöd</a><a href="bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="js/site.js"></script>
+  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
+     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
+     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
+
+
 </body>
 </html>

@@ -1,211 +1,244 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haven Nordic Health</title>
-  <link rel="stylesheet" href="../style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-<link rel="manifest" href="/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
 
-<!-- Favicon för olika storlekar -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <!-- Sidans individuella SEO-information -->
+  <title>Blogg | Haven Nordic Health</title>
+  <meta name="description" content="Läs Havens blogg om återhämtning, relationer, stress, närvaro och personlig utveckling. Tankar och perspektiv för livet som det är.">
+  <link rel="canonical" href="https://www.havennordichealth.se/blog/">
+    <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Haven Nordic Health">
+  <meta property="og:title" content="Blogg | Haven Nordic Health">
+  <meta property="og:description" content="Läs Havens blogg om återhämtning, relationer, stress, närvaro och personlig utveckling. Tankar och perspektiv för livet som det är.">
+  <meta property="og:url" content="https://www.havennordichealth.se/blog/">
+  <meta property="og:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Haven Nordic Health">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blogg | Haven Nordic Health">
+  <meta name="twitter:description" content="Läs Havens blogg om återhämtning, relationer, stress, närvaro och personlig utveckling. Tankar och perspektiv för livet som det är.">
+  <meta name="twitter:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="../images/apple-touch-icon.png">
 
-  gtag('config', 'G-QFYE06CQFW');
-</script>
-</head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="../images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
 
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="../css/pages/blog.css">
 
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="../css/responsive.css">
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="../index.html">Hem</a></li>
-                  <li><a href="../om.html">Om</a></li>
-                  <li><a href="../kunskap.html">Kunskap</a></li>
-                  <li><a href="../coaching.html">Coaching</a></li>
-                  <li><a href="../samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="../bokatid.html">Boka tid</a></li>
-                  <li><a href="../kontakt.html">Kontakt</a></li>
-                  <li><a href="../stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="../blog/index.html">Blogg</a></li>
-                  <li><a href="../gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="../spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
+  <!-- Google Analytics disabled; no tracking script loaded. -->
 
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-
-          <div class="logo-wrapper">
-            <img src="../images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
-        <h2 style="text-align: center;">BLOGG</h2>
-     <!--  <h3 style="text-align: center;">Följ Havens blogg</h3>
-
-          <div class="subscribe">
-  <a href="/rss.xml">Prenumerera via RSS</a>
-
-  <button id="email-toggle">Följ via e-post</button>
-
-  <form id="email-form" class="email-form-hidden">
-    <input type="email" id="email" placeholder="Din e-post" />
-    <button type="submit">→</button>
-  </form>
-</div> -->
-         
-          
-    <!-- Main content -->
-      <main>
-        <section class="blog-list">
-
-<!-- Artikel 9  -->
-  <article class="blog-item">
-    <h2><a href="vanskaper-som-var-sjalvklara.html">Vänskaper som en gång var självklara</a></h2>
-    <p class="blog-date">2026-10-25</p>
-    <p>Vänskap förändras i takt med livet. Utforska hur människor som en gång stod oss nära ibland glider ifrån oss, hur gamla vänskaper kan hitta nya former och hur nya, meningsfulla relationer kan växa fram genom hela livet.</p>
-    <a href="vanskaper-som-var-sjalvklara.html" class="read-more">Läs mer →</a>
-  </article>
-  <!-- Fler artiklar läggs till på samma sätt -->
-
-<!-- Artikel 8  -->
-  <article class="blog-item">
-    <h2><a href="granser-utan-skuld.html">Att sätta gränser utan att känna skuld</a></h2>
-    <p class="blog-date">2026-09-27</p>
-    <p>Många vill finnas där för andra men glömmer ibland bort sig själva. Utforska hur vi kan sätta gränser med omtanke och skapa en bättre balans utan att låta skuldkänslan styra våra val.</p>
-    <a href="granser-utan-skuld.html" class="read-more">Läs mer →</a>
-  </article>
-  <!-- Fler artiklar läggs till på samma sätt -->
-
-  <!-- Artikel 7  -->
-  <article class="blog-item">
-    <h2><a href="slappa-kontrollen.html">Att släppa kontrollen – vägen till mer balans och tillit</a></h2>
-    <p class="blog-date">2026-08-30</p>
-    <p>Utforska hur behovet av kontroll påverkar vår energi, vårt välmående och vår inre balans – och upptäck hur vi kan släppa taget om det vi inte kan påverka för att skapa mer lugn, tillit och närvaro i vardagen.</p>
-    <a href="slappa-kontrollen.html" class="read-more">Läs mer →</a>
-  </article>
-  <!-- Fler artiklar läggs till på samma sätt -->
-
-
-  <!-- Artikel 6  -->
-  <article class="blog-item">
-    <h2><a href="narvaro-och-aterhamtning-i-vardagen.html">Närvaro och återhämtning – att hitta tillbaka till nuet</a></h2>
-    <p class="blog-date">2026-08-02</p>
-    <p>Utforska hur närvaro påverkar nervsystemet, återhämtningen och den inre balansen – och upptäck hur små ögonblick i vardagen kan skapa bättre förutsättningar för ett lugnare och mer hållbart välmående.</p>
-    <a href="narvaro-och-aterhamtning-i-vardagen.html" class="read-more">Läs mer →</a>
-  </article>
-  <!-- Fler artiklar läggs till på samma sätt -->
-
-  <!-- Artikel 5  -->
-  <article class="blog-item">
-    <h2><a href="nervsystem-och-balans.html">Nervsystemet och balans – nyckeln till energi, fokus och balans i vardagen</a></h2>
-    <p class="blog-date">2026-07-05</p>
-    <p>Upptäck hur nervsystemets reglering styr vila, återhämtning och inre stabilitet – och varför systemet ibland fastnar i ett tillstånd där återhämtning uteblir.</p>
-    <a href="nervsystem-och-balans.html" class="read-more">Läs mer →</a>
-  </article>
-  <!-- Fler artiklar läggs till på samma sätt -->
-
-  <!-- Artikel 4  -->
-  <article class="blog-item">
-    <h2><a href="somn-och-aterhamtning.html">Sömn och återhämtning – nyckeln till energi, fokus och balans i vardagen</a></h2>
-    <p class="blog-date">2026-06-14</p>
-    <p>Upptäck hur sömn och återhämtning påverkar hela ditt system – från energi och fokus till stress och känslomässig stabilitet – och hur små justeringar i din vardag kan skapa en mer naturlig och hållbar balans över tid.</p>
-    <a href="somn-och-aterhamtning.html" class="read-more">Läs mer →</a>
-  </article>
-
-  <!-- Artikel 3  -->
-  <article class="blog-item">
-    <h2><a href="vanskap-och-enegi.html">Vänskap och energi – hur våra relationer påverkar vårt välmående</a></h2>
-    <p class="blog-date">2026-05-31</p>
-    <p>Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.</p>
-    <a href="vanskap-och-enegi.html" class="read-more">Läs mer →</a>
-  </article>
-
-  <!-- Artikel 2  -->
-  <article class="blog-item">
-    <h2><a href="fokus-i-vardagen.html">Energi och fokus i vardagen – nyckeln till ett balanserat liv</a></h2>
-    <p class="blog-date">2026-05-17</p>
-    <p>Upptäck hur dagens distraktioner och tempo dränerar din energi – och lär dig enkla sätt att återfå fokus, balans och kraft i vardagen.</p>
-    <a href="fokus-i-vardagen.html" class="read-more">Läs mer →</a>
-  </article>
-
-<!-- Artikel 1 -->
-  <article class="blog-item">
-    <h2><a href="stress-i-vardagen.html">Stress i vardagen – varför återhämtning är viktigt</a></h2>
-    <p class="blog-date">2026-05-08</p>
-    <p class="blog-teaser">Upptäck hur stress påverkar kropp och sinne, och varför regelbunden återhämtning är nyckeln till balans, energi och inre närvaro.</p>
-    <a href="stress-i-vardagen.html" class="read-more">Läs mer →</a>
-  </article>
-  </section>      
-      </main>
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
-
-  <!-- JS Toggle -->
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links.main');
-
-    // Öppna/stäng meny när hamburgaren klickas
-    toggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Stäng meny när man klickar utanför
-    document.addEventListener('click', (event) => {
-      if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-        navLinks.classList.remove('show');
-      }
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.havennordichealth.se/blog/#webpage",
+      "url": "https://www.havennordichealth.se/blog/",
+      "name": "Blogg | Haven Nordic Health",
+      "inLanguage": "sv-SE",
+      "isPartOf": {
+        "@id": "https://www.havennordichealth.se/#website"
+      },
+      "description": "Läs Havens blogg om återhämtning, relationer, stress, närvaro och personlig utveckling. Tankar och perspektiv för livet som det är."
+    }
+  ]
+}
   </script>
-  <script>
-const toggleBtn = document.getElementById("email-toggle");
-const form = document.getElementById("email-form");
+</head>
 
-toggleBtn.addEventListener("click", function () {
-  form.style.display = form.style.display === "flex" ? "none" : "flex";
-});
+<body class="website-v2">
 
-document.addEventListener("click", function (e) {
-  if (!form || !toggleBtn) return;
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
 
-  const clickedInsideForm = form.contains(e.target);
-  const clickedToggle = toggleBtn.contains(e.target);
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="../index.html">
+<img alt="" class="v2-brand-logo" height="60" src="../images/haven-logo-header.webp" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="../index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="../kunskap.html">Kunskap</a>
+<a href="../blog/index.html">Blogg</a>
+<a href="../spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="../coaching.html">Coaching</a>
+<a href="../samtalsstod.html">Samtalsstöd</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="../om.html">Om verksamheten</a>
+</div>
+</details>
+<a href="../kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="../bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
 
-  if (!clickedInsideForm && !clickedToggle) {
-    form.style.display = "none";
-  }
-});
-</script>
-<script src="/script.js"></script>
+
+  <main id="main-content">
+    <!-- Blogg 2.0. Senaste artikeln lyfts fram automatiskt vid sidvisning när nya inlägg läggs i arkivet. -->
+<div class="v2-blog-page">
+
+  <section class="v2-blog-hero v2-section" aria-labelledby="v2-blog-title">
+    <div class="v2-blog-hero-inner">
+      <div class="v2-blog-hero-primary">
+        <p class="v2-kicker">HAVEN NORDIC HEALTH / BLOGG</p>
+        <h1 id="v2-blog-title">Ord att <em>stanna upp</em> vid.</h1>
+        <span class="v2-blog-hero-rule" aria-hidden="true"></span>
+        <p class="v2-blog-hero-lead">Tankar, erfarenheter och perspektiv på livet, relationer och vårt välmående. Texter att läsa i din egen takt – och kanske bära med dig en stund.</p>
+      </div>
+      <div class="v2-blog-hero-aside" aria-hidden="true">
+        <span class="v2-blog-aside-ornament">“</span>
+        <p>Ibland börjar en förändring med att vi ser något på ett nytt sätt.</p>
+        <span class="v2-blog-aside-label">TANKAR FRÅN HAVEN</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-blog-highlight v2-section" aria-label="Senaste artikeln">
+    <div class="v2-blog-shell">
+      <a class="v2-blog-feature" href="../blog/vanskaper-som-var-sjalvklara.html" aria-label="Läs: Vänskaper som en gång var självklara">
+        <div class="v2-blog-feature-visual" aria-hidden="true">
+          <img class="v2-blog-feature-image" src="../images/bloggimages/Höstfika vid den gyllene sjön-2.png" alt="" decoding="async">
+          <span class="v2-blog-art-word">HAVEN JOURNAL</span>
+        </div>
+        <div class="v2-blog-feature-copy">
+          <span class="v2-blog-overline">SENASTE ARTIKELN <span aria-hidden="true">/</span> <time datetime="2026-10-25">25 oktober 2026</time></span>
+          <h2>Vänskaper som en gång var självklara</h2>
+          <p>Vänskap förändras i takt med livet. Utforska hur människor som en gång stod oss nära ibland glider ifrån oss, hur gamla vänskaper kan hitta nya former och hur nya, meningsfulla relationer kan växa fram genom hela livet.</p>
+          <span class="v2-blog-read">Läs artikeln <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="v2-blog-library v2-section" aria-labelledby="v2-blog-library-title">
+    <div class="v2-blog-shell">
+      <div class="v2-blog-section-head">
+        <div>
+          <p class="v2-kicker">FLER TEXTER FRÅN HAVEN</p>
+          <h2 id="v2-blog-library-title">Fortsätt utforska.</h2>
+        </div>
+        <p>Välj det som väcker din nyfikenhet. Här finns inga rätta vägar att börja.</p>
+      </div>
+      <!-- BLOG_ARTICLES_START -->
+      <div class="v2-blog-grid">
+      <a class="v2-blog-card" href="../blog/granser-utan-skuld.html" aria-label="Läs: Att sätta gränser utan att känna skuld">
+        <div class="v2-blog-card-top"><span class="v2-blog-card-index">01</span><time datetime="2026-09-27">27 september 2026</time></div>
+        <h3>Att sätta gränser utan att känna skuld</h3>
+        <p>Många vill finnas där för andra men glömmer ibland bort sig själva. Utforska hur vi kan sätta gränser med omtanke och skapa en bättre balans utan att låta skuldkänslan styra våra val.</p>
+        <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="v2-blog-card" href="../blog/slappa-kontrollen.html" aria-label="Läs: Att släppa kontrollen – vägen till mer balans och tillit">
+        <div class="v2-blog-card-top"><span class="v2-blog-card-index">02</span><time datetime="2026-08-30">30 augusti 2026</time></div>
+        <h3>Att släppa kontrollen – vägen till mer balans och tillit</h3>
+        <p>Utforska hur behovet av kontroll påverkar vår energi, vårt välmående och vår inre balans – och upptäck hur vi kan släppa taget om det vi inte kan påverka för att skapa mer lugn, tillit och närvaro i vardagen.</p>
+        <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="v2-blog-card" href="../blog/narvaro-och-aterhamtning-i-vardagen.html" aria-label="Läs: Närvaro och återhämtning – att hitta tillbaka till nuet">
+        <div class="v2-blog-card-top"><span class="v2-blog-card-index">03</span><time datetime="2026-08-02">2 augusti 2026</time></div>
+        <h3>Närvaro och återhämtning – att hitta tillbaka till nuet</h3>
+        <p>Utforska hur närvaro påverkar nervsystemet, återhämtningen och den inre balansen – och upptäck hur små ögonblick i vardagen kan skapa bättre förutsättningar för ett lugnare och mer hållbart välmående.</p>
+        <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="v2-blog-card" href="../blog/nervsystem-och-balans.html" aria-label="Läs: Nervsystemet och balans – nyckeln till energi, fokus och balans i vardagen">
+        <div class="v2-blog-card-top"><span class="v2-blog-card-index">04</span><time datetime="2026-07-05">5 juli 2026</time></div>
+        <h3>Nervsystemet och balans – nyckeln till energi, fokus och balans i vardagen</h3>
+        <p>Upptäck hur nervsystemets reglering styr vila, återhämtning och inre stabilitet – och varför systemet ibland fastnar i ett tillstånd där återhämtning uteblir.</p>
+        <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="v2-blog-card" href="../blog/somn-och-aterhamtning.html" aria-label="Läs: Sömn och återhämtning – nyckeln till energi, fokus och balans i vardagen">
+        <div class="v2-blog-card-top"><span class="v2-blog-card-index">05</span><time datetime="2026-06-14">14 juni 2026</time></div>
+        <h3>Sömn och återhämtning – nyckeln till energi, fokus och balans i vardagen</h3>
+        <p>Upptäck hur sömn och återhämtning påverkar hela ditt system – från energi och fokus till stress och känslomässig stabilitet – och hur små justeringar i din vardag kan skapa en mer naturlig och hållbar balans över tid.</p>
+        <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="v2-blog-card" href="../blog/vanskap-och-enegi.html" aria-label="Läs: Vänskap och energi – hur våra relationer påverkar vårt välmående">
+        <div class="v2-blog-card-top"><span class="v2-blog-card-index">06</span><time datetime="2026-05-31">31 maj 2026</time></div>
+        <h3>Vänskap och energi – hur våra relationer påverkar vårt välmående</h3>
+        <p>Upptäck hur djupa och meningsfulla vänskapsrelationer påverkar din energi, balans och välmående – och lär dig konkreta sätt att vårda relationer som stärker dig i vardagen.</p>
+        <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="v2-blog-card" href="../blog/fokus-i-vardagen.html" aria-label="Läs: Energi och fokus i vardagen – nyckeln till ett balanserat liv">
+        <div class="v2-blog-card-top"><span class="v2-blog-card-index">07</span><time datetime="2026-05-17">17 maj 2026</time></div>
+        <h3>Energi och fokus i vardagen – nyckeln till ett balanserat liv</h3>
+        <p>Upptäck hur dagens distraktioner och tempo dränerar din energi – och lär dig enkla sätt att återfå fokus, balans och kraft i vardagen.</p>
+        <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+      </a>
+      <a class="v2-blog-card" href="../blog/stress-i-vardagen.html" aria-label="Läs: Stress i vardagen – varför återhämtning är viktigt">
+        <div class="v2-blog-card-top"><span class="v2-blog-card-index">08</span><time datetime="2026-05-08">8 maj 2026</time></div>
+        <h3>Stress i vardagen – varför återhämtning är viktigt</h3>
+        <p>Upptäck hur stress påverkar kropp och sinne, och varför regelbunden återhämtning är nyckeln till balans, energi och inre närvaro.</p>
+        <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+      </a>
+      </div>
+      <!-- BLOG_ARTICLES_END -->
+    </div>
+  </section>
+
+  <section class="v2-blog-outro v2-section" aria-labelledby="v2-blog-outro-title">
+    <div class="v2-blog-outro-inner">
+      <div>
+        <p class="v2-kicker">VILL DU FÖRDJUPA DIG?</p>
+        <h2 id="v2-blog-outro-title">Det finns mer att upptäcka.</h2>
+        <p>Utforska också Havens kunskapsbibliotek, där vi samlar fördjupande information om hälsa, återhämtning och välmående.</p>
+      </div>
+      <a class="v2-blog-outro-link" href="../kunskap.html">Till kunskapsbiblioteket <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</div>
+
+<script src="../js/blog-feature.js" defer></script>
+
+  </main>
+
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="../kunskap.html">Kunskap</a><a href="../blog/index.html">Blogg</a><a href="../spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="../coaching.html">Coaching</a><a href="../samtalsstod.html">Samtalsstöd</a><a href="../bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="../om.html">Om oss</a><a href="../kontakt.html">Kontakt</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="../js/site.js"></script>
+  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
+     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
+     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
+
+
 </body>
 </html>

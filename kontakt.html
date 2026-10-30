@@ -1,160 +1,214 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+
+  <!-- Sidans individuella SEO-information -->
   <title>Kontakt | Haven Nordic Health</title>
-  <link rel="stylesheet" href="style.css?v=7" />
-  <!-- Manifest för webbsidan -->
-  <link rel="manifest" href="/site.webmanifest">
- 
-  <!-- Favicon för olika storlekar -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta name="description" content="Kontakta Haven Nordic Health via telefon eller e-post. Här hittar du våra kontaktuppgifter, öppettider och bankgiro.">
+  <link rel="canonical" href="https://www.havennordichealth.se/kontakt.html">
+    <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Haven Nordic Health">
+  <meta property="og:title" content="Kontakt | Haven Nordic Health">
+  <meta property="og:description" content="Kontakta Haven Nordic Health via telefon eller e-post. Här hittar du våra kontaktuppgifter, öppettider och bankgiro.">
+  <meta property="og:url" content="https://www.havennordichealth.se/kontakt.html">
+  <meta property="og:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Haven Nordic Health">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kontakt | Haven Nordic Health">
+  <meta name="twitter:description" content="Kontakta Haven Nordic Health via telefon eller e-post. Här hittar du våra kontaktuppgifter, öppettider och bankgiro.">
+  <meta name="twitter:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYE06CQFW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Favicon och webbplatsmanifest -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="images/apple-touch-icon.png">
 
-  gtag('config', 'G-QFYE06CQFW');
-</script>
-</head>
-<body>
-  <div class="container">
-    <!-- Hörnramar -->
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner top-right">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-left">
-    <img src="images/cornerimage.png" alt="Hörnornament" class="corner bottom-right">
+  <!-- Gemensamt designsystem -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
 
+  <!-- Sidspecifik CSS -->
+    <link rel="stylesheet" href="css/pages/contact.css">
 
+  <!-- Responsiva anpassningar -->
+  <link rel="stylesheet" href="css/responsive.css">
 
+  <!-- Google Analytics disabled; no tracking script loaded. -->
 
-    <!-- Header -->
-    <header>
-          <div class="menu-wrapper">
-              <button class="menu-toggle" aria-label="Meny">&#9776;</button>
-              <nav class="nav-links main">
-                  <ul>
-                  <li><a href="index.html">Hem</a></li>
-                  <li><a href="om.html">Om</a></li>
-                  <li><a href="kunskap.html">Kunskap</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
-                  <li><a href="samtalsstod.html">Samtalsstöd</a></li>
-                  <li><a href="bokatid.html">Boka tid</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-                  <li><a href="stodhaven.html">Stöd Haven</a></li>
-                  <li><a href="blog/index.html">Blogg</a></li>
-                  <li><a href="gavorochkop.html">Gåvor & Köp</a></li>
-                  <li><a href="spirituellt.html">Spirituellt</a></li>
-                </ul>
-              </nav>
-           </div>
-           <!-- Tillbaka-knapp -->
-            <button class="back-button" onclick="history.back()">←</button>
-          <div class="logo-wrapper">
-            <img src="images/Haven Transparent No buffer no text.png" alt="Haven Nordic Health logo" class="logo" />
-            <div class="logo-text">HAVEN NORDIC HEALTH</div>
-          </div>
-          
-    </header>
-
-    <!-- Main content -->
-    <main>
-      
-      <main>
-  <h2>Kontakt</h2>
-
-  <div class="opening-hours">
-    <h3>Öppettider</h3>
-    <p>Måndag – Fredag: 09:00 – 17:00</p>
-    <p>Lördag – Söndag: Stängt</p>
-  </div>
-
-  <h3>Kontakta oss på</h3> 
-
-  <!-- Telefon -->
-  <div style="margin-bottom: 12px;">
-    <a href="tel:+46280771719" class="copy-box phone-box">
-      <span class="copy-icon">📞</span>
-      <span class="copy-text">+46 280 77 17 19</span>
-    </a>
-  </div>
-
-  <!-- E-post -->
-  <div class="copy-box" id="copyEmail">
-    <span class="copy-icon">✉️</span>
-    <span>info@havennordichealth.se</span>
-  </div>
-  <div id="copyMsg"></div>
-
-<!-- Bankgiro på kontaktsidan -->
-<div style="margin-top: 12px; margin-bottom: 12px;">
-    <a href="javascript:void(0)" class="copy-box bankgiro-box" onclick="copyToClipboard('123-4567', this)">
-    <span class="copy-icon">🏦</span>
-    <span class="copy-text">Bankgiro: 5247-0390</span>
-    </a>
-</div>
-
-</main>
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> Haven Nordic Health</p>
-    </footer>
-  </div>
-
-  <!-- JS Toggle -->
-  <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links.main');
-
-  // Öppna/stäng meny när hamburgaren klickas
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  // Stäng meny när man klickar utanför
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !toggleButton.contains(event.target)) {
-      navLinks.classList.remove('show');
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.havennordichealth.se/kontakt.html#webpage",
+      "url": "https://www.havennordichealth.se/kontakt.html",
+      "name": "Kontakt | Haven Nordic Health",
+      "inLanguage": "sv-SE",
+      "isPartOf": {
+        "@id": "https://www.havennordichealth.se/#website"
+      },
+      "description": "Kontakta Haven Nordic Health via telefon eller e-post. Här hittar du våra kontaktuppgifter, öppettider och bankgiro."
     }
-  });
-</script>
-<script>
-  const box = document.getElementById("copyEmail");
-  const msg = document.getElementById("copyMsg");
-
-  box.addEventListener("click", () => {
-    const email = "havennordichealth@gmail.com";
-
-    navigator.clipboard.writeText(email).then(() => {
-      msg.textContent = "E-mail kopierat!";
-      
-      setTimeout(() => {
-        msg.textContent = "";
-      }, 2000);
-    });
-  });
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-function copyToClipboard(text, el) {
-  navigator.clipboard.writeText(text).then(() => {
-    let msg = el.nextElementSibling;
-    if(!msg || !msg.classList.contains('copy-msg')) {
-      msg = document.createElement('div');
-      msg.className = 'copy-msg';
-      el.parentNode.insertBefore(msg, el.nextSibling);
-    }
-    msg.textContent = 'Bankgiro kopierat!';
-    setTimeout(() => { msg.textContent = ''; }, 2000);
-  });
+  ]
 }
-</script>
+  </script>
+</head>
+
+<body class="website-v2">
+
+  <a class="v2-skip-link" href="#main-content">
+    Hoppa till innehållet
+  </a>
+
+  <!-- Gemensam header för Haven 2.0. -->
+<header class="v2-site-header">
+<div class="v2-header-inner">
+<!-- Logotypen kan bytas här, utan att headerns layout behöver byggas om. -->
+<a aria-label="Haven Nordic Health – startsida" class="v2-brand" href="index.html">
+<img alt="" class="v2-brand-logo" height="60" src="images/haven-logo-header.webp" width="60"/>
+<span class="v2-brand-name">HAVEN <small>NORDIC HEALTH</small></span>
+</a>
+<button aria-controls="v2-main-navigation" aria-expanded="false" aria-label="Öppna menyn" class="v2-menu-toggle" type="button">
+<span aria-hidden="true" class="v2-menu-toggle-lines"><span></span><span></span><span></span></span>
+<span>Meny</span>
+</button>
+<nav aria-label="Huvudnavigation" class="v2-main-navigation" id="v2-main-navigation">
+<a href="index.html">Hem</a>
+<details class="v2-nav-group">
+<summary>Utforska</summary>
+<div class="v2-nav-submenu">
+<a href="kunskap.html">Kunskap</a>
+<a href="blog/index.html">Blogg</a>
+<a href="spirituellt.html">Spirituellt</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Våra tjänster</summary>
+<div class="v2-nav-submenu">
+<a href="coaching.html">Coaching</a>
+<a href="samtalsstod.html">Samtalsstöd</a>
+</div>
+</details>
+<details class="v2-nav-group">
+<summary>Om Haven</summary>
+<div class="v2-nav-submenu">
+<a href="om.html">Om verksamheten</a>
+</div>
+</details>
+<a href="kontakt.html">Kontakt</a>
+<a class="v2-nav-book" href="bokatid.html">Boka tid</a>
+</nav>
+</div>
+</header>
+
+
+  <main id="main-content">
+    <!-- Kontakt 2.0: gemensam meny, sidfot, analys och bokning hanteras av baslayouten. -->
+<div class="v2-contact-page">
+
+  <section class="v2-contact-hero v2-section" aria-labelledby="contact-title">
+    <div class="v2-contact-shell v2-contact-hero-grid">
+      <div class="v2-contact-hero-copy">
+        <p class="v2-kicker">KONTAKT MED HAVEN</p>
+        <h1 id="contact-title">Ett samtal kan börja<br><em>med ett hej.</em></h1>
+        <span class="v2-contact-accent" aria-hidden="true"></span>
+        <p class="v2-contact-lead">Har du frågor om Haven, coaching eller samtalsstöd? Du är varmt välkommen att höra av dig på det sätt som passar dig.</p>
+        <a class="v2-contact-jump" href="#kontaktuppgifter">Se våra kontaktuppgifter <span aria-hidden="true">↘</span></a>
+      </div>
+      <aside class="v2-contact-hero-note" aria-label="En personlig kontakt">
+        <span class="v2-contact-note-label">NÄRA &amp; PERSONLIGT</span>
+        <p>Det behöver inte vara komplicerat att ta kontakt.</p>
+        <span class="v2-contact-note-rule" aria-hidden="true"></span>
+        <span class="v2-contact-note-foot">EN FRÅGA · ETT FÖRSTA STEG</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-contact-details v2-section" id="kontaktuppgifter" aria-labelledby="contact-details-title">
+    <div class="v2-contact-shell">
+      <div class="v2-contact-section-head">
+        <p class="v2-kicker">VI HÖRS</p>
+        <h2 id="contact-details-title">Välj det som passar dig.</h2>
+        <p>Ring oss eller skriv ett mejl. Kontaktuppgifterna finns samlade här så att du enkelt hittar rätt.</p>
+      </div>
+
+      <div class="v2-contact-info-grid">
+        <div class="v2-contact-primary">
+          <article class="v2-contact-method">
+            <div class="v2-contact-method-top"><span class="v2-contact-index">01</span><span class="v2-contact-method-kind">TELEFON</span></div>
+            <h3>Ring oss</h3>
+            <a class="v2-contact-value v2-contact-action-link" href="tel:+46280771719">+46 280 77 17 19 <span aria-hidden="true">↗</span></a>
+            <p>Tryck på numret för att ringa från en enhet som stöder telefonsamtal.</p>
+          </article>
+          <article class="v2-contact-method">
+            <div class="v2-contact-method-top"><span class="v2-contact-index">02</span><span class="v2-contact-method-kind">E-POST</span></div>
+            <h3>Skriv till oss</h3>
+            <a class="v2-contact-value v2-contact-action-link" href="mailto:info@havennordichealth.se"><span id="v2-contact-email">info@havennordichealth.se</span><span aria-hidden="true">↗</span></a>
+            <div class="v2-contact-method-bottom">
+              <p>Öppnar ditt e-postprogram, eller kopiera adressen.</p>
+              <button type="button" class="v2-contact-copy" data-copy-target="v2-contact-email" data-copy-label="E-postadress">Kopiera e-postadress <span aria-hidden="true">⧉</span></button>
+            </div>
+          </article>
+        </div>
+
+        <aside class="v2-contact-aside" aria-label="Öppettider och betalningsuppgifter">
+          <section class="v2-contact-hours" aria-labelledby="contact-hours-title">
+            <p class="v2-contact-aside-kicker">NÄR VI HAR ÖPPET</p>
+            <h3 id="contact-hours-title">Öppettider</h3>
+            <dl>
+              <div><dt>Måndag–fredag</dt><dd>09.00–17.00</dd></div>
+              <div><dt>Lördag–söndag</dt><dd>Stängt</dd></div>
+            </dl>
+          </section>
+          <section class="v2-contact-payment" aria-labelledby="contact-payment-title">
+            <p class="v2-contact-aside-kicker">BETALNINGSUPPGIFTER</p>
+            <h3 id="contact-payment-title">Bankgiro</h3>
+            <p id="v2-contact-bankgiro" class="v2-contact-bankgiro">5247-0390</p>
+            <button type="button" class="v2-contact-copy v2-contact-copy--light" data-copy-target="v2-contact-bankgiro" data-copy-label="Bankgironummer">Kopiera bankgiro <span aria-hidden="true">⧉</span></button>
+          </section>
+        </aside>
+      </div>
+      <p class="v2-contact-copy-status" id="v2-contact-copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="v2-contact-next v2-section" aria-labelledby="contact-next-title">
+    <div class="v2-contact-next-inner">
+      <p class="v2-kicker">VILL DU BOKA ETT SAMTAL?</p>
+      <h2 id="contact-next-title">Det finns också en väg direkt till bokningen.</h2>
+      <p>För coaching och samtalsstöd kan du läsa om våra tjänster eller gå direkt till bokningssidan.</p>
+      <div class="v2-contact-next-actions">
+        <a class="v2-button v2-button-gold" href="bokatid.html">Boka tid <span aria-hidden="true">↗</span></a>
+        <a class="v2-contact-next-link" href="coaching.html">Om coaching <span aria-hidden="true">↗</span></a>
+        <a class="v2-contact-next-link" href="samtalsstod.html">Om samtalsstöd <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+<script defer src="js/contact.js"></script>
+
+  </main>
+
+  <!-- Gemensam sidfot för Haven 2.0. -->
+<footer class="v2-footer"><div class="v2-footer-main"><div class="v2-footer-about"><p class="v2-footer-brand">HAVEN <span>NORDIC HEALTH</span></p><p>En fristad för återhämtning, närvaro, inre balans och utveckling.</p></div><div class="v2-footer-col"><h2>Utforska</h2><a href="kunskap.html">Kunskap</a><a href="blog/index.html">Blogg</a><a href="spirituellt.html">Spirituellt</a></div><div class="v2-footer-col"><h2>Få stöd</h2><a href="coaching.html">Coaching</a><a href="samtalsstod.html">Samtalsstöd</a><a href="bokatid.html">Boka tid</a></div><div class="v2-footer-col"><h2>Haven</h2><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a></div></div><div class="v2-footer-bottom"><span>© <span id="year"></span> Haven Nordic Health</span><span>Skapad med omtanke om människa och natur.</span></div></footer>
+
+
+  <script defer src="js/site.js"></script>
+  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
+     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
+     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
+
 
 </body>
 </html>
