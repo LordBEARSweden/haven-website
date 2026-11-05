@@ -7,20 +7,20 @@
 
   <!-- Sidans individuella SEO-information -->
   <title>Boka tid | Haven Nordic Health</title>
-  <meta name="description" content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar.">
+  <meta name="description" content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt online.">
   <link rel="canonical" href="https://www.havennordichealth.se/bokatid.html">
     <meta property="og:locale" content="sv_SE">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Haven Nordic Health">
   <meta property="og:title" content="Boka tid | Haven Nordic Health">
-  <meta property="og:description" content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar.">
+ <meta property="og:description"content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt online.">
   <meta property="og:url" content="https://www.havennordichealth.se/bokatid.html">
   <meta property="og:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="Haven Nordic Health">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Boka tid | Haven Nordic Health">
-  <meta name="twitter:description" content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar.">
+  <meta name="twitter:description"content="Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt online.">
   <meta name="twitter:image" content="https://www.havennordichealth.se/images/android-chrome-512x512.png">
 
   <!-- Favicon och webbplatsmanifest -->
@@ -58,7 +58,7 @@
       "isPartOf": {
         "@id": "https://www.havennordichealth.se/#website"
       },
-      "description": "Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt via Koalendar."
+      "description": "Boka samtal hos Haven Nordic Health. Se lediga tider i kalendern och boka enkelt online."
     }
   ]
 }
@@ -141,7 +141,7 @@
       <div class="v2-booking-heading">
         <p class="v2-kicker">DIN BOKNING</p>
         <h2 id="booking-calendar-title">Hitta en tid som passar.</h2>
-        <p>Se lediga tider och genomför din bokning i kalendern nedan. Själva bokningen hanteras via Koalendar.</p>
+        <p>Se lediga tider och genomför din bokning i kalendern nedan.</p>
       </div>
 
       <div class="v2-booking-calendar-panel">
@@ -150,11 +150,17 @@
           <span class="v2-booking-panel-dot"></span>
           <span>BOKNINGSKALENDER</span>
         </div>
-        <!-- Koalendar använder detta element som mål för sin inbäddade kalender. -->
-        <div id="inline-widget-haven-nordic-health-3" class="v2-booking-calendar" aria-label="Bokningskalender från Koalendar"></div>
+        <iframe
+                src="https://bookings.cloud.microsoft/book/HavenNordicHealth@havennordichealth.se/?ismsaljsauthenabled"
+                class="v2-booking-calendar"
+                title="Bokningskalender för Haven Nordic Health"
+                width="100%"
+                scrolling="yes"
+                style="border:0;">
+        </iframe>
       </div>
 
-      <p class="v2-booking-fallback">Visas inte kalendern? <a href="https://koalendar.com/e/haven-nordic-health-3" target="_blank" rel="noopener noreferrer">Öppna bokningen i ett eget fönster <span aria-hidden="true">↗</span></a></p>
+      <p class="v2-booking-fallback">Visas inte kalendern? <a href="https://bookings.cloud.microsoft/book/HavenNordicHealth@havennordichealth.se/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">Öppna bokningen i ett eget fönster <span aria-hidden="true">↗</span></a></p>
     </div>
   </section>
 
@@ -175,19 +181,6 @@
 
 </div>
 
-<!-- Den befintliga officiella Koalendar-koden: laddas endast på bokningssidan. -->
-<script>
-  window.Koalendar = window.Koalendar || function () {
-    (Koalendar.props = Koalendar.props || []).push(arguments);
-  };
-</script>
-<script async src="https://koalendar.com/assets/widget.js"></script>
-<script>
-  Koalendar('inline', {
-    url: 'https://koalendar.com/e/haven-nordic-health-3',
-    selector: '#inline-widget-haven-nordic-health-3'
-  });
-</script>
 
   </main>
 
@@ -196,10 +189,8 @@
 
 
   <script defer src="js/site.js"></script>
-  <!-- Haven 2.0: den tidigare flytande Koalendar-widgeten är avaktiverad.
-     Bokningsknappen i navigationen länkar till bokatid.html, där en inline-kalender finns.
-     Behåll denna partial tills byggsystemets placeholder kan förenklas. -->
-
+  <!-- Haven 2.0: Bokningsknappen i navigationen länkar till bokatid.html,
+   där Microsoft Bookings visas som en inbäddad kalender. -->
 
 </body>
 </html>
