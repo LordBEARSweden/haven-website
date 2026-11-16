@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="css/components.css">
 
   <!-- Sidspecifik CSS -->
-  
+    <link rel="stylesheet" href="css/pages/withdrawal.css">
 
   <!-- Responsiva anpassningar -->
   <link rel="stylesheet" href="css/responsive.css">
@@ -114,52 +114,58 @@
 
 
   <main id="main-content">
-    <section class="v2-withdrawal" aria-labelledby="withdrawal-heading"
-         style="max-width: 860px; margin: 0 auto; padding: 48px 20px;">
+    <!-- Ångerrättssida: enbart sidans innehåll; gemensam layout, header och footer byggs av build.py. -->
+<div class="v2-withdrawal-page">
 
-  <h1 id="withdrawal-heading">Ångra avtal</h1>
+  <section class="v2-withdrawal-hero v2-section" aria-labelledby="withdrawal-heading">
+    <div class="v2-withdrawal-hero-inner">
+      <p class="v2-kicker">HAVEN NORDIC HEALTH / JURIDISK INFORMATION</p>
+      <h1 id="withdrawal-heading">Ångra avtal</h1>
+      <span class="v2-withdrawal-rule" aria-hidden="true"></span>
+      <p class="v2-withdrawal-intro">
+        Här kan du meddela Haven Nordic Health att du vill utöva din ångerrätt
+        och frånträda ett avtal.
+      </p>
+    </div>
+  </section>
 
-  <p>
-    Här kan du meddela Haven Nordic Health att du vill utöva
-    din ångerrätt och frånträda ett avtal.
-  </p>
+  <section class="v2-withdrawal-content v2-section" aria-label="Skicka ångermeddelande">
+    <div class="v2-withdrawal-content-inner">
+      <p>
+        Fyll i formuläret nedan och bekräfta ditt ångermeddelande.
+        Du får ett mottagningsbevis skickat till den e-postadress du anger,
+        med uppgifter om ditt meddelande och när det togs emot.
+      </p>
+      <p>
+        Mottagningsbeviset bekräftar att ditt meddelande har tagits emot.
+        Det innebär inte att en eventuell återbetalning redan har behandlats.
+      </p>
 
-  <p>
-    Fyll i formuläret nedan och bekräfta ditt ångermeddelande.
-    Du får ett mottagningsbevis skickat till den e-postadress
-    du anger, med uppgifter om ditt meddelande och när det togs emot.
-  </p>
+      <div class="v2-withdrawal-form-panel">
+        <iframe
+          class="v2-withdrawal-form"
+          title="Formulär för att utöva ångerrätt hos Haven Nordic Health"
+          src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ByZEXsN5zEm1sHrGZG-CL_wheXpg21hOvTN8n0JEEbBUMTRUT1BVQk03SFhZMkxIOTUyNllDMUFNUS4u&amp;embed=true"
+          loading="lazy"
+        ></iframe>
+      </div>
 
-  <p>
-    Mottagningsbeviset bekräftar att ditt meddelande har tagits emot.
-    Det innebär inte att en eventuell återbetalning redan har behandlats.
-  </p>
+      <p class="v2-withdrawal-fallback">
+        Om formuläret inte visas kan du
+        <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ByZEXsN5zEm1sHrGZG-CL_wheXpg21hOvTN8n0JEEbBUMTRUT1BVQk03SFhZMkxIOTUyNllDMUFNUS4u"
+           target="_blank" rel="noopener noreferrer">
+          öppna ångerformuläret i ett eget fönster <span aria-hidden="true">↗</span>
+        </a>
+      </p>
 
-  <iframe
-    title="Formulär för att utöva ångerrätt hos Haven Nordic Health"
-    src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ByZEXsN5zEm1sHrGZG-CL_wheXpg21hOvTN8n0JEEbBUMTRUT1BVQk03SFhZMkxIOTUyNllDMUFNUS4u&amp;embed=true"
-    width="100%"
-    height="1150"
-    style="display: block; width: 100%; border: 0;"
-  ></iframe>
+      <p class="v2-withdrawal-alternative">
+        Du kan även meddela att du vill utöva din ångerrätt via e-post till
+        <a href="mailto:info@havennordichealth.se">info@havennordichealth.se</a>.
+      </p>
+    </div>
+  </section>
 
-  <p>
-    Om formuläret inte visas kan du
-    <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ByZEXsN5zEm1sHrGZG-CL_wheXpg21hOvTN8n0JEEbBUMTRUT1BVQk03SFhZMkxIOTUyNllDMUFNUS4u"
-       target="_blank" rel="noopener noreferrer">
-      öppna ångerformuläret i ett nytt fönster
-    </a>.
-  </p>
-
-  <p>
-    Du kan även meddela att du vill utöva din ångerrätt
-    via e-post till
-    <a href="mailto:info@havennordichealth.se">
-      info@havennordichealth.se
-    </a>.
-  </p>
-
-</section>
+</div>
 
   </main>
 
@@ -192,6 +198,7 @@
       <a href="om.html">Om oss</a>
       <a href="kontakt.html">Kontakt</a>
       <a href="angerratt.html">Ångra avtal</a>
+      <a href="integritetspolicy.html">Integritetspolicy</a>
     </div>
 
   </div>
