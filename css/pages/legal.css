@@ -1,0 +1,165 @@
+
+/* =====================================================
+   HAVEN NORDIC HEALTH 2.0
+   Legal Pages – Privacy Policy & Terms
+   ===================================================== */
+
+/* Page foundation */
+
+body.website-v2 .v2-legal-page {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Hero */
+
+body.website-v2 .v2-legal-hero {
+  padding: clamp(4rem, 8vw, 7rem) 2rem
+           clamp(3rem, 5vw, 5rem);
+}
+
+body.website-v2 .v2-legal-hero-inner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body.website-v2 .v2-legal-hero h1 {
+  max-width: 850px;
+  margin: 1.25rem 0 1.5rem;
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+body.website-v2 .v2-legal-rule {
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin: 2rem 0;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+body.website-v2 .v2-legal-intro {
+  max-width: 660px;
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.75;
+  opacity: 0.85;
+}
+
+/* Main legal content */
+
+body.website-v2 .v2-legal-content {
+  padding: 1rem 2rem clamp(5rem, 8vw, 8rem);
+}
+
+body.website-v2 .v2-legal-content-inner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body.website-v2 .v2-legal-content h2 {
+  margin: 3.5rem 0 1.4rem;
+  padding-top: 2rem;
+  border-top: 1px solid;
+  border-color: color-mix(
+    in srgb,
+    currentColor 18%,
+    transparent
+  );
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+body.website-v2 .v2-legal-content p {
+  max-width: 75ch;
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+body.website-v2 .v2-legal-content ul {
+  max-width: 75ch;
+  margin: 0 0 2rem;
+  padding-left: 1.5rem;
+  list-style: disc outside;
+}
+
+body.website-v2 .v2-legal-content li {
+  padding-left: 0.3rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+body.website-v2 .v2-legal-content li + li {
+  margin-top: 0.6rem;
+}
+
+body.website-v2 .v2-legal-content strong {
+  font-weight: 700;
+}
+
+/* Links */
+
+body.website-v2 .v2-legal-content a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+body.website-v2 .v2-legal-content a:hover {
+  text-decoration-thickness: 2px;
+}
+
+body.website-v2 .v2-legal-content a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* Tablet & mobile */
+
+@media (max-width: 768px) {
+
+  body.website-v2 .v2-legal-hero {
+    padding: 3.5rem 1.5rem 2.5rem;
+  }
+
+  body.website-v2 .v2-legal-content {
+    padding: 1rem 1.5rem 5rem;
+  }
+
+  body.website-v2 .v2-legal-hero h1 {
+    font-size: clamp(2.4rem, 8vw, 3.5rem);
+  }
+
+  body.website-v2 .v2-legal-content h2 {
+    margin-top: 2.75rem;
+    padding-top: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  body.website-v2 .v2-legal-hero {
+    padding-inline: 1.25rem;
+  }
+
+  body.website-v2 .v2-legal-content {
+    padding-inline: 1.25rem;
+  }
+
+  body.website-v2 .v2-legal-content p,
+  body.website-v2 .v2-legal-content li {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+}
