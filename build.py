@@ -153,6 +153,109 @@ def article_media(source_text, canonical_url, root_prefix):
     return parser.date_published, image_url
 
 
+
+def collect_blog_articles():
+    """Read and sort blog articles by publication date."""
+    articles = []
+
+    for source in (PAGES / "blog").glob("*.html"):
+        if source.name == "index.html":
+            continue
+
+        metadata, content = parse_page(
+            source.read_text(encoding="utf-8")
+        )
+
+        parser = ArticleMediaParser()
+        parser.feed(content)
+
+        if not parser.date_published:
+            raise ValueError(
+                f"Missing publication date: {source.name}"
+            )
+
+        if not parser.image_src:
+            raise ValueError(
+                f"Missing article image: {source.name}"
+            )
+
+        articles.append({
+            "title": metadata["title"].removesuffix(
+                f" | {SITE_NAME}"
+            ),
+            "description": (
+                metadata.get("excerpt")
+                or metadata["description"]
+            ),
+            "date": date.fromisoformat(parser.date_published),
+            "image": parser.image_src,
+            "url": f"{{{{root}}}}blog/{source.name}",
+        })
+
+    articles.sort(
+        key=lambda article: article["date"],
+        reverse=True
+    )
+
+    return articles
+
+def render_blog_sections():
+    """Generate featured article and archive cards."""
+    articles = collect_blog_articles()
+
+    if not articles:
+        raise ValueError("No blog articles found.")
+
+    months = (
+        "januari", "februari", "mars", "april",
+        "maj", "juni", "juli", "augusti",
+        "september", "oktober", "november", "december"
+    )
+
+    def format_date(value):
+        return f"{value.day} {months[value.month - 1]} {value.year}"
+
+    latest = articles[0]
+
+    feature = f'''
+      <a class="v2-blog-feature"
+         href="{escape(latest["url"], quote=True)}"
+         aria-label="Läs: {escape(latest["title"], quote=True)}">
+        <div class="v2-blog-feature-visual" aria-hidden="true">
+          <img class="v2-blog-feature-image"
+               src="{escape(latest["image"], quote=True)}"
+               alt="" decoding="async">
+          <span class="v2-blog-art-word">HAVEN JOURNAL</span>
+        </div>
+        <div class="v2-blog-feature-copy">
+          <span class="v2-blog-overline">SENASTE ARTIKELN
+            <span aria-hidden="true">/</span>
+            <time datetime="{latest["date"].isoformat()}">{format_date(latest["date"])}</time>
+          </span>
+          <h2>{escape(latest["title"])}</h2>
+          <p>{escape(latest["description"])}</p>
+          <span class="v2-blog-read">Läs artikeln <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>'''
+
+    cards = []
+
+    for index, article in enumerate(articles[1:], start=1):
+        cards.append(f'''
+        <a class="v2-blog-card"
+           href="{escape(article["url"], quote=True)}"
+           aria-label="Läs: {escape(article["title"], quote=True)}">
+          <div class="v2-blog-card-top">
+            <span class="v2-blog-card-index">{index:02d}</span>
+            <time datetime="{article["date"].isoformat()}">{format_date(article["date"])}</time>
+          </div>
+          <h3>{escape(article["title"])}</h3>
+          <p>{escape(article["description"])}</p>
+          <span class="v2-blog-card-link">Läs mer <span aria-hidden="true">↗</span></span>
+        </a>''')
+
+    return feature, "\n".join(cards)
+
 def create_social_tags(title, description, canonical_url, relative, image_path):
     """Create Open Graph and Twitter summary tags for one published URL."""
     image_path = image_path.lstrip("/")
@@ -311,6 +414,37 @@ def build_page(source, partials, layout):
 
     else:
         metadata, content = parse_page(source_text)
+
+        if relative == Path("blog/index.html"):
+            feature, cards = render_blog_sections()
+
+            sections = (
+                ("BLOG_FEATURE", feature),
+                (
+                    "BLOG_ARTICLES",
+                    f'<div class="v2-blog-grid">\n{cards}\n</div>'
+                ),
+            )
+
+            for name, generated_html in sections:
+                pattern = rf'(<!-- {name}_START -->).*?(<!-- {name}_END -->)'
+
+                content, count = re.subn(
+                    pattern,
+                    lambda match: (
+                        f"{match.group(1)}\n"
+                        f"{generated_html}\n"
+                        f"{match.group(2)}"
+                    ),
+                    content,
+                    flags=re.DOTALL,
+                )
+
+                if count != 1:
+                    raise ValueError(
+                        f"Expected one {name} block in blog/index.html, found {count}"
+                    )
+
         page_title = metadata["title"]
         page_description = metadata["description"]
         image_path = metadata.get("social_image", DEFAULT_SOCIAL_IMAGE)
